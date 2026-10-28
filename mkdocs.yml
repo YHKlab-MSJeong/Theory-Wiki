@@ -17,3 +17,4 @@ nav:
   - Home: index.md
   - Quantum transport:
       - Landauer 수송과 transmission: quantum-transport/landauer-transmission.md
+      - Landauer 문서 검증 기록: quantum-transport/landauer-verification.md
