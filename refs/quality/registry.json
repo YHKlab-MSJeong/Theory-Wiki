@@ -1,0 +1,100 @@
+{
+  "computational-materials-science/quantum-transport/landauer-transmission.md": {
+    "status": "pass",
+    "document_sha256": "6813c06ec99cb1753640a9c20f4bbb99eaad46d7ee8b205c83feab444d8bd2d0",
+    "evidence": "refs/quality/evidence/landauer-2026-10-28-transition.md",
+    "evidence_sha256": "d890b076dc0505e4b271da1de93cfac1ef114bc1a7caf9b963d078c8b0042732",
+    "assets": {},
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/landauer-2026-10-28.md",
+        "sha256": "d1dc2886ddf4bc1959d8795c57591658544ff334e6ee9b6100c2e208e93e9c74"
+      }
+    ],
+    "coverage": {
+      "mode": "meaning-preserving",
+      "description": "제목과 경로, 인용 번호를 정리하고 단일 출처 TBtrans 기능 주장을 제거했다. 남은 과학 주장에는 이전 검토를 승계한다.",
+      "baseline_sha256": "126bcda3a807e23d0d3d757649757c7a0bc601e758b42b30d42fa8ef66fb0b99"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_rules",
+      "independent": true,
+      "date": "2026-10-28"
+    },
+    "sources": {
+      "bruneau": {
+        "provenance": "bruneau-2014",
+        "url": "https://arxiv.org/html/1408.0185",
+        "location": "§1.1, (1.2), (1.6), Remark 2"
+      },
+      "kohler": {
+        "provenance": "kohler-2004",
+        "url": "https://arxiv.org/pdf/cond-mat/0409251",
+        "location": "§2.4, (16)–(18)"
+      },
+      "beenakker": {
+        "provenance": "beenakker-1997",
+        "url": "https://arxiv.org/pdf/cond-mat/9612179",
+        "location": "§I.C, (1.31), (1.33)"
+      },
+      "palmqvist": {
+        "provenance": "palmqvist-2026",
+        "url": "https://research.chalmers.se/publication/551724/file/551724_Fulltext.pdf",
+        "location": "§2.3, (2.32)–(2.33)"
+      },
+      "moldoveanu": {
+        "provenance": "moldoveanu-dragomir-2022",
+        "url": "https://cifra-c2unesco.ro/wp-content/uploads/2022/10/QT-D1.pdf",
+        "location": "§4"
+      },
+      "gross": {
+        "provenance": "gross-2016",
+        "url": "https://ediss.sub.uni-hamburg.de/bitstream/ediss/6747/1/Dissertation.pdf",
+        "location": "§2.1, (2.41)"
+      },
+      "ness": {
+        "provenance": "ness-2010",
+        "url": "https://arxiv.org/pdf/1007.1104",
+        "location": "§II, (4)"
+      }
+    },
+    "findings": [
+      {
+        "claim": "독립 입자 두 전극 전류와 선형 응답",
+        "scope": "동온도, 정상, 탄성 결맞음 및 본문 극한 조건",
+        "status": "supported",
+        "sources": [
+          "bruneau",
+          "kohler"
+        ]
+      },
+      {
+        "claim": "다중 채널과 스핀 합",
+        "scope": "산란 채널 및 스핀 축퇴",
+        "status": "supported",
+        "sources": [
+          "beenakker",
+          "palmqvist"
+        ]
+      },
+      {
+        "claim": "바이어스에 따른 transmission의 변화",
+        "scope": "전자 구조가 바이어스에 의존할 수 있는 경우",
+        "status": "supported",
+        "sources": [
+          "moldoveanu",
+          "gross"
+        ]
+      },
+      {
+        "claim": "상호작용과 비탄성 수송의 적용 한계",
+        "scope": "단일 입자 기본식의 제한",
+        "status": "supported",
+        "sources": [
+          "kohler",
+          "ness"
+        ]
+      }
+    ]
+  }
+}

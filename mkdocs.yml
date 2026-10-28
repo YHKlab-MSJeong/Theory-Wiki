@@ -15,6 +15,12 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
   - Home: index.md
-  - Quantum transport:
-      - Landauer 수송과 transmission: quantum-transport/landauer-transmission.md
-      - Landauer 문서 검증 기록: quantum-transport/landauer-verification.md
+  - Device physics:
+      - Overview: device-physics/index.md
+  - Material science:
+      - Overview: computational-materials-science/index.md
+      - Quantum transport:
+          - Overview: computational-materials-science/quantum-transport/index.md
+          - Landauer transport: computational-materials-science/quantum-transport/landauer-transmission.md
+  - Computational science:
+      - Overview: computational-science/index.md

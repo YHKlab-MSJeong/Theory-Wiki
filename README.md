@@ -5,7 +5,7 @@ Markdown으로 작성하고 MkDocs로 사이트를 만든다. [위키 보기](ht
 
 ## 문서
 
-[Landauer 수송과 transmission](docs/quantum-transport/landauer-transmission.md) — 이론·인용 대조 완료. 새 문서는 [문서 템플릿](template.md)을 참고한다.
+[Landauer transport and transmission](docs/computational-materials-science/quantum-transport/landauer-transmission.md) — 이론·인용 대조 완료. 새 문서는 [문서 템플릿](template.md)을 참고한다.
 
 ## 작성 원칙
 
@@ -33,6 +33,8 @@ Markdown으로 작성하고 MkDocs로 사이트를 만든다. [위키 보기](ht
 3. 독립적인 관점에서 원문, 식, 부호, 근사와 미확인 사항을 검토한다. 검토가 끝나기 전에는 `확인 중`으로 둔다.
 4. humanizer 스킬로 표현을 다듬고 수식·조건·출처·주장의 강도를 편집 전과 대조한다. 문체 교정은 사실 검증을 대신하지 않는다.
 
-로컬 미리보기는 `python -m pip install -r requirements.txt` 후 `mkdocs serve`로 실행한다. `mkdocs build --strict`는 사이트 형식 검증이다.
+전체 작업 규칙은 [AGENTS.md](AGENTS.md)에 둔다. 검증 근거는 사이트에서 표시하지 않고 `refs/quality/`에 보존한다. 이 저장소는 공개이므로 해당 파일은 GitHub에서 볼 수 있다.
+
+로컬 미리보기는 `python -m pip install -r requirements.txt` 후 `mkdocs serve`로 실행한다. 게시 전에는 `./build.sh`를 실행한다. 이 검사는 문서와 등록된 검증 근거의 해시·일부 구조 및 MkDocs 빌드를 확인하며, 원문의 사실 여부나 전체 주장에 대한 검토를 대신하지 않는다.
 
 구성과 작성 원칙은 [RGLee-Wiki](https://github.com/ryonggyulee/RGLee-Wiki)를 참고하여 개인 학습용으로 새로 정리했다.
