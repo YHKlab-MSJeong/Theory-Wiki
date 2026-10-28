@@ -21,6 +21,7 @@ nav:
       - Overview: computational-materials-science/index.md
       - Quantum transport:
           - Overview: computational-materials-science/quantum-transport/index.md
+          - NEGF: computational-materials-science/quantum-transport/negf.md
           - Landauer transport: computational-materials-science/quantum-transport/landauer-transmission.md
   - Computational science:
       - Overview: computational-science/index.md

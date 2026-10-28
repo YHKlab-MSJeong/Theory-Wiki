@@ -96,5 +96,84 @@
         ]
       }
     ]
+  },
+  "computational-materials-science/quantum-transport/negf.md": {
+    "status": "pass",
+    "document_sha256": "295dc1507854ad621b2b31277e8c80d96eb878be8c866e2fda15945b3daa66a0",
+    "evidence": "refs/quality/evidence/negf-2026-10-28.md",
+    "evidence_sha256": "28668709c323386ca6ef65d77ffeb8a7add4b61e74b63e40b8e0e3ab1c1e0861",
+    "assets": {},
+    "coverage": {
+      "mode": "full",
+      "description": "정상상태 두 전극 NEGF 문서 전체의 식, 가정, 적용 한계와 인용을 새로 검토했다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer landauer_verify",
+      "independent": true,
+      "date": "2026-10-28"
+    },
+    "sources": {
+      "papior": {
+        "provenance": "papior-2017",
+        "url": "https://arxiv.org/pdf/1607.04464",
+        "location": "§II, (1)–(4), (6); §III.B; §IV.A, (30)"
+      },
+      "lake_pandey": {
+        "provenance": "lake-pandey-2006",
+        "url": "https://arxiv.org/pdf/cond-mat/0607219",
+        "location": "§VI.C, (102)–(103), (117)–(120); §VI.D, (121)–(122), (126)–(135)"
+      },
+      "siesta": {
+        "provenance": "siesta-5.4-manual",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html#negf-equations",
+        "location": "NEGF equations"
+      },
+      "brandbyge": {
+        "provenance": "brandbyge-2002",
+        "url": "https://arxiv.org/pdf/cond-mat/0110650",
+        "location": "§II; §V, (42)–(44)"
+      },
+      "dhar_sen": {
+        "provenance": "dhar-sen-2006",
+        "url": "https://arxiv.org/pdf/cond-mat/0510303",
+        "location": "§§II–V"
+      },
+      "jauho_wingreen_meir": {
+        "provenance": "jauho-wingreen-meir-1994",
+        "url": "https://arxiv.org/pdf/cond-mat/9404027",
+        "location": "(18)–(19)"
+      },
+      "ness": {
+        "provenance": "ness-dash-godby-2010",
+        "url": "https://arxiv.org/pdf/1007.1104",
+        "location": "§II, (4)"
+      }
+    },
+    "findings": [
+      {
+        "claim": "비직교 기저의 retarded Green 함수와 전극 self-energy",
+        "scope": "정상상태, 유한 중심영역, 비상호작용 전극",
+        "status": "supported",
+        "sources": ["papior", "lake_pandey", "siesta"]
+      },
+      {
+        "claim": "spectral function, lesser Green 함수와 중심영역 density matrix",
+        "scope": "전극 감쇠만 존재하고 전극과 분리된 bound state가 없는 경우",
+        "status": "supported",
+        "sources": ["papior", "lake_pandey", "dhar_sen"]
+      },
+      {
+        "claim": "Keldysh current와 탄성 Landauer 극한",
+        "scope": "명시한 전자 유량 부호, 탄성 단일입자 수송",
+        "status": "supported",
+        "sources": ["jauho_wingreen_meir", "lake_pandey", "papior", "brandbyge"]
+      },
+      {
+        "claim": "상호작용 및 bound state의 적용 한계",
+        "scope": "상호작용 self-energy 또는 분리된 bound state가 존재하는 경우",
+        "status": "supported",
+        "sources": ["dhar_sen", "ness", "jauho_wingreen_meir"]
+      }
+    ]
   }
 }
