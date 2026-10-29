@@ -175,5 +175,90 @@
         "sources": ["dhar_sen", "ness", "jauho_wingreen_meir"]
       }
     ]
+  },
+  "computational-materials-science/quantum-transport/landauer-buttiker.md": {
+    "status": "pass",
+    "document_sha256": "968c206595e71fec96a186d0a0c96924c6a9f5e3a766ec39d798e1e385216f42",
+    "evidence": "refs/quality/evidence/landauer-buttiker-2026-10-29.md",
+    "evidence_sha256": "623d0a0a5a2dc7b2d6d032a5073f16beb0058c9d8eebde9084c923cb955f90e3",
+    "assets": {},
+    "coverage": {
+      "mode": "full",
+      "description": "다중 전극 Landauer–Büttiker 문서 전체의 전하·에너지·열 전류, 선형 열전 응답, 보존 규약과 probe 조건을 새로 검토했다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer landauer_verify",
+      "independent": true,
+      "date": "2026-10-29"
+    },
+    "sources": {
+      "papior": {
+        "provenance": "papior-2017",
+        "url": "https://arxiv.org/pdf/1607.04464",
+        "location": "§IV.A, (24)–(31)"
+      },
+      "meair_jacquod": {
+        "provenance": "meair-jacquod-2013",
+        "url": "https://arxiv.org/pdf/1211.5583",
+        "location": "(1)–(6)"
+      },
+      "christen_buttiker": {
+        "provenance": "christen-buttiker-1996",
+        "url": "https://arxiv.org/pdf/cond-mat/9604029",
+        "location": "(1)–(4)"
+      },
+      "sanchez_serra": {
+        "provenance": "sanchez-serra-2011",
+        "url": "https://arxiv.org/pdf/1107.3576",
+        "location": "(2)–(10), isothermal and adiabatic cases"
+      },
+      "forster": {
+        "provenance": "forster-samuelsson-pilgram-buttiker-2007",
+        "url": "https://arxiv.org/pdf/cond-mat/0609544",
+        "location": "§II"
+      },
+      "shastry_stafford": {
+        "provenance": "shastry-stafford-2016",
+        "url": "https://arxiv.org/pdf/1603.00096",
+        "location": "§II"
+      },
+      "ness": {
+        "provenance": "ness-dash-godby-2010",
+        "url": "https://arxiv.org/pdf/1007.1104",
+        "location": "§II, (4)"
+      }
+    },
+    "findings": [
+      {
+        "claim": "다중 전극 transmission 방향과 Landauer–Büttiker 전하 전류",
+        "scope": "정상상태, 탄성, 위상결맞음, 비상호작용 평형 전극",
+        "status": "supported",
+        "sources": ["papior", "meair_jacquod", "sanchez_serra"]
+      },
+      {
+        "claim": "에너지·열 전류와 B=0 선형 열전 응답",
+        "scope": "양의 공통 평형 온도, 평형 transmission, 방향 대칭",
+        "status": "supported",
+        "sources": ["meair_jacquod", "sanchez_serra"]
+      },
+      {
+        "claim": "보존, time reversal과 gauge 조건",
+        "scope": "unitary scattering 및 바이어스 의존 내부 전위",
+        "status": "supported",
+        "sources": ["christen_buttiker", "papior", "meair_jacquod"]
+      },
+      {
+        "claim": "voltage, dephasing, thermoelectric probe의 경계조건",
+        "scope": "약결합된 이상 probe 모형",
+        "status": "supported",
+        "sources": ["forster", "sanchez_serra", "shastry_stafford"]
+      },
+      {
+        "claim": "상호작용과 비탄성 산란의 적용 한계",
+        "scope": "단일입자 탄성 transmission을 벗어나는 경우",
+        "status": "supported",
+        "sources": ["ness", "forster"]
+      }
+    ]
   }
 }
