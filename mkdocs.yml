@@ -17,6 +17,11 @@ nav:
   - Home: index.md
   - Device physics:
       - Overview: device-physics/index.md
+      - Mobility:
+          - Inversion-layer mobility: device-physics/mobility/inversion-layer-mobility.md
+          - Matthiessen's rule: device-physics/mobility/matthiessens-rule.md
+          - Surface-roughness scattering: device-physics/mobility/surface-roughness-scattering.md
+          - Defect scattering: device-physics/mobility/defect-scattering.md
   - Material science:
       - Overview: computational-materials-science/index.md
       - Quantum transport:
@@ -24,5 +29,10 @@ nav:
           - NEGF: computational-materials-science/quantum-transport/negf.md
           - Landauer transport: computational-materials-science/quantum-transport/landauer-transmission.md
           - Landauer–Büttiker transport: computational-materials-science/quantum-transport/landauer-buttiker.md
+          - Quantum contact resistance: computational-materials-science/quantum-transport/quantum-contact-resistance.md
+          - SCBA convergence: computational-materials-science/quantum-transport/scba-convergence.md
+          - Scattering QTBM method: computational-materials-science/quantum-transport/scattering-qtbm.md
   - Computational science:
       - Overview: computational-science/index.md
+      - Atomistic simulation:
+          - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md
