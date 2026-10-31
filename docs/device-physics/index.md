@@ -1,5 +1,7 @@
 # Device physics
 
+![Inversion-layer mobility connects charge and conductivity, while phonon, roughness and defect models feed a separately checked combination step.](../assets/mobility-overview.svg)
+
 ## Mobility
 
 - [Inversion-layer mobility](mobility/inversion-layer-mobility.md)
