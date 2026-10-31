@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="scc-workflow-title scc-workflow-desc" id="scc-workflow-root">
+        <title id="scc-workflow-title">SCC-DFTB 자기일관 루프</title>
+        <desc id="scc-workflow-desc">현재 원자 전하로 Hamiltonian을 만들고, 전자상태와 Mulliken 전하를 계산한 뒤 residual이 작아질 때까지 mixing을 거쳐 반복하는 SCC-DFTB 흐름.</desc>
+        <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #scc-workflow-root { --color-paper: #f5f5f5;
+      --color-ink: #2d3142;
+      --color-muted: #4f5d75;
+      --color-accent: #bf4520;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace; }
+      #scc-workflow-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #scc-workflow-root .diagram-container { width: 100%; overflow-x: auto; }
+      @media print {
+#scc-workflow-root .diagram-container { overflow-x: visible; }
+}</style>
+          <marker id="scc-workflow-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+          <marker id="scc-workflow-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+          <marker id="scc-workflow-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+
+          <!-- OPTIONAL: dot-pattern background. Uncomment the <pattern> and the second <rect> below if you want the dotted paper look. -->
+          <!--
+          <pattern id="scc-workflow-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="rgba(45,49,66,0.10)"/>
+          </pattern>
+          -->
+        </defs>
+
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <!-- <rect width="100%" height="100%" fill="url(#scc-workflow-dots)" opacity="0.55"/> -->
+
+        <!-- Arrows first: all convey the stated fixed-point iteration only. -->
+        <path d="M240 236 H292" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#scc-workflow-arrow)"/>
+        <path d="M468 236 H520" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#scc-workflow-arrow)"/>
+        <path d="M696 236 H748" fill="none" stroke="#bf4520" stroke-width="1.4" marker-end="url(#scc-workflow-arrow-accent)"/>
+        <path d="M840 300 V372 H160 V300" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#scc-workflow-arrow)"/>
+        <path d="M792 300 V420 H792" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#scc-workflow-arrow)"/>
+
+        <rect x="56" y="184" width="184" height="116" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+        <rect x="72" y="200" width="44" height="16" rx="2" fill="#2d3142" fill-opacity=".10"/><text x="94" y="212" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="#4f5d75">INPUT</text>
+        <text x="148" y="244" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="16" font-weight="600" fill="#2d3142">현재 Δq</text><text x="148" y="268" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#4f5d75">mixed atomic charges</text>
+        <rect x="292" y="184" width="176" height="116" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+        <rect x="308" y="200" width="40" height="16" rx="2" fill="#2d3142" fill-opacity=".10"/><text x="328" y="212" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="#4f5d75">BUILD</text>
+        <text x="380" y="244" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="16" font-weight="600" fill="#2d3142">Hamiltonian H(Δq)</text><text x="380" y="268" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#4f5d75">H⁰ + SCC correction</text>
+        <rect x="520" y="184" width="176" height="116" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+        <rect x="536" y="200" width="36" height="16" rx="2" fill="#2d3142" fill-opacity=".10"/><text x="554" y="212" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="#4f5d75">SOLVE</text>
+        <text x="608" y="244" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="16" font-weight="600" fill="#2d3142">electronic states</text><text x="608" y="268" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#4f5d75">density matrix</text>
+        <rect x="748" y="184" width="144" height="116" rx="6" fill="#bf4520" stroke="#bf4520" stroke-width="1.2" fill-opacity=".08"/>
+        <rect x="764" y="200" width="48" height="16" rx="2" fill="#bf4520" fill-opacity=".18"/><text x="788" y="212" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="#bf4520">OUTPUT</text>
+        <text x="820" y="244" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="16" font-weight="600" fill="#2d3142">new Δq</text><text x="820" y="268" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#4f5d75">Mulliken population</text>
+        <rect x="696" y="420" width="192" height="96" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+        <text x="792" y="456" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="16" font-weight="600" fill="#2d3142">residual test</text><text x="792" y="480" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#4f5d75">‖f(Δq) − Δq‖ &lt; tolerance?</text>
+        <text x="454" y="404" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="12" font-weight="500" fill="#4f5d75">no: mixing 후 반복</text>
+        <text x="858" y="364" text-anchor="middle" font-family="Geist, Noto Sans KR, sans-serif" font-size="12" font-weight="500" fill="#bf4520">yes: SCC fixed point</text>
+        <line x1="48" y1="548" x2="912" y2="548" stroke="#2d3142" stroke-opacity=".18"/>
+        <text x="56" y="574" font-family="Geist, Noto Sans KR, sans-serif" font-size="12" fill="#4f5d75">수렴은 선택한 DFTB 모형의 전하 고정점을 뜻하며, parameter validity나 물리적 정확도를 보증하지 않는다.</text>
+
+      </svg>
