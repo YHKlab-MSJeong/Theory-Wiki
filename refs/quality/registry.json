@@ -1,25 +1,31 @@
 {
   "computational-materials-science/quantum-transport/landauer-transmission.md": {
     "status": "pass",
-    "document_sha256": "6813c06ec99cb1753640a9c20f4bbb99eaad46d7ee8b205c83feab444d8bd2d0",
-    "evidence": "refs/quality/evidence/landauer-2026-10-28-transition.md",
-    "evidence_sha256": "d890b076dc0505e4b271da1de93cfac1ef114bc1a7caf9b963d078c8b0042732",
-    "assets": {},
+    "document_sha256": "f38b0c54f37641c61d0b63c904d443ccc5948068133f1316f03f7f962ecf313b",
+    "evidence": "refs/quality/evidence/landauer-current-window-2026-11-05.md",
+    "evidence_sha256": "ece9119b2a9776e462bfca8f1e29408d03b40bcd15d49aca40b4483c3e8a4c3f",
+    "assets": {
+      "assets/landauer-current-window.svg": "964fa82b36e851e57a58af26c5c3c4f40f3302b2d446a5b8c5fbc5f8db026115"
+    },
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/landauer-2026-10-28.md",
         "sha256": "d1dc2886ddf4bc1959d8795c57591658544ff334e6ee9b6100c2e208e93e9c74"
+      },
+      {
+        "path": "refs/quality/evidence/landauer-2026-10-28-transition.md",
+        "sha256": "d890b076dc0505e4b271da1de93cfac1ef114bc1a7caf9b963d078c8b0042732"
       }
     ],
     "coverage": {
-      "mode": "meaning-preserving",
-      "description": "제목과 경로, 인용 번호를 정리하고 단일 출처 TBtrans 기능 주장을 제거했다. 남은 과학 주장에는 이전 검토를 승계한다.",
-      "baseline_sha256": "126bcda3a807e23d0d3d757649757c7a0bc601e758b42b30d42fa8ef66fb0b99"
+      "mode": "changes",
+      "description": "전극 점유 차이와 T(E,V)를 전류 적분으로 잇고, V→0과 Θ→0의 극한을 분리해 그렸다.",
+      "baseline_sha256": "6813c06ec99cb1753640a9c20f4bbb99eaad46d7ee8b205c83feab444d8bd2d0"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_rules",
+      "role": "independent AI reviewer wiki_transport_diagram_review",
       "independent": true,
-      "date": "2026-10-28"
+      "date": "2026-11-05"
     },
     "sources": {
       "bruneau": {
@@ -94,102 +100,123 @@
           "kohler",
           "ness"
         ]
+      },
+      {
+        "claim": "reservoir occupation difference weights energy-dependent transmission in finite-bias current; linear-response and zero-temperature limits yield thermal weighting and Fermi-energy conductance",
+        "scope": "two-terminal, elastic coherent transport under the document assumptions",
+        "status": "supported",
+        "sources": [
+          "bruneau",
+          "kohler"
+        ]
       }
     ]
   },
-  "computational-materials-science/quantum-transport/negf.md": {
+  "computational-materials-science/quantum-transport/negf.md":   {
     "status": "pass",
-    "document_sha256": "295dc1507854ad621b2b31277e8c80d96eb878be8c866e2fda15945b3daa66a0",
-    "evidence": "refs/quality/evidence/negf-2026-10-28.md",
-    "evidence_sha256": "28668709c323386ca6ef65d77ffeb8a7add4b61e74b63e40b8e0e3ab1c1e0861",
-    "assets": {},
+    "document_sha256": "df333a7f89af78645d793f77d93891d0f716bd50241b6ae67ab1ffe9b4ff2598",
+    "evidence": "refs/quality/evidence/negf-workflow-2026-11-05.md",
+    "evidence_sha256": "a70ff611c42c3a5b452cd47d3a3a9f2b22678c20a4877f8e2aa9da7473af0104",
+    "assets": {
+      "assets/negf-workflow.svg": "7b09623a14e4e32579c94fa40e584eb22d7421e313bd5d872189d494d2267f7a"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/negf-2026-10-28.md",
+        "sha256": "28668709c323386ca6ef65d77ffeb8a7add4b61e74b63e40b8e0e3ab1c1e0861"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "정상상태 두 전극 NEGF 문서 전체의 식, 가정, 적용 한계와 인용을 새로 검토했다."
+      "mode": "changes",
+      "description": "기존 NEGF 설명은 유지하고, 독립 검토에서 드러난 도식 입력의 혼동을 고쳐 lead 구조·결합, reservoir 점유, 전체 lead-current 식을 구분했다.",
+      "baseline_sha256": "295dc1507854ad621b2b31277e8c80d96eb878be8c866e2fda15945b3daa66a0"
     },
     "reviewer": {
-      "role": "independent AI reviewer landauer_verify",
+      "role": "independent AI reviewers diagram_final_review and wiki_transport_diagram_review",
       "independent": true,
-      "date": "2026-10-28"
+      "date": "2026-11-05"
     },
     "sources": {
       "papior": {
         "provenance": "papior-2017",
         "url": "https://arxiv.org/pdf/1607.04464",
-        "location": "§II, (1)–(4), (6); §III.B; §IV.A, (30)"
+        "location": "§II, (1)–(4); §III.B; §IV.A"
       },
       "lake_pandey": {
         "provenance": "lake-pandey-2006",
         "url": "https://arxiv.org/pdf/cond-mat/0607219",
-        "location": "§VI.C, (102)–(103), (117)–(120); §VI.D, (121)–(122), (126)–(135)"
+        "location": "§VI.C–D"
       },
       "siesta": {
         "provenance": "siesta-5.4-manual",
         "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html#negf-equations",
         "location": "NEGF equations"
       },
-      "brandbyge": {
-        "provenance": "brandbyge-2002",
-        "url": "https://arxiv.org/pdf/cond-mat/0110650",
-        "location": "§II; §V, (42)–(44)"
+      "lee_sanvito": {
+        "provenance": "lee-sanvito-2008",
+        "url": "https://arxiv.org/pdf/0804.3389",
+        "location": "§II, (2)–(9)"
       },
-      "dhar_sen": {
-        "provenance": "dhar-sen-2006",
-        "url": "https://arxiv.org/pdf/cond-mat/0510303",
-        "location": "§§II–V"
-      },
-      "jauho_wingreen_meir": {
+      "jauho": {
         "provenance": "jauho-wingreen-meir-1994",
         "url": "https://arxiv.org/pdf/cond-mat/9404027",
         "location": "(18)–(19)"
       },
-      "ness": {
-        "provenance": "ness-dash-godby-2010",
-        "url": "https://arxiv.org/pdf/1007.1104",
-        "location": "§II, (4)"
+      "brandbyge": {
+        "provenance": "brandbyge-2002",
+        "url": "https://arxiv.org/pdf/cond-mat/0110650",
+        "location": "§II, §V"
       }
     },
     "findings": [
       {
-        "claim": "비직교 기저의 retarded Green 함수와 전극 self-energy",
-        "scope": "정상상태, 유한 중심영역, 비상호작용 전극",
+        "claim": "retarded boundary input and reservoir lesser injection",
+        "scope": "steady-state two-terminal NEGF lead self-energies",
         "status": "supported",
-        "sources": ["papior", "lake_pandey", "siesta"]
+        "sources": [
+          "papior",
+          "siesta",
+          "lee_sanvito"
+        ]
       },
       {
-        "claim": "spectral function, lesser Green 함수와 중심영역 density matrix",
-        "scope": "전극 감쇠만 존재하고 전극과 분리된 bound state가 없는 경우",
+        "claim": "density and terminal current use distinct Green-function observables and lead-current expression",
+        "scope": "electrode-only lesser Green function and steady-state lead current",
         "status": "supported",
-        "sources": ["papior", "lake_pandey", "dhar_sen"]
+        "sources": [
+          "jauho",
+          "papior",
+          "brandbyge"
+        ]
       },
       {
-        "claim": "Keldysh current와 탄성 Landauer 극한",
-        "scope": "명시한 전자 유량 부호, 탄성 단일입자 수송",
+        "claim": "electrostatic density feedback is an optional coupled outer loop",
+        "scope": "Poisson/Hamiltonian self-consistent transport calculation",
         "status": "supported",
-        "sources": ["jauho_wingreen_meir", "lake_pandey", "papior", "brandbyge"]
-      },
-      {
-        "claim": "상호작용 및 bound state의 적용 한계",
-        "scope": "상호작용 self-energy 또는 분리된 bound state가 존재하는 경우",
-        "status": "supported",
-        "sources": ["dhar_sen", "ness", "jauho_wingreen_meir"]
+        "sources": [
+          "papior",
+          "brandbyge"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/landauer-buttiker.md": {
     "status": "pass",
-    "document_sha256": "968c206595e71fec96a186d0a0c96924c6a9f5e3a766ec39d798e1e385216f42",
-    "evidence": "refs/quality/evidence/landauer-buttiker-2026-10-29.md",
-    "evidence_sha256": "623d0a0a5a2dc7b2d6d032a5073f16beb0058c9d8eebde9084c923cb955f90e3",
-    "assets": {},
+    "document_sha256": "bcee4c43ba5977745ad7371b98c88fd7e5ccd2ecf1ed358ad0daa7ace1985091",
+    "evidence": "refs/quality/evidence/landauer-buttiker-probes-2026-11-05.md",
+    "evidence_sha256": "9363bd0ff7ed17dace2215aea3e3b016637357766e531b7f5eedde5b1901b7bf",
+    "assets": {
+      "assets/landauer-buttiker-probes.svg": "d63cb66382aaf1221faf9c78cc14efaf06caa14a18999aafd34682ddd15528cb"
+    },
     "coverage": {
-      "mode": "full",
-      "description": "다중 전극 Landauer–Büttiker 문서 전체의 전하·에너지·열 전류, 선형 열전 응답, 보존 규약과 probe 조건을 새로 검토했다."
+      "mode": "changes",
+      "description": "각 방향 Tαβ를 독립 표기로 두고 단자 전류식과 세 종류 probe 조건을 분리했다.",
+      "baseline_sha256": "968c206595e71fec96a186d0a0c96924c6a9f5e3a766ec39d798e1e385216f42"
     },
     "reviewer": {
-      "role": "independent AI reviewer landauer_verify",
+      "role": "independent AI reviewer wiki_transport_diagram_review",
       "independent": true,
-      "date": "2026-10-29"
+      "date": "2026-11-05"
     },
     "sources": {
       "papior": {
@@ -233,40 +260,617 @@
         "claim": "다중 전극 transmission 방향과 Landauer–Büttiker 전하 전류",
         "scope": "정상상태, 탄성, 위상결맞음, 비상호작용 평형 전극",
         "status": "supported",
-        "sources": ["papior", "meair_jacquod", "sanchez_serra"]
+        "sources": [
+          "papior",
+          "meair_jacquod",
+          "sanchez_serra"
+        ]
       },
       {
         "claim": "에너지·열 전류와 B=0 선형 열전 응답",
         "scope": "양의 공통 평형 온도, 평형 transmission, 방향 대칭",
         "status": "supported",
-        "sources": ["meair_jacquod", "sanchez_serra"]
+        "sources": [
+          "meair_jacquod",
+          "sanchez_serra"
+        ]
       },
       {
         "claim": "보존, time reversal과 gauge 조건",
         "scope": "unitary scattering 및 바이어스 의존 내부 전위",
         "status": "supported",
-        "sources": ["christen_buttiker", "papior", "meair_jacquod"]
+        "sources": [
+          "christen_buttiker",
+          "papior",
+          "meair_jacquod"
+        ]
       },
       {
         "claim": "voltage, dephasing, thermoelectric probe의 경계조건",
         "scope": "약결합된 이상 probe 모형",
         "status": "supported",
-        "sources": ["forster", "sanchez_serra", "shastry_stafford"]
+        "sources": [
+          "forster",
+          "sanchez_serra",
+          "shastry_stafford"
+        ]
       },
       {
         "claim": "상호작용과 비탄성 산란의 적용 한계",
         "scope": "단일입자 탄성 transmission을 벗어나는 경우",
         "status": "supported",
-        "sources": ["ness", "forster"]
+        "sources": [
+          "ness",
+          "forster"
+        ]
+      },
+      {
+        "claim": "multi-terminal current is a signed sum over directed transmissions and reservoir occupations; voltage, voltage–temperature, and dephasing probes impose different zero-current conditions",
+        "scope": "stationary elastic coherent transport with the document current convention",
+        "status": "supported",
+        "sources": [
+          "papior",
+          "forster",
+          "sanchez_serra",
+          "shastry_stafford"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/landauer-buttiker-2026-10-29.md",
+        "sha256": "623d0a0a5a2dc7b2d6d032a5073f16beb0058c9d8eebde9084c923cb955f90e3"
       }
     ]
   },
-  "device-physics/mobility/inversion-layer-mobility.md":{"status":"pass","document_sha256":"2602c765dcc8745ffce2086313e563198d5d823523531de0ba3243b6087ac7b6","evidence":"refs/quality/evidence/inversion-layer-mobility-2026-10-30.md","evidence_sha256":"32e9a9be4edea65f3a675edcc91e7c048207d3af9f1614db59958784ba491138","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_rules","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"lundstrom","url":"https://arxiv.org/pdf/1603.03132","location":"§2–3"},"b":{"provenance":"yeh","url":"https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content","location":"§III"}},"findings":[{"claim":"effective mobility extraction","scope":"low-field diffusive","status":"supported","sources":["a","b"]}]},
-  "device-physics/mobility/matthiessens-rule.md":{"status":"pass","document_sha256":"23fbfaf51452a963572f3f4f0a3ec58f93b93b7e2167d5d7ccd9af9934ee0463","evidence":"refs/quality/evidence/matthiessens-rule-2026-10-30.md","evidence_sha256":"c0a1afd4e1451417e93016aeba26a5e8e4d2d7347cbc186aad17c2511a44974f","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_rules","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"wettstein","url":"https://iis-people.ee.ethz.ch/~schenk/theses/wettstein.pdf","location":"Appendix A.1"},"b":{"provenance":"lundstrom","url":"https://arxiv.org/pdf/1603.03132","location":"§6"}},"findings":[{"claim":"rate and mobility addition distinction","scope":"stated approximations","status":"supported","sources":["a","b"]}]},
-  "device-physics/mobility/surface-roughness-scattering.md":{"status":"pass","document_sha256":"35380d50d6c935f2aaf907e8636ba427ffe25be2f5be017679273e16d4ba0675","evidence":"refs/quality/evidence/surface-roughness-scattering-2026-10-30.md","evidence_sha256":"41d5db4adf56e8ad8a19e5fa7de386c3314e9d96e6b5b379ffd64443f5fb1a85","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_rules","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"badami","url":"https://air.uniud.it/retrieve/e27ce0c5-bae9-055e-e053-6605fe0a7873/Badami_PhDThesisUploaded.pdf","location":"Ch.2"},"b":{"provenance":"sano","url":"https://arxiv.org/html/2604.22155","location":"§II–III"}},"findings":[{"claim":"roughness correlation model","scope":"Born statistics","status":"supported","sources":["a","b"]}]},
-  "device-physics/mobility/defect-scattering.md":{"status":"pass","document_sha256":"0ffb3f41377d4e10a492dcc45e5ab8211859e63c66dda8fcbd0b17873134d826","evidence":"refs/quality/evidence/defect-scattering-2026-10-30.md","evidence_sha256":"c0e0c876b39a78f7fc9f6e1d05c07a206818bd6524fefc8ec3115bb5fe662f96","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_rules","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"hwang","url":"https://arxiv.org/pdf/cond-mat/0608645","location":"(1)–(3)"},"b":{"provenance":"kaasbjerg","url":"https://arxiv.org/pdf/1612.00469","location":"§II"}},"findings":[{"claim":"defect scattering model","scope":"2D cases","status":"supported","sources":["a","b"]}]},
-  "computational-materials-science/quantum-transport/quantum-contact-resistance.md":{"status":"pass","document_sha256":"40b925378cb79b2689b5fb2c338b1b7dc92ea230c8ac559d472898db53cda290","evidence":"refs/quality/evidence/quantum-contact-resistance-2026-10-30.md","evidence_sha256":"3ccb4d119ca235cf3f16eea3babd756710e9554cf08212dba40afab537d4ab99","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_tooling","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"beenakker","url":"https://arxiv.org/pdf/cond-mat/9612179","location":"§I.C.2"},"b":{"provenance":"feilhauer","url":"https://arxiv.org/pdf/1011.6193","location":"§I"}},"findings":[{"claim":"conductance quantum","scope":"zero-temperature linear response","status":"supported","sources":["a","b"]}]},
-  "computational-materials-science/quantum-transport/scba-convergence.md":{"status":"pass","document_sha256":"6a194a73c50ecd4b9abf8548b28d7f6d5e43c6af4f33db5d5d32f8e82b889021","evidence":"refs/quality/evidence/scba-convergence-2026-10-30.md","evidence_sha256":"fd3efd70bfaaee033d8665c3612f5c5c699d1b7a55ef3a44b463b31965508d81","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_tooling","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"bescond","url":"https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf","location":"§II"},"b":{"provenance":"mera","url":"https://arxiv.org/html/1512.06846","location":"§V"}},"findings":[{"claim":"SCBA iteration","scope":"stated models","status":"supported","sources":["a","b"]}]},
-  "computational-materials-science/quantum-transport/scattering-qtbm.md":{"status":"pass","document_sha256":"57d16c75a0fe3fc3fdf1ed7d617f011b348aa60a91286aebddcf93b72498657b","evidence":"refs/quality/evidence/scattering-qtbm-2026-10-30.md","evidence_sha256":"bb9688662e56eadc0ea3a6ab25a0b31cf8f1f3f774c8eda31d56272be50b20b3","assets":{},"coverage":{"mode":"full","description":"full review"},"reviewer":{"role":"independent AI reviewer wiki_tooling","independent":true,"date":"2026-10-30"},"sources":{"a":{"provenance":"frensley","url":"https://personal.utdallas.edu/~frensley/technical/FrensleyRMP1990.pdf","location":"Appendix D"},"b":{"provenance":"shao","url":"https://academicweb.nd.edu/~lent/pdf/nd/An_eigenvalue_method_for_open-boundary_quantum_transmission_problems.pdf","location":"§I–II"}},"findings":[{"claim":"elastic QTBM","scope":"stationary single-particle","status":"supported","sources":["a","b"]}]},
+  "device-physics/mobility/inversion-layer-mobility.md":{
+    "status": "pass",
+    "document_sha256": "3af4ae637eb2dd32dc0ec9da5e683d4e6d4cc540bc45ed70b0c8a8d5e942c62b",
+    "evidence": "refs/quality/evidence/inversion-layer-mobility-2026-11-05.md",
+    "evidence_sha256": "c02e2d884dc5db5735eab6ee2fe240e807ed2bb99a4d0ee634bda2dd1db54d80",
+    "assets": {
+      "assets/inversion-layer-mobility.svg": "ba1228b23fc91dc7710ae5780f8ccc1b812aedc9d38d3b4018bb4164dbdddb74"
+    },
+    "coverage": {
+      "mode": "changes",
+      "description": "gate, oxide, semiconductor 및 계면 sheet density의 위치와 저전계 μeff 정의를 연결했다.",
+      "baseline_sha256": "2602c765dcc8745ffce2086313e563198d5d823523531de0ba3243b6087ac7b6"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_device_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "a": {
+        "provenance": "lundstrom",
+        "url": "https://arxiv.org/pdf/1603.03132",
+        "location": "§2–3"
+      },
+      "b": {
+        "provenance": "yeh",
+        "url": "https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content",
+        "location": "§III"
+      }
+    },
+    "findings": [
+      {
+        "claim": "effective mobility extraction",
+        "scope": "low-field diffusive",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "gate-induced inversion sheet conducts laterally and the low-field diffusive effective mobility is sheet conductivity divided by q times sheet carrier density",
+        "scope": "low-field, diffusive channel and the document extraction convention",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/inversion-layer-mobility-2026-10-30.md",
+        "sha256": "32e9a9be4edea65f3a675edcc91e7c048207d3af9f1614db59958784ba491138"
+      }
+    ]
+  },
+  "device-physics/mobility/matthiessens-rule.md":{
+    "status": "pass",
+    "document_sha256": "e0631d508f9f3a02fb0169599562329ec1e1854f971d6eca56402b32ef56ce00",
+    "evidence": "refs/quality/evidence/matthiessen-rates-2026-11-05.md",
+    "evidence_sha256": "6d7ffa5f2709afb6956cc2bf6f5900685480ca61abaf23a08727decc20d36408",
+    "assets": {
+      "assets/matthiessen-rates.svg": "80afbfd99df77a72f3e255191225e7a9e30a0df59ba01f7c66063bc12ce480cb"
+    },
+    "coverage": {
+      "mode": "changes",
+      "description": "에너지별 rate 합과 평균된 이동도 역수 합을 서로 다른 단계로 그렸다.",
+      "baseline_sha256": "23fbfaf51452a963572f3f4f0a3ec58f93b93b7e2167d5d7ccd9af9934ee0463"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_device_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "a": {
+        "provenance": "wettstein",
+        "url": "https://iis-people.ee.ethz.ch/~schenk/theses/wettstein.pdf",
+        "location": "Appendix A.1"
+      },
+      "b": {
+        "provenance": "lundstrom",
+        "url": "https://arxiv.org/pdf/1603.03132",
+        "location": "§6"
+      }
+    },
+    "findings": [
+      {
+        "claim": "rate and mobility addition distinction",
+        "scope": "stated approximations",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "fixed-energy independent scattering rates may be added in the stated approximation, while inverse energy-averaged effective mobilities require additional transport-weighting assumptions",
+        "scope": "independent scattering mechanisms and relaxation-time transport approximation",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/matthiessens-rule-2026-10-30.md",
+        "sha256": "c0a1afd4e1451417e93016aeba26a5e8e4d2d7347cbc186aad17c2511a44974f"
+      }
+    ]
+  },
+  "device-physics/mobility/surface-roughness-scattering.md":{
+    "status": "pass",
+    "document_sha256": "99bf846e6177c964a251de04f9827700335db754d041c584653c48dd28125cb2",
+    "evidence": "refs/quality/evidence/surface-roughness-scattering-2026-11-05.md",
+    "evidence_sha256": "54d28e9b47fceb28d566a9b2d1ca4da7c6579dd94d9f111085d8e8b3d68d4954",
+    "assets": {
+      "assets/surface-roughness-scattering.svg": "f0667f494f871c5ca3e9060da06c7a9a767e32e71fb6c6dad3ba563690824b25"
+    },
+    "coverage": {
+      "mode": "changes",
+      "description": "높이 통계, C(r)/S(q), 전위 matrix element, elastic transition rate의 순서를 나타냈다.",
+      "baseline_sha256": "35380d50d6c935f2aaf907e8636ba427ffe25be2f5be017679273e16d4ba0675"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_device_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "a": {
+        "provenance": "badami",
+        "url": "https://air.uniud.it/retrieve/e27ce0c5-bae9-055e-e053-6605fe0a7873/Badami_PhDThesisUploaded.pdf",
+        "location": "Ch.2"
+      },
+      "b": {
+        "provenance": "sano",
+        "url": "https://arxiv.org/html/2604.22155",
+        "location": "§II–III"
+      }
+    },
+    "findings": [
+      {
+        "claim": "roughness correlation model",
+        "scope": "Born statistics",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "roughness correlation spectrum contributes to perturbation matrix elements and transition rates, but height and correlation length alone do not determine a universal mobility",
+        "scope": "the document correlation models and Born/Fermi-golden-rule formulation",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/surface-roughness-scattering-2026-10-30.md",
+        "sha256": "41d5db4adf56e8ad8a19e5fa7de386c3314e9d96e6b5b379ffd64443f5fb1a85"
+      }
+    ]
+  },
+  "device-physics/mobility/defect-scattering.md":{
+    "status": "pass",
+    "document_sha256": "0d58789a120899d4d0fd84effa7a1bd5a50d1e70460fde6823bf7efedbbf6293",
+    "evidence": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
+    "evidence_sha256": "af7d40f736ab084d5f17e0c6f8a352f2350c2d60216a2605aca3670163d20494",
+    "assets": {
+      "assets/defect-scattering-model.svg": "763eaa76a25de0c6b5751262ee60e86feb6ddaa8d81542d83ed4ba2b23df84d5"
+    },
+    "coverage": {
+      "mode": "changes",
+      "description": "Defect 도식에 단일 결함 matrix element 정의, normalization, disorder 평균 제곱행렬원소와 rate-level density/final-state sum을 분리해 반영했다.",
+      "baseline_sha256": "0ffb3f41377d4e10a492dcc45e5ab8211859e63c66dda8fcbd0b17873134d826"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_device_audit",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "a": {
+        "provenance": "hwang",
+        "url": "https://arxiv.org/pdf/cond-mat/0608645",
+        "location": "(1)–(3)"
+      },
+      "b": {
+        "provenance": "kaasbjerg",
+        "url": "https://arxiv.org/pdf/1612.00469",
+        "location": "§II"
+      }
+    },
+    "findings": [
+      {
+        "claim": "defect scattering model",
+        "scope": "2D cases",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "single-defect matrix element Mₖ′ₖ=⟨k′|Vⱼ|k⟩ is normalized before the disorder average of |M|²; independent-defect Born rate then uses defect density and a final-state sum, while one periodic supercell is not random-ensemble mobility",
+        "scope": "weak-disorder/Born treatment in the cited two-dimensional examples",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/defect-scattering-2026-10-30.md",
+        "sha256": "c0e0c876b39a78f7fc9f6e1d05c07a206818bd6524fefc8ec3115bb5fe662f96"
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/quantum-contact-resistance.md":{
+    "status": "pass",
+    "document_sha256": "729c90c905e0c9d58daa3ed08c1a8f8a848a25e017325436b70f75e23c4e2fee",
+    "evidence": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
+    "evidence_sha256": "7b98d12e743f2c869cbcddfc498cb4d8b108a7ebf506ffbed7ada1794a75ea0a",
+    "assets": {
+      "assets/quantum-contact-resistance.svg": "d2813113e291e55dbe6d3390c30c0ca149bbd3246ce9d3b3b6e9ac0ad2d92773"
+    },
+    "coverage": {
+      "mode": "changes",
+      "description": "채널 degeneracy와 전체 two-terminal 값, 대칭 bookkeeping 및 비대칭 contact의 차이를 한 그림에 담았다.",
+      "baseline_sha256": "40b925378cb79b2689b5fb2c338b1b7dc92ea230c8ac559d472898db53cda290"
+    },
+    "reviewer": {
+      "role": "independent AI reviewers wiki_tooling and wiki_transport_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "a": {
+        "provenance": "beenakker",
+        "url": "https://arxiv.org/pdf/cond-mat/9612179",
+        "location": "§I.C.2"
+      },
+      "b": {
+        "provenance": "feilhauer",
+        "url": "https://arxiv.org/pdf/1011.6193",
+        "location": "§I"
+      },
+      "mortensen": {
+        "provenance": "mortensen-et-al-1999",
+        "url": "https://arxiv.org/pdf/cond-mat/9907026",
+        "location": "§I"
+      },
+      "texier_montambaux": {
+        "provenance": "texier-montambaux-four-terminal-resistances",
+        "url": "https://gilles.montambaux.com/files/publications/reprints/189_four_terminal_resistances.pdf",
+        "location": "§2"
+      },
+      "landauer": {
+        "provenance": "landauer-conductance-determined-by-transmission-1989",
+        "url": "https://doi.org/10.1088/0953-8984/1/43/011",
+        "location": "Abstract"
+      }
+    },
+    "findings": [
+      {
+        "claim": "conductance quantum",
+        "scope": "zero-temperature linear response",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "N fully transmitting spin-degenerate modes give G=(2e²/h)N and R2t=h/(2e²N)",
+        "scope": "ideal zero-temperature two-terminal, unit-transmission limit; spin degeneracy counted once",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "claim": "equal half-per-contact values are a symmetry-based bookkeeping inference for the symmetric ideal model, not universal physical contact resistances",
+        "scope": "symmetric ideal two-terminal model; asymmetric contacts have no universal half assignment",
+        "status": "supported",
+        "sources": [
+          "a",
+          "mortensen"
+        ]
+      }
+    ],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/quantum-contact-resistance-2026-10-30.md",
+        "sha256": "3ccb4d119ca235cf3f16eea3babd756710e9554cf08212dba40afab537d4ab99"
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/scba-convergence.md":  {
+    "status": "pass",
+    "document_sha256": "8279202afd0c89a08125c565e9a2354fb7c9037c6030e53bc02a4647082d27ca",
+    "evidence": "refs/quality/evidence/scba-workflow-2026-11-05.md",
+    "evidence_sha256": "0750f5412f5aa8b977f5d69625cddf0b39693514fbd7a21cbfe35617ca38424d",
+    "assets": {
+      "assets/scba-fixed-point.svg": "b9b63a2c647e08f820d3fd710dd4520c0df36eb6c62b400595a044d8b09a9285"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/scba-convergence-2026-10-30.md",
+        "sha256": "fd3efd70bfaaee033d8665c3612f5c5c699d1b7a55ef3a44b463b31965508d81"
+      }
+    ],
+    "coverage": {
+      "mode": "changes",
+      "description": "SCBA의 Born/self-consistent 용어를 기준 모형 앞에서 정의하고 고정점 도식 설명을 보완했다.",
+      "baseline_sha256": "6a194a73c50ecd4b9abf8548b28d7f6d5e43c6af4f33db5d5d32f8e82b889021"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer wiki_transport_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "bescond": {
+        "provenance": "bescond-2013",
+        "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf",
+        "location": "§II, (1)–(2)"
+      },
+      "lee_sanvito": {
+        "provenance": "lee-sanvito-2008",
+        "url": "https://arxiv.org/pdf/0804.3389",
+        "location": "abstract; §II.B, §III.B, §V"
+      },
+      "mera": {
+        "provenance": "mera-pedersen-nikolic-2016",
+        "url": "https://arxiv.org/html/1512.06846",
+        "location": "§I–II, §V.1–2"
+      }
+    },
+    "findings": [
+      {
+        "claim": "SCBA fixed-point iteration maps Green functions to scattering self-energy and back through Dyson-Keldysh",
+        "scope": "stated steady-state scattering model",
+        "status": "supported",
+        "sources": [
+          "bescond",
+          "mera"
+        ]
+      },
+      {
+        "claim": "unmixed fixed-point residual differs from the mixed update size",
+        "scope": "iterative convergence diagnosis",
+        "status": "supported",
+        "sources": [
+          "lee_sanvito",
+          "bescond"
+        ]
+      },
+      {
+        "claim": "current, grid, causality, and optional electrostatic checks remain separate from residual convergence",
+        "scope": "numerical and model diagnostics",
+        "status": "supported",
+        "sources": [
+          "lee_sanvito",
+          "mera",
+          "bescond"
+        ]
+      },
+      {
+        "claim": "Born denotes the selected perturbative interaction self-energy approximation; self-consistency updates the selected Sigma[G], while interactions, bath, and diagram set remain model choices",
+        "scope": "the cited electron-phonon SCBA examples and steady-state NEGF iteration",
+        "status": "supported",
+        "sources": [
+          "bescond",
+          "lee_sanvito",
+          "mera"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/scattering-qtbm.md":  {
+    "status": "pass",
+    "document_sha256": "d331be396872b0417a5a8aaf47be3df95e53735a3e6ae30486cc97bba4b1a9fb",
+    "evidence": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
+    "evidence_sha256": "225d1a042aa354511931a3901e06a2860ca8e86228bddaa0fdff648a05c9ead8",
+    "assets": {
+      "assets/qtbm-workflow.svg": "8333b6f4447a4fb2111bfcbddfbcbe7553bedadd65fbf10f5ed0b45c902bc117"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/scattering-qtbm-2026-10-30.md",
+        "sha256": "bb9688662e56eadc0ea3a6ab25a0b31cf8f1f3f774c8eda31d56272be50b20b3"
+      }
+    ],
+    "coverage": {
+      "mode": "full",
+      "description": "QTBM 기초와 산란 확장 문서를 재구성하고 boundary, flux, signed energy-integrated current, closure와 evanescent mode 범위를 검토했다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewers qtbm_citations_final, qtbm_evanescent_review, and wiki_transport_diagram_review",
+      "independent": true,
+      "date": "2026-11-05"
+    },
+    "sources": {
+      "frensley": {
+        "provenance": "frensley-1990",
+        "url": "https://personal.utdallas.edu/~frensley/technical/FrensleyRMP1990.pdf",
+        "location": "Appendix D, (D1)–(D6)"
+      },
+      "gehring": {
+        "provenance": "gehring-2003",
+        "url": "https://repositum.tuwien.at/bitstream/20.500.12708/12170/2/Gehring%20Andreas%20-%202003%20-%20Simulation%20of%20tunneling%20in%20semiconductor%20devices.pdf",
+        "location": "§3.5.4, (3.92)–(3.99); §3.5, (3.55)–(3.56)"
+      },
+      "shao": {
+        "provenance": "shao-porod-lent-kirkner-1995",
+        "url": "https://academicweb.nd.edu/~lent/pdf/nd/An_eigenvalue_method_for_open-boundary_quantum_transmission_problems.pdf",
+        "location": "§II, (2)"
+      },
+      "lake_pandey": {
+        "provenance": "lake-pandey-2006",
+        "url": "https://arxiv.org/pdf/cond-mat/0607219",
+        "location": "§VI.C–D"
+      },
+      "papior": {
+        "provenance": "papior-2017",
+        "url": "https://arxiv.org/pdf/1607.04464",
+        "location": "§II, (1)–(4)"
+      },
+      "bruneau": {
+        "provenance": "bruneau-jaksic-last-pillet-2014",
+        "url": "https://arxiv.org/html/1408.0185",
+        "location": "§1.1, (1.2), (1.6)"
+      },
+      "kohler": {
+        "provenance": "kohler-lehmann-haenggi-2004",
+        "url": "https://arxiv.org/pdf/cond-mat/0409251",
+        "location": "§2.4, (16)–(18)"
+      },
+      "vyas": {
+        "provenance": "vyas-vandeput-fischetti-2020",
+        "url": "https://doi.org/10.1103/PhysRevApplied.13.014067",
+        "location": "Abstract"
+      },
+      "weinbub_kosik": {
+        "provenance": "weinbub-kosik-2022",
+        "url": "https://www.iue.tuwien.ac.at/pdf/ib_2022/JB2022_Weinbub_1.pdf",
+        "location": "§7.4"
+      },
+      "kosik": {
+        "provenance": "kosik-2004",
+        "url": "https://www.iue.tuwien.ac.at/phd/kosik/node96.html",
+        "location": "§7.2.6.1, (7.22)–(7.25)"
+      },
+      "heinz": {
+        "provenance": "heinz-2004",
+        "url": "https://iis-people.ee.ethz.ch/~schenk/theses/heinz.pdf",
+        "location": "§4.5"
+      },
+      "khomyakov": {
+        "provenance": "khomyakov-brocks-et-al-2005",
+        "url": "https://arxiv.org/pdf/cond-mat/0501609",
+        "location": "§III.A–B, (4)–(17)"
+      },
+      "sorensen": {
+        "provenance": "sorensen-hansen-petersen-et-al-2009",
+        "url": "https://arxiv.org/pdf/0804.4306",
+        "location": "§II.A, §III.A"
+      }
+    },
+    "findings": [
+      {
+        "claim": "incident, reflected and transmitted lead modes with an inhomogeneous open-boundary source",
+        "scope": "stationary single-particle QTBM",
+        "status": "supported",
+        "sources": [
+          "frensley",
+          "gehring",
+          "shao"
+        ]
+      },
+      {
+        "claim": "nonorthogonal open-boundary matrix includes overlap and lead-device coupling terms",
+        "scope": "schematic common form; source vector remains discretization and normalization dependent",
+        "status": "supported",
+        "sources": [
+          "lake_pandey",
+          "papior",
+          "gehring"
+        ]
+      },
+      {
+        "claim": "transmission is an outgoing-to-incoming flux ratio; amplitude squared requires unit-flux normalization",
+        "scope": "elastic propagating channels",
+        "status": "supported",
+        "sources": [
+          "gehring",
+          "shao"
+        ]
+      },
+      {
+        "claim": "energy-integrated two-terminal net current is an occupation-weighted signed sum over incoming modes at each energy",
+        "scope": "elastic coherent transport with the stated current-direction convention",
+        "status": "supported",
+        "sources": [
+          "bruneau",
+          "kohler"
+        ]
+      },
+      {
+        "claim": "a Pauli master equation is one published scattering extension combined with QTBM open boundaries",
+        "scope": "specific method example, not a definition of all scattering QTBM",
+        "status": "supported",
+        "sources": [
+          "vyas",
+          "weinbub_kosik"
+        ]
+      },
+      {
+        "claim": "an absorbing imaginary potential alone does not determine compensating in-scattering",
+        "scope": "loss-only model does not close a conserving inelastic transport calculation",
+        "status": "supported",
+        "sources": [
+          "kosik",
+          "heinz"
+        ]
+      },
+      {
+        "claim": "evanescent modes may be needed for boundary mode matching and can affect transmission when their tails span a short central region, while asymptotic flux channels are propagating modes",
+        "scope": "periodic-lead mode matching and finite two-probe devices",
+        "status": "supported",
+        "sources": [
+          "khomyakov",
+          "sorensen"
+        ]
+      }
+    ]
+  },
   "computational-science/atomistic-simulation/dftb-large-scale.md":{"status":"pass","document_sha256":"ec2bb020a8dd61278ed2cfbcb5ac9dd21b4def57ee72e011df318711fbb1aa42","evidence":"refs/quality/evidence/dftb-scc-workflow-2026-10-31.md","evidence_sha256":"8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72","assets":{"assets/scc-workflow.svg":"a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"},"prior_evidence":[{"path":"refs/quality/evidence/dftb-large-scale-2026-10-30.md","sha256":"4a94c7b6ff2582a97782e36c630867a63ea81f6dcaba74de694698c9da1052da"}],"coverage":{"mode":"meaning-preserving","description":"원본 SCC fixed-point 그림과 접근성 설명만 추가했으며 기존 과학 주장과 적용 범위를 보존했다.","baseline_sha256":"3561f23ebf9c3bebd45c9487b44a5ea7c5ea4f67eb53b432f43fa6db57f90fe2"},"reviewer":{"role":"independent AI reviewer landauer_review","independent":true,"date":"2026-10-31"},"sources":{"a":{"provenance":"koskinen-makinen-2009","url":"https://arxiv.org/pdf/0910.5861","location":"§II, §IX"},"b":{"provenance":"hourahine-2020","url":"https://strathprints.strath.ac.uk/71868/1/Hourahine_etal_JCP_2020_DFTB_plus_a_software_package_for_efficient_approximate.pdf","location":"§II.A.2–3"}},"findings":[{"claim":"SCC fixed-point workflow", "scope":"SCC-DFTB charge convention and iteration", "status":"supported","sources":["a","b"]}]}
 }

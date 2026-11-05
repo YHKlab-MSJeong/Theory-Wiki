@@ -22,6 +22,8 @@ G=\frac{e^2}{h}\sum_n T_n,
 
 대칭 이상 모형에서는 \(h/(2e^2N)\)를 양쪽 접촉에 \(h/(4e^2N)\)씩 배분하는 bookkeeping을 쓸 수 있다. 하지만 비대칭 contact, 반사, mode mismatch가 있으면 각 contact에 고유하고 보편적인 half-quantum resistance를 할당할 수 없다. 실제 contact의 transmission은 contact material과 geometry에 의존하므로 이 bookkeeping을 계면의 고유 물성으로 읽으면 안 된다. [Mortensen et al., §I](https://arxiv.org/pdf/cond-mat/9907026), [Beenakker, §I.C](https://arxiv.org/pdf/cond-mat/9612179)
 
+![spin-degenerate ballistic mode 수가 이상적인 두 단자 conductance와 저항을 정하며, 대칭 모형의 절반 분배와 일반적인 접촉 저항을 구분한다.](../../assets/quantum-contact-resistance.svg)
+
 ## 4. 네 단자 저항과의 구별
 
 four-terminal measurement는 voltage probe의 위치와 coupling으로 정의된 electrochemical potential 차이를 쓴다. weak noninvasive probe의 이상화에서 ballistic channel의 내부 voltage drop은 two-terminal 값과 다를 수 있다. 그러므로 네 단자 추출값과 \(h/(2e^2N)\)을 직접 동일시하거나, \(R_Q\)를 모든 interface의 실제 contact resistance로 쓰면 안 된다. [Texier–Montambaux, §2](https://gilles.montambaux.com/files/publications/reprints/189_four_terminal_resistances.pdf), [Landauer, abstract](https://doi.org/10.1088/0953-8984/1/43/011)

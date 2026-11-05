@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="negf-workflow-title negf-workflow-desc" id="negf-workflow-root">
+  <title id="negf-workflow-title">NEGF calculation path from reservoirs to density and current</title>
+  <desc id="negf-workflow-desc">Lead structure and coupling determine the retarded self-energy; reservoir occupations weight the lesser self-energy. Dyson and Keldysh equations give Gr and Glesser, from which density and the full lead-current expression are evaluated.</desc>
+  <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #negf-workflow-root { font-family: system-ui, sans-serif; }
+      #negf-workflow-root .diagram-container { width: 100%; overflow-x: auto; }</style>
+    <marker id="negf-workflow-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#4f5d75"/></marker>
+    <marker id="negf-workflow-arrow-accent" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#bf4520"/></marker>
+  </defs>
+  <rect width="960" height="600" fill="#f5f5f5"/>
+  <rect x="28" y="60" width="904" height="438" rx="8" fill="#2d3142" stroke="#2d3142" fill-opacity=".02" stroke-opacity=".18"/>
+  <rect x="44" y="64" width="176" height="18" rx="2" fill="#f5f5f5"/>
+  <text x="52" y="78" font-size="8" font-weight="600" letter-spacing="1.2" fill="#4f5d75">STEADY-STATE TWO-TERMINAL NEGF</text>
+
+  <path d="M192 172H220V148H248" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+  <path d="M192 408H248" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+  <path d="M440 148H500" fill="none" stroke="#bf4520" stroke-width="1.4" marker-end="url(#negf-workflow-arrow-accent)"/>
+  <path d="M440 412H500" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+  <path d="M344 204V356" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+  <rect x="350" y="272" width="48" height="20" rx="3" fill="#f5f5f5"/>
+  <text x="374" y="286" text-anchor="middle" font-size="12" fill="#4f5d75">Γα</text>
+  <path d="M596 204V356" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+  <path d="M692 412H748" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#negf-workflow-arrow)"/>
+
+  <rect x="40" y="126" width="152" height="92" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="116" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#2d3142">Lead structure</text>
+  <text x="116" y="188" text-anchor="middle" font-size="12" fill="#4f5d75">H/S · coupling</text>
+
+  <rect x="40" y="362" width="152" height="92" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="116" y="398" text-anchor="middle" font-size="14" font-weight="600" fill="#2d3142">Reservoir occupations</text>
+  <text x="116" y="424" text-anchor="middle" font-size="12" fill="#4f5d75">fL/R(E)</text>
+
+  <rect x="248" y="92" width="192" height="112" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="344" y="138" text-anchor="middle" font-size="15" font-weight="600" fill="#2d3142">Retarded boundary</text>
+  <text x="344" y="166" text-anchor="middle" font-size="12" fill="#4f5d75">Σrα(E), Γα(E)</text>
+
+  <rect x="248" y="356" width="192" height="112" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="344" y="402" text-anchor="middle" font-size="16" font-weight="600" fill="#2d3142">Injection source</text>
+  <text x="344" y="430" text-anchor="middle" font-size="12" fill="#4f5d75">Σ&lt;α = i fα Γα</text>
+
+  <rect x="500" y="92" width="192" height="112" rx="6" fill="#bf4520" stroke="#bf4520" stroke-width="1.2" fill-opacity=".08"/>
+  <text x="596" y="138" text-anchor="middle" font-size="16" font-weight="600" fill="#2d3142">Dyson solve</text>
+  <text x="596" y="166" text-anchor="middle" font-size="12" fill="#4f5d75">H_C, S_C → Gr</text>
+
+  <rect x="500" y="356" width="192" height="112" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="596" y="402" text-anchor="middle" font-size="16" font-weight="600" fill="#2d3142">Keldysh equation</text>
+  <text x="596" y="430" text-anchor="middle" font-size="12" fill="#4f5d75">G&lt; = Gr Σ&lt; Ga</text>
+
+  <rect x="748" y="356" width="172" height="112" rx="6" fill="#f5f5f5" stroke="#2d3142"/>
+  <text x="834" y="390" text-anchor="middle" font-size="16" font-weight="600" fill="#2d3142">ρ and Iα</text>
+  <text x="834" y="416" text-anchor="middle" font-size="11" fill="#4f5d75">ρ: G&lt;</text>
+  <text x="834" y="439" text-anchor="middle" font-size="10" fill="#4f5d75">Iα: full lead-current trace</text>
+
+  <line x1="48" y1="524" x2="912" y2="524" stroke="#2d3142" stroke-opacity=".18"/>
+  <text x="56" y="550" font-size="12" fill="#4f5d75">Σr sets the boundary; Σ&lt; carries occupation. Add Σint when modeled; ρ → Poisson/H is an optional outer loop.</text>
+</svg>

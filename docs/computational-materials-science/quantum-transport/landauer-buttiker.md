@@ -125,6 +125,8 @@ J_\alpha^Q
 
 probe의 화학 퍼텐셜과 온도를 모두 미지수로 두고 \(J_p^N=J_p^Q=0\)을 풀면 thermoelectric probe 또는 voltage–temperature probe가 된다. 이 조건은 ‘국소 전압’이나 ‘국소 온도’를 직접 측정한 값이 아니라, 약결합된 이상 probe 모형이 만족하는 값으로 해석해야 한다. [4, 식 (2)–(10) 및 adiabatic case; 6, 초록 및 §II]
 
+![다중 reservoir의 방향별 transmission을 부호가 있는 단자 전류로 합산하고, voltage·voltage–temperature·dephasing probe의 서로 다른 조건으로 연결한다.](../../assets/landauer-buttiker-probes.svg)
+
 ## 6. 적용 범위와 계산 점검
 
 - 각 전극의 \(\mu_\alpha\), \(\Theta_\alpha\), 전송 인덱스 방향, 전자 유량 또는 양전하 전류의 부호, 스핀과 \(k\)-점 평균의 포함 방식을 함께 기록한다.

@@ -24,6 +24,8 @@ W_{k\rightarrow k'}=\frac{2\pi}{\hbar}\left|\langle k'\lvert\delta U\rvert k\ran
 
 로 쓴다. ensemble-averaged \(\lvert M_{kk'}\rvert^2\)에는 roughness autocorrelation의 Fourier spectrum \(S(\mathbf q)\)와 wavefunction overlap·경계 전위 변조가 반영된다. screening은 선택한 모형에서 추가될 수 있다. 따라서 \(\Delta_{\mathrm{rms}}\)와 \(\Lambda\)만으로 보편적인 mobility나 scattering rate를 정할 수 없다. [Sano, §II.C, 식 (11)](https://arxiv.org/html/2604.22155), [Badami, Ch. 2 §2.1, 식 (2.1)–(2.2)](https://air.uniud.it/retrieve/e27ce0c5-bae9-055e-e053-6605fe0a7873/Badami_PhDThesisUploaded.pdf)
 
+![계면 높이의 상관함수와 Fourier spectrum에서 전위 섭동과 전자 상태의 matrix element를 거쳐 산란률로 이어지는 흐름을 보여준다.](../../assets/surface-roughness-scattering.svg)
+
 ## 3. 보고해야 할 항목
 
 모형을 제시할 때에는 \(C(r)\) 또는 \(S(q)\)의 함수형과 \(\Lambda\) convention, \(\Delta_{\mathrm{rms}}\), 계면별 correlation, wavefunction·screening 계산법, Born 근사의 사용 여부를 함께 적는다. 실험 AFM의 거칠기와 전자에 유효한 buried interface spectrum은 같다고 가정하지 말고, 필요한 경우 독립적으로 calibration한다.

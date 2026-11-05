@@ -63,6 +63,8 @@ G=\frac{e^2}{h}\sum_\sigma T_\sigma(\mu,0).
 
 위 유도는 Fermi 함수의 Taylor 전개와 영도 극한에 따른다. [1, 식 (1.6); 2, 식 (16)–(17)]
 
+![전극의 점유 차이와 에너지별 transmission을 곱해 전류를 적분하고, 선형 응답과 영도 극한에서 conductance로 이어지는 과정을 보여준다.](../../assets/landauer-current-window.svg)
+
 ## 5. 계산 결과를 읽을 때
 
 - 비교하는 transmission과 화학 퍼텐셜의 에너지 기준을 맞춘다. 스핀의 포함 여부와 전류 부호 관례도 함께 기록한다.

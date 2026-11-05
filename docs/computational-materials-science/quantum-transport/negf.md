@@ -6,6 +6,8 @@ description: 정상상태 NEGF에서 전극 self-energy, Green 함수, 전하밀
 
 Non-equilibrium Green's function (NEGF)은 개방된 양자계에서 전극의 점유와 결합을 경계조건으로 넣어 전하밀도와 전류를 구하는 틀이다. 이 글은 정상상태의 두 전극 소자를 대상으로 하며, 전극은 비상호작용 평형 reservoir, 중심영역은 유한한 기저로 기술한다고 둔다. Landauer 전송식은 이 틀의 탄성·단일입자 극한에서 얻어지는 결과로 다룬다. 시간 의존 구동, 강한 상관, 그리고 유한한 전극 자체의 비평형은 여기서 유도하지 않는다. [1, §2; 2, §§II–III; 3, §1]
 
+![lead 구조와 결합이 retarded self-energy를, reservoir 점유가 lesser self-energy를 정한다. Dyson–Keldysh 계산 뒤 전하밀도와 전체 lead-current 식을 평가하는 정상상태 2단자 NEGF 흐름도.](../../assets/negf-workflow.svg)
+
 ## 1. 소자와 전극의 분할
 
 전체 계를 왼쪽 전극 \(L\), 중심영역 \(C\), 오른쪽 전극 \(R\)로 나눈다. 각 전극은 자체 화학 퍼텐셜 \(\mu_\alpha\)와 온도 \(\Theta_\alpha\)를 가진 평형 분포

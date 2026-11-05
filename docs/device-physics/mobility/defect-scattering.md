@@ -16,6 +16,8 @@ description: 전하·중성 결함의 수송 산란 모형과 적용 범위를 �
 
 주기적 DFT supercell의 한 vacancy는 ordered array의 전자 구조를 주며, 무작위 dilute defect ensemble의 mobility를 바로 주지 않는다. 수송 예측에는 결함 생성 에너지·전하 상태와 별도로, 실제 농도, spatial correlation, scattering matrix element, carrier distribution을 연결해야 한다. Si(111) surface charged-impurity 모형과 MoS\(_2\) vacancy 모형은 위 일반 관계는 공유하지만 parameter를 서로 이전할 수 없다. [Hwang–Das Sarma](https://arxiv.org/pdf/cond-mat/0608645), [Kaasbjerg–Low–Jauho](https://arxiv.org/pdf/1612.00469)
 
+![단일 결함 matrix element Mₖ′ₖ = ⟨k′|Vⱼ|k⟩를 정의하고, disorder 평균 |M|²와 단일 결함 normalization에서 결함 밀도·final-state sum을 포함한 independent-defect Born rate로 이어지는 흐름을 보여준다.](../../assets/defect-scattering-model.svg)
+
 ## 4. 참고 문헌
 
 1. E. H. Hwang, S. Das Sarma, *Transport properties of two-dimensional electron systems on silicon (111) surfaces* (2006), pp. 1–2, https://arxiv.org/pdf/cond-mat/0608645.

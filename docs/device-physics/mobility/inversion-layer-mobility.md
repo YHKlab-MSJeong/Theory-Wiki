@@ -24,6 +24,8 @@ I_D \simeq \frac{W}{L}\mu_{\mathrm{eff}}\lvert Q_{\mathrm{inv}}\rvert V_{DS,\mat
 
 에서 \(\mu_{\mathrm{eff}}\)를 얻는다. \(W,L\)은 유효 channel 폭·길이이다. \(\lvert Q_{\mathrm{inv}}\rvert\)의 산출법과 \(V_{DS,\mathrm{int}}\)의 접촉 보정은 추출식의 정의와 일치해야 한다. split-CV는 \(Q_{\mathrm{inv}}\)를 직접 정하는 한 방법이며, contact/series resistance 보정은 그 저항 모형과 부호 convention을 함께 쓸 때 적용한다. [Yeh–Guo, §III, 식 (16)–(22)](https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content), [Lundstrom–Sun, §2–3](https://arxiv.org/pdf/1603.03132)
 
+![gate 전계가 만든 반전 전자층의 sheet density와 channel 방향 전도도로부터 저전계 유효 이동도를 정의하는 모습을 보여준다.](../../assets/inversion-layer-mobility.svg)
+
 ## 3. 전계와 산란의 역할
 
 \(\mu_{\mathrm{eff}}\) 하나는 특정 산란률을 직접 측정한 값이 아니다. 전계 의존성을 해석하려면 \(n_s\), 온도, vertical field, channel 방향, 접촉 보정과 사용하는 산란 모형을 함께 고정해야 한다. 여러 산란률을 한 mobility로 결합하는 근사의 조건은 [Matthiessen's rule](matthiessens-rule.md)에서 따로 다룬다. [Lundstrom–Sun, §2–3](https://arxiv.org/pdf/1603.03132), [Yeh–Guo, §III](https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content)

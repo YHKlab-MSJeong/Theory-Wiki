@@ -6,13 +6,15 @@ description: self-consistent Born approximation 반복의 수렴 판정과 물�
 
 ## 1. SCBA가 푸는 고정점
 
-self-consistent Born approximation (SCBA)은 scattering self-energy를 이전 Green function으로 계산하고 Dyson–Keldysh 식을 다시 푸는 고정점 문제다. \(g\)를 고립 central region의 Green function으로 정의하면, 개략적으로
+self-consistent Born approximation (SCBA)은 scattering self-energy를 이전 Green function으로 계산하고 Dyson–Keldysh 식을 다시 푸는 고정점 문제다. 여기서 Born은 선택한 상호작용의 섭동 self-energy 근사를, self-consistent는 갱신된 Green function으로 self-energy를 다시 계산해 고정점을 찾는 절차를 가리킨다. 포함할 상호작용, bath와 diagram은 별도 산란 모형이 정한다. [Bescond et al., §II, 식 (1)–(2); Lee–Sanvito, 초록; Mera et al., §I–II] \(g\)를 고립 central region의 Green function으로 정의하면, 개략적으로
 
 \[
 G_{n}^{r}(E)=\left[g^{-1}(E)-\Sigma_{\mathrm{contacts}}^{r}(E)-\Sigma_{\mathrm{scatt}}^{r}[G_{n-1}](E)\right]^{-1}
 \]
 
 처럼 쓸 수 있으며, lesser component도 같은 self-energy functional과 함께 갱신한다. phonon scattering을 포함한 NEGF 전개에서 이 반복과 electrostatic self-consistency를 구분한 예가 제시되어 있다. [Bescond et al., §II, 식 (1)–(2)](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf), [Mera–Pedersen–Nikolić, §V.1–2, 식 (21), (25)–(28)](https://arxiv.org/html/1512.06846)
+
+![현재 Green 함수에서 scattering self-energy를 만들고 Dyson–Keldysh 방정식을 다시 푸는 SCBA 고정점 반복. residual 종료 기준과 전류·격자·인과성 검사는 별도 항목이다.](../../assets/scba-fixed-point.svg)
 
 ## 2. 수치 수렴의 최소 조건
 
@@ -34,4 +36,4 @@ SCBA 반복의 residual 통과는 선택한 Born diagram, phonon bath, screening
 
 1. M. Bescond et al., *One-shot Current Conserving Approach of Phonon Scattering Treatment in Nano-transistors* (2013), §II, https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf.
 2. W. Lee, S. Sanvito, *Exploring the limits of the self consistent Born approximation for inelastic electronic transport* (2008), §II–V, https://arxiv.org/pdf/0804.3389.
-3. H. Mera, T. G. Pedersen, B. K. Nikolić, *Hypergeometric resummation of self-consistent sunset diagrams for electron-boson quantum many-body systems out of equilibrium* (2016), §V, https://arxiv.org/html/1512.06846.
+3. H. Mera, T. G. Pedersen, B. K. Nikolić, *Hypergeometric resummation of self-consistent sunset diagrams for electron-boson quantum many-body systems out of equilibrium* (2016), §I–II, §V, https://arxiv.org/html/1512.06846.
