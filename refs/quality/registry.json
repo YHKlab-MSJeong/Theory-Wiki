@@ -112,7 +112,7 @@
       }
     ]
   },
-  "computational-materials-science/quantum-transport/negf.md":   {
+  "computational-materials-science/quantum-transport/negf.md": {
     "status": "pass",
     "document_sha256": "df333a7f89af78645d793f77d93891d0f716bd50241b6ae67ab1ffe9b4ff2598",
     "evidence": "refs/quality/evidence/negf-workflow-2026-11-05.md",
@@ -323,7 +323,7 @@
       }
     ]
   },
-  "device-physics/mobility/inversion-layer-mobility.md":{
+  "device-physics/mobility/inversion-layer-mobility.md": {
     "status": "pass",
     "document_sha256": "3af4ae637eb2dd32dc0ec9da5e683d4e6d4cc540bc45ed70b0c8a8d5e942c62b",
     "evidence": "refs/quality/evidence/inversion-layer-mobility-2026-11-05.md",
@@ -380,7 +380,7 @@
       }
     ]
   },
-  "device-physics/mobility/matthiessens-rule.md":{
+  "device-physics/mobility/matthiessens-rule.md": {
     "status": "pass",
     "document_sha256": "e0631d508f9f3a02fb0169599562329ec1e1854f971d6eca56402b32ef56ce00",
     "evidence": "refs/quality/evidence/matthiessen-rates-2026-11-05.md",
@@ -437,7 +437,7 @@
       }
     ]
   },
-  "device-physics/mobility/surface-roughness-scattering.md":{
+  "device-physics/mobility/surface-roughness-scattering.md": {
     "status": "pass",
     "document_sha256": "99bf846e6177c964a251de04f9827700335db754d041c584653c48dd28125cb2",
     "evidence": "refs/quality/evidence/surface-roughness-scattering-2026-11-05.md",
@@ -494,7 +494,7 @@
       }
     ]
   },
-  "device-physics/mobility/defect-scattering.md":{
+  "device-physics/mobility/defect-scattering.md": {
     "status": "pass",
     "document_sha256": "0d58789a120899d4d0fd84effa7a1bd5a50d1e70460fde6823bf7efedbbf6293",
     "evidence": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
@@ -551,7 +551,7 @@
       }
     ]
   },
-  "computational-materials-science/quantum-transport/quantum-contact-resistance.md":{
+  "computational-materials-science/quantum-transport/quantum-contact-resistance.md": {
     "status": "pass",
     "document_sha256": "729c90c905e0c9d58daa3ed08c1a8f8a848a25e017325436b70f75e23c4e2fee",
     "evidence": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
@@ -632,7 +632,7 @@
       }
     ]
   },
-  "computational-materials-science/quantum-transport/scba-convergence.md":  {
+  "computational-materials-science/quantum-transport/scba-convergence.md": {
     "status": "pass",
     "document_sha256": "8279202afd0c89a08125c565e9a2354fb7c9037c6030e53bc02a4647082d27ca",
     "evidence": "refs/quality/evidence/scba-workflow-2026-11-05.md",
@@ -714,7 +714,7 @@
       }
     ]
   },
-  "computational-materials-science/quantum-transport/scattering-qtbm.md":  {
+  "computational-materials-science/quantum-transport/scattering-qtbm.md": {
     "status": "pass",
     "document_sha256": "d331be396872b0417a5a8aaf47be3df95e53735a3e6ae30486cc97bba4b1a9fb",
     "evidence": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
@@ -872,5 +872,734 @@
       }
     ]
   },
-  "computational-science/atomistic-simulation/dftb-large-scale.md":{"status":"pass","document_sha256":"ec2bb020a8dd61278ed2cfbcb5ac9dd21b4def57ee72e011df318711fbb1aa42","evidence":"refs/quality/evidence/dftb-scc-workflow-2026-10-31.md","evidence_sha256":"8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72","assets":{"assets/scc-workflow.svg":"a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"},"prior_evidence":[{"path":"refs/quality/evidence/dftb-large-scale-2026-10-30.md","sha256":"4a94c7b6ff2582a97782e36c630867a63ea81f6dcaba74de694698c9da1052da"}],"coverage":{"mode":"meaning-preserving","description":"원본 SCC fixed-point 그림과 접근성 설명만 추가했으며 기존 과학 주장과 적용 범위를 보존했다.","baseline_sha256":"3561f23ebf9c3bebd45c9487b44a5ea7c5ea4f67eb53b432f43fa6db57f90fe2"},"reviewer":{"role":"independent AI reviewer landauer_review","independent":true,"date":"2026-10-31"},"sources":{"a":{"provenance":"koskinen-makinen-2009","url":"https://arxiv.org/pdf/0910.5861","location":"§II, §IX"},"b":{"provenance":"hourahine-2020","url":"https://strathprints.strath.ac.uk/71868/1/Hourahine_etal_JCP_2020_DFTB_plus_a_software_package_for_efficient_approximate.pdf","location":"§II.A.2–3"}},"findings":[{"claim":"SCC fixed-point workflow", "scope":"SCC-DFTB charge convention and iteration", "status":"supported","sources":["a","b"]}]}
+  "computational-science/atomistic-simulation/dftb-large-scale.md": {
+    "status": "pass",
+    "document_sha256": "ec2bb020a8dd61278ed2cfbcb5ac9dd21b4def57ee72e011df318711fbb1aa42",
+    "evidence": "refs/quality/evidence/dftb-scc-workflow-2026-10-31.md",
+    "evidence_sha256": "8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72",
+    "assets": {
+      "assets/scc-workflow.svg": "a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/dftb-large-scale-2026-10-30.md",
+        "sha256": "4a94c7b6ff2582a97782e36c630867a63ea81f6dcaba74de694698c9da1052da"
+      }
+    ],
+    "coverage": {
+      "mode": "meaning-preserving",
+      "description": "원본 SCC fixed-point 그림과 접근성 설명만 추가했으며 기존 과학 주장과 적용 범위를 보존했다.",
+      "baseline_sha256": "3561f23ebf9c3bebd45c9487b44a5ea7c5ea4f67eb53b432f43fa6db57f90fe2"
+    },
+    "reviewer": {
+      "role": "independent AI reviewer landauer_review",
+      "independent": true,
+      "date": "2026-10-31"
+    },
+    "sources": {
+      "a": {
+        "provenance": "koskinen-makinen-2009",
+        "url": "https://arxiv.org/pdf/0910.5861",
+        "location": "§II, §IX"
+      },
+      "b": {
+        "provenance": "hourahine-2020",
+        "url": "https://strathprints.strath.ac.uk/71868/1/Hourahine_etal_JCP_2020_DFTB_plus_a_software_package_for_efficient_approximate.pdf",
+        "location": "§II.A.2–3"
+      }
+    },
+    "findings": [
+      {
+        "claim": "SCC fixed-point workflow",
+        "scope": "SCC-DFTB charge convention and iteration",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/dielectric-response.md": {
+    "status": "pass",
+    "document_sha256": "837e3d50ec1d7f1d0f1ffc892c950dd9f0c148391e477c1e9f6b65ac7daacfb4",
+    "evidence": "refs/quality/evidence/dielectric-response-2026-11-06.md",
+    "evidence_sha256": "a219aa73819b3944a3e41283855fc1d7f8cfed88fd785bee057fa29f9c951db8",
+    "assets": {
+      "assets/dielectric-response-map.svg": "9a12f5c3a11c87a75213a52448d51fd446d04e224cf944c91f81e3b41a1c1dd9"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "유전 응답을 전자·이온 성분으로 나누고 조화 포논 모드와 Born 유효전하를 연결한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature and diagram_audit",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "prx": {
+        "provenance": "takigawa-kiyohara-kumagai-prx-2026",
+        "url": "https://doi.org/10.1103/28wr-w896",
+        "location": "Abstract; §I notation; §II.A Eq. (2) Fig. 3; §II.B Eq. (3) Fig. 4 and Table III",
+        "kind": "primary-research"
+      },
+      "gonze": {
+        "provenance": "gonze-lee-1997",
+        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
+        "location": "Abstract; §III dynamical matrices; §IV electronic dielectric tensor; §V BEC; §VII sum rule; §VIII low-frequency response"
+      },
+      "baroni": {
+        "provenance": "baroni-et-al-2001",
+        "url": "https://doi.org/10.1103/RevModPhys.73.515",
+        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+      },
+      "robertson04": {
+        "provenance": "robertson-2004",
+        "url": "https://doi.org/10.1051/epjap:2004206",
+        "location": "Eq. (1), §§1–2; high-k gate dielectric constraints"
+      },
+      "robertson06": {
+        "provenance": "robertson-2006",
+        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
+        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Takigawa 등은 진공 기준을 포함하는 고주파 유전율을 1 + 전자 유전 기여로 표기한다.",
+        "scope": "특정 논문에 사용된 표기 convention의 기록이며 표기법 전체를 단정하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "prx"
+        ]
+      },
+      {
+        "claim": "정적 유전 응답은 고정 이온 전자 항과 격자 이온 항으로 분해되며, 이온 응답은 DFPT의 BEC와 포논 정보를 사용한다.",
+        "scope": "절연체의 선형·조화 응답; SI에서 상대 유전율 텐서",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "질량 정규화 포논 모드의 이온 유전 응답은 모드 유효전하와 주파수에 의존하며, 저주파 모드는 역제곱 가중을 받는다.",
+        "scope": "정적 Γ점 조화 응답; 영주파수 병진 모드는 제외",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "High-k 게이트 재료의 유전율은 두께·밴드갭·밴드 정렬·계면 조건과 함께 판단해야 한다.",
+        "scope": "벌크 계산값에서 소자 적합성으로 과도 일반화 금지",
+        "status": "supported",
+        "sources": [
+          "robertson04",
+          "robertson06"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/born-effective-charge.md": {
+    "status": "pass",
+    "document_sha256": "89fe4f5952a36c27b1d8025815218bf29b55fcac1096d2e82ed1182a6b4a4a14",
+    "evidence": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
+    "evidence_sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Born 유효전하의 응답 정의와 극성 격자·전자–포논 계산에서의 역할을 설명한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "gonze": {
+        "provenance": "gonze-lee-1997",
+        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
+        "location": "Abstract; §III dynamical matrices; §IV electronic dielectric tensor; §V BEC; §VII sum rule; §VIII low-frequency response"
+      },
+      "baroni": {
+        "provenance": "baroni-et-al-2001",
+        "url": "https://doi.org/10.1103/RevModPhys.73.515",
+        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+      },
+      "epw": {
+        "provenance": "epw-theory-docs",
+        "url": "https://docs.epw-code.org/Theory.html",
+        "location": "Eqs. (3)–(13), (28)–(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
+      },
+      "giustino": {
+        "provenance": "giustino-2017",
+        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
+        "location": "§§III.A–B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Born 유효전하는 원자 변위에 대한 분극 변화의 텐서 응답이며 형식 산화수와 동일하지 않다.",
+        "scope": "절연체에서 미소 변위 및 선형 응답",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "BEC와 고주파 유전 텐서는 polar long-range 전자–포논 항을 정하는 장파장 물리량이다.",
+        "scope": "3D polar crystal, 장파장 극한",
+        "status": "supported",
+        "sources": [
+          "epw",
+          "giustino"
+        ]
+      },
+      {
+        "claim": "조화 이온 유전 응답은 BEC뿐 아니라 포논 고유벡터와 주파수도 필요로 한다.",
+        "scope": "단위와 모드 정규화 규약을 고정한 bulk crystal",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/dfpt-dielectric-response.md": {
+    "status": "pass",
+    "document_sha256": "7d49f075feabd5eecdbbe523d1a793f83f5f555f4cc26c46150f6b33d775d4ca",
+    "evidence": "refs/quality/evidence/dfpt-dielectric-response-2026-11-06.md",
+    "evidence_sha256": "7d2d1529e29f193f90e1b476200d7c8eb51eaac18e4375cc53d82b876a056d70",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "DFPT의 전자·원자 선형 응답에서 유전 텐서를 계산하고 검토하는 기준을 정리한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "gonze": {
+        "provenance": "gonze-lee-1997",
+        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
+        "location": "Abstract; §III dynamical matrices; §IV electronic dielectric tensor; §V BEC; §VII sum rule; §VIII low-frequency response"
+      },
+      "baroni": {
+        "provenance": "baroni-et-al-2001",
+        "url": "https://doi.org/10.1103/RevModPhys.73.515",
+        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+      },
+      "stengel": {
+        "provenance": "stengel-spaldin-vanderbilt-2009",
+        "url": "https://doi.org/10.1038/nphys1185",
+        "location": "Main text on electric displacement, dielectric response and structural regimes"
+      }
+    },
+    "findings": [
+      {
+        "claim": "DFPT의 1차 파동함수·밀도 응답으로 BEC, 전자 유전 텐서와 동역학 행렬 등 2차 에너지 미분량을 얻는다.",
+        "scope": "DFT 기반 선형 응답과 조화 결정 격자",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "정적 유전율의 이온 항에는 BEC와 Γ점 포논 모드가 들어가고, 수치 규약·수렴 설정을 별도로 확인해야 한다.",
+        "scope": "조화 절연체, 계산별 단위·질량 정규화 명시",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "선형 조화 응답의 수렴은 상 안정성, 박막 계면 성능 또는 비조화 효과 검증을 대신하지 않는다.",
+        "scope": "모델 범위와 재료·소자 주장 구분",
+        "status": "supported",
+        "sources": [
+          "baroni",
+          "stengel"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/high-k-screening.md": {
+    "status": "pass",
+    "document_sha256": "547e0fc138ff7d6a2439174ed9f5dd14a1a2af39688a23b81bfd909015557afd",
+    "evidence": "refs/quality/evidence/high-k-screening-2026-11-06.md",
+    "evidence_sha256": "0089d35e4843e67a7e4cb8cfc862da2ecf83c58d7d20680f9a4c9edff01b5371",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "High-k 후보를 밴드갭과 계면·결함·안정성 조건을 포함해 해석한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "robertson04": {
+        "provenance": "robertson-2004",
+        "url": "https://doi.org/10.1051/epjap:2004206",
+        "location": "Eq. (1), §§1–2; high-k gate dielectric constraints"
+      },
+      "robertson06": {
+        "provenance": "robertson-2006",
+        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
+        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
+      },
+      "yim": {
+        "provenance": "yim-et-al-2015",
+        "url": "https://doi.org/10.1038/am.2015.57",
+        "location": "Abstract; Introduction; Methods; Results and Fig. 4",
+        "kind": "primary-research"
+      },
+      "lee": {
+        "provenance": "lee-et-al-2018",
+        "url": "https://doi.org/10.1038/s41598-018-33095-6",
+        "location": "Abstract; Methods; Results",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "평행판 근사에서 같은 정전용량은 높은 유전율의 더 두꺼운 절연막으로 구현할 수 있다.",
+        "scope": "이상화된 gate stack capacitance 관계",
+        "status": "supported",
+        "sources": [
+          "robertson04",
+          "robertson06"
+        ]
+      },
+      {
+        "claim": "큰 유전율과 넓은 밴드갭, 밴드 오프셋 및 계면 안정성을 함께 고려해야 한다.",
+        "scope": "실제 게이트 스택 후보 선별",
+        "status": "supported",
+        "sources": [
+          "robertson04",
+          "robertson06"
+        ]
+      },
+      {
+        "claim": "제일원리 screening은 후보군을 좁히는 계산 단계이며 실험 박막·소자 검증과 같지 않다.",
+        "scope": "2015 산화물·2018 비산화물 탐색의 보고 범위",
+        "status": "supported",
+        "sources": [
+          "yim",
+          "lee"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/cases/yim-2015-high-k-oxides.md": {
+    "status": "pass",
+    "document_sha256": "e2ae8c3cb75d9e61289c3b3549a635b54a82327ad7339cf25b6b920c707d5bef",
+    "evidence": "refs/quality/evidence/yim-2015-high-k-oxides-2026-11-06.md",
+    "evidence_sha256": "34ef569a3e695c26d760ee603133ef41ab87f94161722a8758954e0046cdbd35",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Yim 등 2015년 high-throughput 산화물 스크리닝의 질문과 결과 해석 범위를 기록한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "yim": {
+        "provenance": "yim-et-al-2015",
+        "url": "https://doi.org/10.1038/am.2015.57",
+        "location": "Abstract; Introduction; Methods; Results and Fig. 4",
+        "kind": "primary-research"
+      },
+      "robertson06": {
+        "provenance": "robertson-2006",
+        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
+        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
+      },
+      "robertson04": {
+        "provenance": "robertson-2004",
+        "url": "https://doi.org/10.1051/epjap:2004206",
+        "location": "Eq. (1), §§1–2; high-k gate dielectric constraints"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Yim 등은 초록·서론에서 1,800개 초과 또는 약 1,800개 산화물 구조를, Results에서 1,762개 계산 구조를 보고하고 Fig. 4에 1,158개를 표시한다.",
+        "scope": "원문 내부 표현 차이를 그대로 기록하며 독립 재현 주장은 하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "yim"
+        ]
+      },
+      {
+        "claim": "연구의 재료 설계 문제는 유전율뿐 아니라 누설 억제를 위한 큰 밴드갭과 함께 후보를 고르는 것이다.",
+        "scope": "게이트 유전체 설계 맥락",
+        "status": "supported",
+        "sources": [
+          "yim",
+          "robertson06"
+        ]
+      },
+      {
+        "claim": "계산상 후보 통과는 박막·계면·공정 신뢰성의 검증을 뜻하지 않는다.",
+        "scope": "벌크 screening 결과의 적용 한계",
+        "status": "supported",
+        "sources": [
+          "yim",
+          "robertson04"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/cases/lee-2018-nonoxide-dielectrics.md": {
+    "status": "pass",
+    "document_sha256": "aca83a58f3600eda9745771d2fd8062d927749776b7552c58753efa205456818",
+    "evidence": "refs/quality/evidence/lee-2018-nonoxide-dielectrics-2026-11-06.md",
+    "evidence_sha256": "49210240bbf8cb6b573efae312caf303074506670819d1c7056faf7358489f98",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Lee 등 2018년 비산화물 유전체 스크리닝의 계산 대상과 후보 주장 범위를 정리한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "lee": {
+        "provenance": "lee-et-al-2018",
+        "url": "https://doi.org/10.1038/s41598-018-33095-6",
+        "location": "Abstract; Methods; Results",
+        "kind": "primary-research"
+      },
+      "gonze": {
+        "provenance": "gonze-lee-1997",
+        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
+        "location": "Abstract; §III dynamical matrices; §IV electronic dielectric tensor; §V BEC; §VII sum rule; §VIII low-frequency response"
+      },
+      "robertson04": {
+        "provenance": "robertson-2004",
+        "url": "https://doi.org/10.1051/epjap:2004206",
+        "location": "Eq. (1), §§1–2; high-k gate dielectric constraints"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Lee 등은 869개 이원 화합물, 절연체 449개, 삼원 불화물 415개를 조사했다고 보고한다.",
+        "scope": "원문 보고 수치이며 독립 재현 주장은 하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "lee"
+        ]
+      },
+      {
+        "claim": "Lee 등은 BaBeF4에 대해 밴드갭 9.7 eV와 유전율 17을 보고한다.",
+        "scope": "특정 구조와 원문 계산 설정의 문헌 보고값이며 독립 재현이 아님",
+        "status": "reported-primary",
+        "sources": [
+          "lee"
+        ]
+      },
+      {
+        "claim": "DFPT 계산은 Born 유효전하·포논 응답을 포함해 격자 유전 기여를 평가한다.",
+        "scope": "조화 절연체, 원문에 기술된 VASP/DFPT pipeline",
+        "status": "supported",
+        "sources": [
+          "lee",
+          "gonze"
+        ]
+      },
+      {
+        "claim": "bulk screening에서 후보로 제안된 사실은 실험적 소자 성능을 보증하지 않는다.",
+        "scope": "재료 평가 단계의 경계",
+        "status": "supported",
+        "sources": [
+          "lee",
+          "robertson04"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/ml-born-effective-charge.md": {
+    "status": "pass",
+    "document_sha256": "20126b7d689cf6d9439e7882f0e6eb31ace7a3881810835aa90b676f1627c023",
+    "evidence": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
+    "evidence_sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "SevenNet-Polar의 Born 유효전하 예측 범위와 유전율 계산에서의 입력 역할을 구분한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "seven": {
+        "provenance": "lu-et-al-sevennet-polar-2026",
+        "url": "https://arxiv.org/abs/2607.14827",
+        "location": "v3 Abstract; §§2–4, 2026-07-21",
+        "kind": "primary-research"
+      },
+      "gonze": {
+        "provenance": "gonze-lee-1997",
+        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
+        "location": "Abstract; §III dynamical matrices; §IV electronic dielectric tensor; §V BEC; §VII sum rule; §VIII low-frequency response"
+      },
+      "baroni": {
+        "provenance": "baroni-et-al-2001",
+        "url": "https://doi.org/10.1103/RevModPhys.73.515",
+        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+      },
+      "wilds": {
+        "provenance": "koh-et-al-wilds-2021",
+        "url": "https://proceedings.mlr.press/v139/koh21a.html",
+        "location": "Abstract; distribution shifts and in-/out-of-distribution evaluation"
+      }
+    },
+    "findings": [
+      {
+        "claim": "SevenNet-Polar 논문은 BEC 전용 예측과 에너지·힘·응력·BEC 다중과제 모델을 제시하고, BEC RMSE 0.0043e 및 0.0029e를 보고한다.",
+        "scope": "논문이 정의한 ZrO2, Li3PO4 및 perovskite 자료 분할의 결과이며 독립 재현값이 아님",
+        "status": "reported-primary",
+        "sources": [
+          "seven"
+        ]
+      },
+      {
+        "claim": "BEC만으로 전체 유전 텐서를 얻을 수 없고, 포논 모드와 전자 응답이 추가로 필요하다.",
+        "scope": "bulk polar crystal, 선형·조화 응답",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "시험 분할 점수와 학습 분포가 달라지는 조건의 일반화는 다른 검증 질문이다.",
+        "scope": "원문 benchmark와 일반적인 distribution shift 평가 경계",
+        "status": "supported",
+        "sources": [
+          "seven",
+          "wilds"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md": {
+    "status": "pass",
+    "document_sha256": "5567a088436276e59b7637a74a01f88f35c87a7bdaec2e73eb9f2c4eae80cbe5",
+    "evidence": "refs/quality/evidence/takigawa-2026-prx-ionic-dielectric-ml-2026-11-06.md",
+    "evidence_sha256": "c11c4564d0a09c30906e0a4b30f541c027bfd82102ea5c41137ee51cc8509e39",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Takigawa 등 2026년 PRX의 factorized ML과 이온 유전 텐서 산출 경로를 설명한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer dielectric_literature",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "prx": {
+        "provenance": "takigawa-kiyohara-kumagai-prx-2026",
+        "url": "https://doi.org/10.1103/28wr-w896",
+        "location": "Abstract; §I notation; §II.A Eq. (2) Fig. 3; §II.B Eq. (3) Fig. 4 and Table III",
+        "kind": "primary-research"
+      },
+      "robertson06": {
+        "provenance": "robertson-2006",
+        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
+        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
+      }
+    },
+    "findings": [
+      {
+        "claim": "2026 PRX 논문은 BEC와 포논 물성을 factorize해 이온 유전 텐서를 계산하고 전자 유전 기여를 별도로 예측하는 joint model을 제시한다.",
+        "scope": "모델 구성에 대한 원문 보고이며 독립 재현 주장은 하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "prx"
+        ]
+      },
+      {
+        "claim": "논문은 direct model과 joint model을 839개 Γ점 안정 산화물에서 5-fold CV로 비교하고 log10 고유값 오차 R²/RMSE를 보고한다.",
+        "scope": "논문 정의 데이터 분할의 결과이며 독립 재현값으로 취급하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "prx"
+        ]
+      },
+      {
+        "claim": "논문은 후보 풀 8,717개에서 Γ점 안정성 확인 후 4,654개, ML 유전율·r2SCAN 밴드갭 선별 142개, PBEsol-DFPT 확인 121개를 거쳐 DFPT 유전율과 DDH 밴드갭의 최종 FOM 기준으로 31개 후보를 남겼다고 보고한다.",
+        "scope": "논문이 정의한 순차 screening 수치·기준이며 독립 재현 주장은 하지 않음",
+        "status": "reported-primary",
+        "sources": [
+          "prx"
+        ]
+      },
+      {
+        "claim": "논문이 제시한 후보 탐색은 계산 기반 screening이며 실험 합성·박막 검증과 구분된다.",
+        "scope": "논문이 보고한 screening 결과와 후보물성 산출 경계",
+        "status": "supported",
+        "sources": [
+          "prx",
+          "robertson06"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md": {
+    "status": "pass",
+    "document_sha256": "5daa502470a743c1119b639c99d73cef8a94251c3ec2953bdf62d5f920a1994c",
+    "evidence": "refs/quality/evidence/electron-phonon-coupling-2026-11-06.md",
+    "evidence_sha256": "f70a584aafd7b48ee57415c7b520a4e1e70eb40722e4d60071d8c3b000acd075",
+    "assets": {
+      "assets/eph-workflow.svg": "0baaecd332809a54ccb53c8116016ceab3ec38b4b945abd164e04151568eb766"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "힘상수·동역학 행렬·포논 모드와 전자–포논 결합 행렬원소의 관계를 연결한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer eph_sources and diagram_audit",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "giustino": {
+        "provenance": "giustino-2017",
+        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
+        "location": "§§III.A–B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
+      },
+      "baroni": {
+        "provenance": "baroni-et-al-2001",
+        "url": "https://doi.org/10.1103/RevModPhys.73.515",
+        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+      },
+      "epw": {
+        "provenance": "epw-theory-docs",
+        "url": "https://docs.epw-code.org/Theory.html",
+        "location": "Eqs. (3)–(13), (28)–(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
+      }
+    },
+    "findings": [
+      {
+        "claim": "힘상수는 에너지 Hessian이며 Fourier 변환과 원자 질량 가중으로 동역학 행렬을 만들고, 그 고유값은 포논 주파수 제곱이다.",
+        "scope": "조화 결정; 문서에 고정한 Fourier 부호·고유벡터 규약",
+        "status": "supported",
+        "sources": [
+          "giustino",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "EPC 행렬원소는 포논 모드의 1차 퍼텐셜 변화가 전자 상태 전이에 결합하는 진폭이다.",
+        "scope": "주기 결정의 harmonic DFPT; prefactor와 normalization convention 명시",
+        "status": "supported",
+        "sources": [
+          "giustino",
+          "epw"
+        ]
+      },
+      {
+        "claim": "극성 long-range Fröhlich contribution은 BEC와 epsilon-infinity에 의존하고 단거리 보간과 별도 처리된다.",
+        "scope": "polar 3D crystal, long-wavelength treatment",
+        "status": "supported",
+        "sources": [
+          "epw",
+          "giustino"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md": {
+    "status": "pass",
+    "document_sha256": "cc6fbbaa662464a31b4e01d8b4155dc950b6ed89508f62ae3d683a4b8e0e85a4",
+    "evidence": "refs/quality/evidence/electron-phonon-self-energy-2026-11-06.md",
+    "evidence_sha256": "2cff6f97fde555a50f34612eefd7787668e993a360c785e7fd2cc8832aa8867c",
+    "assets": {
+      "assets/eph-self-energy.svg": "c455b61dbb0de41df1faab0a9840151c33a50fcc0f2fd56f4b5f83a255d0f8a8"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Fan–Migdal과 Debye–Waller self-energy 및 준입자 근사의 에너지·수명 해석을 설명한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer eph_sources and diagram_audit",
+      "independent": true,
+      "date": "2026-11-06"
+    },
+    "sources": {
+      "epw": {
+        "provenance": "epw-theory-docs",
+        "url": "https://docs.epw-code.org/Theory.html",
+        "location": "Eqs. (3)–(13), (28)–(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
+      },
+      "giustino": {
+        "provenance": "giustino-2017",
+        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
+        "location": "§§III.A–B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
+      },
+      "ponce23": {
+        "provenance": "ponce-et-al-2023",
+        "url": "https://doi.org/10.1063/5.0131009",
+        "location": "Review sections on Fan and Debye-Waller terms and calculation approximations"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Fan–Migdal은 동적 1차 EPC 제곱 항이고 Debye–Waller는 정적 2차 퍼텐셜 항이다.",
+        "scope": "조화 AHC, band-diagonal 근사와 retarded convention",
+        "status": "supported",
+        "sources": [
+          "epw",
+          "giustino"
+        ]
+      },
+      {
+        "claim": "에너지 이동은 실수부와 연결되고 허수부는 준입자 반폭·수명과 연결되지만 peak가 잘 정의된 조건에서만 단순식을 쓸 수 있다.",
+        "scope": "retarded electron self-energy; half-width convention 명시",
+        "status": "supported",
+        "sources": [
+          "epw",
+          "giustino"
+        ]
+      },
+      {
+        "claim": "pole, on-shell, adiabatic AHC 계산은 서로 다른 에너지 평가 및 포논 근사를 사용한다.",
+        "scope": "근사 가정 및 broadening·k/q 수렴을 분리",
+        "status": "supported",
+        "sources": [
+          "giustino",
+          "ponce23"
+        ]
+      }
+    ]
+  }
 }

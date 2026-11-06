@@ -70,6 +70,21 @@ class QualityCheckTest(unittest.TestCase):
         self.registry.write_text(json.dumps(data))
         self.assertTrue(any('two documented' in x for x in quality.check(self.root)))
 
+    def test_attributed_primary_source_report_passes(self):
+        data = json.loads(self.registry.read_text())
+        data['article.md']['sources']['a']['kind'] = 'primary-research'
+        data['article.md']['findings'][0]['status'] = 'reported-primary'
+        data['article.md']['findings'][0]['sources'] = ['a']
+        self.registry.write_text(json.dumps(data))
+        self.assertEqual(quality.check(self.root), [])
+
+    def test_primary_source_report_rejects_secondary_source(self):
+        data = json.loads(self.registry.read_text())
+        data['article.md']['findings'][0]['status'] = 'reported-primary'
+        data['article.md']['findings'][0]['sources'] = ['a']
+        self.registry.write_text(json.dumps(data))
+        self.assertTrue(any('one documented primary' in x for x in quality.check(self.root)))
+
     def test_string_false_reviewer_is_blocked(self):
         data = json.loads(self.registry.read_text())
         data['article.md']['reviewer']['independent'] = 'false'

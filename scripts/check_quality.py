@@ -71,14 +71,19 @@ def check(root):
         if not findings:
             issues.append(f'findings missing: {path}')
         for finding in findings:
-            if finding.get('status') != 'supported' or not finding.get('claim') or not finding.get('scope'):
+            status = finding.get('status')
+            if status not in {'supported', 'reported-primary'} or not finding.get('claim') or not finding.get('scope'):
                 issues.append(f'unsupported or incomplete finding: {path}')
             refs = finding.get('sources', [])
             verified = [sources.get(ref, {}) for ref in refs]
             provenance = {str(item.get('provenance', '')).strip().casefold() for item in verified if item.get('provenance')}
             urls = {str(item.get('url', '')).strip().rstrip('/').casefold() for item in verified if item.get('url')}
-            if (len(provenance) < 2 or len(urls) < 2
-                    or any(not item.get('url') or not item.get('location') or not item.get('provenance') for item in verified)):
+            source_metadata_missing = any(not item.get('url') or not item.get('location') or not item.get('provenance') for item in verified)
+            if status == 'reported-primary':
+                primary_report_invalid = len(verified) != 1 or verified[0].get('kind') != 'primary-research'
+                if primary_report_invalid or source_metadata_missing:
+                    issues.append(f'primary-source report must cite one documented primary research source: {path}')
+            elif (len(provenance) < 2 or len(urls) < 2 or source_metadata_missing):
                 issues.append(f'finding needs two documented independent sources: {path}')
         if entry.get('document_sha256') != digest(docs / path):
             issues.append(f'article changed since verification: {path}')

@@ -24,6 +24,20 @@ nav:
           - Defect scattering: device-physics/mobility/defect-scattering.md
   - Material science:
       - Overview: computational-materials-science/index.md
+      - Dielectric response:
+          - Overview: computational-materials-science/dielectric-response/index.md
+          - Dielectric response and dielectric tensor: computational-materials-science/dielectric-response/dielectric-response.md
+          - Born effective charge: computational-materials-science/dielectric-response/born-effective-charge.md
+          - DFPT dielectric response: computational-materials-science/dielectric-response/dfpt-dielectric-response.md
+          - High-κ dielectric screening: computational-materials-science/dielectric-response/high-k-screening.md
+          - Case studies:
+              - Yim et al. 2015: computational-materials-science/dielectric-response/cases/yim-2015-high-k-oxides.md
+              - Lee et al. 2018: computational-materials-science/dielectric-response/cases/lee-2018-nonoxide-dielectrics.md
+              - Takigawa et al. 2026 PRX: computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md
+          - Machine learning for Born effective charges: computational-materials-science/dielectric-response/ml-born-effective-charge.md
+      - Electron–phonon coupling:
+          - Electron–phonon coupling: computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md
+          - Electron self-energy: computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md
       - Quantum transport:
           - Overview: computational-materials-science/quantum-transport/index.md
           - NEGF: computational-materials-science/quantum-transport/negf.md
