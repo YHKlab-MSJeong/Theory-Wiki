@@ -18,7 +18,7 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 
 따라서 semicore를 포함한 SZP도 가능하고, semicore를 포함한 DZP도 가능하다. semicore 포함 여부와 zeta/polarization은 각각 따로 정해야 한다. 또한 약어는 코드와 basis 계열에 따라 의미가 달라진다. CP2K의 MOLOPT DZVP·SZV와 SIESTA의 DZP·SZP를 이름만 보고 같은 basis 크기나 정확도로 대응시키면 안 된다. [1, Basis generation and basis size; 3, PSML format]
 
-특정 ion 파일의 이름만으로 semicore나 basis 크기를 추정하지 말고, valence 전자 수와 각 채널의 zeta·polarization 설정을 직접 확인한다. MoS₂에 적용할 때도 이 입력 정보와 실제 밴드·수송 검증을 구분한다. [1, Basis generation and basis size; 3, PSML format]
+특정 ion 파일의 이름만으로 semicore나 basis 크기를 추정하지 말고, valence 전자 수와 각 채널의 zeta·polarization 설정을 직접 확인한다. 입력 파일의 설정과 실제 밴드·수송 검증은 구분한다. [1, Basis generation and basis size; 3, PSML format]
 
 ## 2. 비교 기준은 목표 물리량으로 정한다
 
@@ -34,18 +34,14 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 
 어느 단계에서 차이가 생기는지 분리하면, basis를 원소별로 키울지, pseudopotential이나 정렬을 다시 확인할지, 접촉 모델을 바꿀지를 판단할 수 있다. 더 큰 basis 하나와의 차이만으로 원인을 basis 오차라고 단정하지 않는다.
 
-## 4. MoS₂ 수송 후보에 적용할 때
-
-PPS_ion_from_psml의 Mo SZP는 계산 후보로 평가할 수 있지만, semicore 포함만으로 정확도가 보장되지는 않는다. 먼저 동일한 pseudopotential 계열에서 관심 밴드와 정렬을 확인하고, 다음으로 대표 접촉의 T(E), 필요한 경우 유한 바이어스 전류를 비교한다. 현재 이 위키에 정리한 문헌 사례는 일반 검증 설계를 제시할 뿐, 사용자의 실제 MoS₂/Au 구조에 대한 SZP 계산을 대신하지 않는다.
-
-## 5. 함께 보기
+## 4. 함께 보기
 
 - [전자구조 대규모 solver의 역할](electronic-structure-solvers.md)
 - [Order-N DFT](order-n-dft.md)
 - [Hamiltonian 블록 확장과 RGF](../../computational-materials-science/quantum-transport/hamiltonian-block-stitching.md)
 - [기저 크기 검증을 보고한 수송 사례](../../computational-materials-science/quantum-transport/basis-set-validation-cases.md)
 
-## 6. 참고 자료
+## 5. 참고 자료
 
 1. SIESTA developers, [SIESTA 5.4 reference manual](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html), “Basis sets,” “Basis generation,” and “Basis size.”
 2. A. Afzalian et al., “Advanced DFT-NEGF transport techniques for realistic nanoelectronic devices,” [arXiv:2106.07248](https://arxiv.org/abs/2106.07248), §§II–III.

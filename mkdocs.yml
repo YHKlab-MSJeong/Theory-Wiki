@@ -51,6 +51,8 @@ nav:
               - Overview: computational-materials-science/quantum-transport/long-channel-transport.md
               - Hamiltonian block extension and RGF: computational-materials-science/quantum-transport/hamiltonian-block-stitching.md
               - ML Hamiltonian transport: computational-materials-science/quantum-transport/ml-hamiltonian-transport.md
+              - DFTH-NEGF: computational-materials-science/quantum-transport/dfth-negf.md
+              - Nonorthogonal KPM: computational-materials-science/quantum-transport/nonorthogonal-kpm.md
               - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md
   - Computational science:
       - Overview: computational-science/index.md
