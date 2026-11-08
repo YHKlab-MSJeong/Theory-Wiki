@@ -17,6 +17,44 @@ High-\(\kappa\) 유전체는 기준 물질보다 큰 상대 유전율을 이용�
 
 벌크 유전율은 조성 및 구조를 바꾼 박막·계면에서 그대로 유지되지 않을 수 있다. 박막에서는 응력, 결정상, 계면층, 배향, 두께가 응답을 바꿀 수 있어, 벌크 후보 선별을 실험 소자 성능 예측으로 바로 읽어서는 안 된다. [2, §2–4; 3, §1–3]
 
+
+### (1) 등가 산화막 두께와 계면층
+
+등가 산화막 두께(equivalent oxide thickness, EOT)는 같은 면적당 정전용량을 주는 SiO\(_2\)의 두께다. 균일한 절연막이 선형·등방성이고 평행판의 가장자리 효과를 무시하면, 상대 유전율 \(\kappa\)와 물리 두께 \(t\)에 대해
+
+\[
+\frac{C}{A}=\frac{\varepsilon_0\kappa}{t},\qquad
+\mathrm{EOT}=\frac{\kappa_{\rm SiO_2}}{\kappa}t
+\]
+
+이다. \(\varepsilon_0\)는 진공 유전율이고 \(\kappa_{\rm SiO_2}\)는 기준 SiO\(_2\)의 상대 유전율이다. 같은 EOT에서 높은 \(\kappa\)의 막은 더 두꺼울 수 있다. 실제 터널링 누설은 두께뿐 아니라 장벽의 높이·형태, 유효질량, 결함에도 의존하므로 EOT만으로 정해지지 않는다. [1, §1.2, Eq. (2); 7, §II]
+
+계면층(IL)과 high-\(\kappa\) 막을 직렬 유전체로 근사하면 \(A/C=\sum_i t_i/(\varepsilon_0\kappa_i)\)이므로
+
+\[
+\mathrm{EOT}=\kappa_{\rm SiO_2}\left(
+\frac{t_{\rm IL}}{\kappa_{\rm IL}}+
+\frac{t_{\rm HK}}{\kappa_{\rm HK}}\right)
+\]
+
+가 된다. 층의 균일성, 같은 면적, 선형 유전 응답을 가정한 식이다. 실제 MOS 구조의 측정 정전용량에는 반도체 쪽 전하 분포와 전극의 응답도 기여할 수 있어, 이 이상적인 유전체 EOT와 측정된 전체 capacitance-equivalent thickness를 무조건 같게 보지 않는다. [1, §1.2, Eq. (3); 7, §V.A, Eq. (11)]
+
+???+ example "계면층을 포함한 EOT 예시"
+
+    SiO\(_2\) 기준 \(\kappa_{\rm SiO_2}=3.9\), SiO\(_2\) 계면층 \(t_{\rm IL}=0.5\) nm, high-\(\kappa\) 막 \(t_{\rm HK}=5\) nm와 \(\kappa_{\rm HK}=20\)을 가정하자. 위 식에서 EOT는 \(0.5+3.9(5/20)=1.475\) nm다. 이는 주어진 수치의 계산 예시이며 특정 재료·소자의 측정값이 아니다.
+
+### (2) 밴드갭과 계면 장벽
+
+유전체 벌크의 밴드갭 \(E_g\)만으로 접촉 장벽을 결정할 수는 없다. 같은 에너지 기준에서 반도체와 유전체의 밴드 가장자리를 비교해, 전자 장벽을 \(\Delta E_c=E_{c,\rm diel}-E_{c,\rm semi}\), 정공 장벽을 \(\Delta E_v=E_{v,\rm semi}-E_{v,\rm diel}\)로 정의할 수 있다. 이 부호 규약에서 양수는 각각 전자와 정공에 대한 장벽을 뜻한다. 계면 결합과 쌍극자, 결함에 따라 정렬이 달라질 수 있으므로 벌크 밴드갭 선별 뒤 실제 계면을 따로 검토한다. [1, §§2.4, 4; 7, §VI.A]
+
+예를 들어 Lee 등의 탐색에서 사용한 \(E_g\kappa\)는 후보를 정렬하기 위한 지표다. 저자들은 밴드갭과 유전율을 함께 고려하도록 이를 정의했으며, 그 값이 계면 장벽이나 소자 누설 전류의 직접 계산값은 아니다. [5, Results, Fig. 5]
+
+### (3) 구조 안정성과 유전 응답
+
+정적 유전 텐서는 고정 이온의 전자 응답과 이온이 완화하며 생기는 응답을 포함한다. 이온 기여는 [Born 유효전하](born-effective-charge.md), 포논 모드와 주파수에 좌우되며, [DFPT 유전 응답](dfpt-dielectric-response.md)에서 계산 경로를 다룬다. 부드러운 모드는 큰 응답을 만들 수 있지만, 불안정 모드가 있으면 해당 구조의 조화 근방을 안정한 평형상으로 해석하기 어렵다. 특정 구조가 동역학적으로 안정하다는 것과 다른 상에 비해 열역학적으로 우세하다는 것은 서로 다른 질문이다. [4, Methods; 5, Methods; 6, §II.B]
+
+비등방 결정에서는 막 두께 방향의 유전 텐서 성분이 중요하다. 방향별 값과 다결정 평균을 섞어 순위를 매기지 않도록 결정상·배향·주파수·완화 조건을 함께 확인한다. 유전 텐서의 정의는 [유전 응답과 유전 텐서](dielectric-response.md)에서 설명한다. [1, §2; 7, §II]
+
 ## 2. 계산 자료를 비교할 때
 
 후보 표의 유전율은 실험값, 전자 기여, 정적 격자 기여, 계산된 전체 정적 유전율이 서로 섞여 있을 수 있다. 구조의 상, 계산 함수, 주파수와 이온 완화 여부, 유전 텐서의 평균 방식을 먼저 맞춘다. 밴드갭은 semilocal DFT, hybrid functional, 실험값이 다를 수 있으므로 데이터 출처와 보정 방법을 구별한다. [1, Methods; 2, §2–4]
@@ -44,3 +82,4 @@ Lee 등의 불화물 선별 결과는 유전율과 밴드갭을 함께 비교하
 4. K. Yim et al., “Novel high-\(\kappa\) dielectrics for next-generation electronic devices screened by automated ab initio calculations,” *NPG Asia Materials* **7**, e190 (2015), https://doi.org/10.1038/am.2015.57.
 5. M. Lee et al., “High-throughput ab initio calculations on dielectric constant and band gap of non-oxide dielectrics,” *Scientific Reports* **8**, 14794 (2018), https://doi.org/10.1038/s41598-018-33095-6.
 6. A. Takigawa, S. Kiyohara, and Y. Kumagai, “Physics-Based Factorized Machine Learning for Predicting Ionic Dielectric Tensors,” *Physical Review X* **16**, 021006 (2026), [DOI](https://doi.org/10.1103/28wr-w896), [APS reuse information](https://journals.aps.org/prx/abstract/10.1103/28wr-w896).
+7. G. D. Wilk, R. M. Wallace, and J. M. Anthony, “High-κ gate dielectrics: Current status and materials properties considerations,” *Journal of Applied Physics* **89**, 5243–5275 (2001), [DOI](https://doi.org/10.1063/1.1361065), [full text](https://web.stanford.edu/class/ee311/NOTES/Wilk_HighK.pdf).

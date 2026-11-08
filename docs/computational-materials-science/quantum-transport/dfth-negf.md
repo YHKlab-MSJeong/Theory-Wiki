@@ -4,7 +4,7 @@ description: 정적 DFT Hamiltonian과 전극 self-energy를 NEGF에 넣는 DFTH
 
 # DFTH-NEGF: 정적 DFT Hamiltonian으로 푸는 수송
 
-Liu 등의 2026년 프리프린트는 열린경계 수송의 자기일관 Hamiltonian 대신 주기 ground-state DFT Hamiltonian을 고정해 NEGF에 넣는 경로를 DFTH-NEGF라 부른다. 이 문서에서도 해당 논문의 용어로 DFTH-NEGF를 사용한다. 이때 NEGF와 전극 self-energy 계산은 유지하고, 수송 전하에 따른 Hamiltonian 갱신은 생략한다. [1, Introduction and Results]
+Liu 등의 2026년 프리프린트는 열린경계 수송의 자기일관 Hamiltonian 대신 주기 ground-state DFT Hamiltonian을 고정해 [NEGF](negf.md)에 넣는 경로를 DFTH-NEGF라 부른다. 이 문서에서도 해당 논문의 용어로 DFTH-NEGF를 사용한다. 이때 NEGF와 전극 self-energy 계산은 유지하고, 수송 전하에 따른 Hamiltonian 갱신은 생략한다. [1, Introduction and Results]
 
 <figure markdown="span">
 
@@ -17,7 +17,7 @@ Liu 등의 2026년 프리프린트는 열린경계 수송의 자기일관 Hamilt
 
 ## 1. NEGF 계산에서 유지하는 것과 생략하는 것
 
-산란영역의 비직교 기저 Green 함수는
+[비직교 국소 기저](../../computational-science/atomistic-simulation/localized-basis-sets.md)에서 산란영역의 Green 함수는
 
 \[
 G_C^r(E)=

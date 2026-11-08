@@ -1006,9 +1006,9 @@
   },
   "computational-materials-science/dielectric-response/born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "5b67a5374621e086ba6a53d90a1f5edb5334f6f3a20b982e55ea9e1c8c5b1b8c",
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "1ea13c074150dbe141a0b2f2e28401b878ec2a9b54bdf53b9cff865d9dfccf76",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/born-effective-charge-response.svg": "c2e84840370b28e3749ed390690228fddfafe87e7284882c20f47891f04caead"
     },
@@ -1016,17 +1016,21 @@
       {
         "path": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
         "sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "1e79b2587c3b860138c08af83afc258667eb9621b1f82722b71026c9310a097c"
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "5b67a5374621e086ba6a53d90a1f5edb5334f6f3a20b982e55ea9e1c8c5b1b8c"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "gonze": {
@@ -1037,7 +1041,7 @@
       "baroni": {
         "provenance": "baroni-et-al-2001",
         "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+        "location": "§§II.C.2, II.D.2; polarization and Born response"
       },
       "epw": {
         "provenance": "epw-theory-docs",
@@ -1048,6 +1052,24 @@
         "provenance": "giustino-2017",
         "url": "https://doi.org/10.1103/RevModPhys.89.015003",
         "location": "§§III.A–B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
+      },
+      "wu": {
+        "provenance": "wu-vanderbilt-hamann-2005",
+        "url": "https://arxiv.org/abs/cond-mat/0501548",
+        "location": "§II.A, Eqs.(3)–(8)",
+        "kind": "primary-research"
+      },
+      "exciting": {
+        "provenance": "exciting-born-tutorial",
+        "url": "https://www.exciting-code.org/uploads/exciting/tutorial-notebooks-sodium/born_effective_charges_of_zincblende_structure_crystals.html",
+        "location": "§§1–3, Eqs.(1)–(4)",
+        "kind": "primary-documentation"
+      },
+      "fhiaims": {
+        "provenance": "fhi-aims-polarization",
+        "url": "https://www.fhi-aims.org/uploads/manual/Ch3/S42.html",
+        "location": "§3.42, How to calculate Born Effective Charges?",
+        "kind": "primary-documentation"
       }
     },
     "findings": [
@@ -1086,14 +1108,23 @@
           "gonze",
           "baroni"
         ]
+      },
+      {
+        "claim": "Born 텐서는 고정 셀에서 원자변위에 대한 분극 미분 및 전기장에 대한 힘 미분으로 표현된다.",
+        "scope": "절연체, 선형 응답, 고정 거시 전기장 및 변형률",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "wu"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/dfpt-dielectric-response.md": {
     "status": "pass",
-    "document_sha256": "8c5ce526f70b2774e9144f5c89f27e7afccd9891aef9bd4ca86997c1e23e3d56",
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "0c724b1d6ef4aeec85329db788c60a3b42f955482218c56f8f340eb91ee3c7e0",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/dfpt-dielectric-workflow.svg": "e3d14d4dfbb2cbefb38c3278831e6fdcd9825987e5491e0cf4291960be657118"
     },
@@ -1101,17 +1132,21 @@
       {
         "path": "refs/quality/evidence/dfpt-dielectric-response-2026-11-06.md",
         "sha256": "7d2d1529e29f193f90e1b476200d7c8eb51eaac18e4375cc53d82b876a056d70"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "7d49f075feabd5eecdbbe523d1a793f83f5f555f4cc26c46150f6b33d775d4ca"
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "8c5ce526f70b2774e9144f5c89f27e7afccd9891aef9bd4ca86997c1e23e3d56"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "gonze": {
@@ -1122,12 +1157,18 @@
       "baroni": {
         "provenance": "baroni-et-al-2001",
         "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "§§II.3.2, II.4.2–4.3; §V.6 anharmonic effects"
+        "location": "§§II.C, II.D.2, III.B–C, V.F; Eqs.(23)–(27), (95), (150)"
       },
       "stengel": {
         "provenance": "stengel-spaldin-vanderbilt-2009",
         "url": "https://doi.org/10.1038/nphys1185",
         "location": "Main text on electric displacement, dielectric response and structural regimes"
+      },
+      "shpiro": {
+        "provenance": "shpiro-2022-nonorthogonal-forces",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8908760/",
+        "location": "§2, Eqs.(12)–(13), basis and overlap derivatives",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -1166,14 +1207,32 @@
           "gonze",
           "baroni"
         ]
+      },
+      {
+        "claim": "DFPT의 정적 이온 유전 응답은 BEC와 질량 가중 Γ점 광학 모드의 유효전하 및 주파수로 구성된다.",
+        "scope": "안정한 조화 절연체, 고정 전기장·변형률, SI 규약",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
+      },
+      {
+        "claim": "원자 중심의 비직교 기저에서는 원자 변위에 따른 기저 및 overlap 변화가 응답 계산에 관련된다.",
+        "scope": "기저의 원자 위치 의존성",
+        "status": "supported",
+        "sources": [
+          "baroni",
+          "shpiro"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/high-k-screening.md": {
     "status": "pass",
-    "document_sha256": "8ac184c932a24ad92435f38f9434e73a610358e9c809235c211b5a03a14e0f76",
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "3e0978ad5ed28544ea70bb9a1e1a721f6366f8115215f8a65b309ad08d1c8d13",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/high-k-selection.svg": "dd8bbfa1f3e0d61b04a0316699f7b0331ab5573b7c24d78107bc15d7044d5cd1",
       "computational-materials-science/dielectric-response/images/lee-2018-fig5.png": "3ff44e655eae1a9966820c34e21b8db8f37493cd76ba23104d50b53c248dbfd1"
@@ -1186,23 +1245,27 @@
       {
         "path": "refs/quality/evidence/high-k-screening-update-2026-11-08.md",
         "sha256": "5eb941dbcb2f409497576fbf207c4930d622373a5cc072766e40865a79fb2868"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "241ece2089e0d3693a7f0c1c6469e61845ab79241ee700ff96e49493a7af63de"
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "8ac184c932a24ad92435f38f9434e73a610358e9c809235c211b5a03a14e0f76"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "robertson04": {
         "provenance": "robertson-2004",
         "url": "https://doi.org/10.1051/epjap:2004206",
-        "location": "Eq. (1), §§1–2; high-k gate dielectric constraints"
+        "location": "§1.2 Eqs.(2)–(3); §§2.4,4; dielectric and band offsets"
       },
       "robertson06": {
         "provenance": "robertson-2006",
@@ -1218,13 +1281,19 @@
       "lee": {
         "provenance": "lee-et-al-2018",
         "url": "https://doi.org/10.1038/s41598-018-33095-6",
-        "location": "Abstract; Methods; Results; Fig. 5, Methods",
+        "location": "Results, Methods, Fig.5",
         "kind": "primary-research"
       },
       "takigawa_screening": {
         "provenance": "takigawa-kiyohara-kumagai-prx-2026",
         "url": "https://journals.aps.org/prx/pdf/10.1103/28wr-w896",
         "location": "Abstract; §II.B, printed pp. 5–6; Fig. 4(a,b), printed p. 5; Table III",
+        "kind": "primary-research"
+      },
+      "wilk": {
+        "provenance": "wilk-wallace-anthony-2001",
+        "url": "https://doi.org/10.1063/1.1361065",
+        "location": "§§II, V.A Eq.(11), VI.A",
         "kind": "primary-research"
       }
     },
@@ -1280,6 +1349,23 @@
         "sources": [
           "lee"
         ]
+      },
+      {
+        "claim": "EOT는 같은 정전용량의 SiO2 등가 두께이며, 이상적 직렬 층의 기여를 합산할 수 있다.",
+        "scope": "선형 균일 평행판 유전체와 명시된 고정 면적",
+        "status": "supported",
+        "sources": [
+          "robertson04",
+          "wilk"
+        ]
+      },
+      {
+        "claim": "Lee 등은 Egκ를 계산 후보 선별 지표로 사용한다.",
+        "scope": "해당 논문 비산화물 후보 및 Eg의 eV 단위",
+        "status": "reported-primary",
+        "sources": [
+          "lee"
+        ]
       }
     ],
     "supplemental_evidence": [
@@ -1291,27 +1377,33 @@
   },
   "computational-materials-science/dielectric-response/yim-2015-high-k-oxides.md": {
     "status": "pass",
-    "document_sha256": "2b1313ba84562aebbec1c520e100fc4c810220f25cf226e3c111042369fdd777",
-    "evidence": "refs/quality/evidence/yim-2015-high-k-oxides-2026-11-06.md",
-    "evidence_sha256": "98225eff03fa229a361db306fdaa5905713943d42a70b5fd6c920a890e8fad62",
+    "document_sha256": "ab0dcc0fe357e9d1eb4e93de9e8c4165ce372be8b220e57c526ec4a19aaf3138",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/yim-2015-fig4.png": "eb0ac490834ccc98186c9a5b70518d1a7b8e5509bc19d014b0fc3a3ce69d0005"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/yim-2015-high-k-oxides-2026-11-06.md",
+        "sha256": "98225eff03fa229a361db306fdaa5905713943d42a70b5fd6c920a890e8fad62"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Yim 등 2015년 high-throughput 산화물 스크리닝의 질문과 결과 해석 범위를 기록한다."
+      "mode": "changes",
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "2b1313ba84562aebbec1c520e100fc4c810220f25cf226e3c111042369fdd777"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "yim": {
         "provenance": "yim-et-al-2015",
         "url": "https://doi.org/10.1038/am.2015.57",
-        "location": "Abstract; Introduction; Methods; Results and Fig. 4",
+        "location": "Methods, Results, Fig.3–4, Table 1",
         "kind": "primary-research"
       },
       "robertson06": {
@@ -1351,33 +1443,47 @@
           "yim",
           "robertson04"
         ]
+      },
+      {
+        "claim": "Yim 논문의 구조 선정, HSE@GGA와 DFPT 계산, Fig.4 및 c-BeO 수치는 원 논문의 결과와 조건이다.",
+        "scope": "Methods, Results, Fig.3–4, Table 1",
+        "status": "reported-primary",
+        "sources": [
+          "yim"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/lee-2018-nonoxide-dielectrics.md": {
     "status": "pass",
-    "document_sha256": "e641e804e0660d3e278ab056012b62e644d0f53b1cf98f383213f29b0fcedcc7",
-    "evidence": "refs/quality/evidence/lee-2018-nonoxide-dielectrics-2026-11-06.md",
-    "evidence_sha256": "a159e576ce5b7a006065d51d8ed1a77c0197fbbd56571a08aaed1494e553e868",
+    "document_sha256": "d6480e6dedb234dfb3af09bc18024af18b38b40e24783945a0d3fb45115d3a4c",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/lee-2018-fig4.png": "c7c32ec272121e0c611f55819625ff699a9a018f27d97efd692898eaa1d622f8",
       "computational-materials-science/dielectric-response/images/lee-2018-fig5.png": "3ff44e655eae1a9966820c34e21b8db8f37493cd76ba23104d50b53c248dbfd1"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/lee-2018-nonoxide-dielectrics-2026-11-06.md",
+        "sha256": "a159e576ce5b7a006065d51d8ed1a77c0197fbbd56571a08aaed1494e553e868"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Lee 등 2018년 비산화물 유전체 스크리닝의 계산 대상과 후보 주장 범위를 정리한다."
+      "mode": "changes",
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "e641e804e0660d3e278ab056012b62e644d0f53b1cf98f383213f29b0fcedcc7"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "lee": {
         "provenance": "lee-et-al-2018",
         "url": "https://doi.org/10.1038/s41598-018-33095-6",
-        "location": "Abstract; Methods; Results",
+        "location": "Results, Methods, Figs.2–5, Table 1",
         "kind": "primary-research"
       },
       "gonze": {
@@ -1425,14 +1531,22 @@
           "lee",
           "robertson04"
         ]
+      },
+      {
+        "claim": "Lee 논문의 이원·삼원 후보 수, 계산 근사, Fig.4–5 및 불화물 후보 수치는 원 논문의 결과다.",
+        "scope": "Results, Methods, Figs.2–5, Table 1",
+        "status": "reported-primary",
+        "sources": [
+          "lee"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/ml-born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "22da0df98eb835e3d51ff5387ccb1150543f2464586aa1a62a3325c9751d1c76",
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "175582f9ffaea85b683cd43984c5c251e944cdd4aa6d2cbc23bce799d82b6aa7",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/sevennet-polar-outputs.svg": "165e53ff9152eb708e3ba14ce29aa6aa77bc8db095106d5cab97ea14e4c3d988"
     },
@@ -1440,23 +1554,27 @@
       {
         "path": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
         "sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "0b75c5bc6e825d7853f961787401965846d751606a43c532e59c833fffdf0337"
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "22da0df98eb835e3d51ff5387ccb1150543f2464586aa1a62a3325c9751d1c76"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "seven": {
         "provenance": "lu-et-al-sevennet-polar-2026",
         "url": "https://arxiv.org/abs/2607.14827",
-        "location": "v3 Abstract; §§2–4, 2026-07-21",
+        "location": "§§2.1–2.4, 4.4–4.7, Tables 1–3, Fig.2, Supplement §10 Eq.(S1)",
         "kind": "primary-research"
       },
       "gonze": {
@@ -1510,32 +1628,46 @@
           "gonze",
           "baroni"
         ]
+      },
+      {
+        "claim": "SevenNet-PS/PM의 모델, 자료, BEC 손실 정규화, 정확도 및 결함 사례는 arXiv v3 논문 보고값이다.",
+        "scope": "§§2.1–2.4, 4.4–4.7, Tables 1–3, Fig.2, Supplement §10 Eq.(S1)",
+        "status": "reported-primary",
+        "sources": [
+          "seven"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/takigawa-2026-prx-ionic-dielectric-ml.md": {
     "status": "pass",
-    "document_sha256": "fa0b115a214e94b985ae4bcc660ee856bc113582eb13505878ee4b7cbd3df124",
-    "evidence": "refs/quality/evidence/takigawa-2026-prx-ionic-dielectric-ml-2026-11-06.md",
-    "evidence_sha256": "5d0c701f116bbc184c29565d01eff7b8934ee00670215f6e297d2013e50a81f3",
+    "document_sha256": "302fee03f6a1cc08d49b0f805b246d6df134a25352a38e807101cae0c46b6021",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/dielectric-response/images/takigawa-2026-prx-fig2.png": "b28f57f42d5fe03015e583aebfd11995576ddfeb9ab75d9a4ba47439c79472a5"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/takigawa-2026-prx-ionic-dielectric-ml-2026-11-06.md",
+        "sha256": "5d0c701f116bbc184c29565d01eff7b8934ee00670215f6e297d2013e50a81f3"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Takigawa 등 2026년 PRX의 factorized ML과 이온 유전 텐서 산출 경로를 설명한다."
+      "mode": "changes",
+      "description": "논문·이론 내용, 수식·예제 및 관련 이론 링크의 변경 범위",
+      "baseline_sha256": "fa0b115a214e94b985ae4bcc660ee856bc113582eb13505878ee4b7cbd3df124"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "prx": {
         "provenance": "takigawa-kiyohara-kumagai-prx-2026",
         "url": "https://doi.org/10.1103/28wr-w896",
-        "location": "Abstract; §I notation; §II.A Eq. (2) Fig. 3; §II.B Eq. (3) Fig. 4 and Table III",
+        "location": "§§II.A–B, IV.A–B; Tables I–III; Figs.2–4",
         "kind": "primary-research"
       },
       "robertson06": {
@@ -1576,6 +1708,14 @@
         "sources": [
           "prx",
           "robertson06"
+        ]
+      },
+      {
+        "claim": "Takigawa 논문의 joint/direct 모델 검증과 고유전율 선별 수치 및 Γ점 안정성 기준은 해당 원문의 보고값이다.",
+        "scope": "§§II.A–B, IV.A–B; Tables I–III; Figs.2–4",
+        "status": "reported-primary",
+        "sources": [
+          "prx"
         ]
       }
     ]
@@ -2517,9 +2657,9 @@
   },
   "computational-materials-science/quantum-transport/hamgnn-negf.md": {
     "status": "pass",
-    "document_sha256": "69bb19aadd81c644b23c9665589c06959db9ecc9193610c72f9e913496cca94c",
-    "evidence": "refs/quality/evidence/hamgnn-negf-update-2026-11-08.md",
-    "evidence_sha256": "fb92b1a02c628ad21f0e7da29c606a8ffdd92635bbf56ad5b469f1025908fd0d",
+    "document_sha256": "67e7e3ad9a0f2e1cb4d9c3e57483db52d76977a139cfddefd48d43e41de978b6",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/quantum-transport/images/hamgnn-negf-workflow.svg": "eca76dfaf59103aa1e462392712c6cc2e6bd281b540490e00410a680fe3cbcda"
     },
@@ -2527,17 +2667,21 @@
       {
         "path": "refs/quality/evidence/hamgnn-negf-2026-11-08.md",
         "sha256": "146168ce00f6fb9a04b57deeced9c1d9f3c48720ef61016e37102f963acc7e95"
+      },
+      {
+        "path": "refs/quality/evidence/hamgnn-negf-update-2026-11-08.md",
+        "sha256": "fb92b1a02c628ad21f0e7da29c606a8ffdd92635bbf56ad5b469f1025908fd0d"
       }
     ],
     "coverage": {
-      "mode": "changes",
-      "description": "KPM workflow and the paper’s Results/Methods Fermi-level reporting difference were clarified.",
-      "baseline_sha256": "460a52db1467f6a1ef3701e164004008fe82ef6447ba12016ccf75bf1f9187a1"
+      "mode": "meaning-preserving",
+      "description": "이론 링크·서식",
+      "baseline_sha256": "69bb19aadd81c644b23c9665589c06959db9ecc9193610c72f9e913496cca94c"
     },
     "reviewer": {
-      "role": "independent AI reviewer kpm_dfth_science_review",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "liu2026": {
@@ -2608,21 +2752,27 @@
   },
   "computational-materials-science/quantum-transport/dfth-negf.md": {
     "status": "pass",
-    "document_sha256": "ec8ff055836992c3309b1afbffdb5ea04c96a0f2cfef2e6d2e81ec9b35e2ba68",
-    "evidence": "refs/quality/evidence/dfth-negf-2026-11-08.md",
-    "evidence_sha256": "6ad46638abc4941b8f84df3f32c3702a55638b28093de24c25a3858d5cfa5641",
+    "document_sha256": "108f3046c3b68f2223fa5bcfed9ce0d3961f09eb27b0c3f37c3a8881e3713292",
+    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
     "assets": {
       "computational-materials-science/quantum-transport/images/dfth-negf-workflow.svg": "a2854b49a9b6eb5cc0875d2eb1c532a8e8505bb215d414768557daf26e656114"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/dfth-negf-2026-11-08.md",
+        "sha256": "6ad46638abc4941b8f84df3f32c3702a55638b28093de24c25a3858d5cfa5641"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "DFTH-NEGF static-H assumptions, nonorthogonal open-boundary equations, Full-NEGF comparison and finite-bias limits."
+      "mode": "meaning-preserving",
+      "description": "이론 링크·서식",
+      "baseline_sha256": "ec8ff055836992c3309b1afbffdb5ea04c96a0f2cfef2e6d2e81ec9b35e2ba68"
     },
     "reviewer": {
-      "role": "independent AI reviewers kpm_dfth_science_review and dfth_audit",
+      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "liu": {

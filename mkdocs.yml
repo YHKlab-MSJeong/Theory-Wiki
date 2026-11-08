@@ -1,4 +1,6 @@
 site_name: Minsu's Theory Wiki
+repo_url: https://github.com/YHKlab-MSJeong/Theory-Wiki
+edit_uri: edit/main/docs/
 theme:
   name: material
   language: ko
@@ -6,9 +8,17 @@ theme:
     - navigation.sections
     - navigation.top
     - search.highlight
+    - search.suggest
+    - navigation.footer
+    - toc.follow
+    - content.action.edit
 markdown_extensions:
   - admonition
   - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:

@@ -4,7 +4,7 @@ description: HamGNN-NEGF의 Hamiltonian 학습, 비직교 KPM, 전극 self-energ
 
 # HamGNN-NEGF: 학습 Hamiltonian으로 확장하는 양자 수송
 
-HamGNN-NEGF는 작은 구조에서 얻은 일반 DFT Hamiltonian과 overlap 행렬 자료로 원자 환경과 행렬 요소의 관계를 학습하고, 큰 장치 구조의 Hamiltonian을 예측한 뒤 NEGF 수송에 넣는 방법이다. 저자들은 이를 통해 계산량을 줄이면서 고정 단면에서 채널 길이에 대한 선형 스케일링을 얻었다고 보고한다. 논문은 2026년 9월 공개된 arXiv v1 프리프린트다. [1, Abstract; §§I–II]
+HamGNN-NEGF는 작은 구조에서 얻은 [국소 원자궤도 기저](../../computational-science/atomistic-simulation/localized-basis-sets.md)의 DFT Hamiltonian과 overlap 행렬 자료로 원자 환경과 행렬 요소의 관계를 학습하고, 큰 장치 구조의 Hamiltonian을 예측한 뒤 [NEGF 수송](negf.md)에 넣는 방법이다. 저자들은 이를 통해 계산량을 줄이면서 고정 단면에서 채널 길이에 대한 선형 스케일링을 얻었다고 보고한다. 논문은 2026년 9월 공개된 arXiv v1 프리프린트다. [1, Abstract; §§I–II]
 
 <figure markdown="span">
 
@@ -25,7 +25,10 @@ HamGNN은 원자 환경에 따라 새 Hamiltonian을 예측하므로 구조 변�
 
 ## 2. 학습 자료와 행렬 예측
 
-논문은 E(3)-equivariant graph neural network인 HamGNN을 사용한다. 학습자료는 전자 수송 결과가 아니라, 작은 주기 구조에 대한 ground-state DFT Hamiltonian \(H\)와 overlap \(S\)다. 본문 Methods는 PBE/SIESTA, norm-conserving pseudopotential, DZP basis를 사용했다고 적는다. Pt–Si–Pt, P-doped Pt–Si:P–Pt, Pt–분자–Pt 세 구조군마다 세 가지 채널 길이를 만들었다. 각 길이별로 산란영역 원자에 0.08 Å 무작위 변위를 적용한 구조 50개를 생성했다. 자료는 training/validation/test로 80/10/10 분할했다. [1, Methods, pp. 11–12]
+???+ note "학습 구조와 데이터 분할"
+
+    논문은 E(3)-equivariant graph neural network인 HamGNN을 사용한다. 학습자료는 전자 수송 결과가 아니라, 작은 주기 구조에 대한 ground-state DFT Hamiltonian \(H\)와 overlap \(S\)다. 본문 Methods는 PBE/SIESTA, norm-conserving pseudopotential, DZP basis를 사용했다고 적는다. Pt–Si–Pt, P-doped Pt–Si:P–Pt, Pt–분자–Pt 세 구조군마다 세 가지 채널 길이를 만들었다. 각 길이별로 산란영역 원자에 0.08 Å 무작위 변위를 적용한 구조 50개를 생성했다. 자료는 training/validation/test로 80/10/10 분할했다. [1, Methods, pp. 11–12]
+
 
 학습 단계에는 ground-state DFT의 H/S 행렬과 전극 자료가 필요하다. 다만 매 transport 단계에서 full DFT-NEGF 결과를 label로 만들지는 않는다고 저자들은 설명한다. [1, Abstract; Methods]
 
@@ -34,9 +37,9 @@ HamGNN은 원자 환경에 따라 새 Hamiltonian을 예측하므로 구조 변�
 계산은 다음 네 단계로 이어진다.
 
 1. **큰 장치의 원자 구조를 입력한다.** HamGNN은 원자 환경을 바탕으로 device Hamiltonian H를 예측한다. 비직교 계산에는 overlap S도 필요하지만, 큰 장치의 S를 구성하는 절차는 논문에서 명확히 설명하지 않는다.
-2. **정적 장치 행렬에 전극 self-energy를 붙인다.** 전극 self-energy는 전극 bulk DFT의 H, S와 계면 coupling으로 구성한다. 이 경로는 열린 경계 수송을 수행하면서 매번 전하밀도를 갱신해 Hamiltonian을 다시 만드는 Full-NEGF의 self-consistent loop를 생략한다.
+2. **정적 장치 행렬에 [전극 self-energy](negf.md)를 붙인다.** 전극 self-energy는 전극 bulk DFT의 H, S와 계면 coupling으로 구성한다. 이 경로는 열린 경계 수송을 수행하면서 매번 전하밀도를 갱신해 Hamiltonian을 다시 만드는 Full-NEGF의 self-consistent loop를 생략한다.
 3. **비직교 KPM으로 Fermi 준위를 정한다.** 일반화 고유값 스펙트럼의 DOS를 Chebyshev moments로 근사하고, 전자수 조건을 만족하는 \(\mu_F\)를 찾는다. 비직교 행렬 작용에는 overlap 선형계 풀이가 들어가며, 일반화 고유값을 직접 대각화하지 않는다. 수식과 수렴 기준은 [비직교 KPM 문서](nonorthogonal-kpm.md), 고정 Hamiltonian으로 수송하는 방법은 [DFTH-NEGF 문서](dfth-negf.md)를 참고한다. [1, §II; 2, Eqs. (7)–(9)]
-4. **RGF로 \(T(E)\)를 계산한다.** 산란영역을 principal layer로 나누고 인접 층 결합을 따라 Green 함수 정보를 재귀적으로 전달한다. [1, §II, Fig. 1; Methods, pp. 11–12]
+4. **[RGF](hamiltonian-block-stitching.md)로 \(T(E)\)를 계산한다.** 산란영역을 principal layer로 나누고 인접 층 결합을 따라 Green 함수 정보를 재귀적으로 전달한다. [1, §II, Fig. 1; Methods, pp. 11–12]
 
 Results Fig. 3과 Supplementary Table 1은 \(2\times2\times5\) Si 사례에서 KPM 수렴을 확인하고, KPM으로 얻은 \(E_F\)를 이후 NEGF 계산에 사용했다고 적는다. 반면 Methods p. 12는 benchmark systems의 \(E_F\)를 일반화 고유값 문제의 직접 대각화로 얻었다고 적는다. 프리프린트는 두 진술의 적용 대상 관계를 설명하지 않는다. 따라서 Results에 명시된 해당 Si 사례와 Methods의 benchmark 절차는 각각 기록하되, 모든 transmission benchmark에 KPM을 적용했다고 단정할 수는 없다. [1, Results, Fig. 3 and Supplementary Table 1; Methods, p. 12]
 
