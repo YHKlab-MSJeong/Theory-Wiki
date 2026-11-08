@@ -32,7 +32,18 @@ class QualityCheckTest(unittest.TestCase):
                         'b': {'url': 'https://b.example', 'location': 'p. 2', 'provenance': 'b'}},
             'findings': [{'claim': 'claim', 'scope': 'conditions', 'status': 'supported', 'sources': ['a', 'b']}],
         }}), encoding='utf-8')
-        (self.root / 'mkdocs.yml').write_text('nav:\n  - Article: article.md\n', encoding='utf-8')
+        domain_pages = {
+            'device-physics': 'Device physics',
+            'computational-materials-science': 'Material science',
+            'computational-science': 'Computational science',
+        }
+        nav = ['nav:', '  - Article: article.md']
+        for slug, title in domain_pages.items():
+            overview = self.root / 'docs' / slug / 'index.md'
+            overview.parent.mkdir(parents=True)
+            overview.write_text(f'# {title}\n', encoding='utf-8')
+            nav.extend([f'  - {title}:', f'      - Overview: {slug}/index.md'])
+        (self.root / 'mkdocs.yml').write_text('\n'.join(nav) + '\n', encoding='utf-8')
 
     def tearDown(self):
         self.temp.cleanup()
