@@ -20,6 +20,8 @@ description: 작은 DFT Hamiltonian 확장, Order-N DFT, 학습 Hamiltonian 수�
 
 학습 Hamiltonian은 원자 환경으로부터 행렬 요소를 **예측하는 모형**이며, 예측된 행렬을 NEGF에 넣어 수송을 계산할 수 있다. [3, §§II–III; 4, Abstract and main text]
 
+HamGNN-NEGF의 학습 행렬, 비직교 KPM, RGF 연결과 적용 경계는 [독립 문서](hamgnn-negf.md)에서 자세히 설명한다.
+
 ## 2. 채널 길이를 늘릴 때 먼저 정할 질문
 
 완전히 주기적인 균일 채널을 긴 산란영역으로 표현하려는 경우에는 대표 단위의 행렬 블록을 반복하는 모델을 만들 수 있다. 반면 실제 트랜지스터에서는 전극 접합, 게이트 전위, 도핑, 결함, 변형과 전하 재분포가 채널 위치에 따라 달라질 수 있다. 이 효과를 무시하고 한 블록을 복제하면 계산은 길어져도 해당 공간 변화를 Hamiltonian에 새로 반영하지 않는다. [1, §XIII; 2, TBT.Elec.<>.Bulk and principal-layer guidance; 3, §§III.2–III.3]

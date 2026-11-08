@@ -1603,16 +1603,17 @@
     ]
   },
   "computational-materials-science/quantum-transport/long-channel-transport.md": {
-    "evidence": "refs/quality/evidence/long-channel-transport-2026-11-08.md",
+    "evidence": "refs/quality/evidence/long-channel-transport-crosslink-2026-11-08.md",
     "assets": {
       "assets/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
     },
     "coverage": {
-      "mode": "full",
-      "description": "작은 DFT 블록 반복, Order-N DFT, ML Hamiltonian 수송의 입력·계산 목표·한계를 비교한다."
+      "mode": "changes",
+      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
+      "baseline_sha256": "91339dee849bebc89abde750e488153215a9a4ca9c44de38b8e9d5d0ad49ccfd"
     },
     "reviewer": {
-      "role": "independent AI reviewer hamiltonian_scope; Order-N cross-review order_n_sources",
+      "role": "independent AI reviewer wiki_coverage",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1686,9 +1687,14 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "91339dee849bebc89abde750e488153215a9a4ca9c44de38b8e9d5d0ad49ccfd",
-    "evidence_sha256": "cf83cfe1f9342f6df4e42eeefadb95e7904c28b201f07dca4d1c45f057f39b81",
-    "prior_evidence": []
+    "document_sha256": "e7da664b4f3807761be85246357d48d1860ab08496c65d194d65062303c825b7",
+    "evidence_sha256": "ad31332ee4ecd3ea5517db479679bb0f3182d05de36343c0b73597a8fbdb4834",
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/long-channel-transport-2026-11-08.md",
+        "sha256": "cf83cfe1f9342f6df4e42eeefadb95e7904c28b201f07dca4d1c45f057f39b81"
+      }
+    ]
   },
   "computational-materials-science/quantum-transport/hamiltonian-block-stitching.md": {
     "evidence": "refs/quality/evidence/hamiltonian-block-stitching-2026-11-08.md",
@@ -1784,14 +1790,15 @@
     "prior_evidence": []
   },
   "computational-materials-science/quantum-transport/ml-hamiltonian-transport.md": {
-    "evidence": "refs/quality/evidence/ml-hamiltonian-transport-2026-11-08.md",
+    "evidence": "refs/quality/evidence/ml-hamiltonian-transport-crosslink-2026-11-08.md",
     "assets": {},
     "coverage": {
-      "mode": "full",
-      "description": "DeePTB-SK/E3와 HamGNN-NEGF의 학습·예측 경로와 논문 보고 범위를 구분한다."
+      "mode": "changes",
+      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
+      "baseline_sha256": "5ca4ea916b63e36a9d007a00948d95e632839f2df22fe564f6c132c36d63ef5e"
     },
     "reviewer": {
-      "role": "independent AI reviewer hamiltonian_scope",
+      "role": "independent AI reviewer wiki_coverage",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1867,19 +1874,25 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "5ca4ea916b63e36a9d007a00948d95e632839f2df22fe564f6c132c36d63ef5e",
-    "evidence_sha256": "321b0f6679bdfc8b2551a02741a134b407aca840f0180ba3f5d515e1888fbdcd",
-    "prior_evidence": []
+    "document_sha256": "660e00253080816911ce581b7324bba0d81cb7a15ea13270b8dd5f9918b5cfc9",
+    "evidence_sha256": "ad84ca31e3f2f44627c0b1dd1dc6c66f24f44bf7f336486f3ec5e285feedfd93",
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/ml-hamiltonian-transport-2026-11-08.md",
+        "sha256": "321b0f6679bdfc8b2551a02741a134b407aca840f0180ba3f5d515e1888fbdcd"
+      }
+    ]
   },
   "computational-science/atomistic-simulation/order-n-dft.md": {
-    "evidence": "refs/quality/evidence/order-n-dft-2026-11-08.md",
+    "evidence": "refs/quality/evidence/order-n-dft-crosslink-2026-11-08.md",
     "assets": {},
     "coverage": {
-      "mode": "full",
-      "description": "Order-N의 국소성·스케일링, SIESTA KMG 구현, solver 구분 및 장채널 블록 반복과의 차이를 설명한다."
+      "mode": "changes",
+      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
+      "baseline_sha256": "475d580ba1ee961026bfc021ddafccb66ff7d7a3214d249bb5d4e1e2b7eaa317"
     },
     "reviewer": {
-      "role": "independent AI reviewer order_n_sources",
+      "role": "independent AI reviewer wiki_coverage",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1953,8 +1966,392 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "475d580ba1ee961026bfc021ddafccb66ff7d7a3214d249bb5d4e1e2b7eaa317",
-    "evidence_sha256": "0ce08dbec3576175f690378fac9a33c8e90c4f5c019d634376ad65556b3495e9",
-    "prior_evidence": []
+    "document_sha256": "31535f7623ca2a9c7227ba97feb8ac23e4e8797d841854069e851e52f57e1a51",
+    "evidence_sha256": "e761f9596a215c315d3cfe9fe44470248712c9122184784c7666bca41f1e9984",
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/order-n-dft-2026-11-08.md",
+        "sha256": "0ce08dbec3576175f690378fac9a33c8e90c4f5c019d634376ad65556b3495e9"
+      }
+    ]
+  },
+  "computational-science/atomistic-simulation/localized-basis-sets.md": {
+    "status": "pass",
+    "document_sha256": "add66656416f75a1a024ceaf49cf7d52458e27497e1c85cb05c9bd2d1addd198",
+    "evidence": "refs/quality/evidence/localized-basis-sets-2026-11-08.md",
+    "evidence_sha256": "6ad8194204d4331db8672ccc3e31eee44027ff74feafc1cb2922a7f4b369fc90",
+    "assets": {
+      "assets/basis-validation-workflow.svg": "3c4fed395b49c6fbdb9b53975ab4d66038ef033794d6e6b66c41a970112d69b1"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Semicore/basis definitions, target-observable validation steps and local-device claim boundary."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer basis_solver_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "siesta": {
+        "provenance": "siesta-reference-5.4",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
+        "location": "Basis sets; Basis generation; Basis size",
+        "kind": "primary-documentation"
+      },
+      "afzalian": {
+        "provenance": "afzalian-2021-dft-negf",
+        "url": "https://arxiv.org/abs/2106.07248",
+        "location": "§§II–III; QE plane-wave/Wannier and OpenMX device comparison",
+        "kind": "primary-research"
+      },
+      "psml": {
+        "provenance": "psml-specification",
+        "url": "https://psml.readthedocs.io/en/latest/",
+        "location": "Valence configuration and semicore metadata",
+        "kind": "primary-documentation"
+      },
+      "quhe": {
+        "provenance": "quhe-2019-res2-zpz",
+        "url": "https://www.rsc.org/suppdata/c8/tc/c8tc05863f/c8tc05863f1.pdf",
+        "location": "Supporting Information p. 1, Fig. S1",
+        "kind": "primary-research"
+      },
+      "szabo": {
+        "provenance": "szabo-2019-metal-mos2-wannier",
+        "url": "https://arxiv.org/abs/1912.04847",
+        "location": "§§II–III; Wannier layer-band and contact transport setup",
+        "kind": "primary-research"
+      },
+      "ducry_mode": {
+        "provenance": "ducry-2019-mode-space",
+        "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf",
+        "location": "pp. 70–72, Figs. 2 and 4",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Semicore electron selection in a pseudopotential is distinct from radial zeta flexibility and polarization shells in the localized basis.",
+        "scope": "PSML valence/semicore metadata and SIESTA localized-basis definitions.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "psml"
+        ]
+      },
+      {
+        "claim": "For transport use, basis suitability should be checked against relevant band states, contact alignment and device observables; plane-wave, Wannier and atomic-orbital references can be compared with their model differences recorded.",
+        "scope": "Target-observable validation design for localized-orbital transport.",
+        "status": "supported",
+        "sources": [
+          "afzalian",
+          "quhe",
+          "szabo"
+        ]
+      },
+      {
+        "claim": "Agreement in a band or reduced representation alone does not establish that an interface transmission or device current is unchanged.",
+        "scope": "Transport validation, including the distinct mode-space approximation example.",
+        "status": "supported",
+        "sources": [
+          "quhe",
+          "ducry_mode"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/basis-set-validation-cases.md": {
+    "status": "pass",
+    "document_sha256": "48b8105ddbc21838f569d1e3fcb4801bc56cb43fd35c6d81c51d525f49ebd553",
+    "evidence": "refs/quality/evidence/basis-set-validation-cases-2026-11-08.md",
+    "evidence_sha256": "fbe717fa013799cd2720ab55065dbe60d391b5fd2599ce7ae98c96465ad33092",
+    "assets": {},
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "Six literature cases with reported-primary limits and separation of basis-cardinality from other approximations."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer basis_solver_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "ducry2026": {
+        "provenance": "ducry-2026-mos2-oxide",
+        "url": "https://www.nature.com/articles/s41699-026-00677-2",
+        "location": "Methods and Supplementary Information; basis choice and band/defect/transport comparisons",
+        "kind": "primary-research"
+      },
+      "quhe": {
+        "provenance": "quhe-2019-res2-zpz",
+        "url": "https://www.rsc.org/suppdata/c8/tc/c8tc05863f/c8tc05863f1.pdf",
+        "location": "Supporting Information p. 1, Fig. S1",
+        "kind": "primary-research"
+      },
+      "sassi2025": {
+        "provenance": "sassi-2025-au-wse2",
+        "url": "https://doi.org/10.1021/acsaelm.5c00828",
+        "location": "Methods; basis used for strain bands and Au|WSe2 transport",
+        "kind": "primary-research"
+      },
+      "afzalian2021": {
+        "provenance": "afzalian-2021-dft-negf",
+        "url": "https://arxiv.org/abs/2106.07248",
+        "location": "Fig. 1 and §§II–III; WS2 device methods and author list",
+        "kind": "primary-research"
+      },
+      "szabo2019": {
+        "provenance": "szabo-2019-metal-mos2-wannier",
+        "url": "https://arxiv.org/abs/1912.04847",
+        "location": "§§II–III; layer Wannier Hamiltonians, contact alignment and kz sampling",
+        "kind": "primary-research"
+      },
+      "ducry2019": {
+        "provenance": "ducry-2019-mode-space",
+        "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf",
+        "location": "pp. 70–72, Figs. 2 and 4",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "The MoS2/oxide study reports element-dependent reference and transport basis sets and the stated CB-edge, defect-level and n-type transport comparisons.",
+        "scope": "Specific CP2K/PBEsol model and basis selections in the cited paper.",
+        "status": "reported-primary",
+        "sources": [
+          "ducry2026"
+        ]
+      },
+      {
+        "claim": "The ReS2 SI reports an SZP/DZP transmission comparison for zigzag ReS2 at Lg=4 nm and Vg=-1.3 V and describes the traces as consistent.",
+        "scope": "One reported device condition; no quantitative global convergence claim.",
+        "status": "reported-primary",
+        "sources": [
+          "quhe"
+        ]
+      },
+      {
+        "claim": "The WSe2/Au paper reports DZP for strain bands and SZP in TranSIESTA interface transport, without a direct SZP/DZP device-current convergence comparison in the cited methods.",
+        "scope": "The basis use and validation evidence explicitly reported in the paper.",
+        "status": "reported-primary",
+        "sources": [
+          "sassi2025"
+        ]
+      },
+      {
+        "claim": "The Afzalian paper compares QE plane-wave/Wannier and OpenMX nonorthogonal LCAO device workflows and reports ID-VG agreement; it is not a SZP/DZP convergence study.",
+        "scope": "WS2 transport example in the 2021 paper.",
+        "status": "reported-primary",
+        "sources": [
+          "afzalian2021"
+        ]
+      },
+      {
+        "claim": "The Szabo paper obtains contact-transport Hamiltonians through a VASP-to-Wannier route and checks constituent-layer bands, with stated alignment and kz-sampling model conditions.",
+        "scope": "Metal/MoS2 interfaces in the cited paper; not a localized-orbital basis-cardinality comparison.",
+        "status": "reported-primary",
+        "sources": [
+          "szabo2019"
+        ]
+      },
+      {
+        "claim": "The mode-space paper reports a 0.047 meV Cu band maximum error in its stated window, nearly 20% current underestimation for all-mode-space electrodes at 0.2 V, and less than 1% current error when retaining one real-space interface block.",
+        "scope": "Mode-space transformation with the reported CP2K DZVP model; not AO basis reduction.",
+        "status": "reported-primary",
+        "sources": [
+          "ducry2019"
+        ]
+      }
+    ]
+  },
+  "computational-science/atomistic-simulation/electronic-structure-solvers.md": {
+    "status": "pass",
+    "document_sha256": "4e5b996ed7aa843e6f18f8083a515a52d3c82a81b53d99657706a619e5fbb4c6",
+    "evidence": "refs/quality/evidence/electronic-structure-solvers-2026-11-08.md",
+    "evidence_sha256": "94769dcd1491312d16ec62016285092f5286d558be66aceece5f59bc0ccedcaa",
+    "assets": {
+      "assets/solver-and-transport-roles.svg": "065f4ff39a336fb3c398995a4a348a4267c67e6b78be4237b813320d8b12acaa"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "OMM/PEXSI/CheSS algorithm roles, ELSI interface, and distinction from block-stitching transport."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer basis_solver_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "siesta": {
+        "provenance": "siesta-reference-5.4",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
+        "location": "Calculation of the electronic structure; SolverOMM; SolverON; SolverPEXSI; SolverELSI; SolverCheSS; NEGF equations",
+        "kind": "primary-documentation"
+      },
+      "elsi2020": {
+        "provenance": "elsi-open-infrastructure-2020",
+        "url": "https://arxiv.org/abs/1912.13403",
+        "location": "§§I–II; software interface, supported solver families and benchmark context",
+        "kind": "primary-research"
+      },
+      "pexsi_docs": {
+        "provenance": "pexsi-documentation",
+        "url": "https://pexsi.readthedocs.io/en/stable/introduction.html",
+        "location": "Overview; rational pole expansion; selected inversion; applicability discussion",
+        "kind": "primary-documentation"
+      },
+      "chess": {
+        "provenance": "mohr-2017-chess",
+        "url": "https://arxiv.org/abs/1704.00512",
+        "location": "Abstract and §§II–III; Chebyshev matrix functions for sparse electronic-structure matrices",
+        "kind": "primary-research"
+      },
+      "elsi2018": {
+        "provenance": "yu-2018-elsi-interface",
+        "url": "https://arxiv.org/abs/1705.11191",
+        "location": "Abstract and §§I–III; unified Kohn-Sham solver interface",
+        "kind": "primary-research"
+      },
+      "pexsi2013": {
+        "provenance": "lin-2013-pexsi",
+        "url": "https://arxiv.org/abs/1202.2159",
+        "location": "Abstract and method; pole expansion and selected inversion for density, energy and forces",
+        "kind": "primary-research"
+      },
+      "tbtrans": {
+        "provenance": "siesta-tbtrans-guide-5.4",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html",
+        "location": "Principal layer interactions; Green function; calculation time",
+        "kind": "primary-documentation"
+      }
+    },
+    "findings": [
+      {
+        "claim": "The SIESTA 5.4 OMM, historical Order-N, PEXSI, ELSI and CheSS entries denote distinct implementation and algorithm roles; SIESTA SolverOMM is described as cubic scaling.",
+        "scope": "The versioned SIESTA 5.4 solver descriptions and the ELSI OMM context.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "elsi2018"
+        ]
+      },
+      {
+        "claim": "ELSI is a common software interface for connecting electronic-structure codes to compatible eigensolver or density-matrix solver libraries, not one numerical backend.",
+        "scope": "ELSI interface and backend selection as described in the cited versions.",
+        "status": "supported",
+        "sources": [
+          "elsi2018",
+          "elsi2020"
+        ]
+      },
+      {
+        "claim": "PEXSI uses rational pole expansion and selected inversion to obtain selected matrix-function entries for electronic-structure quantities; efficiency is conditional on problem and parallel setting.",
+        "scope": "Sparse-matrix DFT usage; no universal O(N) or guaranteed speedup asserted.",
+        "status": "supported",
+        "sources": [
+          "pexsi_docs",
+          "pexsi2013"
+        ]
+      },
+      {
+        "claim": "CheSS applies Chebyshev polynomial expansions to sparse matrix functions and the SIESTA 5.4 integration is marked experimental.",
+        "scope": "Density matrix and related sparse matrix functions in the cited library/code version.",
+        "status": "supported",
+        "sources": [
+          "chess",
+          "siesta"
+        ]
+      },
+      {
+        "claim": "Electronic-structure solvers do not themselves construct a long transport region by repeating an already computed block or evaluate RGF transmission.",
+        "scope": "Whole-structure Kohn-Sham electronic-structure solution versus principal-layer open-boundary transport.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "tbtrans"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/hamgnn-negf.md": {
+    "status": "pass",
+    "document_sha256": "460a52db1467f6a1ef3701e164004008fe82ef6447ba12016ccf75bf1f9187a1",
+    "evidence": "refs/quality/evidence/hamgnn-negf-2026-11-08.md",
+    "evidence_sha256": "146168ce00f6fb9a04b57deeced9c1d9f3c48720ef61016e37102f963acc7e95",
+    "assets": {
+      "assets/hamgnn-negf-workflow.svg": "eca76dfaf59103aa1e462392712c6cc2e6bd281b540490e00410a680fe3cbcda"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "HamGNN-NEGF training, nonorthogonal KPM, electrode self-energy, RGF, scaling conditions and validation limits."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer hamgnn_content_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "liu2026": {
+        "provenance": "liu-2026-hamgnn-negf-arxiv-v1",
+        "url": "https://arxiv.org/pdf/2609.37058v1",
+        "location": "Abstract; §II and Fig. 1 pp. 3–4; Results pp. 4–11; Methods pp. 11–12; arXiv v1 submitted 2026-09-29",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "HamGNN training uses ordinary ground-state DFT Hamiltonian and overlap data; the authors say costly DFT-NEGF transport outputs are not required as training labels.",
+        "scope": "Training dataset and claim limits in the 2026 arXiv v1 preprint.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      },
+      {
+        "claim": "The reported pipeline predicts a static device Hamiltonian, combines it with DFT-derived electrode self-energies, determines the Fermi level with nonorthogonal KPM and evaluates transmission with RGF without a transport SCF loop.",
+        "scope": "The paper's DFTH-NEGF workflow.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      },
+      {
+        "claim": "The paper reports channel-length linear scaling only for fixed cross-section and calculation settings, with HamGNN, KPM and RGF cost terms dependent on graph, moment/random-vector and layer-block sizes.",
+        "scope": "Asymptotic scaling conditions stated for the proposed workflow.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      },
+      {
+        "claim": "The paper reports the listed Pt-Si-Pt and doped Pt-Si:P-Pt transmission errors, a Hamiltonian-element error, atom-count speedups and simulations exceeding 10000 atoms.",
+        "scope": "Specific structures and settings of the preprint benchmarks.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      },
+      {
+        "claim": "The finite-bias results use a zero-bias Hamiltonian approximation and are presented for weakly nonlinear regimes; pristine interfaces show larger transmission errors at higher tested bias than doped devices.",
+        "scope": "Finite-bias approximation and reported benchmarks, not general self-consistent finite-bias validity.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      },
+      {
+        "claim": "The main paper does not clearly specify how the overlap matrix for a large predicted device is constructed, so the page does not claim that the network predicts both H and S.",
+        "scope": "Reproducibility gap in the nonorthogonal implementation described in the preprint.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      }
+    ]
   }
 }

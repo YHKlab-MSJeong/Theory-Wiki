@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>수송 물리량에 맞춘 basis 검증 흐름도</title>
+<style>body{margin:0;padding:24px;background:#f6f5f1;font:16px system-ui,sans-serif;color:#19343d}main{max-width:1280px;margin:auto}svg{display:block;width:100%;height:auto}</style></head>
+<body><main><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">수송 물리량을 기준으로 한 basis 검증</title>
+<desc id="diagram-desc">입력 확인, 관심 밴드 비교, 접촉 정렬 비교, 대표 수송량 비교, 기준 통과 또는 수정의 다섯 단계를 보여준다.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#607278"/></marker>
+  <style>
+    .bg{fill:#f6f5f1}.title{font:700 26px system-ui,sans-serif;fill:#19343d}.sub{font:15px system-ui,sans-serif;fill:#50646b}
+    .box{fill:#fff;stroke:#b9c6c5;stroke-width:2;rx:12}.accent{fill:#e5f1ef;stroke:#2f7b74;stroke-width:2}
+    .step{font:700 13px system-ui,sans-serif;letter-spacing:1px;fill:#2f7b74}.head{font:700 18px system-ui,sans-serif;fill:#19343d}
+    .body{font:14px system-ui,sans-serif;fill:#435960}.arrow{fill:none;stroke:#607278;stroke-width:2.5;marker-end:url(#arrow)}
+    .note{font:600 15px system-ui,sans-serif;fill:#963f36}
+  </style>
+</defs>
+<rect class="bg" width="1200" height="430"/>
+<text class="title" x="48" y="54">수송 계산에 쓸 작은 basis를 어떻게 검증할까</text>
+<text class="sub" x="48" y="82">DZP는 비교 후보 중 하나다. 각 단계의 허용 오차는 목표 장치와 관측량에 맞춰 정한다.</text>
+<path class="arrow" d="M222 210H259"/><path class="arrow" d="M447 210H484"/><path class="arrow" d="M672 210H709"/><path class="arrow" d="M897 210H934"/>
+<g transform="translate(38 128)"><rect class="box" width="184" height="164"/><text class="step" x="18" y="28">01 · 입력</text><text class="head" x="18" y="62">모델 고정</text><text class="body" x="18" y="91">ion / pseudopotential</text><text class="body" x="18" y="114">semicore · zeta · cutoff</text><text class="body" x="18" y="137">기하 · XC · k점</text></g>
+<g transform="translate(263 128)"><rect class="box" width="184" height="164"/><text class="step" x="18" y="28">02 · 밴드</text><text class="head" x="18" y="62">수송 창 확인</text><text class="body" x="18" y="91">valley 순서와 위치</text><text class="body" x="18" y="114">유효질량 · splitting</text><text class="body" x="18" y="137">관심 에너지 구간</text></g>
+<g transform="translate(488 128)"><rect class="box" width="184" height="164"/><text class="step" x="18" y="28">03 · 정렬</text><text class="head" x="18" y="62">접촉 확인</text><text class="body" x="18" y="91">일함수 · band edge</text><text class="body" x="18" y="114">진공 준위 기준</text><text class="body" x="18" y="137">계면 전하 이동</text></g>
+<g transform="translate(713 128)"><rect class="accent" width="184" height="164"/><text class="step" x="18" y="28">04 · 수송</text><text class="head" x="18" y="62">목표량 비교</text><text class="body" x="18" y="91">T(E) · 선형응답</text><text class="body" x="18" y="114">유한 bias I–V</text><text class="body" x="18" y="137">동일 접촉·전위 조건</text></g>
+<g transform="translate(938 128)"><rect class="box" width="224" height="164"/><text class="step" x="18" y="28">05 · 판정</text><text class="head" x="18" y="62">채택 또는 수정</text><text class="body" x="18" y="91">사전 기준 통과 → 채택</text><text class="body" x="18" y="114">원인 분리 → 선택적 확장</text><text class="body" x="18" y="137">불확실 → 주장 보류</text></g>
+<rect x="38" y="332" width="1124" height="54" rx="10" fill="#f5e9e4"/>
+<text class="note" x="60" y="365">밴드가 맞는 것만으로 접촉 transmission과 장치 전류까지 검증되지는 않는다.</text>
+</svg>
+</main></body></html>

@@ -50,6 +50,8 @@ Pt–Si–Pt 사례에서 저자들은 \(1\times1\times2\), \(1\times1\times3\),
 
 실무적으로는 짧은 DFT-NEGF 기준계에서 band와 transmission을 먼저 비교하고, 그 뒤 길이·결함·게이트 조건을 하나씩 바꾸어 모델의 적용 범위를 확인한다. 문헌의 큰 원자 수 결과는 알고리즘 규모를 보여주는 사례이지 모든 계산 조건에서 같은 정확도를 보장하지 않는다.
 
+HamGNN-NEGF의 학습 자료, 비직교 KPM의 Fermi 준위 탐색, RGF 복잡도, 유한 바이어스 근사와 benchmark 오차는 [HamGNN-NEGF 독립 문서](hamgnn-negf.md)에서 자세히 다룬다.
+
 ## 4. 참고 자료
 
 1. J. Zou et al., “Deep learning accelerated quantum transport simulations in nanoelectronics: from break junctions to field-effect transistors,” *npj Computational Materials* **11**, 375 (2025), [§§II–III, Figs. 1, 2, 5](https://doi.org/10.1038/s41524-025-01853-6).

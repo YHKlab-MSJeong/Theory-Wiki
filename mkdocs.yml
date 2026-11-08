@@ -40,6 +40,7 @@ nav:
           - Electron self-energy: computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md
       - Quantum transport:
           - Overview: computational-materials-science/quantum-transport/index.md
+          - Basis validation cases: computational-materials-science/quantum-transport/basis-set-validation-cases.md
           - NEGF: computational-materials-science/quantum-transport/negf.md
           - Landauer transport: computational-materials-science/quantum-transport/landauer-transmission.md
           - Landauer–Büttiker transport: computational-materials-science/quantum-transport/landauer-buttiker.md
@@ -50,8 +51,11 @@ nav:
               - Overview: computational-materials-science/quantum-transport/long-channel-transport.md
               - Hamiltonian block extension and RGF: computational-materials-science/quantum-transport/hamiltonian-block-stitching.md
               - ML Hamiltonian transport: computational-materials-science/quantum-transport/ml-hamiltonian-transport.md
+              - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md
   - Computational science:
       - Overview: computational-science/index.md
       - Atomistic simulation:
+          - Localized basis sets: computational-science/atomistic-simulation/localized-basis-sets.md
+          - Electronic structure solvers: computational-science/atomistic-simulation/electronic-structure-solvers.md
           - Order-N DFT: computational-science/atomistic-simulation/order-n-dft.md
           - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md

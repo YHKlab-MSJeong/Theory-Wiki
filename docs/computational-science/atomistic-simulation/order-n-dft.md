@@ -38,6 +38,8 @@ E^{\mathrm{KMG}}=
 
 실제 선형 스케일링에는 원자당 기저함수 수가 일정하고, 행렬 연결 범위와 국소화 반경이 계 크기와 함께 무한히 늘지 않는 조건이 필요하다. 작은 계산에서는 행렬 구축 외의 solver·통신 비용이 우세할 수 있어 asymptotic \(O(N)\) 이점이 아직 나타나지 않을 수 있다. [1, §§VI, XIII; 2, “Calculation of the electronic structure”]
 
+OMM·PEXSI·ELSI·CheSS의 알고리즘과 코드별 역할은 [전자구조 대규모 solver 문서](electronic-structure-solvers.md)에서 따로 비교한다.
+
 현재 SIESTA 5.4 문서는 historical `SolverON`이 점유·비점유 상태가 명확히 분리된 계에만 작동하며, 사용과 안정성 측면에서 취약하다고 경고한다. 같은 문서는 별도의 OMM, PEXSI, ELSI 및 CheSS solver도 소개한다. 따라서 논문 속 \(O(N)\) 원리와 현재 코드에서 특정 solver가 안정적·효율적으로 작동한다는 주장은 따로 확인해야 한다. [2, “Calculation of the electronic structure,” “SolverON,” “SolverOMM,” “SolverPEXSI,” “SolverCheSS”]
 
 CheSS는 이 문맥에서 해밀토니안 행렬 자체의 Chebyshev 전개가 아니다. SIESTA 문서는 CheSS를 \(H\), \(S\)의 희소성을 활용해 밀도행렬을 Chebyshev 다항식으로 계산하는 별도 solver라고 설명하고, 유한 HOMO–LUMO gap과 작은 spectral width에서 잘 작동하며 기능이 실험적이라고 밝힌다. 또 `ON.ChemicalPotential`의 Chebyshev Fermi 함수 전개는 화학퍼텐셜의 \(O(N)\) 추정용 옵션이다. 두 옵션을 historical KMG functional과 동일한 알고리즘으로 취급하지 않는다. [2, “ON.ChemicalPotential,” “SolverCheSS”]
