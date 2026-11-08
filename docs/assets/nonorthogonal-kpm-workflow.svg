@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="kpm-title kpm-desc">
+<title id="kpm-title">비직교 KPM으로 Fermi 준위 찾기</title>
+<desc id="kpm-desc">Hamiltonian과 overlap에서 implicit matrix-vector action을 반복해 Chebyshev moments를 얻고 broadened DOS를 복원한 뒤 전자수 적분을 만족하는 Fermi 준위를 찾는다. KPM은 transmission을 계산하지 않는다.</desc>
+<defs>
+  <marker id="kpm-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#61747a"/></marker>
+  <style>
+    .kbg{fill:#f6f5f1}.ktitle{font:700 27px system-ui,sans-serif;fill:#19343d}.ksub{font:15px system-ui,sans-serif;fill:#52666c}
+    .kbox{fill:#fff;stroke:#b8c6c4;stroke-width:2}.kteal{fill:#e5f1ef;stroke:#2f7b74;stroke-width:2}.kgold{fill:#fbf1d9;stroke:#c89328;stroke-width:2}.kred{fill:#f5e9e4;stroke:#af5b4d;stroke-width:2}
+    .kh{font:700 16px system-ui,sans-serif;fill:#19343d}.kb{font:14px system-ui,sans-serif;fill:#465c62}.ksmall{font:13px system-ui,sans-serif;fill:#50646b}
+    .karrow{fill:none;stroke:#61747a;stroke-width:2.5;marker-end:url(#kpm-arrow)}
+  </style>
+</defs>
+<rect class="kbg" width="1280" height="430"/>
+<text class="ktitle" x="40" y="48">비직교 KPM: 행렬 대각화 대신 DOS moments에서 μF를 찾는다</text>
+<text class="ksub" x="40" y="76">Hamiltonian의 전체 고유값을 만들지 않고, Chebyshev recurrence와 전자수 조건을 사용한다.</text>
+<path class="karrow" d="M216 222H241"/><path class="karrow" d="M420 222H445"/><path class="karrow" d="M624 222H649"/><path class="karrow" d="M828 222H853"/><path class="karrow" d="M1032 222H1057"/>
+<rect class="kbox" x="40" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="58" y="192">일반화 스펙트럼</text><text class="kb" x="58" y="220">H c = ε S c</text><text class="kb" x="58" y="246">기저 비직교성 포함</text>
+<rect class="kteal" x="244" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="262" y="192">Implicit action</text><text class="kb" x="262" y="220">S y = H v 풀이</text><text class="kb" x="262" y="246">S⁻¹을 저장하지 않음</text>
+<rect class="kbox" x="448" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="466" y="192">Chebyshev moments</text><text class="kb" x="466" y="220">Tₘ(X̃) 재귀</text><text class="kb" x="466" y="246">stochastic trace</text>
+<rect class="kgold" x="652" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="670" y="192">Kernel broadening</text><text class="kb" x="670" y="220">μₘ → DOS ρK(E)</text><text class="kb" x="670" y="246">유한 에너지 해상도</text>
+<rect class="kbox" x="856" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="874" y="192">전자수 조건</text><text class="kb" x="874" y="220">∫ρK(E) f(E; μ,T)dE</text><text class="kb" x="874" y="246">목표 전자수와 일치</text>
+<rect class="kteal" x="1060" y="160" width="176" height="124" rx="12"/>
+<text class="kh" x="1078" y="192">Fermi 준위 μF</text><text class="kb" x="1078" y="220">N(μ)=Ntarget</text><text class="kb" x="1078" y="246">전자수 오차 확인</text>
+<rect class="kred" x="40" y="324" width="1196" height="58" rx="11"/>
+<text class="kh" x="64" y="359">범위</text><text class="kb" x="142" y="359">KPM은 DOS와 μF를 근사한다. Transmission T(E)는 이후 NEGF/RGF에서 계산한다.</text>
+</svg>
