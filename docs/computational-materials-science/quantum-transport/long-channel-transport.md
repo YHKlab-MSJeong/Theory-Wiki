@@ -20,7 +20,7 @@ description: 작은 DFT Hamiltonian 확장, Order-N DFT, 학습 Hamiltonian 수�
 
 학습 Hamiltonian은 원자 환경으로부터 행렬 요소를 **예측하는 모형**이며, 예측된 행렬을 NEGF에 넣어 수송을 계산할 수 있다. [3, §§II–III; 4, Abstract and main text]
 
-HamGNN-NEGF의 학습 행렬, 비직교 KPM, RGF 연결과 적용 경계는 [독립 문서](hamgnn-negf.md)에서 자세히 설명한다.
+HamGNN-NEGF의 학습 Hamiltonian, 비직교 KPM, RGF 연결과 적용 경계는 [독립 문서](hamgnn-negf.md)에서 자세히 설명한다. 정적 DFT Hamiltonian으로 열린계 수송을 계산하는 방법은 [DFTH-NEGF](dfth-negf.md), 전자수 조건으로 Fermi 준위를 찾는 비직교 KPM은 [별도 문서](nonorthogonal-kpm.md)에서 다룬다.
 
 ## 2. 채널 길이를 늘릴 때 먼저 정할 질문
 
