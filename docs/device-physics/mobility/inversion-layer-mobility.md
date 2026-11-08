@@ -4,7 +4,7 @@ description: MOSFET inversion layer에서 유효 이동도의 정의와 추출 �
 
 # Inversion-layer mobility
 
-## 1. 무엇을 이동도라고 부르는가
+## 1. 이동도 정의와 관측량
 
 Inversion layer mobility는 gate 전계로 형성된 반전층의 횡방향 전도도를 전하 밀도로 나눈 유효 수송 계수다. 낮은 drain 전계, 국소 평형, 확산 수송이라는 기준 모형에서 sheet conductivity \(\sigma_s\)와 sheet electron density \(n_s\)에 대해
 
@@ -16,7 +16,7 @@ Inversion layer mobility는 gate 전계로 형성된 반전층의 횡방향 전�
 
 ## 2. 선형영역 추출과 전하의 선택
 
-접촉 밖의 channel 전압 \(V_{DS,\mathrm{int}}\)가 작고 \(Q_{\mathrm{inv}}=-q n_s\)를 독립적으로 알면,
+접촉 전압 강하를 뺀 채널 전압 \(V_{DS,\mathrm{int}}\)가 작고 \(Q_{\mathrm{inv}}=-q n_s\)를 독립적으로 알면,
 
 \[
 I_D \simeq \frac{W}{L}\mu_{\mathrm{eff}}\lvert Q_{\mathrm{inv}}\rvert V_{DS,\mathrm{int}}
@@ -24,7 +24,14 @@ I_D \simeq \frac{W}{L}\mu_{\mathrm{eff}}\lvert Q_{\mathrm{inv}}\rvert V_{DS,\mat
 
 에서 \(\mu_{\mathrm{eff}}\)를 얻는다. \(W,L\)은 유효 channel 폭·길이이다. \(\lvert Q_{\mathrm{inv}}\rvert\)의 산출법과 \(V_{DS,\mathrm{int}}\)의 접촉 보정은 추출식의 정의와 일치해야 한다. split-CV는 \(Q_{\mathrm{inv}}\)를 직접 정하는 한 방법이며, contact/series resistance 보정은 그 저항 모형과 부호 convention을 함께 쓸 때 적용한다. [Yeh–Guo, §III, 식 (16)–(22)](https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content), [Lundstrom–Sun, §2–3](https://arxiv.org/pdf/1603.03132)
 
-![gate 전계가 만든 반전 전자층의 sheet density와 channel 방향 전도도로부터 저전계 유효 이동도를 정의하는 모습을 보여준다.](../../assets/inversion-layer-mobility.svg)
+<figure markdown="span">
+
+  ![gate 전계가 만든 반전 전자층의 sheet density와 channel 방향 전도도로부터 저전계 유효 이동도를 정의하는 모습을 보여준다.](images/inversion-layer-mobility.svg)
+
+  <figcaption markdown="1">
+  이 위키의 개념도. gate 전계로 형성된 반전층 sheet density와 채널 방향 전도도에서 저전계 유효 이동도를 정의한다. 기호와 추출 조건은 본문에 설명했다.
+  </figcaption>
+</figure>
 
 ## 3. 전계와 산란의 역할
 

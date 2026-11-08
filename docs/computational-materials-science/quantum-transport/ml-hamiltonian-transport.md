@@ -4,7 +4,9 @@ description: DeePTB-NEGF와 HamGNN-NEGF가 작은 DFT 자료에서 긴 채널의
 
 # 학습 Hamiltonian 기반 장채널 수송
 
-작은 원자구조에서 DFT 전자구조를 학습하고, 긴 구조의 국소 환경에 모델을 적용해 Hamiltonian을 만든 뒤 NEGF로 수송을 계산하는 연구가 나왔다. 이 방식은 대표 Hamiltonian 블록을 그대로 반복하는 것과 다르다. 새 구조의 각 국소 환경에 따라 행렬 요소를 다시 예측한다. 그렇다고 예측 행렬이 DFT 자기일관 계산과 동등하거나 학습 범위 밖에서도 정확하다는 뜻은 아니다. [1, §§II–III; 2, Abstract, Introduction, Results, and Discussion]
+작은 원자구조에서 DFT 전자구조를 학습하고, 긴 구조의 각 국소 환경에 모델을 적용해 Hamiltonian을 예측한 뒤 NEGF로 수송을 계산하는 방법이 보고되어 있다. 이 방식은 대표 Hamiltonian 블록을 그대로 반복하는 것과 다르다. 새 구조의 각 국소 환경에 따라 행렬 요소를 다시 예측한다. 그렇다고 예측 행렬이 DFT 자기일관 계산과 동등하거나 학습 범위 밖에서도 정확하다는 뜻은 아니다. [1, §§II–III; 2, Abstract, Introduction, Results, and Discussion]
+
+DeePTB-NEGF 논문의 Figure 1은 [출판사 논문 페이지](https://www.nature.com/articles/s41524-025-01853-6)에서 확인할 수 있다. [1, Fig. 1]
 
 ## 1. 학습 모델이 Hamiltonian을 만드는 두 방식
 

@@ -68,7 +68,14 @@ QTBM은 입사 모드 하나에 대한 산란 상태를 계산한다. reservoir�
 
 허수 흡수 퍼텐셜 \(-iW\)는 선택한 상태의 out-scattering 또는 loss를 표현할 수 있지만, 대응하는 in-scattering과 reservoir·phonon bath의 점유를 스스로 정하지 않는다. 따라서 loss 항만 추가한 계산을 보존적인 비탄성 산란 모형으로 간주할 수 없다. in/out 항의 관계와 점유 갱신을 같은 모형 안에서 명시해야 한다. [7, §7.2.6.1, 식 (7.22)–(7.25); 8, §4.5]
 
-![에너지별 입사 lead mode의 QTBM 산란 풀이 뒤 reservoir 점유와 부호를 반영한 mode current를 에너지 적분해 전체 전류를 얻는다. 아래 별도 경로는 전이율과 bath 점유를 추가하는 model-dependent 산란 확장으로, Pauli master equation은 한 사례다.](../../assets/qtbm-workflow.svg)
+<figure markdown="span">
+
+  ![에너지별 입사 lead mode의 QTBM 산란 풀이 뒤 reservoir 점유와 부호를 반영한 mode current를 에너지 적분해 전체 전류를 얻는다. 아래 별도 경로는 전이율과 bath 점유를 추가하는 model-dependent 산란 확장으로, Pauli master equation은 한 사례다.](images/qtbm-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키가 새로 그린 계산 흐름도. 에너지별 입사 lead mode의 산란 문제를 푼 뒤 reservoir 점유와 부호를 반영해 전류를 적분한다. 산란 전이율을 추가하는 확장은 모델 의존적이며 기본 QTBM과 구분한다.
+  </figcaption>
+</figure>
 
 ## 6. 계산을 검토할 때
 

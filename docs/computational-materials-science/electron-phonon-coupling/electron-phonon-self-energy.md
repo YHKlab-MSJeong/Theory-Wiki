@@ -23,13 +23,20 @@ Fan–Migdal self-energy는 두 1차 e-ph 행렬원소의 곱에 비례하는 �
 \right].
 \]
 
-\(f\)와 \(n\)은 각각 전자와 포논 점유, \(\eta>0\)는 retarded 분모의 양의 무한소 또는 수치 적분에서 쓰는 broadening이다. 흡수·방출 경로와 점유 인자를 구분하며, 구현에서 \(\omega\)를 에너지로 쓰는지 각진동수로 쓰는지 단위를 확인해야 한다. 이 식은 band-off-diagonal 항과 비조화 포논 효과를 포함하지 않는 근사식이다. [1, Eq. 28; 2, §V.B]
+\(f\)와 \(n\)은 각각 전자와 포논 점유, \(\eta>0\)는 retarded 분모의 양의 무한소 또는 수치 적분에서 쓰는 broadening이다. 이 식은 흡수·방출 경로와 각 경로의 점유 인자를 구분한다. 구현에서 \(\omega\)를 에너지로 쓰는지 각진동수로 쓰는지 단위를 확인해야 한다. 이 식은 band-off-diagonal 항과 비조화 포논 효과를 포함하지 않는 근사식이다. [1, Eq. 28; 2, §V.B]
 
 ## 2. Debye–Waller 기여
 
 Debye–Waller 항은 원자 변위에 따른 2차 전자 퍼텐셜 변화의 열평균에서 나온다. 조화 모드의 점유 가중치는 \(2n_{\mathbf q\nu}+1\)을 포함해 0 K에도 영점 진동 기여가 남는다. 이 band-diagonal 조화 근사에서 해당 항은 정적이며 실수다. 실제 값은 2차 퍼텐셜 미분의 계산 또는 이를 근사하는 방법에 의존하므로, rigid-ion approximation 등 적용한 근사를 함께 기록한다. [1, Eq. 29; 2, §V.B; 3, §III]
 
-![조화 2차 근사에서 일차 e-ph 결합은 동적 Fan–Migdal 항을 만들고 이차 퍼텐셜 항은 실수인 정적 Debye–Waller 기여를 만든다.](../../assets/eph-self-energy.svg)
+<figure markdown="span">
+
+  ![조화 2차 근사에서 일차 e-ph 결합은 동적 Fan–Migdal 항을 만들고 이차 퍼텐셜 항은 실수인 정적 Debye–Waller 기여를 만든다.](images/eph-self-energy.svg)
+
+  <figcaption markdown="1">
+  이 위키의 기여 분해도. 조화 근사에서 1차 전자–포논 결합은 동적 Fan–Migdal 항을, 2차 퍼텐셜 항은 정적 Debye–Waller 항을 만든다. 각 항의 근사와 부호는 본문에서 정의한다.
+  </figcaption>
+</figure>
 
 ## 3. 에너지 이동과 스펙트럼 폭
 

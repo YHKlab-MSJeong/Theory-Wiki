@@ -4,7 +4,7 @@ description: 작은 DFT의 비직교 Hamiltonian 블록을 이어 긴 채널의 
 
 # Hamiltonian 블록 확장과 RGF
 
-짧은 원자구조에서 계산한 국소 Hamiltonian을 길이 방향으로 반복하면 긴 채널의 행렬 모형을 만들 수 있다. 이 방법은 반복할 행렬과 연결 블록을 조립하는 근사다. 확장된 모든 원자에 대해 새 Kohn–Sham 전하와 퍼텐셜을 자기일관적으로 계산하는 Order-N DFT와는 다르다. [1, §§III, VI; 2, TBtrans User Guide]
+짧은 원자구조에서 계산한 국소 Hamiltonian을 길이 방향으로 반복하면 긴 채널의 행렬 모형을 만들 수 있다. 이 방법은 반복할 행렬과 연결 블록을 조립하는 근사다. 확장된 모든 원자에 대해 새 Kohn–Sham 전하와 퍼텐셜을 자기일관적으로 계산하는 Order-N DFT와는 다르다. [1, §XIV; 2, “Calculation of electronic structure”]
 
 ## 1. 기저 확장과 행렬 블록
 
@@ -29,11 +29,11 @@ Hc_n=\epsilon_n S c_n
 수송 방향을 principal layer \(i\)들로 나누고, 완전히 반복되는 채널이라면 각 층의 내부 행렬과 이웃 층 결합을
 
 \[
-H_{ii}=H_0,\quad H_{i,i+1}=V,\qquad
-S_{ii}=S_0,\quad S_{i,i+1}=S_1
+H_{ii}=H_0,\quad H_{i,i+1}=V,\quad H_{i+1,i}=V^\dagger,\qquad
+S_{ii}=S_0,\quad S_{i,i+1}=S_1,\quad S_{i+1,i}=S_1^\dagger
 \]
 
-처럼 반복해 조립할 수 있다. \(V\)와 \(S_1\)은 인접 층 사이의 Hamiltonian과 overlap이다. 실제 소자에서는 접합·결함·전위가 달라지는 위치에 다른 블록을 두어야 한다. 비직교 기저의 층간 결합은 \(H-ES\)에 함께 들어가므로 Hamiltonian만 복사하고 overlap이나 층간 행렬 요소를 빼면 원래의 전자 문제와 달라진다. [1, §§III, VI; 2, “Hamiltonian matrix” and “Principal layer interactions”]
+처럼 반복해 조립할 수 있다. \(V\)와 \(S_1\)은 인접 층 사이의 Hamiltonian과 overlap이다. 역방향 블록은 Hermitian 행렬 \(H\), \(S\)의 켤레전치다. 실제 소자에서는 접합·결함·전위가 달라지는 위치에 다른 블록을 두어야 한다. 비직교 기저에서는 retarded Green kernel \(zS-H\), \(z=E+i0^+\)에 층간 항 \(zS_1-V\)가 함께 들어간다. Hamiltonian만 복사하고 overlap이나 층간 행렬 요소를 빼면 원래의 전자 문제와 달라진다. [1, §§III–VI; 2, “Hamiltonian matrix” and “Principal layer interactions”]
 
 ## 2. 전극과 열린 경계
 
@@ -55,9 +55,9 @@ T(E)=\operatorname{Tr}\!\left[\Gamma_LG^r\Gamma_RG^a\right],
 
 결합 범위가 한 층보다 길면 principal layer를 더 크게 잡아 결합이 인접 블록으로만 보이게 해야 한다. SIESTA TBtrans 안내서는 전극이 이웃 초격자 하나와만 상호작용하는 principal layer 조건을 확인하도록 요구하며, 이를 무시하면 비물리 결과가 날 수 있다고 경고한다. [2, “Principal layer interactions”]
 
-## 3. RGF가 줄이는 계산량
+## 3. RGF의 계산 복잡도
 
-Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬을 한 번에 구하는 대신, 블록 삼중대각 구조를 따라 층별 Green 함수와 자기 에너지를 순차적으로 갱신한다. 층의 행렬 크기 \(M_b\)와 에너지·횡방향 \(k\)-점 수를 고정하면, 층 수 \(N_z\)에 따른 계산은 대략 \(O(N_z M_b^3)\)로 증가한다. 따라서 **단면 크기와 블록 차원을 고정한 채 길이만 늘릴 때** 채널 길이에 대해 선형이 된다. 단면을 넓히면 \(M_b\)가 커지고 비용이 빠르게 증가할 수 있다. [2, “Calculation time” and “Principal layer interactions”; 3, §1]
+Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬을 한 번에 구하는 대신, 블록 삼중대각 구조를 따라 층별 Green 함수와 자기 에너지를 순차적으로 갱신한다. 조밀한 층 블록의 차원 \(M_b\)를 고정하면 central scattering region에서 한 에너지·횡방향 \(k\)-점의 재귀 계산은 층 수 \(N_z\)에 따라 대략 \(O(N_z M_b^3)\)로 증가한다. 따라서 **단면 크기와 블록 차원을 고정한 채 길이만 늘릴 때** 이 부분의 비용은 채널 길이에 대해 선형이다. 단면을 넓히면 \(M_b\)가 커지고 비용이 빠르게 증가할 수 있다. 이 추정에는 전극 surface Green 함수 계산, 에너지 적분, 자기일관 반복이 포함되지 않는다. [3, §1, Eqs. (9)–(12), pp. 4–5; 4, §III.C.1, Eqs. (17)–(18)]
 
 ## 4. 블록 복제가 맞는 조건과 어긋나는 조건
 
@@ -67,7 +67,7 @@ Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬�
 
 - 게이트에 따른 공간 의존 전위, 밴드 굽힘과 screening
 - 도핑·결함·변형으로 바뀐 국소 전자구조
-- 채널 길이에 따라 달라지는 전하 재분포와 접촉 유도 효과
+- 채널 길이에 따라 달라지는 전하 재분포와 접촉 유도 전위·전하 변화의 자기일관 되먹임
 - 전자–포논 등 비탄성 산란
 
 이 항들이 목표 물성에 중요하면, 전위의 자기일관 갱신이나 검증된 수송 Hamiltonian 모델을 추가해야 한다. 예를 들어 TranSIESTA의 NEGF–Poisson 반복은 비평형 전하와 전위를 맞추는 경로이며, 고정 \(H\) 블록 복제만으로 대체되지 않는다. [2, “TranSIESTA,” “NEGF equations”; 4, §§III.2–III.3]
@@ -84,7 +84,8 @@ Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬�
 
 ## 6. 참고 자료
 
-1. J. M. Soler et al., “The SIESTA method for ab initio order-\(N\) materials simulation,” *J. Phys.: Condens. Matter* **14**, 2745 (2002), [§§III–VI](https://doi.org/10.1088/0953-8984/14/11/302).
-2. SIESTA developers, [SIESTA 5.4 reference manual](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html), “NEGF equations”; [TBtrans User Guide](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html), “TBT.Elec.<>.HS,” “Principal layer interactions,” and “Calculation time.”
-3. N. R. Papior et al., “Improvements on non-equilibrium and transport Green function techniques: the next-generation TranSIESTA,” *Computer Physics Communications* **212**, 8–24 (2017), [arXiv:1607.04464](https://arxiv.org/abs/1607.04464).
-4. J. Zou et al., “Deep learning accelerated quantum transport simulations in nanoelectronics: from break junctions to field-effect transistors,” *npj Computational Materials* **11**, 375 (2025), [§§III.2–III.3](https://doi.org/10.1038/s41524-025-01853-6).
+1. J. M. Soler et al., “The SIESTA method for ab initio order-\(N\) materials simulation,” *J. Phys.: Condens. Matter* **14**, 2745 (2002), [§§III–VI, XIV](https://doi.org/10.1088/0953-8984/14/11/302).
+2. SIESTA developers, [SIESTA 5.4 reference manual](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html), “Calculation of electronic structure” and “NEGF equations”; [TBtrans User Guide](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html), “TBT.Elec.<>.HS,” “Principal layer interactions,” and “Calculation time.”
+3. M. Wimmer and K. Richter, “Optimal block-tridiagonalization of matrices for coherent charge transport,” *Journal of Computational Physics* **228**, 8548–8565 (2009), [§1, Eqs. (9)–(12), pp. 4–5](https://arxiv.org/abs/0806.2739).
+4. N. R. Papior et al., “Improvements on non-equilibrium and transport Green function techniques: the next-generation TranSIESTA,” *Computer Physics Communications* **212**, 8–24 (2017), [§III.C.1, Eqs. (17)–(18)](https://arxiv.org/abs/1607.04464).
+5. J. Zou et al., “Deep learning accelerated quantum transport simulations in nanoelectronics: from break junctions to field-effect transistors,” *npj Computational Materials* **11**, 375 (2025), [§§III.2–III.3](https://doi.org/10.1038/s41524-025-01853-6).

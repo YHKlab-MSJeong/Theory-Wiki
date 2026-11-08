@@ -14,7 +14,14 @@ G_{n}^{r}(E)=\left[g^{-1}(E)-\Sigma_{\mathrm{contacts}}^{r}(E)-\Sigma_{\mathrm{s
 
 처럼 쓸 수 있으며, lesser component도 같은 self-energy functional과 함께 갱신한다. phonon scattering을 포함한 NEGF 전개에서 이 반복과 electrostatic self-consistency를 구분한 예가 제시되어 있다. [Bescond et al., §II, 식 (1)–(2)](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf), [Mera–Pedersen–Nikolić, §V.1–2, 식 (21), (25)–(28)](https://arxiv.org/html/1512.06846)
 
-![현재 Green 함수에서 scattering self-energy를 만들고 Dyson–Keldysh 방정식을 다시 푸는 SCBA 고정점 반복. residual 종료 기준과 전류·격자·인과성 검사는 별도 항목이다.](../../assets/scba-fixed-point.svg)
+<figure markdown="span">
+
+  ![현재 Green 함수에서 scattering self-energy를 만들고 Dyson–Keldysh 방정식을 다시 푸는 SCBA 고정점 반복. residual 종료 기준과 전류·격자·인과성 검사는 별도 항목이다.](images/scba-fixed-point.svg)
+
+  <figcaption markdown="1">
+  이 위키의 고정점 흐름도. Green 함수에서 산란 self-energy를 만들고 이를 다시 사용해 Green 함수를 갱신한다. 반복 잔차, 전류 보존, 격자·에너지 수렴과 인과성은 별도로 확인한다.
+  </figcaption>
+</figure>
 
 ## 2. 수치 수렴의 최소 조건
 
@@ -24,7 +31,7 @@ G_{n}^{r}(E)=\left[g^{-1}(E)-\Sigma_{\mathrm{contacts}}^{r}(E)-\Sigma_{\mathrm{s
 
 정상상태 two-terminal 계산에서는 terminal current가 \(I_L=-I_R\)인지 확인해야 한다. Mera–Pedersen–Nikolić의 대칭 molecular model에서는 특정 coupling과 wide-band 조건에서 전류 일치가 iteration의 민감한 판별자가 아니었으므로, 전류 일치 하나만을 일반 convergence criterion으로 쓰면 부족하다. [Mera–Pedersen–Nikolić, §V.2, 식 (25)–(28)](https://arxiv.org/html/1512.06846), [Bescond et al., §II](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf) retarded self-energy의 causality, lesser/greater component의 관계와 Hilbert-transform 처리는 구현 convention 및 포함한 diagram에 맞게 별도 점검해야 하며, current conservation이 이를 대신하지 않는다. [Lee–Sanvito, §II.B, 식 (15)–(18)](https://arxiv.org/pdf/0804.3389), [Mera–Pedersen–Nikolić, §V.1](https://arxiv.org/html/1512.06846)
 
-## 4. 수렴이 뜻하지 않는 것
+## 4. 수렴 판정의 해석 범위
 
 SCBA 반복의 residual 통과는 선택한 Born diagram, phonon bath, screening, device Hamiltonian, contact model이 실제 물리를 충분히 설명한다는 증거가 아니다. 서로 다른 초기값·grid·mixing에서 같은 관측량을 얻는지는 numerical robustness 검사이지 실험적 검증이 아니다. [Lee–Sanvito, §V](https://arxiv.org/pdf/0804.3389), [Bescond et al., §II](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf)
 

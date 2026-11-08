@@ -34,7 +34,7 @@ e^{i\mathbf q\cdot\mathbf R}.
 
 ## 2. 포논 모드에서 결합 행렬원소까지
 
-진동 모드 \((\mathbf q,\nu)\)가 만드는 1차 Kohn–Sham 퍼텐셜 변화는 원자별 변위 응답에 포논 고유벡터를 투영하고 영점 진동 진폭을 곱해 구성한다. 편극벡터를 \(\sum_{\kappa\alpha}|e_{\kappa\alpha,\nu}(\mathbf q)|^2=1\)로 정규화하는 한 convention에서는,
+원자별 변위 응답에 포논 고유벡터를 투영한 뒤 영점 진동 진폭을 곱해 진동 모드 \((\mathbf q,\nu)\)의 1차 Kohn–Sham 퍼텐셜 변화를 계산한다. 편극벡터를 \(\sum_{\kappa\alpha}|e_{\kappa\alpha,\nu}(\mathbf q)|^2=1\)로 정규화하는 한 가지 규약에서는,
 
 \[
 \Delta_{\mathbf q\nu}v^{KS}
@@ -51,7 +51,14 @@ g_{mn\nu}(\mathbf k,\mathbf q)
 
 여기서 \(v^{KS}\)와 \(\partial_{\kappa\alpha,\mathbf q}v^{KS}\)는 각각 Kohn–Sham 퍼텐셜과 변위 응답의 격자 주기 성분이다. 전체 퍼텐셜 섭동은 \(\Delta_{\mathbf q\nu}V^{KS}(\mathbf r)=e^{i\mathbf q\cdot\mathbf r}\Delta_{\mathbf q\nu}v^{KS}(\mathbf r)\)로 쓸 수 있다. \(u_{n\mathbf k}\)는 Bloch 상태의 주기 부분이므로, 식의 단위 셀 행렬원소에는 주기 성분 \(\Delta v^{KS}\)가 들어간다. 이는 단위 셀 적분 convention이며, 유한 Born–von Kármán 결정의 해밀토니안에는 별도로 셀 수 정규화 인자가 나타날 수 있다. \(g\)는 초기 전자 상태 \((n,\mathbf k)\)와 최종 상태 \((m,\mathbf k+\mathbf q)\)를 특정 포논과 연결하는 복소 전이 진폭이며, 보통 그 제곱 크기가 산란율 또는 self-energy에 들어간다. [1, §III.A–B; 2, “Electron-phonon matrix elements”]
 
-![힘상수에서 동역학 행렬과 포논 모드를 얻고, 원자변위 DFPT 응답에 모드를 투영해 Bloch 상태 사이의 전자–포논 행렬원소를 계산한다.](../../assets/eph-workflow.svg)
+<figure markdown="span">
+
+  ![힘상수에서 동역학 행렬과 포논 모드를 얻고, 원자변위 DFPT 응답에 모드를 투영해 Bloch 상태 사이의 전자–포논 행렬원소를 계산한다.](images/eph-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키가 작성한 계산 흐름도. 힘상수 행렬에서 포논 모드를 얻고 원자변위 DFPT 응답을 모드에 투영해 전자–포논 행렬원소를 구성한다. 기저와 정규화 규약은 본문 식에 명시했다.
+  </figcaption>
+</figure>
 
 ## 3. 제일원리 계산 흐름과 보간
 

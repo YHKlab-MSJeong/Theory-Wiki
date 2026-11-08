@@ -5,6 +5,7 @@
 - 출처 유형: 1997년 비직교 KPM 논문, 2006년 KPM 리뷰, 2026년 9월 29일 arXiv v1 preprint
 - 독립 검토: `kpm_dfth_science_review`, 과학 주장·식·원문 위치 재검토, 2026-11-08
 - 그림: `nonorthogonal-kpm-workflow.svg`는 연산자 적용, moment, 평활 DOS와 전자수 조건의 순서를 원문을 바탕으로 새로 그렸다. editable source는 `refs/quality/figure-source/nonorthogonal-kpm-workflow.html`이다.
+- 독립 그림 검토: `diagram_final_review`, 2026-11-08. (S y=(H-bS)v) 연산자 적용, Chebyshev moments, 평활 DOS, 전자수 기반 \(\mu_F\) 탐색 및 후속 NEGF/RGF transmission 경로가 본문과 일치한다. SVG와 편집 원본은 렌더된 도식 내용이 동일하다. SVG SHA-256: `a2086c0860666ca96258a2e1c5eb48062458bdaa5616cc3fa75a3e1e8c77a4c5`.
 - 문체: humanizer 검토 후 수식, 변수, 수렴 조건, 주장 범위를 다시 확인했다.
 
 ## 주장과 근거

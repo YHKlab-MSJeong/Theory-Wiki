@@ -4,11 +4,18 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 
 # 국소 원자궤도 기저 선택과 수송 검증
 
-국소 원자궤도 기저는 계산 비용과 전자 상태를 얼마나 잘 표현하는지에 영향을 준다. 수송 계산에 작은 기저를 쓸 때는 특정 큰 기저를 무조건 재현하는 대신, 목표 밴드·접촉 정렬·전송·전류가 허용 오차 안에서 유지되는지를 확인한다. DZP는 유용한 비교 후보지만 자동으로 정답이 되는 기준은 아니다. [1, Basis sets; 2, §§II–III]
+국소 원자궤도 기저는 계산 비용과 전자 상태를 얼마나 잘 표현하는지에 영향을 준다. 수송 계산에 작은 기저를 쓸 때는 특정 큰 기저로 계산한 결과를 무조건 재현하기보다, 목표 밴드·접촉 정렬·전송·전류가 허용 오차 안에서 유지되는지를 확인한다. DZP는 유용한 비교 후보지만 자동으로 정답이 되는 기준은 아니다. [1, Basis sets; 2, §§II–III]
 
-![수송 목적의 기저 검증 단계. 밴드 일치만으로 접촉 전송의 정확성을 대신하지 않는다.](../../assets/basis-validation-workflow.svg)
+<figure markdown="span">
 
-## 1. Semicore와 basis 크기는 다른 선택이다
+  ![수송 목적의 기저 검증 단계. 밴드 일치만으로 접촉 전송의 정확성을 대신하지 않는다.](images/basis-validation-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키의 기저 검증 흐름도. 작은 basis 후보를 관심 밴드뿐 아니라 에너지 정렬·접촉 결합·transmission과 목표 device 관측량으로 평가한다. 기준 계산과 허용오차는 사용 목적에 따라 정한다.
+  </figcaption>
+</figure>
+
+## 1. Semicore 처리와 basis 크기의 구분
 
 | 선택 | 정하는 내용 | 확인할 정보 |
 |---|---|---|
@@ -20,11 +27,11 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 
 특정 ion 파일의 이름만으로 semicore나 basis 크기를 추정하지 말고, valence 전자 수와 각 채널의 zeta·polarization 설정을 직접 확인한다. 입력 파일의 설정과 실제 밴드·수송 검증은 구분한다. [1, Basis generation and basis size; 3, PSML format]
 
-## 2. 비교 기준은 목표 물리량으로 정한다
+## 2. 목표 물리량에 따른 비교 기준
 
 빠른 소자 수송이 목적이라면, DZP 밴드의 재현도보다 관심 에너지와 장치 조건에서 수송 결과가 얼마나 유지되는지를 기준으로 삼는다. 기준 Hamiltonian은 더 큰 원자궤도 basis, plane-wave DFT, 또는 검증된 Wannier 표현일 수 있다. 기준이 바뀌면 pseudopotential, 교환-상관 함수, 구조, k점, smearing과 전하 조건의 차이도 함께 기록한다. [2, §§II–III; 5, §II]
 
-## 3. 단계별로 확인한다
+## 3. 단계별 검증 절차
 
 1. **계산 모델을 고정한다.** pseudopotential과 ion 파일, valence·semicore, 원소별 zeta/polarization 채널, cutoff를 기록한다. basis만 비교하려면 나머지 모델 설정과 구조를 가능한 한 고정한다.
 2. **수송 에너지 창의 밴드를 비교한다.** VBM·CBM만이 아니라 실제 바이어스 창에 들어오는 valley 순서와 상대 에너지, 곡률·유효질량, 층간 splitting 등을 본다. 전체 밴드 RMS는 필요한 구간의 오차를 가릴 수 있다.

@@ -5,7 +5,7 @@ Markdown으로 작성하고 MkDocs로 사이트를 만든다. [위키 보기](ht
 
 ## 문서
 
-[Landauer transport and transmission](docs/computational-materials-science/quantum-transport/landauer-transmission.md) — 이론·인용 대조 완료. 새 문서는 [문서 템플릿](template.md)을 참고한다.
+사이트 문서는 device physics, material science, computational science의 세 영역으로 나뉜다. 전체 목록은 [Theory Wiki](https://yhklab-msjeong.github.io/Theory-Wiki/)에서 본다. 새 문서를 작성할 때는 [문서 템플릿](template.md)을 참고한다.
 
 ## 작성 원칙
 

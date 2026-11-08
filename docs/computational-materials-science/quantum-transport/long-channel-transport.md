@@ -6,9 +6,16 @@ description: 작은 DFT Hamiltonian 확장, Order-N DFT, 학습 Hamiltonian 수�
 
 짧은 계산으로 얻은 전자구조 정보를 긴 채널에 적용하는 방법은 한 가지가 아니다. 작은 구조의 Hamiltonian을 반복해 큰 행렬을 만드는 방식, 큰 구조 전체를 대상으로 선형 스케일링 DFT를 푸는 방식, 작은 DFT 자료로 학습한 모델이 긴 구조의 Hamiltonian을 예측하는 방식은 서로 다른 근사와 계산 목표를 가진다. 이 문서에서 **Hamiltonian 블록 확장**은 첫 번째 방식을 뜻한다. 이를 Order-N DFT와 같은 방법으로 부르지 않는다. [1, §§II, VI, XIII; 2, Calculation of the electronic structure; 3, §§II–III]
 
-![작은 DFT Hamiltonian 블록 반복, 전체 구조 Order-N DFT, 학습 Hamiltonian 기반 NEGF의 입력·확장·계산 경로를 비교한다.](../../assets/long-channel-methods.svg)
+<figure markdown="span">
 
-## 1. 세 방법은 무엇을 늘리는가
+  ![작은 DFT Hamiltonian 블록 반복, 전체 구조 Order-N DFT, 학습 Hamiltonian 기반 NEGF의 입력·확장·계산 경로를 비교한다.](images/long-channel-methods.svg)
+
+  <figcaption markdown="1">
+  이 위키가 직접 그린 비교도. 작은 Hamiltonian 블록 반복, 전체 구조 Order-N DFT, 학습 Hamiltonian을 이용한 수송은 모델을 만드는 단계와 계산 목표가 서로 다르다. 선형 스케일링은 각 방법의 조건에서만 성립한다.
+  </figcaption>
+</figure>
+
+## 1. Hamiltonian과 기저의 확장 방식
 
 | 방법 | 큰 구조를 만드는 방식 | 주 계산 | 핵심 가정과 경계 |
 |---|---|---|---|

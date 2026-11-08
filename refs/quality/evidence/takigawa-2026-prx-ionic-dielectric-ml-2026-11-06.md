@@ -1,6 +1,6 @@
 # 품질 근거: takigawa-2026-prx-ionic-dielectric-ml.md
 
-- 대상 문서: `docs/computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md`
+- 대상 문서: `docs/computational-materials-science/dielectric-response/takigawa-2026-prx-ionic-dielectric-ml.md`
 - 판정 범위: 전체 문서, 신규 작성
 - 검토 기준: 두 독립 과학 출처와 원문 귀속 결과를 구분한다.
 - 문서 SHA-256: `5567a088436276e59b7637a74a01f88f35c87a7bdaec2e73eb9f2c4eae80cbe5`
@@ -37,7 +37,7 @@
 
 - 논문별 수치·후보는 해당 원문이 보고한 결과로만 기록했다. 독립 재현·합성·소자 검증으로 표현하지 않았다.
 - 유전율 식은 본문에 적은 SI 단위, 구조, 선형·조화 근사와 모드 정규화에 한정한다.
-- 원본 문헌의 그림을 복제하지 않았다. SVG는 개념 관계를 새로 그린 저작 도식이며, 아래 원문들은 물리 관계의 검증 근거다.
+- 문서에는 Takigawa et al. Fig. 2를 재사용했다. APS의 CC BY 4.0 안내와 제3자 그림 예외, Fig. 2 캡션의 별도 권리자 표시 여부, 원본 PDF·crop·해시는 `paper-figure-reuse-2026-11-08.md`에 기록했다. 별도 SVG 개념도는 위키가 새로 그렸다.
 
 ## 독립 검토
 

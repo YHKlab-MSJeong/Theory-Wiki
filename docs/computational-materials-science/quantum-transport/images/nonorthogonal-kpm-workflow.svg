@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="kpm-title kpm-desc">
 <title id="kpm-title">비직교 KPM으로 Fermi 준위 찾기</title>
-<desc id="kpm-desc">Hamiltonian과 overlap에서 implicit matrix-vector action을 반복해 Chebyshev moments를 얻고 broadened DOS를 복원한 뒤 전자수 적분을 만족하는 Fermi 준위를 찾는다. KPM은 transmission을 계산하지 않는다.</desc>
+<desc id="kpm-desc">shifted/scaled 비직교 Hamiltonian 작용을 overlap 선형계로 계산해 Chebyshev moments를 얻고 DOS에서 Fermi 준위를 탐색한다. KPM은 transmission을 계산하지 않는다.</desc>
 <defs>
   <marker id="kpm-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#61747a"/></marker>
   <style>
@@ -17,7 +17,7 @@
 <rect class="kbox" x="40" y="160" width="176" height="124" rx="12"/>
 <text class="kh" x="58" y="192">일반화 스펙트럼</text><text class="kb" x="58" y="220">H c = ε S c</text><text class="kb" x="58" y="246">기저 비직교성 포함</text>
 <rect class="kteal" x="244" y="160" width="176" height="124" rx="12"/>
-<text class="kh" x="262" y="192">Implicit action</text><text class="kb" x="262" y="220">S y = H v 풀이</text><text class="kb" x="262" y="246">S⁻¹을 저장하지 않음</text>
+<text class="kh" x="262" y="192">Implicit action</text><text class="kb" x="262" y="220">S y = (H − bS) v</text><text class="kb" x="262" y="246">X̃v = y/a; S⁻¹ 생략</text>
 <rect class="kbox" x="448" y="160" width="176" height="124" rx="12"/>
 <text class="kh" x="466" y="192">Chebyshev moments</text><text class="kb" x="466" y="220">Tₘ(X̃) 재귀</text><text class="kb" x="466" y="246">stochastic trace</text>
 <rect class="kgold" x="652" y="160" width="176" height="124" rx="12"/>

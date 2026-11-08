@@ -6,9 +6,16 @@ description: OMM, PEXSI, ELSI와 CheSS의 전자구조 계산 역할을 Order-N 
 
 이 이름들은 대규모 전자구조 계산에서 서로 다른 역할을 한다. OMM, PEXSI와 CheSS는 Kohn–Sham 전자구조의 점유 부분공간 또는 밀도행렬을 구하는 서로 다른 알고리즘 계열이다. ELSI는 solver 자체가 아니라 여러 solver를 전자구조 코드에 연결하는 인터페이스다. 실제 계산의 지원 범위와 성능은 코드 버전, 컴파일 옵션, 기저 희소성, 원자계 크기와 계산 조건에 따라 달라진다. [1, Calculation of the electronic structure; 2, §§I–II]
 
-![전자구조 solver와 Hamiltonian 블록 확장·수송 계산은 서로 다른 경로다. ELSI는 solver 인터페이스를 제공한다.](../../assets/solver-and-transport-roles.svg)
+<figure markdown="span">
 
-## 1. 네 이름은 같은 종류가 아니다
+  ![전자구조 solver와 Hamiltonian 블록 확장·수송 계산은 서로 다른 경로다. ELSI는 solver 인터페이스를 제공한다.](images/solver-and-transport-roles.svg)
+
+  <figcaption markdown="1">
+  이 위키가 작성한 역할 관계도. OMM·PEXSI·CheSS는 전자구조 solver이고, ELSI는 solver interface다. Hamiltonian 블록 확장과 수송 계산은 다른 단계다.
+  </figcaption>
+</figure>
+
+## 1. Solver와 인터페이스의 역할
 
 | 이름 | 역할과 기본 아이디어 | 계산 범위와 주의점 |
 |---|---|---|
@@ -19,7 +26,18 @@ description: OMM, PEXSI, ELSI와 CheSS의 전자구조 계산 역할을 Order-N 
 
 이 표의 “대규모”나 “선형 스케일링”은 입력 크기가 커질수록 항상 유리하다는 약속이 아니다. 예를 들어 SIESTA 문서는 대부분의 중간 크기 계산이 대각화 또는 OMM을 사용하며 Order-N이나 PEXSI의 이점이 없을 수 있다고 설명한다. 비교할 때는 실제 기저 크기, 희소 연결, k점, 메모리, 병렬 자원과 수렴 결과를 본다. [1, Calculation of the electronic structure; 3, Introduction]
 
-## 2. Order-N은 알고리즘 목표이지 단일 solver 이름이 아니다
+Hourahine 등은 DFTB+의 비자기일관 전하(non-self-consistent charge, non-SCC), spin-non-polarized, \(\Gamma\)-점 계산 두 예제에서 밀도행렬 구성 시간을 비교했다. Fig. 5(c)는 CNT 사례에서 MKL 대각화, ELPA2와 PEXSI를, Fig. 5(d)는 Si supercell 사례에서 MKL 대각화, ELPA2와 NTPoly를 비교한다. 서로 다른 구조에서 비교한 solver 조합이므로 이 그림을 보편적인 성능 순위로 해석하지 않는다. [8, §III.A.1, Fig. 5(c,d)]
+
+<figure markdown="span">
+
+  ![DFTB+의 CNT 및 Si supercell 사례에서 MKL, ELPA2, PEXSI, NTPoly의 밀도행렬 구성 시간을 비교한 논문 Figure 5(c,d).](images/dftbplus-hourahine-2020-fig5-cd.png)
+
+  <figcaption markdown="1">
+  **원 논문 Fig. 5(c,d).** B. Hourahine et al., “DFTB+, a software package for efficient approximate density functional theory based atomistic simulations,” *The Journal of Chemical Physics* 152, 124101 (2020), [DOI](https://doi.org/10.1063/1.5143190), [원문 PDF, p. 14](https://wrap.warwick.ac.uk/id/eprint/137347/1/WRAP-DFTB-software-package-efficient-density-atomistic-simulations-Hourahine-2020.pdf), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). 패널 (c,d)의 축·범례·자료를 보존하고 (a,b), 논문 캡션과 페이지 여백을 잘라냈다. 결과 자료는 수정하지 않았다.
+  </figcaption>
+</figure>
+
+## 2. Order-N의 알고리즘적 의미
 
 선형 스케일링 DFT는 계 크기에 대한 연산량 증가를 O(N)에 가깝게 만드는 목표다. 국소화된 궤도나 희소 밀도행렬 등을 활용하는 여러 알고리즘이 이 목표를 가질 수 있지만, OMM·PEXSI·CheSS라는 이름을 붙였다고 모든 구현과 조건에서 O(N)이 되는 것은 아니다. 특히 SIESTA 5.4의 SolverOMM은 세제곱 스케일링으로 안내된다. 같은 코드의 과거 Order-N 구현과는 별도 경로다. [1, SolverOMM; SolverON; SolverPEXSI; SolverCheSS; 2, §II]
 
@@ -54,3 +72,4 @@ solver 이름 또는 예상 O(N)만으로 정확도나 실행시간을 판단하
 5. V. W. Yu et al., “ELSI: A Unified Software Interface for Kohn–Sham Electronic Structure Solvers,” *Computer Physics Communications* **222**, 267–285 (2018), [arXiv:1705.11191](https://arxiv.org/abs/1705.11191).
 6. L. Lin et al., “Accelerating Atomic Orbital-based Electronic Structure Calculation via Pole Expansion and Selected Inversion,” [arXiv:1202.2159](https://arxiv.org/abs/1202.2159).
 7. SIESTA developers, [TBtrans User Guide](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html), “Principal layer interactions,” “Green function,” and “Calculation time.”
+8. B. Hourahine et al., “DFTB+, a software package for efficient approximate density functional theory based atomistic simulations,” *The Journal of Chemical Physics* **152**, 124101 (2020), [DOI](https://doi.org/10.1063/1.5143190), [open full text](https://wrap.warwick.ac.uk/id/eprint/137347/1/WRAP-DFTB-software-package-efficient-density-atomistic-simulations-Hourahine-2020.pdf). §III.A.1, Fig. 5(c,d).

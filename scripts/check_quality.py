@@ -2,6 +2,7 @@
 """Check publication record integrity; this cannot verify scientific truth."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -34,6 +35,54 @@ def check(root):
     issues = []
     if len(nav) != len(set(nav)):
         issues.append('navigation contains duplicate paths')
+    nav_sections = {
+        key: value
+        for item in config.get('nav', []) if isinstance(item, dict)
+        for key, value in item.items()
+        if key != 'Home'
+    }
+    for domain in ('Device physics', 'Material science', 'Computational science'):
+        domain_items = nav_sections.get(domain)
+        if not isinstance(domain_items, list):
+            issues.append(f'missing domain navigation section: {domain}')
+            continue
+        for section in domain_items:
+            if not isinstance(section, dict):
+                issues.append(f'domain item must be a topic group: {domain}: {section}')
+                continue
+            title, items = next(iter(section.items()))
+            if title == 'Overview':
+                if not isinstance(items, str):
+                    issues.append(f'domain overview must be one page: {domain}')
+                continue
+            if not isinstance(items, list) or not items:
+                issues.append(f'topic group must list pages: {domain}/{title}')
+                continue
+            if any(
+                not isinstance(child, dict) or any(isinstance(path, (dict, list)) for path in child.values())
+                for child in items
+            ):
+                issues.append(f'topic group contains a nested navigation group: {domain}/{title}')
+                continue
+            first_path = next(iter(items[0].values()))
+            if not isinstance(first_path, str) or not first_path.endswith('/index.md'):
+                issues.append(f'topic group must start with its index.md: {domain}/{title}')
+                continue
+            index_path = docs / first_path
+            if index_path.is_file():
+                lines = [line.strip() for line in index_path.read_text(encoding='utf-8').splitlines() if line.strip()]
+                link_matches = [re.fullmatch(r'- \[[^]]+\]\(([^)]+)\)', line) for line in lines[1:]]
+                if len(lines) < 2 or not lines[0].startswith('# ') or any(match is None for match in link_matches):
+                    issues.append(f'topic index must contain only a title and page-title links: {first_path}')
+                else:
+                    listed = [match.group(1) for match in link_matches]
+                    expected = {
+                        os.path.relpath(path, Path(first_path).parent).replace(os.sep, '/')
+                        for child in items[1:]
+                        for path in child.values()
+                    }
+                    if len(listed) != len(set(listed)) or set(listed) != expected:
+                        issues.append(f'topic index links must match every page in its navigation group: {first_path}')
     articles = {p.relative_to(docs).as_posix() for p in docs.rglob('*.md') if p.name != 'index.md'}
     pages = {p.relative_to(docs).as_posix() for p in docs.rglob('*.md')}
     for path in nav:
@@ -99,7 +148,16 @@ def check(root):
             target = (root / previous['path']).resolve()
             if not target.is_relative_to((root / 'refs/quality/evidence').resolve()) or not target.is_file() or digest(target) != previous['sha256']:
                 issues.append(f'previous evidence missing or changed: {path}')
-        for match in re.findall(r'!\[[^\]]*\]\(([^)\s]+)', content):
+        image_matches = list(re.finditer(r'!\[([^\]]*)\]\(([^)\s]+)', content))
+        for image_match in image_matches:
+            alt, match = image_match.groups()
+            if not alt.strip():
+                issues.append(f'image requires meaningful alternative text: {path}')
+            opening = content.rfind('<figure markdown="span">', 0, image_match.start())
+            closing = content.find('</figure>', image_match.end())
+            caption = content.find('<figcaption markdown="1">', image_match.start(), closing if closing >= 0 else len(content))
+            if opening < 0 or closing < 0 or opening >= image_match.start() or caption < image_match.start():
+                issues.append(f'image requires figure and figcaption markup: {path}')
             if '://' in match:
                 issues.append(f'external image forbidden: {path}: {match}')
                 continue

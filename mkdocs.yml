@@ -8,6 +8,7 @@ theme:
     - search.highlight
 markdown_extensions:
   - admonition
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
@@ -18,6 +19,7 @@ nav:
   - Device physics:
       - Overview: device-physics/index.md
       - Mobility:
+          - Index: device-physics/mobility/index.md
           - Inversion-layer mobility: device-physics/mobility/inversion-layer-mobility.md
           - Matthiessen's rule: device-physics/mobility/matthiessens-rule.md
           - Surface-roughness scattering: device-physics/mobility/surface-roughness-scattering.md
@@ -25,39 +27,42 @@ nav:
   - Material science:
       - Overview: computational-materials-science/index.md
       - Dielectric response:
-          - Overview: computational-materials-science/dielectric-response/index.md
+          - Index: computational-materials-science/dielectric-response/index.md
           - Dielectric response and dielectric tensor: computational-materials-science/dielectric-response/dielectric-response.md
           - Born effective charge: computational-materials-science/dielectric-response/born-effective-charge.md
           - DFPT dielectric response: computational-materials-science/dielectric-response/dfpt-dielectric-response.md
           - High-κ dielectric screening: computational-materials-science/dielectric-response/high-k-screening.md
-          - Case studies:
-              - Yim et al. 2015: computational-materials-science/dielectric-response/cases/yim-2015-high-k-oxides.md
-              - Lee et al. 2018: computational-materials-science/dielectric-response/cases/lee-2018-nonoxide-dielectrics.md
-              - Takigawa et al. 2026 PRX: computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md
+          - Yim et al. 2015: computational-materials-science/dielectric-response/yim-2015-high-k-oxides.md
+          - Lee et al. 2018: computational-materials-science/dielectric-response/lee-2018-nonoxide-dielectrics.md
+          - Takigawa et al. 2026 PRX: computational-materials-science/dielectric-response/takigawa-2026-prx-ionic-dielectric-ml.md
           - Machine learning for Born effective charges: computational-materials-science/dielectric-response/ml-born-effective-charge.md
       - Electron–phonon coupling:
+          - Index: computational-materials-science/electron-phonon-coupling/index.md
           - Electron–phonon coupling: computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md
           - Electron self-energy: computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md
       - Quantum transport:
-          - Overview: computational-materials-science/quantum-transport/index.md
-          - Basis validation cases: computational-materials-science/quantum-transport/basis-set-validation-cases.md
+          - Index: computational-materials-science/quantum-transport/index.md
+          - Overview: computational-materials-science/quantum-transport/overview.md
           - NEGF: computational-materials-science/quantum-transport/negf.md
+          - QTBM: computational-materials-science/quantum-transport/scattering-qtbm.md
           - Landauer transport: computational-materials-science/quantum-transport/landauer-transmission.md
           - Landauer–Büttiker transport: computational-materials-science/quantum-transport/landauer-buttiker.md
           - Quantum contact resistance: computational-materials-science/quantum-transport/quantum-contact-resistance.md
+          - Mode-space transport: computational-materials-science/quantum-transport/mode-space-transport.md
+          - Basis validation cases: computational-materials-science/quantum-transport/basis-set-validation-cases.md
           - SCBA convergence: computational-materials-science/quantum-transport/scba-convergence.md
-          - Scattering QTBM method: computational-materials-science/quantum-transport/scattering-qtbm.md
-          - Long-channel transport:
-              - Overview: computational-materials-science/quantum-transport/long-channel-transport.md
-              - Hamiltonian block extension and RGF: computational-materials-science/quantum-transport/hamiltonian-block-stitching.md
-              - ML Hamiltonian transport: computational-materials-science/quantum-transport/ml-hamiltonian-transport.md
-              - DFTH-NEGF: computational-materials-science/quantum-transport/dfth-negf.md
-              - Nonorthogonal KPM: computational-materials-science/quantum-transport/nonorthogonal-kpm.md
-              - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md
+          - Long-channel transport: computational-materials-science/quantum-transport/long-channel-transport.md
+          - Hamiltonian block extension and RGF: computational-materials-science/quantum-transport/hamiltonian-block-stitching.md
+          - ML Hamiltonian transport: computational-materials-science/quantum-transport/ml-hamiltonian-transport.md
+          - DFTH-NEGF: computational-materials-science/quantum-transport/dfth-negf.md
+          - Nonorthogonal KPM: computational-materials-science/quantum-transport/nonorthogonal-kpm.md
+          - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md
   - Computational science:
       - Overview: computational-science/index.md
       - Atomistic simulation:
+          - Index: computational-science/atomistic-simulation/index.md
           - Localized basis sets: computational-science/atomistic-simulation/localized-basis-sets.md
           - Electronic structure solvers: computational-science/atomistic-simulation/electronic-structure-solvers.md
+          - SIESTA 5.4 OMM: computational-science/atomistic-simulation/siesta-54-omm.md
           - Order-N DFT: computational-science/atomistic-simulation/order-n-dft.md
           - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md

@@ -18,7 +18,11 @@ High-\(\kappa\) 유전체는 기준 물질보다 큰 상대 유전율을 이용�
 
 ## 3. 탐색 연구와 연결
 
-2015년 연구는 산화물에서 높은 유전율과 넓은 밴드갭을 동시에 찾는 자동화 제일원리 스크리닝을 수행했다. 2018년 연구는 탄화물·질화물·황화물·인화물·할로겐화물 등 비산화물 후보로 탐색을 넓혔다. 두 사례는 screening 범위와 계산 파이프라인을 보여주며, 실제 박막의 공정·계면 성능을 입증한 것은 아니다. [4, Abstract; 5, Abstract and Methods]
+2015년 연구는 산화물에서 높은 유전율과 넓은 밴드갭을 동시에 찾는 자동화 제일원리 스크리닝을 수행했다. 2018년 연구는 탄화물·질화물·황화물·인화물·할로겐화물 등 비산화물 후보로 탐색을 넓혔다. 두 사례는 후보 선별 범위와 계산 파이프라인을 보여주며, 실제 박막의 공정·계면 성능을 입증한 것은 아니다. [4, Abstract; 5, Abstract and Methods]
+
+2026년 Takigawa 등은 머신러닝과 제일원리 계산을 결합해 8,717개 산화물을 선별하고 최종 고유전율 후보 31개를 보고했다. 원 논문 Fig. 4(a,b)는 단계별 후보 축소와 유전율–밴드갭 지도를 함께 보여준다. [6, §II.B, Fig. 4]
+
+원 논문 Fig. 4(a,b)의 선별 절차와 결과 지도는 [APS 공식 도판](https://journals.aps.org/prx/article/10.1103/28wr-w896/deliverable/ded1aa42-0182-40ff-9cde-d6c2f81a6e41)에서 볼 수 있다. 논문은 CC BY 4.0을 따르지만 APS는 일부 도판에 제3자 저작권 예외가 있을 수 있다고 안내한다. Fig. 4 캡션에서 별도 권리자 표기는 확인되지 않았다. 출판사 도판 파일은 접근 제한으로 확보하지 못해, 이 문서에는 원그림을 복제하지 않고 공식 링크만 둔다. [6, Fig. 4]
 
 ## 4. 참고 문헌
 
@@ -27,3 +31,4 @@ High-\(\kappa\) 유전체는 기준 물질보다 큰 상대 유전율을 이용�
 3. A. A. Demkov and A. Navrotsky, eds., *Materials Fundamentals of Gate Dielectrics*, Springer (2005), https://doi.org/10.1007/0-387-27658-3.
 4. K. Yim et al., “Novel high-\(\kappa\) dielectrics for next-generation electronic devices screened by automated ab initio calculations,” *NPG Asia Materials* **7**, e190 (2015), https://doi.org/10.1038/am.2015.57.
 5. M. Lee et al., “High-throughput ab initio calculations on dielectric constant and band gap of non-oxide dielectrics,” *Scientific Reports* **8**, 14794 (2018), https://doi.org/10.1038/s41598-018-33095-6.
+6. A. Takigawa, S. Kiyohara, and Y. Kumagai, “Physics-Based Factorized Machine Learning for Predicting Ionic Dielectric Tensors,” *Physical Review X* **16**, 021006 (2026), [DOI](https://doi.org/10.1103/28wr-w896), [APS reuse information](https://journals.aps.org/prx/abstract/10.1103/28wr-w896).

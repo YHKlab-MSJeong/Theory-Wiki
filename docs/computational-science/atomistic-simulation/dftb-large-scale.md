@@ -4,7 +4,7 @@ description: 대규모 원자론 시뮬레이션에서 DFTB의 근사, 파라미
 
 # DFTB model for large-scale atomistic simulation
 
-## 1. DFTB는 어떤 근사인가
+## 1. DFTB의 근사 원리
 
 density-functional tight binding (DFTB)은 reference density 주위에서 Kohn–Sham DFT total energy를 전개하고, minimal atomic basis와 pretabulated two-center matrix element를 쓰는 전자구조 근사다. SCC-DFTB에서는 charge fluctuation의 2차 항까지 남겨 charge redistribution을 self-consistently 푼다. 따라서 DFTB는 DFT와 같은 이름의 input을 받더라도 exchange-correlation functional, basis, repulsive term, charge model을 모두 직접 계산하는 plane-wave DFT가 아니다. [Hourahine et al., §II, 식 (1)–(2)](https://doi.org/10.1063/1.5143190), [Yang et al., §II, pp. 10862–10864](https://theory.rutgers.edu/resources/pdfs/Yang_JPhysChemA_2007_v111_p10861.pdf)
 
@@ -20,7 +20,14 @@ E_{\mathrm{DFTB}}=\sum_i f_i\langle\psi_i\lvert H^0\rvert\psi_i\rangle
 
 처럼 band-structure term, atomic charge fluctuation \(\Delta q_A\)의 interaction, short-range repulsive potential로 구성된다. \(H^0\), \(\gamma_{AB}\), \(V_{\mathrm{rep}}^{AB}\)는 선택한 Slater–Koster parameter set 및 그 fitting 범위와 연결된다. SCC cycle은 Mulliken charge와 Hamiltonian을 self-consistently 갱신한다. 주기계에서는 lattice image·k-point와 전하 항의 periodic boundary 처리를 포함한 구현 식을 써야 한다. [Hourahine et al., §II.A](https://doi.org/10.1063/1.5143190), [Yang et al., §II, pp. 10862–10864](https://theory.rutgers.edu/resources/pdfs/Yang_JPhysChemA_2007_v111_p10861.pdf)
 
-![SCC-DFTB workflow: 현재 원자 전하로 Hamiltonian을 만들고 전자상태와 Mulliken 전하를 다시 계산하여, residual이 tolerance보다 작아질 때까지 mixing과 반복을 수행한다.](../../assets/scc-workflow.svg)
+<figure markdown="span">
+
+  ![SCC-DFTB workflow: 현재 원자 전하로 Hamiltonian을 만들고 전자상태와 Mulliken 전하를 다시 계산하여, residual이 tolerance보다 작아질 때까지 mixing과 반복을 수행한다.](images/scc-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키의 self-consistent-charge DFTB 흐름도. 현재 전하에서 Hamiltonian과 전자상태를 계산하고 새 Mulliken 전하와 residual을 구해, mixing 후 수렴 기준까지 반복한다.
+  </figcaption>
+</figure>
 
 이 그림은 본문의 SCC fixed-point 구조만을 설명하기 위해 새로 제작한 개념도다. \(\Delta q\)의 부호 convention, mixing parameter, tolerance 및 전자온도는 사용하는 코드·parameter set의 정의와 함께 해석해야 한다.
 
@@ -28,7 +35,7 @@ E_{\mathrm{DFTB}}=\sum_i f_i\langle\psi_i\lvert H^0\rvert\psi_i\rangle
 
 two-center table과 minimal basis는 큰 supercell의 geometry optimization, molecular dynamics, defect·interface sampling에 쓸 수 있는 근사 모형을 제공한다. 실제 scaling은 diagonalization, SCC iteration, sparse/local-orbital solver, parallelization에 좌우된다. 따라서 원자 수가 많다는 이유만으로 자동으로 linear scaling이 되거나 특정 DFT보다 정확하다는 뜻은 아니다. sparse implementation에서도 eigenproblem과 장거리 Coulomb 항의 처리를 따로 고려해야 한다. [Hourahine et al., §II](https://doi.org/10.1063/1.5143190), [Aradi et al., abstract](https://pureportal.strath.ac.uk/en/publications/dftb-a-sparse-matrix-based-implementation-of-the-dftb-method/)
 
-## 4. parameter transferability가 핵심 검증 대상이다
+## 4. 매개변수 전이 가능성의 검증
 
 parameter file은 원소 이름만으로 정할 수 없다. 적용하려는 결합·coordination·전하 상태·defect·surface가 fitting domain 밖이면 target observable을 별도 검증해야 한다. graphene defect의 한 비교에서는 일부 구조는 DFT와 잘 맞았지만 OH-terminated edge formation energy에는 큰 차이가 남았다. 이는 한 계·parameter set·reference DFT의 사례이지 일반 오차막대가 아니다. DFTB 계산의 수치 수렴과 target observable에 대한 parameter validation을 분리해야 한다. [Hourahine et al., §II](https://doi.org/10.1063/1.5143190), [Zobelli et al., §II–IV, Table I–II](https://arxiv.org/pdf/1207.3194)
 

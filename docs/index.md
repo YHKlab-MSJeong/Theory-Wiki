@@ -4,4 +4,4 @@
 
 - [Landauer transport and transmission](computational-materials-science/quantum-transport/landauer-transmission.md)
 
-각 문서의 검증 상태와 미확인 사항을 확인한다. 작성·검증 기준은 [저장소 README](https://github.com/YHKlab-MSJeong/Theory-Wiki#readme)에 기록한다.
+문서별 이론 설명과 참고 문헌은 각 페이지에 정리한다. 위키의 작성 원칙은 [저장소 README](https://github.com/YHKlab-MSJeong/Theory-Wiki#readme)에서 볼 수 있다.

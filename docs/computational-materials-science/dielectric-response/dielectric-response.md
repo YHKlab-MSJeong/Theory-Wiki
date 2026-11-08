@@ -4,7 +4,7 @@ description: 전자와 이온 격자의 선형 유전 응답을 텐서와 진동
 
 # Dielectric response and dielectric tensor
 
-유전 응답은 전기장이 유도하는 분극의 선형 관계다. 결정에서는 결정축에 따라 응답이 다를 수 있으므로 상대 유전율은 스칼라보다 텐서 \(\varepsilon_{\alpha\beta}(\omega)\)로 쓰는 것이 일반적이다. 절연체의 조화·선형 응답에서 전자 분극은 이온을 고정한 고주파 유전 텐서 \(\varepsilon^\infty\)에, 이온 이동은 진동 모드의 주파수와 유효 전하를 포함하는 이온 기여에 나타난다. 여기서 \(\varepsilon^\infty\)는 진공 기준값을 포함한 상대 유전 텐서다. 표기 convention에 따라 이를 \(1+\varepsilon^{\mathrm{ele}}\)로 나누기도 하며, Takigawa 등은 2026년 논문에서 이 표기를 사용한다. [1, §§III–IV, VIII; 2, §§II.3.2, II.4.2; 5, §I]
+유전 응답은 전기장이 유도하는 분극의 선형 관계다. 결정에서는 결정축에 따라 응답이 다를 수 있으므로 상대 유전율은 스칼라보다 텐서 \(\varepsilon_{\alpha\beta}(\omega)\)로 쓰는 것이 일반적이다. 절연체의 조화·선형 응답에서 전자 분극은 이온을 고정한 고주파 유전 텐서 \(\varepsilon^\infty\)에, 이온 이동은 진동 모드의 주파수와 유효 전하를 포함하는 이온 기여에 나타난다. 여기서 \(\varepsilon^\infty\)는 진공 기준값을 포함한 상대 유전 텐서다. 표기 관례에 따라 이를 \(1+\varepsilon^{\mathrm{ele}}\)로 나누기도 하며, Takigawa 등은 2026년 논문에서 이 표기를 사용한다. [1, §§III–IV, VIII; 2, §§II.3.2, II.4.2; 5, §I]
 
 ## 1. 전자 응답과 이온 응답
 
@@ -25,9 +25,16 @@ description: 전자와 이온 격자의 선형 유전 응답을 텐서와 진동
 
 여기서는 SI 단위, 셀 부피 \(\Omega\), 고유벡터 정규화 \(\sum_{\kappa\alpha}|e_{\kappa\alpha,\nu}|^2=1\), 그리고 무시 가능한 감쇠의 정적 조화 응답을 가정했다. \(\widetilde Z\)의 단위는 \(\mathrm{C\,kg^{-1/2}}\)이고, 따라서 \(\varepsilon^{\mathrm{ion}}\)은 무차원이다. 구현마다 포논 고유벡터 또는 전하에 \(\sqrt{\mathrm{amu}}\), 전자 전하 \(e\), 단위 셀 부피를 흡수하는 규약이 달라질 수 있으므로 수치식을 비교할 때 단위를 확인해야 한다. [1, §VIII; 2, §II.4.2]
 
-![고정 이온 전자 응답과 Born 유효전하·포논 모드가 만드는 이온 응답이 전체 유전 텐서를 구성한다.](../../assets/dielectric-response-map.svg)
+<figure markdown="span">
 
-이 분해는 [Born 유효전하](born-effective-charge.md)와 [DFPT 계산](dfpt-dielectric-response.md)에서 계산량별로 이어진다. 관련 논문 사례는 [high-\(\kappa\) 탐색](high-k-screening.md)에서 확인한다.
+  ![고정 이온 전자 응답과 Born 유효전하·포논 모드가 만드는 이온 응답이 전체 유전 텐서를 구성한다.](images/dielectric-response-map.svg)
+
+  <figcaption markdown="1">
+  이 위키의 개념도. 고정 이온 전자 응답과 Born 유효전하·포논이 만드는 이온 응답을 합쳐 전체 유전 텐서를 구성하는 관계를 정리했다. 유도와 규약은 본문 인용을 따른다.
+  </figcaption>
+</figure>
+
+각 성분에 필요한 물리량과 계산은 [Born 유효전하](born-effective-charge.md)와 [DFPT 계산](dfpt-dielectric-response.md)에서 이어서 설명한다. 관련 논문 사례는 [high-\(\kappa\) 탐색](high-k-screening.md)에서 확인한다.
 
 ## 2. 유전율이 큰 이유와 해석의 한계
 

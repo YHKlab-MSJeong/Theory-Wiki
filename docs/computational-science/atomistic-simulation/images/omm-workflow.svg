@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 510" role="img" aria-labelledby="omm-title omm-desc">
+<title id="omm-title">SIESTA 5.4 native OMM의 SCF 계산 흐름</title>
+<desc id="omm-desc">현재 SCF에서 주어진 Hamiltonian과 overlap으로 점유 trial orbital subspace를 최소화하고 density matrix로 다음 SCF Hamiltonian을 갱신한다.</desc>
+<defs>
+  <marker id="omm-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#61747a"/></marker>
+  <style>
+    .bg{fill:#f6f5f1}.title{font:700 27px system-ui,sans-serif;fill:#19343d}.sub{font:15px system-ui,sans-serif;fill:#52666c}
+    .box{fill:#fff;stroke:#b8c6c4;stroke-width:2;rx:12}.teal{fill:#e5f1ef;stroke:#2f7b74;stroke-width:2;rx:12}.gold{fill:#fbf1d9;stroke:#c89328;stroke-width:2;rx:12}
+    .h{font:700 17px system-ui,sans-serif;fill:#19343d}.b{font:14px system-ui,sans-serif;fill:#465c62}.small{font:13px system-ui,sans-serif;fill:#50646b}.label{font:700 12px system-ui,sans-serif;letter-spacing:1px;fill:#2f7b74}
+    .arrow{fill:none;stroke:#61747a;stroke-width:2.5;marker-end:url(#omm-arrow)}.loop{fill:none;stroke:#2f7b74;stroke-width:2.5;stroke-dasharray:8 6;marker-end:url(#omm-arrow)}
+  </style>
+</defs>
+<rect class="bg" width="1240" height="510"/>
+<text class="title" x="40" y="48">SIESTA 5.4 native OMM: 점유 부분공간을 SCF 안에서 최적화</text>
+<text class="sub" x="40" y="76">각 SCF 단계에서 H, S가 주어지면 개별 고유벡터 대신 trial orbital coefficient C를 갱신한다.</text>
+<rect class="box" x="40" y="156" width="190" height="108"/>
+<text class="label" x="58" y="181">CURRENT SCF</text><text class="h" x="58" y="211">Hamiltonian H</text><text class="h" x="58" y="237">Overlap S</text>
+<path class="arrow" d="M230 210H270"/>
+<rect class="box" x="274" y="156" width="190" height="108"/>
+<text class="h" x="292" y="198">Trial orbitals</text><text class="h" x="292" y="225">coefficients C</text><text class="small" x="292" y="249">점유 subspace</text>
+<path class="arrow" d="M464 210H504"/>
+<rect class="gold" x="508" y="142" width="240" height="136"/>
+<text class="label" x="528" y="169">MINIMIZATION</text><text class="h" x="528" y="198">H_W = C† H C</text><text class="h" x="528" y="223">S_W = C† S C</text><text class="b" x="528" y="250">quartic OMM functional</text>
+<path class="arrow" d="M748 210H790"/>
+<rect class="teal" x="794" y="156" width="190" height="108"/>
+<text class="h" x="814" y="198">수렴한 C</text><text class="b" x="814" y="225">점유 부분공간</text><text class="small" x="814" y="249">보통 별도 대각화 없음</text>
+<path class="arrow" d="M984 210H1024"/>
+<rect class="box" x="1028" y="156" width="172" height="108"/>
+<text class="h" x="1046" y="196">Density</text><text class="h" x="1046" y="222">matrix</text><text class="small" x="1046" y="247">다음 SCF 입력</text>
+<path class="loop" d="M1114 264V331Q1114 345 1100 345H132Q118 345 118 331V267"/>
+<text class="small" x="420" y="372">고정 구조 SCF: 밀도에서 H를 갱신하고 S는 유지</text>
+<rect x="40" y="410" width="1160" height="58" rx="10" fill="#f5e9e4" stroke="#d5b6ad" stroke-width="1.5"/>
+<text class="b" x="60" y="436">OMM 최소화 대상은 점유 부분공간이다. SIESTA 5.4 native OMM은 매뉴얼에서 cubic-scaling으로 분류되며 Order-N 경로와 다르다.</text>
+<text class="small" x="60" y="457">원자 좌표가 바뀌는 MD 단계에서는 H와 S를 모두 다시 계산한다.</text>
+</svg>

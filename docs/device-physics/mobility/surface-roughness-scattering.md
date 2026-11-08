@@ -24,7 +24,14 @@ W_{k\rightarrow k'}=\frac{2\pi}{\hbar}\left|\langle k'\lvert\delta U\rvert k\ran
 
 로 쓴다. ensemble-averaged \(\lvert M_{kk'}\rvert^2\)에는 roughness autocorrelation의 Fourier spectrum \(S(\mathbf q)\)와 wavefunction overlap·경계 전위 변조가 반영된다. screening은 선택한 모형에서 추가될 수 있다. 따라서 \(\Delta_{\mathrm{rms}}\)와 \(\Lambda\)만으로 보편적인 mobility나 scattering rate를 정할 수 없다. [Sano, §II.C, 식 (11)](https://arxiv.org/html/2604.22155), [Badami, Ch. 2 §2.1, 식 (2.1)–(2.2)](https://air.uniud.it/retrieve/e27ce0c5-bae9-055e-e053-6605fe0a7873/Badami_PhDThesisUploaded.pdf)
 
-![계면 높이의 상관함수와 Fourier spectrum에서 전위 섭동과 전자 상태의 matrix element를 거쳐 산란률로 이어지는 흐름을 보여준다.](../../assets/surface-roughness-scattering.svg)
+<figure markdown="span">
+
+  ![계면 높이의 상관함수와 Fourier spectrum에서 전위 섭동과 전자 상태의 matrix element를 거쳐 산란률로 이어지는 흐름을 보여준다.](images/surface-roughness-scattering.svg)
+
+  <figcaption markdown="1">
+  이 위키의 계산 개념도. 계면 높이 상관함수와 Fourier spectrum에서 전위 섭동과 상태 간 행렬원소를 거쳐 산란률로 이어지는 과정을 요약한다.
+  </figcaption>
+</figure>
 
 ## 3. 보고해야 할 항목
 

@@ -6,7 +6,14 @@ description: 정상상태 NEGF에서 전극 self-energy, Green 함수, 전하밀
 
 Non-equilibrium Green's function (NEGF)은 개방된 양자계에서 전극의 점유와 결합을 경계조건으로 넣어 전하밀도와 전류를 구하는 틀이다. 이 글은 정상상태의 두 전극 소자를 대상으로 하며, 전극은 비상호작용 평형 reservoir, 중심영역은 유한한 기저로 기술한다고 둔다. Landauer 전송식은 이 틀의 탄성·단일입자 극한에서 얻어지는 결과로 다룬다. 시간 의존 구동, 강한 상관, 그리고 유한한 전극 자체의 비평형은 여기서 유도하지 않는다. [1, §2; 2, §§II–III; 3, §1]
 
-![lead 구조와 결합이 retarded self-energy를, reservoir 점유가 lesser self-energy를 정한다. Dyson–Keldysh 계산 뒤 전하밀도와 전체 lead-current 식을 평가하는 정상상태 2단자 NEGF 흐름도.](../../assets/negf-workflow.svg)
+<figure markdown="span">
+
+  ![lead 구조와 결합이 retarded self-energy를, reservoir 점유가 lesser self-energy를 정한다. Dyson–Keldysh 계산 뒤 전하밀도와 전체 lead-current 식을 평가하는 정상상태 2단자 NEGF 흐름도.](images/negf-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키의 계산 흐름도. 전극 구조와 결합은 retarded self-energy를, reservoir 점유는 lesser self-energy를 정하고, Dyson–Keldysh 계산으로 밀도와 단자 전류를 구한다. 부호와 기저 규약은 본문에서 정의한다.
+  </figcaption>
+</figure>
 
 ## 1. 소자와 전극의 분할
 
@@ -94,7 +101,7 @@ I=\frac{e}{h}\int dE\,T(E)[f_L(E)-f_R(E)],
 T(E)=\operatorname{Tr}[\Gamma_LG^r\Gamma_RG^a]
 \]
 
-로 줄어든다. 이때 \(I\)는 위에서 정의한 \(L\to C\) 방향 전자 유량과 같은 부호로 잡았고, spin이 기저와 trace에 이미 포함되어 있으면 별도 2를 곱하지 않는다. 횡방향 주기계에서는 각 \(k\)-점의 \(T(E,k)\)를 Brillouin zone 가중치로 평균한 뒤 적분한다. 이 Landauer 표현의 적용 범위와 선형 응답은 [Landauer transport and transmission](landauer-transmission.md)에서 이어서 다룬다. [1, §IV.A, 식 (30); 4, §V, 식 (42)–(44); 2, §VI.D]
+로 줄어든다. 이때 \(I\)는 위에서 정의한 \(L\to C\) 방향 전자 유량과 같은 부호로 잡았고, 스핀 자유도가 기저와 trace에 이미 포함되어 있으면 별도 2를 곱하지 않는다. 횡방향 주기계에서는 각 \(k\)-점의 \(T(E,k)\)를 Brillouin zone 가중치로 평균한 뒤 적분한다. 이 Landauer 표현의 적용 범위와 선형 응답은 [Landauer transport and transmission](landauer-transmission.md)에서 이어서 다룬다. [1, §IV.A, 식 (30); 4, §V, 식 (42)–(44); 2, §VI.D]
 
 ## 5. 상호작용, bound state와 계산의 한계
 

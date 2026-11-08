@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mode-space 수송 계산 흐름</title>
+<style>body{margin:0;padding:24px;background:#f6f5f1;font:16px system-ui,sans-serif;color:#19343d}main{max-width:1320px;margin:auto}.scroll{overflow-x:auto}svg{display:block;width:100%;min-width:1240px;height:auto}</style></head>
+<body><main><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 540" role="img" aria-labelledby="ms-title ms-desc">
+<title id="ms-title">Real-space 기저에서 mode-space와 NEGF 수송 계산으로 이어지는 흐름</title>
+<desc id="ms-desc">층별 H와 S 블록을 선택적으로 횡방향 mode basis로 변환하고, 필요하면 모드를 절단한 뒤 self-energy를 포함한 비직교 NEGF 역행렬을 직접 또는 RGF로 계산해 전송과 전하를 얻는다.</desc>
+<defs>
+  <marker id="ms-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#61747a"/></marker>
+  <style>
+    .bg{fill:#f6f5f1}.title{font:700 27px system-ui,sans-serif;fill:#19343d}.sub{font:15px system-ui,sans-serif;fill:#52666c}
+    .box{fill:#fff;stroke:#b8c6c4;stroke-width:2;rx:12}.teal{fill:#e5f1ef;stroke:#2f7b74;stroke-width:2;rx:12}.gold{fill:#fbf1d9;stroke:#c89328;stroke-width:2;rx:12}
+    .h{font:700 16px system-ui,sans-serif;fill:#19343d}.b{font:14px system-ui,sans-serif;fill:#465c62}.small{font:13px system-ui,sans-serif;fill:#50646b}.label{font:700 12px system-ui,sans-serif;letter-spacing:1px;fill:#2f7b74}
+    .arrow{fill:none;stroke:#61747a;stroke-width:2.5;marker-end:url(#ms-arrow)}.dash{fill:none;stroke:#af5b4d;stroke-width:2;stroke-dasharray:7 6}
+  </style>
+</defs>
+<rect class="bg" width="1280" height="540"/>
+<text class="title" x="40" y="48">Mode-space는 기저 표현, NEGF는 수송 형식론, RGF는 행렬 풀이 알고리즘</text>
+<text class="sub" x="40" y="76">비직교 계산은 H와 S, contact coupling, electrode self-energy를 같은 기저 규약으로 변환한다.</text>
+<rect class="box" x="35" y="146" width="178" height="116"/>
+<text class="h" x="53" y="180">Layered basis</text><text class="b" x="53" y="207">Hᵢⱼ, Sᵢⱼ</text><text class="small" x="53" y="234">real-space / AO</text>
+<path class="arrow" d="M213 204H244"/>
+<rect class="teal" x="248" y="146" width="178" height="116"/>
+<text class="label" x="266" y="171">OPTIONAL</text><text class="h" x="266" y="198">Mode transform</text><text class="b" x="266" y="224">Uᵢ† Hᵢⱼ Uⱼ</text><text class="b" x="266" y="247">Uᵢ† Sᵢⱼ Uⱼ</text>
+<path class="arrow" d="M426 204H457"/>
+<rect class="gold" x="461" y="146" width="178" height="116"/>
+<text class="label" x="479" y="171">OPTIONAL REDUCTION</text><text class="h" x="479" y="198">Mode selection</text><text class="b" x="479" y="224">전체 기저: 정확한 변환</text><text class="small" x="479" y="247">축소 시 truncation 근사</text>
+<path class="arrow" d="M639 204H670"/>
+<rect class="box" x="674" y="146" width="178" height="116"/>
+<text class="h" x="692" y="180">Open-system</text><text class="b" x="692" y="207">z S − H − Σₗ − Σᵣ</text><text class="small" x="692" y="234">contact basis consistent</text>
+<path class="arrow" d="M852 204H883"/>
+<rect class="teal" x="887" y="146" width="178" height="116"/>
+<text class="label" x="905" y="171">NEGF SOLVER</text><text class="h" x="905" y="198">Direct inverse</text><text class="b" x="905" y="224">or RGF if</text><text class="b" x="905" y="247">block-tridiagonal</text>
+<path class="arrow" d="M1065 204H1096"/>
+<rect class="box" x="1100" y="146" width="150" height="116"/>
+<text class="h" x="1118" y="180">Outputs</text><text class="b" x="1118" y="207">T(E), G</text><text class="b" x="1118" y="234">density, current</text>
+<text class="small" x="40" y="338">Uncoupled-mode는 모드 간 결합을 버리는 별도 근사다. RGF는 real-space 또는 mode-space 기저에 적용할 수 있다.</text>
+<rect x="40" y="390" width="1200" height="88" rx="10" fill="#f5e9e4" stroke="#d5b6ad" stroke-width="1.5"/>
+<text class="h" x="60" y="420">두 근사는 별개다</text>
+<text class="b" x="60" y="446">모드 절단은 기저 상태 일부를 생략한다. Uncoupled-mode는 off-diagonal coupling을 버린다. 비직교 기저에서는 E S − H의 결합을 함께 봐야 한다.</text>
+<text class="small" x="60" y="466">고정 단면 기저에서 RGF 비용은 길이 방향 층 수에 선형일 수 있다. 단면 기저 수와 결합 범위가 유지되어야 한다.</text>
+</svg></div></main></body></html>

@@ -18,11 +18,18 @@ G=\frac{e^2}{h}\sum_n T_n,
 
 이며 \(T_n\)은 spin을 이미 분리해 센 channel \(n\)의 transmission이다. 따라서 \(N\)개의 spin-degenerate mode가 모두 \(T=1\)이면 \(R_{2\mathrm{t}}=h/(2e^2N)\)이다. 이 유한 값은 disorder가 없는 channel에도 reservoir와 mode matching이 있는 두 단자 측정에서 나타나는 contact contribution이다. [Beenakker, §I.C.2](https://arxiv.org/pdf/cond-mat/9612179), [Feilhauer–Moško, §I, 식 (11), (15)](https://arxiv.org/pdf/1011.6193)
 
-## 3. 접촉 하나에 임의로 반씩 나눌 수 없는 이유
+## 3. 접촉 저항 분배의 한계
 
 대칭 이상 모형에서는 \(h/(2e^2N)\)를 양쪽 접촉에 \(h/(4e^2N)\)씩 배분하는 bookkeeping을 쓸 수 있다. 하지만 비대칭 contact, 반사, mode mismatch가 있으면 각 contact에 고유하고 보편적인 half-quantum resistance를 할당할 수 없다. 실제 contact의 transmission은 contact material과 geometry에 의존하므로 이 bookkeeping을 계면의 고유 물성으로 읽으면 안 된다. [Mortensen et al., §I](https://arxiv.org/pdf/cond-mat/9907026), [Beenakker, §I.C](https://arxiv.org/pdf/cond-mat/9612179)
 
-![spin-degenerate ballistic mode 수가 이상적인 두 단자 conductance와 저항을 정하며, 대칭 모형의 절반 분배와 일반적인 접촉 저항을 구분한다.](../../assets/quantum-contact-resistance.svg)
+<figure markdown="span">
+
+  ![spin-degenerate ballistic mode 수가 이상적인 두 단자 conductance와 저항을 정하며, 대칭 모형의 절반 분배와 일반적인 접촉 저항을 구분한다.](images/quantum-contact-resistance.svg)
+
+  <figcaption markdown="1">
+  이 위키가 직접 그린 개념도. 이상적인 spin-degenerate ballistic mode가 두 단자 conductance와 저항에 기여하는 방식, 대칭 모형의 접촉별 분배와 일반적인 접촉 저항을 구분한다.
+  </figcaption>
+</figure>
 
 ## 4. 네 단자 저항과의 구별
 

@@ -16,6 +16,7 @@
 - diagram-design `self_check.py`와 SVG export를 각 HTML source에 대해 통과시켰다.
 - `open-transport-overview.svg` SHA-256: `1056e10c8cd8be91663c463f424fd9b3130c30b540b8232741302c4fdd79d355`
 - `mobility-overview.svg` SHA-256: `d3c83ee959d8d86e478155eaded95776bd209b0da80d2b85b0062acce1555e5d`
+- 2026-11-08 edit: `open-transport-overview.svg` now shows left and right reservoirs/leads, both self-energies, and charge current only to match the two-terminal overview. Rendered PNG inspected. Current source and page asset SHA-256: `4371cc5a657c9c740a73b810549afcab8026b5e5f3a46ecd6a185c8da3fbfaac`.
 
 ## 참고문헌
 

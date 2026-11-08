@@ -1,11 +1,11 @@
 {
   "computational-materials-science/quantum-transport/landauer-transmission.md": {
     "status": "pass",
-    "document_sha256": "f38b0c54f37641c61d0b63c904d443ccc5948068133f1316f03f7f962ecf313b",
+    "document_sha256": "52c21d662b062aebec4531947a92c2a805243134a16220d7944950ad376b7939",
     "evidence": "refs/quality/evidence/landauer-current-window-2026-11-05.md",
     "evidence_sha256": "ece9119b2a9776e462bfca8f1e29408d03b40bcd15d49aca40b4483c3e8a4c3f",
     "assets": {
-      "assets/landauer-current-window.svg": "964fa82b36e851e57a58af26c5c3c4f40f3302b2d446a5b8c5fbc5f8db026115"
+      "computational-materials-science/quantum-transport/images/landauer-current-window.svg": "964fa82b36e851e57a58af26c5c3c4f40f3302b2d446a5b8c5fbc5f8db026115"
     },
     "prior_evidence": [
       {
@@ -114,11 +114,11 @@
   },
   "computational-materials-science/quantum-transport/negf.md": {
     "status": "pass",
-    "document_sha256": "df333a7f89af78645d793f77d93891d0f716bd50241b6ae67ab1ffe9b4ff2598",
+    "document_sha256": "9ff3f58690c41ce0cc17973551d0ae7c35936575b52276d874d50eefeddce80c",
     "evidence": "refs/quality/evidence/negf-workflow-2026-11-05.md",
     "evidence_sha256": "a70ff611c42c3a5b452cd47d3a3a9f2b22678c20a4877f8e2aa9da7473af0104",
     "assets": {
-      "assets/negf-workflow.svg": "7b09623a14e4e32579c94fa40e584eb22d7421e313bd5d872189d494d2267f7a"
+      "computational-materials-science/quantum-transport/images/negf-workflow.svg": "7b09623a14e4e32579c94fa40e584eb22d7421e313bd5d872189d494d2267f7a"
     },
     "prior_evidence": [
       {
@@ -202,11 +202,11 @@
   },
   "computational-materials-science/quantum-transport/landauer-buttiker.md": {
     "status": "pass",
-    "document_sha256": "bcee4c43ba5977745ad7371b98c88fd7e5ccd2ecf1ed358ad0daa7ace1985091",
+    "document_sha256": "a1b2bfc18daed44eb7bf438212d3a7cda75289b5e5b4b385df1f5bdb0a17f470",
     "evidence": "refs/quality/evidence/landauer-buttiker-probes-2026-11-05.md",
     "evidence_sha256": "9363bd0ff7ed17dace2215aea3e3b016637357766e531b7f5eedde5b1901b7bf",
     "assets": {
-      "assets/landauer-buttiker-probes.svg": "d63cb66382aaf1221faf9c78cc14efaf06caa14a18999aafd34682ddd15528cb"
+      "computational-materials-science/quantum-transport/images/landauer-buttiker-probes.svg": "d63cb66382aaf1221faf9c78cc14efaf06caa14a18999aafd34682ddd15528cb"
     },
     "coverage": {
       "mode": "changes",
@@ -325,11 +325,11 @@
   },
   "device-physics/mobility/inversion-layer-mobility.md": {
     "status": "pass",
-    "document_sha256": "3af4ae637eb2dd32dc0ec9da5e683d4e6d4cc540bc45ed70b0c8a8d5e942c62b",
+    "document_sha256": "4ccb37a0187bb06bebceaed87adae6bf036f30eb51c5ab56f6164284142c4017",
     "evidence": "refs/quality/evidence/inversion-layer-mobility-2026-11-05.md",
     "evidence_sha256": "c02e2d884dc5db5735eab6ee2fe240e807ed2bb99a4d0ee634bda2dd1db54d80",
     "assets": {
-      "assets/inversion-layer-mobility.svg": "ba1228b23fc91dc7710ae5780f8ccc1b812aedc9d38d3b4018bb4164dbdddb74"
+      "device-physics/mobility/images/inversion-layer-mobility.svg": "ba1228b23fc91dc7710ae5780f8ccc1b812aedc9d38d3b4018bb4164dbdddb74"
     },
     "coverage": {
       "mode": "changes",
@@ -382,11 +382,11 @@
   },
   "device-physics/mobility/matthiessens-rule.md": {
     "status": "pass",
-    "document_sha256": "e0631d508f9f3a02fb0169599562329ec1e1854f971d6eca56402b32ef56ce00",
+    "document_sha256": "2dc8373fd60b72c77612db06aa2706649e63c76092819799b06ca7a1a028f444",
     "evidence": "refs/quality/evidence/matthiessen-rates-2026-11-05.md",
     "evidence_sha256": "6d7ffa5f2709afb6956cc2bf6f5900685480ca61abaf23a08727decc20d36408",
     "assets": {
-      "assets/matthiessen-rates.svg": "80afbfd99df77a72f3e255191225e7a9e30a0df59ba01f7c66063bc12ce480cb"
+      "device-physics/mobility/images/matthiessen-rates.svg": "80afbfd99df77a72f3e255191225e7a9e30a0df59ba01f7c66063bc12ce480cb"
     },
     "coverage": {
       "mode": "changes",
@@ -439,11 +439,11 @@
   },
   "device-physics/mobility/surface-roughness-scattering.md": {
     "status": "pass",
-    "document_sha256": "99bf846e6177c964a251de04f9827700335db754d041c584653c48dd28125cb2",
+    "document_sha256": "f57bb3dfbc49334b53e0ee1167089522d2b85ff220b09d9e4f94dc3ffd6cc83a",
     "evidence": "refs/quality/evidence/surface-roughness-scattering-2026-11-05.md",
     "evidence_sha256": "54d28e9b47fceb28d566a9b2d1ca4da7c6579dd94d9f111085d8e8b3d68d4954",
     "assets": {
-      "assets/surface-roughness-scattering.svg": "f0667f494f871c5ca3e9060da06c7a9a767e32e71fb6c6dad3ba563690824b25"
+      "device-physics/mobility/images/surface-roughness-scattering.svg": "f0667f494f871c5ca3e9060da06c7a9a767e32e71fb6c6dad3ba563690824b25"
     },
     "coverage": {
       "mode": "changes",
@@ -496,11 +496,11 @@
   },
   "device-physics/mobility/defect-scattering.md": {
     "status": "pass",
-    "document_sha256": "0d58789a120899d4d0fd84effa7a1bd5a50d1e70460fde6823bf7efedbbf6293",
+    "document_sha256": "0ebd574342ae85cc3bc225ac13859249bd03a1cce8c7f79abe80691307c9f503",
     "evidence": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
     "evidence_sha256": "af7d40f736ab084d5f17e0c6f8a352f2350c2d60216a2605aca3670163d20494",
     "assets": {
-      "assets/defect-scattering-model.svg": "763eaa76a25de0c6b5751262ee60e86feb6ddaa8d81542d83ed4ba2b23df84d5"
+      "device-physics/mobility/images/defect-scattering-model.svg": "763eaa76a25de0c6b5751262ee60e86feb6ddaa8d81542d83ed4ba2b23df84d5"
     },
     "coverage": {
       "mode": "changes",
@@ -553,11 +553,11 @@
   },
   "computational-materials-science/quantum-transport/quantum-contact-resistance.md": {
     "status": "pass",
-    "document_sha256": "729c90c905e0c9d58daa3ed08c1a8f8a848a25e017325436b70f75e23c4e2fee",
+    "document_sha256": "87da14f16e5c72b9fb9eb201896d3f9f2c42d24ca939b03dbeb5a86d81cfbcef",
     "evidence": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
     "evidence_sha256": "7b98d12e743f2c869cbcddfc498cb4d8b108a7ebf506ffbed7ada1794a75ea0a",
     "assets": {
-      "assets/quantum-contact-resistance.svg": "d2813113e291e55dbe6d3390c30c0ca149bbd3246ce9d3b3b6e9ac0ad2d92773"
+      "computational-materials-science/quantum-transport/images/quantum-contact-resistance.svg": "d2813113e291e55dbe6d3390c30c0ca149bbd3246ce9d3b3b6e9ac0ad2d92773"
     },
     "coverage": {
       "mode": "changes",
@@ -634,11 +634,11 @@
   },
   "computational-materials-science/quantum-transport/scba-convergence.md": {
     "status": "pass",
-    "document_sha256": "8279202afd0c89a08125c565e9a2354fb7c9037c6030e53bc02a4647082d27ca",
+    "document_sha256": "1f2ce7e805a1a1580be30b5016620e8c0fe8a44c78ee8718cf07657843fa2f90",
     "evidence": "refs/quality/evidence/scba-workflow-2026-11-05.md",
     "evidence_sha256": "0750f5412f5aa8b977f5d69625cddf0b39693514fbd7a21cbfe35617ca38424d",
     "assets": {
-      "assets/scba-fixed-point.svg": "b9b63a2c647e08f820d3fd710dd4520c0df36eb6c62b400595a044d8b09a9285"
+      "computational-materials-science/quantum-transport/images/scba-fixed-point.svg": "b9b63a2c647e08f820d3fd710dd4520c0df36eb6c62b400595a044d8b09a9285"
     },
     "prior_evidence": [
       {
@@ -716,11 +716,11 @@
   },
   "computational-materials-science/quantum-transport/scattering-qtbm.md": {
     "status": "pass",
-    "document_sha256": "d331be396872b0417a5a8aaf47be3df95e53735a3e6ae30486cc97bba4b1a9fb",
+    "document_sha256": "e431b2cb288b1920fe9b3aaf6795878cfb499b6f72f1c2c75944311e7d58d4c7",
     "evidence": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
     "evidence_sha256": "225d1a042aa354511931a3901e06a2860ca8e86228bddaa0fdff648a05c9ead8",
     "assets": {
-      "assets/qtbm-workflow.svg": "8333b6f4447a4fb2111bfcbddfbcbe7553bedadd65fbf10f5ed0b45c902bc117"
+      "computational-materials-science/quantum-transport/images/qtbm-workflow.svg": "8333b6f4447a4fb2111bfcbddfbcbe7553bedadd65fbf10f5ed0b45c902bc117"
     },
     "prior_evidence": [
       {
@@ -874,11 +874,11 @@
   },
   "computational-science/atomistic-simulation/dftb-large-scale.md": {
     "status": "pass",
-    "document_sha256": "ec2bb020a8dd61278ed2cfbcb5ac9dd21b4def57ee72e011df318711fbb1aa42",
+    "document_sha256": "39e828ead74ee02b23603624f0a7487ffb4ee3c18a5b83c3d41c8540289d884d",
     "evidence": "refs/quality/evidence/dftb-scc-workflow-2026-10-31.md",
     "evidence_sha256": "8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72",
     "assets": {
-      "assets/scc-workflow.svg": "a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"
+      "computational-science/atomistic-simulation/images/scc-workflow.svg": "a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"
     },
     "prior_evidence": [
       {
@@ -922,11 +922,11 @@
   },
   "computational-materials-science/dielectric-response/dielectric-response.md": {
     "status": "pass",
-    "document_sha256": "837e3d50ec1d7f1d0f1ffc892c950dd9f0c148391e477c1e9f6b65ac7daacfb4",
+    "document_sha256": "9313f64da4a46fa9c82845f9d46d0aa4c846dfbe60cd052335a83331788c4ecd",
     "evidence": "refs/quality/evidence/dielectric-response-2026-11-06.md",
     "evidence_sha256": "a219aa73819b3944a3e41283855fc1d7f8cfed88fd785bee057fa29f9c951db8",
     "assets": {
-      "assets/dielectric-response-map.svg": "9a12f5c3a11c87a75213a52448d51fd446d04e224cf944c91f81e3b41a1c1dd9"
+      "computational-materials-science/dielectric-response/images/dielectric-response-map.svg": "9a12f5c3a11c87a75213a52448d51fd446d04e224cf944c91f81e3b41a1c1dd9"
     },
     "prior_evidence": [],
     "coverage": {
@@ -1006,7 +1006,7 @@
   },
   "computational-materials-science/dielectric-response/born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "89fe4f5952a36c27b1d8025815218bf29b55fcac1096d2e82ed1182a6b4a4a14",
+    "document_sha256": "1e79b2587c3b860138c08af83afc258667eb9621b1f82722b71026c9310a097c",
     "evidence": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
     "evidence_sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477",
     "assets": {},
@@ -1137,19 +1137,25 @@
   },
   "computational-materials-science/dielectric-response/high-k-screening.md": {
     "status": "pass",
-    "document_sha256": "547e0fc138ff7d6a2439174ed9f5dd14a1a2af39688a23b81bfd909015557afd",
-    "evidence": "refs/quality/evidence/high-k-screening-2026-11-06.md",
-    "evidence_sha256": "0089d35e4843e67a7e4cb8cfc862da2ecf83c58d7d20680f9a4c9edff01b5371",
+    "document_sha256": "241ece2089e0d3693a7f0c1c6469e61845ab79241ee700ff96e49493a7af63de",
+    "evidence": "refs/quality/evidence/high-k-screening-update-2026-11-08.md",
+    "evidence_sha256": "5eb941dbcb2f409497576fbf207c4930d622373a5cc072766e40865a79fb2868",
     "assets": {},
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/high-k-screening-2026-11-06.md",
+        "sha256": "0089d35e4843e67a7e4cb8cfc862da2ecf83c58d7d20680f9a4c9edff01b5371"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "High-k 후보를 밴드갭과 계면·결함·안정성 조건을 포함해 해석한다."
+      "mode": "changes",
+      "description": "기존 high-k screening 원리를 유지하고 Takigawa et al. 후보 선별값, Fig. 4 설명 및 도판 권리·접근 범위를 추가했다.",
+      "baseline_sha256": "547e0fc138ff7d6a2439174ed9f5dd14a1a2af39688a23b81bfd909015557afd"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers new_article_fact_review and paper_figure_rights_audit",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-08"
     },
     "sources": {
       "robertson04": {
@@ -1172,6 +1178,12 @@
         "provenance": "lee-et-al-2018",
         "url": "https://doi.org/10.1038/s41598-018-33095-6",
         "location": "Abstract; Methods; Results",
+        "kind": "primary-research"
+      },
+      "takigawa_screening": {
+        "provenance": "takigawa-kiyohara-kumagai-prx-2026",
+        "url": "https://journals.aps.org/prx/pdf/10.1103/28wr-w896",
+        "location": "Abstract; §II.B, printed pp. 5–6; Fig. 4(a,b), printed p. 5; Table III",
         "kind": "primary-research"
       }
     },
@@ -1202,15 +1214,31 @@
           "yim",
           "lee"
         ]
+      },
+      {
+        "claim": "Takigawa et al. report screening a final pool of 8,717 oxides through staged filters to 31 high-k candidates; Fig. 4(a,b) shows the workflow and epsilon-average versus band-gap map.",
+        "scope": "Reported computational candidate-screening workflow and results; not synthesis or device validation.",
+        "status": "reported-primary",
+        "sources": [
+          "takigawa_screening"
+        ]
+      }
+    ],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
+        "sha256": "353b6dae719bbd52eb8fcc6ba33e17d0fa64f60521fe7363a256bd6a596a4351"
       }
     ]
   },
-  "computational-materials-science/dielectric-response/cases/yim-2015-high-k-oxides.md": {
+  "computational-materials-science/dielectric-response/yim-2015-high-k-oxides.md": {
     "status": "pass",
-    "document_sha256": "e2ae8c3cb75d9e61289c3b3549a635b54a82327ad7339cf25b6b920c707d5bef",
+    "document_sha256": "2b1313ba84562aebbec1c520e100fc4c810220f25cf226e3c111042369fdd777",
     "evidence": "refs/quality/evidence/yim-2015-high-k-oxides-2026-11-06.md",
-    "evidence_sha256": "34ef569a3e695c26d760ee603133ef41ab87f94161722a8758954e0046cdbd35",
-    "assets": {},
+    "evidence_sha256": "98225eff03fa229a361db306fdaa5905713943d42a70b5fd6c920a890e8fad62",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/yim-2015-fig4.png": "eb0ac490834ccc98186c9a5b70518d1a7b8e5509bc19d014b0fc3a3ce69d0005"
+    },
     "prior_evidence": [],
     "coverage": {
       "mode": "full",
@@ -1268,12 +1296,15 @@
       }
     ]
   },
-  "computational-materials-science/dielectric-response/cases/lee-2018-nonoxide-dielectrics.md": {
+  "computational-materials-science/dielectric-response/lee-2018-nonoxide-dielectrics.md": {
     "status": "pass",
-    "document_sha256": "aca83a58f3600eda9745771d2fd8062d927749776b7552c58753efa205456818",
+    "document_sha256": "e641e804e0660d3e278ab056012b62e644d0f53b1cf98f383213f29b0fcedcc7",
     "evidence": "refs/quality/evidence/lee-2018-nonoxide-dielectrics-2026-11-06.md",
-    "evidence_sha256": "49210240bbf8cb6b573efae312caf303074506670819d1c7056faf7358489f98",
-    "assets": {},
+    "evidence_sha256": "a159e576ce5b7a006065d51d8ed1a77c0197fbbd56571a08aaed1494e553e868",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/lee-2018-fig4.png": "c7c32ec272121e0c611f55819625ff699a9a018f27d97efd692898eaa1d622f8",
+      "computational-materials-science/dielectric-response/images/lee-2018-fig5.png": "3ff44e655eae1a9966820c34e21b8db8f37493cd76ba23104d50b53c248dbfd1"
+    },
     "prior_evidence": [],
     "coverage": {
       "mode": "full",
@@ -1341,7 +1372,7 @@
   },
   "computational-materials-science/dielectric-response/ml-born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "20126b7d689cf6d9439e7882f0e6eb31ace7a3881810835aa90b676f1627c023",
+    "document_sha256": "0b75c5bc6e825d7853f961787401965846d751606a43c532e59c833fffdf0337",
     "evidence": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
     "evidence_sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284",
     "assets": {},
@@ -1407,12 +1438,14 @@
       }
     ]
   },
-  "computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md": {
+  "computational-materials-science/dielectric-response/takigawa-2026-prx-ionic-dielectric-ml.md": {
     "status": "pass",
-    "document_sha256": "5567a088436276e59b7637a74a01f88f35c87a7bdaec2e73eb9f2c4eae80cbe5",
+    "document_sha256": "fa0b115a214e94b985ae4bcc660ee856bc113582eb13505878ee4b7cbd3df124",
     "evidence": "refs/quality/evidence/takigawa-2026-prx-ionic-dielectric-ml-2026-11-06.md",
-    "evidence_sha256": "c11c4564d0a09c30906e0a4b30f541c027bfd82102ea5c41137ee51cc8509e39",
-    "assets": {},
+    "evidence_sha256": "5d0c701f116bbc184c29565d01eff7b8934ee00670215f6e297d2013e50a81f3",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/takigawa-2026-prx-fig2.png": "b28f57f42d5fe03015e583aebfd11995576ddfeb9ab75d9a4ba47439c79472a5"
+    },
     "prior_evidence": [],
     "coverage": {
       "mode": "full",
@@ -1474,11 +1507,11 @@
   },
   "computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md": {
     "status": "pass",
-    "document_sha256": "5daa502470a743c1119b639c99d73cef8a94251c3ec2953bdf62d5f920a1994c",
+    "document_sha256": "c3c803f7986e267c860babd9a43af148b768412685bfd12a28b74e5ca3795a39",
     "evidence": "refs/quality/evidence/electron-phonon-coupling-2026-11-06.md",
     "evidence_sha256": "f70a584aafd7b48ee57415c7b520a4e1e70eb40722e4d60071d8c3b000acd075",
     "assets": {
-      "assets/eph-workflow.svg": "0baaecd332809a54ccb53c8116016ceab3ec38b4b945abd164e04151568eb766"
+      "computational-materials-science/electron-phonon-coupling/images/eph-workflow.svg": "0baaecd332809a54ccb53c8116016ceab3ec38b4b945abd164e04151568eb766"
     },
     "prior_evidence": [],
     "coverage": {
@@ -1539,11 +1572,11 @@
   },
   "computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md": {
     "status": "pass",
-    "document_sha256": "cc6fbbaa662464a31b4e01d8b4155dc950b6ed89508f62ae3d683a4b8e0e85a4",
+    "document_sha256": "31e130953c3b3a5aa68d7e88ba7d250510a0b78bd6388fb20d54d0e09b325c1f",
     "evidence": "refs/quality/evidence/electron-phonon-self-energy-2026-11-06.md",
     "evidence_sha256": "2cff6f97fde555a50f34612eefd7787668e993a360c785e7fd2cc8832aa8867c",
     "assets": {
-      "assets/eph-self-energy.svg": "c455b61dbb0de41df1faab0a9840151c33a50fcc0f2fd56f4b5f83a255d0f8a8"
+      "computational-materials-science/electron-phonon-coupling/images/eph-self-energy.svg": "c455b61dbb0de41df1faab0a9840151c33a50fcc0f2fd56f4b5f83a255d0f8a8"
     },
     "prior_evidence": [],
     "coverage": {
@@ -1605,7 +1638,7 @@
   "computational-materials-science/quantum-transport/long-channel-transport.md": {
     "evidence": "refs/quality/evidence/long-channel-transport-kpm-dfth-links-2026-11-08.md",
     "assets": {
-      "assets/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
+      "computational-materials-science/quantum-transport/images/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
     },
     "coverage": {
       "mode": "changes",
@@ -1687,7 +1720,7 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "18a5601537c61eb8c1ac6707ee2310f1b02677aad0ed379702ae28eb18568ca0",
+    "document_sha256": "3806c05e657624888d1d9c30277ee507a1f334456208d52f70b78ba609ea0278",
     "evidence_sha256": "8d86634cbfc18c44826452690ec95f907fb1ddad223c048f78d40983b438f6d5",
     "prior_evidence": [
       {
@@ -1712,13 +1745,13 @@
       "soler": {
         "provenance": "soler-2002-siesta",
         "url": "https://doi.org/10.1088/0953-8984/14/11/302",
-        "location": "§§III–VI basis/matrix elements; §XIII Order-N functional; §XIV transport",
+        "location": "§§III–VI basis/matrix elements; §XIV Order-N functional",
         "kind": "primary-research"
       },
       "siesta": {
         "provenance": "siesta-reference-5.4",
         "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
-        "location": "Calculation of electronic structure; SolverON; ON.eta; ON.RcLWF; SolverCheSS; NEGF equations; TranSIESTA",
+        "location": "Calculation of electronic structure; NEGF equations; TranSIESTA",
         "kind": "primary-documentation"
       },
       "tbtrans": {
@@ -1742,7 +1775,13 @@
       "papior": {
         "provenance": "papior-2017-transiesta",
         "url": "https://arxiv.org/abs/1607.04464",
-        "location": "NEGF and recursive transport formalism; block-structured transport calculations",
+        "location": "§III.C.1, Eqs. (17)–(18); recursive Green function method",
+        "kind": "primary-research"
+      },
+      "wimmer": {
+        "provenance": "wimmer-richter-2009-block-tridiagonalization",
+        "url": "https://arxiv.org/abs/0806.2739",
+        "location": "§1, Eqs. (9)–(12), pp. 4–5",
         "kind": "primary-research"
       }
     },
@@ -1767,11 +1806,11 @@
       },
       {
         "claim": "RGF cost is linear in the number of layers at fixed block dimension and does not imply linear cost when cross-section grows.",
-        "scope": "Block-tridiagonal transport with fixed cross-section",
+        "scope": "One energy and transverse k point in the central scattering region at fixed layer dimension; excludes electrode surface Green functions, energy integration, and self-consistency.",
         "status": "supported",
         "sources": [
-          "tbtrans",
-          "ham"
+          "wimmer",
+          "papior"
         ]
       },
       {
@@ -1785,8 +1824,8 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "07c2977fc040edea4410c329dbf823e76b6cbcdad357eec3265787c86cd28daf",
-    "evidence_sha256": "7d43e83c27013bceb8eb929c8ea126b8492bd76c8165c3f02e4cd393d7f436e3",
+    "document_sha256": "d50ca8e43e1ace7dc040a7f1265a2207148735bdd2f549033eafa77d3cb7ef5f",
+    "evidence_sha256": "eab98566cdd5ac4bf52c468db60eb886c7a9bc4009f5a46e9c47efe48e0cd171",
     "prior_evidence": []
   },
   "computational-materials-science/quantum-transport/ml-hamiltonian-transport.md": {
@@ -1874,7 +1913,7 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "660e00253080816911ce581b7324bba0d81cb7a15ea13270b8dd5f9918b5cfc9",
+    "document_sha256": "4efc76ac3ace20d2204c2094df938cae54516a9689bd9106c58cc1f4ba2af102",
     "evidence_sha256": "ad84ca31e3f2f44627c0b1dd1dc6c66f24f44bf7f336486f3ec5e285feedfd93",
     "prior_evidence": [
       {
@@ -1966,7 +2005,7 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "31535f7623ca2a9c7227ba97feb8ac23e4e8797d841854069e851e52f57e1a51",
+    "document_sha256": "5279b2506bee0c4563b0a7d7b3e58ea95f29042c898ae551eda5a0553a9aadf6",
     "evidence_sha256": "e761f9596a215c315d3cfe9fe44470248712c9122184784c7666bca41f1e9984",
     "prior_evidence": [
       {
@@ -1977,11 +2016,11 @@
   },
   "computational-science/atomistic-simulation/localized-basis-sets.md": {
     "status": "pass",
-    "document_sha256": "30ee7b1783977b4b770ef711e3874e34e777798cf0097afb49ad6ca4957ddc8e",
+    "document_sha256": "40cf679931d2535499a1828baee81f7cf26fe401c196d7b15eae89f1cd3980b6",
     "evidence": "refs/quality/evidence/localized-basis-sets-scope-update-2026-11-08.md",
     "evidence_sha256": "82396241fd67b10a53e2a4545c4a96dc0decbfd6d60e5e156645c363a3716d8a",
     "assets": {
-      "assets/basis-validation-workflow.svg": "3c4fed395b49c6fbdb9b53975ab4d66038ef033794d6e6b66c41a970112d69b1"
+      "computational-science/atomistic-simulation/images/basis-validation-workflow.svg": "3c4fed395b49c6fbdb9b53975ab4d66038ef033794d6e6b66c41a970112d69b1"
     },
     "prior_evidence": [
       {
@@ -2070,17 +2109,32 @@
   },
   "computational-materials-science/quantum-transport/basis-set-validation-cases.md": {
     "status": "pass",
-    "document_sha256": "48b8105ddbc21838f569d1e3fcb4801bc56cb43fd35c6d81c51d525f49ebd553",
-    "evidence": "refs/quality/evidence/basis-set-validation-cases-2026-11-08.md",
-    "evidence_sha256": "fbe717fa013799cd2720ab55065dbe60d391b5fd2599ce7ae98c96465ad33092",
-    "assets": {},
-    "prior_evidence": [],
+    "document_sha256": "42540248b7fb32cd3679fb5a777a104bd68884dfb9b66a3c813f57f393722868",
+    "evidence": "refs/quality/evidence/basis-set-validation-figure-update-2026-11-08.md",
+    "evidence_sha256": "94dcff5873abd5a669bae5824089c1d7677f908c5d99cac760882ac5ba1d3a43",
+    "assets": {
+      "computational-materials-science/quantum-transport/images/afzalian-2021-fig1.png": "6b397b51838334b39a1d74c4badb55d828332b8b1d8c9b574eba81f65971100d",
+      "computational-materials-science/quantum-transport/images/afzalian-2021-fig2.png": "578dac7c2ef68fae399deef8f05c3a67750a7421aa5b270ba261fff094046975"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/basis-set-validation-cases-2026-11-08.md",
+        "sha256": "fbe717fa013799cd2720ab55065dbe60d391b5fd2599ce7ae98c96465ad33092"
+      }
+    ],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
+        "sha256": "353b6dae719bbd52eb8fcc6ba33e17d0fa64f60521fe7363a256bd6a596a4351"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Six literature cases with reported-primary limits and separation of basis-cardinality from other approximations."
+      "mode": "changes",
+      "description": "기존 여섯 문헌 사례 설명을 유지하고, Afzalian et al. Fig. 2의 Hamiltonian 표현 비교 원그림과 범위 제한 설명을 추가했다.",
+      "baseline_sha256": "48b8105ddbc21838f569d1e3fcb4801bc56cb43fd35c6d81c51d525f49ebd553"
     },
     "reviewer": {
-      "role": "independent AI reviewer basis_solver_review",
+      "role": "independent AI reviewers paper_figure_audit and basis_solver_review",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -2119,6 +2173,12 @@
         "provenance": "ducry-2019-mode-space",
         "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf",
         "location": "pp. 70–72, Figs. 2 and 4",
+        "kind": "primary-research"
+      },
+      "afzalian_fig2": {
+        "provenance": "afzalian-2021-fig2",
+        "url": "https://arxiv.org/pdf/2106.07248v1",
+        "location": "Fig. 2, PDF p. 3; arXiv v1 license record",
         "kind": "primary-research"
       }
     },
@@ -2170,24 +2230,45 @@
         "sources": [
           "ducry2019"
         ]
+      },
+      {
+        "claim": "Afzalian et al. Fig. 2 reports a relaxed HfS2/WSe2 structure and compares ATOMOS Wannierized and Quantum ESPRESSO plane-wave band dispersions along the plotted path.",
+        "scope": "Single figure comparison; not SZP/DZP basis convergence or universal equivalence.",
+        "status": "reported-primary",
+        "sources": [
+          "afzalian_fig2"
+        ]
       }
     ]
   },
   "computational-science/atomistic-simulation/electronic-structure-solvers.md": {
     "status": "pass",
-    "document_sha256": "4e5b996ed7aa843e6f18f8083a515a52d3c82a81b53d99657706a619e5fbb4c6",
-    "evidence": "refs/quality/evidence/electronic-structure-solvers-2026-11-08.md",
-    "evidence_sha256": "94769dcd1491312d16ec62016285092f5286d558be66aceece5f59bc0ccedcaa",
+    "document_sha256": "1414e9ca4b89dc4b1e4ff8d724da07011f9c6bae24d86a9bb8ab61741bcc97b5",
+    "evidence": "refs/quality/evidence/electronic-structure-solvers-figure-update-2026-11-08.md",
+    "evidence_sha256": "d0cb3d1382a1e50c60f5ebe0980b087392245be6152dbba124676f0e2e3d0d4f",
     "assets": {
-      "assets/solver-and-transport-roles.svg": "065f4ff39a336fb3c398995a4a348a4267c67e6b78be4237b813320d8b12acaa"
+      "computational-science/atomistic-simulation/images/dftbplus-hourahine-2020-fig5-cd.png": "c3b499a0a9615e85decac3a8b1d4721027bc4cc84483475f14eccea7a7d62ab3",
+      "computational-science/atomistic-simulation/images/solver-and-transport-roles.svg": "065f4ff39a336fb3c398995a4a348a4267c67e6b78be4237b813320d8b12acaa"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/electronic-structure-solvers-2026-11-08.md",
+        "sha256": "94769dcd1491312d16ec62016285092f5286d558be66aceece5f59bc0ccedcaa"
+      }
+    ],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
+        "sha256": "353b6dae719bbd52eb8fcc6ba33e17d0fa64f60521fe7363a256bd6a596a4351"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "OMM/PEXSI/CheSS algorithm roles, ELSI interface, and distinction from block-stitching transport."
+      "mode": "changes",
+      "description": "기존 solver 설명을 유지하고 Hourahine et al. Fig. 5(c,d) 원그림, 비-SCC·spin·k-point benchmark 조건 및 해석 한계를 추가했다.",
+      "baseline_sha256": "4e5b996ed7aa843e6f18f8083a515a52d3c82a81b53d99657706a619e5fbb4c6"
     },
     "reviewer": {
-      "role": "independent AI reviewer basis_solver_review",
+      "role": "independent AI reviewers paper_figure_audit and basis_solver_review",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -2233,6 +2314,12 @@
         "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html",
         "location": "Principal layer interactions; Green function; calculation time",
         "kind": "primary-documentation"
+      },
+      "hourahine2020": {
+        "provenance": "hourahine-2020-dftbplus",
+        "url": "https://wrap.warwick.ac.uk/id/eprint/137347/1/WRAP-DFTB-software-package-efficient-density-atomistic-simulations-Hourahine-2020.pdf",
+        "location": "§III.A.1, Fig. 5(c,d), PDF p. 14; benchmark conditions and figure caption",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -2280,16 +2367,24 @@
           "siesta",
           "tbtrans"
         ]
+      },
+      {
+        "claim": "Hourahine et al. Fig. 5(c,d) reports density-matrix construction times for non-SCC, spin-non-polarized, Gamma-point DFTB+ calculations of C64000 CNT and Si6750 models; the solver sets differ between panels.",
+        "scope": "Two specific models and reported solver comparisons; not a universal solver ranking.",
+        "status": "reported-primary",
+        "sources": [
+          "hourahine2020"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/hamgnn-negf.md": {
     "status": "pass",
-    "document_sha256": "31fde86a76f1d3c71a280520b7cf4ba045aeb0101a7390e8c035b8d7d9437a4c",
+    "document_sha256": "69bb19aadd81c644b23c9665589c06959db9ecc9193610c72f9e913496cca94c",
     "evidence": "refs/quality/evidence/hamgnn-negf-update-2026-11-08.md",
     "evidence_sha256": "fb92b1a02c628ad21f0e7da29c606a8ffdd92635bbf56ad5b469f1025908fd0d",
     "assets": {
-      "assets/hamgnn-negf-workflow.svg": "eca76dfaf59103aa1e462392712c6cc2e6bd281b540490e00410a680fe3cbcda"
+      "computational-materials-science/quantum-transport/images/hamgnn-negf-workflow.svg": "eca76dfaf59103aa1e462392712c6cc2e6bd281b540490e00410a680fe3cbcda"
     },
     "prior_evidence": [
       {
@@ -2374,13 +2469,105 @@
       }
     ]
   },
+  "computational-materials-science/quantum-transport/dfth-negf.md": {
+    "status": "pass",
+    "document_sha256": "ec8ff055836992c3309b1afbffdb5ea04c96a0f2cfef2e6d2e81ec9b35e2ba68",
+    "evidence": "refs/quality/evidence/dfth-negf-2026-11-08.md",
+    "evidence_sha256": "6ad46638abc4941b8f84df3f32c3702a55638b28093de24c25a3858d5cfa5641",
+    "assets": {
+      "computational-materials-science/quantum-transport/images/dfth-negf-workflow.svg": "a2854b49a9b6eb5cc0875d2eb1c532a8e8505bb215d414768557daf26e656114"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "DFTH-NEGF static-H assumptions, nonorthogonal open-boundary equations, Full-NEGF comparison and finite-bias limits."
+    },
+    "reviewer": {
+      "role": "independent AI reviewers kpm_dfth_science_review and dfth_audit",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "liu": {
+        "provenance": "liu-2026-hamgnn-negf-arxiv-v1",
+        "url": "https://arxiv.org/pdf/2609.37058v1",
+        "location": "Introduction and Fig. 1; Results pp. 4–5; Discussion pp. 9–10; Methods p. 12; Supplementary Table 1",
+        "kind": "primary-research"
+      },
+      "siesta": {
+        "provenance": "siesta-reference-5.4",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
+        "location": "NEGF equations; TranSIESTA overview",
+        "kind": "primary-documentation"
+      },
+      "papior": {
+        "provenance": "papior-2017-transiesta",
+        "url": "https://doi.org/10.1016/j.cpc.2016.09.022",
+        "location": "§II, Eqs. (1)–(4); §III.B; §IV.A",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "이 문서는 DFTH-NEGF를 Liu et al. preprint에서 사용한 용어로 한정하며, 논문 경로는 static periodic DFT Hamiltonian과 lead self-energy로 열린계 transmission을 계산하고 transport Hamiltonian feedback을 생략한다.",
+        "scope": "해당 논문의 Fig. 1 workflow.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "비직교 Green function, broadening 및 coherent two-terminal Caroli transmission은 H, S와 lead self-energy를 포함하며, 계면 partition 세부사항은 구현 규약을 따른다.",
+        "scope": "steady-state single-particle NEGF.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "papior"
+        ]
+      },
+      {
+        "claim": "TranSIESTA full-NEGF 경로는 열린계 밀도 계산으로 중심 Hamiltonian을 갱신하는 self-consistent loop를 포함한다.",
+        "scope": "TranSIESTA transport implementation.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "papior"
+        ]
+      },
+      {
+        "claim": "저자들은 Au–benzenedithiol–Au와 Stone–Wales CNT 비교에서 DFTH-NEGF transmission의 거의 일치와 계산시간 18.3%, 27.4% 감소를 보고한다.",
+        "scope": "논문의 Fig. 2 두 benchmark 사례만.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "finite-bias H0 approximation은 zero-bias Hamiltonian을 고정하므로 fully self-consistent finite-bias NEGF와 다르며 논문은 weakly nonlinear regime으로 제한한다.",
+        "scope": "논문에서 시험한 bias, material, energy window and settings.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "Fermi-level procedure는 Results p. 5의 KPM 기술과 Methods p. 12의 benchmark direct-diagonalization 기술이 적용 대상 관계를 해결하지 않은 채 병존한다.",
+        "scope": "모든 transmission benchmark에 하나의 procedure가 쓰였다고 단정하지 않는다.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      }
+    ]
+  },
   "computational-materials-science/quantum-transport/nonorthogonal-kpm.md": {
     "status": "pass",
-    "document_sha256": "be99667ddd3071e5ce997b6ea046950dc7cb15eb757f747da9152712fb8be3ba",
+    "document_sha256": "76f7914b06cf674bac2f7b68c002ca502da436c7613c54e418f26db13639dd45",
     "evidence": "refs/quality/evidence/nonorthogonal-kpm-2026-11-08.md",
-    "evidence_sha256": "c9f60253cc2c40012c2c7b563d0d7241f5606187f9f4520082ec7a3630682c63",
+    "evidence_sha256": "f85ae09800bbea36fa731fb29f298534b38facb35f0c22cb6dc35fe2c66317b4",
     "assets": {
-      "assets/nonorthogonal-kpm-workflow.svg": "de6a455d2a7680fed444613002397f0bfb1cb2c05cffc8aecc7a090379a577af"
+      "computational-materials-science/quantum-transport/images/kpm-gibbs-oscillations.svg": "f56c84f24e8a683fc83eb5efba6068185569c28a8b7d04a159c98163aa929f61",
+      "computational-materials-science/quantum-transport/images/nonorthogonal-kpm-workflow.svg": "a2086c0860666ca96258a2e1c5eb48062458bdaa5616cc3fa75a3e1e8c77a4c5"
     },
     "prior_evidence": [],
     "coverage": {
@@ -2466,93 +2653,307 @@
       }
     ]
   },
-  "computational-materials-science/quantum-transport/dfth-negf.md": {
+  "computational-materials-science/quantum-transport/mode-space-transport.md": {
     "status": "pass",
-    "document_sha256": "be676c75d1269949ce680e1092a88d2d2ec537e312f9538006df8841156f108c",
-    "evidence": "refs/quality/evidence/dfth-negf-2026-11-08.md",
-    "evidence_sha256": "9b5ea793c32907eb177afca76ddd5073cfe71cb079c56987686d152d71686041",
+    "document_sha256": "e443166a0ee7b79b3017aee9d5120870cd4292bd7b8b32598f03b73cd4ceaa7c",
+    "evidence": "refs/quality/evidence/mode-space-transport-2026-11-08.md",
+    "evidence_sha256": "55818cde0ac1a71029bffd71216e174e71004c0e844380144cf6d94cab6d9daa",
     "assets": {
-      "assets/dfth-negf-workflow.svg": "a2854b49a9b6eb5cc0875d2eb1c532a8e8505bb215d414768557daf26e656114"
+      "computational-materials-science/quantum-transport/images/carrillo-nunez-2020-fig2.png": "50319c7751a8aea3eb6e8d656a788cdb0c169f8847e59984929e01ac9b35b305",
+      "computational-materials-science/quantum-transport/images/mode-space-workflow.svg": "5956a3a7296665507243c04e26189dbce77a3fdc9824381c56b989ba439efcf1"
     },
     "prior_evidence": [],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
+        "sha256": "353b6dae719bbd52eb8fcc6ba33e17d0fa64f60521fe7363a256bd6a596a4351"
+      }
+    ],
     "coverage": {
       "mode": "full",
-      "description": "DFTH-NEGF static-H assumptions, nonorthogonal open-boundary equations, Full-NEGF comparison and finite-bias limits."
+      "description": "Mode-space 표현, 접촉과 비직교 overlap, 점유·밀도·전류, 모드 결합 및 산란 근사와 RGF 비용 조건을 설명한다."
     },
     "reviewer": {
-      "role": "independent AI reviewer kpm_dfth_science_review",
+      "role": "independent AI reviewers new_article_fact_review, mode_space_factcheck, and paper_figure_audit",
       "independent": true,
       "date": "2026-11-08"
     },
     "sources": {
-      "liu": {
-        "provenance": "liu-2026-hamgnn-negf-arxiv-v1",
-        "url": "https://arxiv.org/pdf/2609.37058v1",
-        "location": "Introduction; §II and Fig. 1; Results p. 4; Discussion pp. 9–10; Methods p. 12",
+      "luisier2006": {
+        "provenance": "luisier-2006-mode-space",
+        "url": "https://doi.org/10.1063/1.2244522",
+        "location": "§II.B, Eqs. (9), (11)–(18); §§III–IV"
+      },
+      "afzalian2018": {
+        "provenance": "afzalian-2018-tb-mode-space",
+        "url": "https://arxiv.org/abs/1705.00909",
+        "location": "Results pp. 3–6; Methods p. 7; Eqs. (1)–(9); Supplementary Fig. 5",
         "kind": "primary-research"
       },
-      "siesta": {
-        "provenance": "siesta-reference-5.4",
-        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
-        "location": "NEGF equations; TranSIESTA overview",
-        "kind": "primary-documentation"
+      "lemus2020": {
+        "provenance": "lemus-2020-mode-space-scattering",
+        "url": "https://arxiv.org/html/2003.09536v2",
+        "location": "§§2.3–2.6; §§3.1–3.5; Figs. 2–9"
       },
-      "papior": {
+      "ducry2019": {
+        "provenance": "ducry-2019-hybrid-mode-space",
+        "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf",
+        "location": "pp. 69–72, Figs. 2–4",
+        "kind": "primary-research"
+      },
+      "papior2017": {
         "provenance": "papior-2017-transiesta",
-        "url": "https://doi.org/10.1016/j.cpc.2016.09.022",
-        "location": "§II, Eqs. (1)–(4); §III.B; §IV.A",
+        "url": "https://arxiv.org/pdf/1607.04464",
+        "location": "§II.B, Eqs. (10)–(15); §III.C.1, Eqs. (17)–(18)"
+      },
+      "brandbyge2002": {
+        "provenance": "brandbyge-2002-negf",
+        "url": "https://arxiv.org/pdf/cond-mat/0110650",
+        "location": "§III.A, density matrix and scattering states"
+      },
+      "wimmer2009": {
+        "provenance": "wimmer-richter-2009-rgf",
+        "url": "https://arxiv.org/pdf/0806.2739",
+        "location": "Eqs. (9)–(12), fixed block-width scaling"
+      },
+      "carrillo2020": {
+        "provenance": "carrillo-nunez-2020-mode-space",
+        "url": "https://eprints.gla.ac.uk/221595/13/221595.pdf",
+        "location": "Fig. 2, PDF p. 5; CC BY 4.0",
         "kind": "primary-research"
       }
     },
     "findings": [
       {
-        "claim": "이 문서는 DFTH-NEGF를 Liu et al. preprint에서 사용한 용어로 한정하며, 논문 경로는 static periodic DFT Hamiltonian과 lead self-energy로 열린계 transmission을 계산하고 transport Hamiltonian feedback을 생략한다.",
-        "scope": "해당 논문의 Fig. 1 workflow.",
-        "status": "reported-primary",
-        "sources": [
-          "liu"
-        ]
-      },
-      {
-        "claim": "비직교 Green function, broadening 및 coherent two-terminal Caroli transmission은 H, S와 lead self-energy를 포함하며, 계면 partition 세부사항은 구현 규약을 따른다.",
-        "scope": "steady-state single-particle NEGF.",
+        "claim": "Mode-space projection transforms H and S together, and electrode couplings and self-energies must use a consistent transformed basis.",
+        "scope": "Nonorthogonal local-orbital transport; distinguish full basis transforms from truncated approximations.",
         "status": "supported",
         "sources": [
-          "siesta",
-          "papior"
+          "luisier2006",
+          "ducry2019",
+          "papior2017"
         ]
       },
       {
-        "claim": "TranSIESTA full-NEGF 경로는 열린계 밀도 계산으로 중심 Hamiltonian을 갱신하는 self-consistent loop를 포함한다.",
-        "scope": "TranSIESTA transport implementation.",
+        "claim": "The electrode lesser-injection expression determines occupations of lead-coupled states, while a bound state with zero broadening expectation is not occupied by that injection term alone.",
+        "scope": "Coherent steady-state two-terminal formulation and stated Green-function convention.",
         "status": "supported",
         "sources": [
-          "siesta",
-          "papior"
+          "papior2017",
+          "brandbyge2002"
         ]
       },
       {
-        "claim": "저자들은 Au–benzenedithiol–Au와 Stone–Wales CNT 비교에서 DFTH-NEGF transmission의 거의 일치와 계산시간 18.3%, 27.4% 감소를 보고한다.",
-        "scope": "논문의 Fig. 2 두 benchmark 사례만.",
-        "status": "reported-primary",
+        "claim": "Uncoupled-mode treatment removes intermode coupling as an additional approximation, distinct from retaining fewer modes.",
+        "scope": "The cited coupled-mode and mode-space scattering formulations.",
+        "status": "supported",
         "sources": [
-          "liu"
+          "luisier2006",
+          "lemus2020"
         ]
       },
       {
-        "claim": "finite-bias H0 approximation은 zero-bias Hamiltonian을 고정하므로 fully self-consistent finite-bias NEGF와 다르며 논문은 weakly nonlinear regime으로 제한한다.",
-        "scope": "논문에서 시험한 bias, material, energy window and settings.",
-        "status": "reported-primary",
+        "claim": "RGF scales linearly with layer count for a fixed block width in a one-energy and one-transverse-k calculation.",
+        "scope": "Block-tridiagonal device operator with fixed principal-layer dimension.",
+        "status": "supported",
         "sources": [
-          "liu"
+          "papior2017",
+          "wimmer2009"
         ]
       },
       {
-        "claim": "Fermi-level procedure는 Results p. 5의 KPM 기술과 Methods p. 12의 benchmark direct-diagonalization 기술이 적용 대상 관계를 해결하지 않은 채 병존한다.",
-        "scope": "모든 transmission benchmark에 하나의 procedure가 쓰였다고 단정하지 않는다.",
+        "claim": "Carrillo-Nuñez et al. compare full-band and mode-space dispersions for a 3 nm <111> Si nanowire in Fig. 2.",
+        "scope": "Reported structure and energy window only; not a current-accuracy or universal result.",
         "status": "reported-primary",
         "sources": [
-          "liu"
+          "carrillo2020"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/overview.md": {
+    "status": "pass",
+    "document_sha256": "734599feb33072669f4e11978a2bb4515aa26fe04832a62bc11cd6c9ba9229ba",
+    "evidence": "refs/quality/evidence/open-transport-overview-2026-11-08.md",
+    "evidence_sha256": "092712316594a45c21e6fcb2cb8a2db30136699ba1541284ce232d73f38a8b14",
+    "assets": {
+      "computational-materials-science/quantum-transport/images/open-transport-overview.svg": "4371cc5a657c9c740a73b810549afcab8026b5e5f3a46ecd6a185c8da3fbfaac"
+    },
+    "prior_evidence": [],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/overview-diagrams-2026-10-31.md",
+        "sha256": "78efe9b6eb1718e615a8f3aec364db202687e6f97b1cb1d60735f153e77c26f1"
+      }
+    ],
+    "coverage": {
+      "mode": "full",
+      "description": "두 단자 정상상태 탄성·결맞음 수송에서 NEGF, QTBM과 Landauer 관계의 역할을 구분한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer new_article_fact_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "papior2017": {
+        "provenance": "papior-2017-transiesta",
+        "url": "https://arxiv.org/abs/1607.04464",
+        "location": "§II; §IV.A"
+      },
+      "brandbyge2002": {
+        "provenance": "brandbyge-2002-negf",
+        "url": "https://arxiv.org/abs/cond-mat/0110650",
+        "location": "§§II–III, V"
+      },
+      "frensley1990": {
+        "provenance": "frensley-1990-qtbm",
+        "url": "https://personal.utdallas.edu/~frensley/technical/FrensleyRMP1990.pdf",
+        "location": "Appendix D, pp. 784–785"
+      },
+      "gehring2003": {
+        "provenance": "gehring-2003-device-simulation",
+        "url": "https://repositum.tuwien.at/bitstream/20.500.12708/12170/2/Gehring%20Andreas%20-%202003%20-%20Simulation%20of%20tunneling%20in%20semiconductor%20devices.pdf",
+        "location": "§3.5.4, Eqs. (3.92)–(3.99)"
+      },
+      "bruneau2014": {
+        "provenance": "bruneau-2014-landauer",
+        "url": "https://arxiv.org/html/1408.0185",
+        "location": "§1.1, Eqs. (1.2), (1.6)"
+      },
+      "kohler2004": {
+        "provenance": "kohler-2004-quantum-transport",
+        "url": "https://arxiv.org/pdf/cond-mat/0409251",
+        "location": "§2.4, Eqs. (16)–(18)"
+      }
+    },
+    "findings": [
+      {
+        "claim": "NEGF uses electrode self-energies to describe open boundaries and calculates states and occupations in the device.",
+        "scope": "Independent-electron steady-state two-terminal transport.",
+        "status": "supported",
+        "sources": [
+          "papior2017",
+          "brandbyge2002"
+        ]
+      },
+      {
+        "claim": "QTBM solves open-boundary scattering states for a specified incoming electrode mode.",
+        "scope": "Stationary single-particle boundary formulation.",
+        "status": "supported",
+        "sources": [
+          "frensley1990",
+          "gehring2003"
+        ]
+      },
+      {
+        "claim": "Two-terminal elastic coherent Landauer current weights energy-resolved transmission by the reservoir occupation difference.",
+        "scope": "The independent-electron conditions stated in the article.",
+        "status": "supported",
+        "sources": [
+          "bruneau2014",
+          "kohler2004"
+        ]
+      },
+      {
+        "claim": "NEGF, QTBM and Landauer describe related but distinct aspects and are not necessarily three sequential solvers in one calculation.",
+        "scope": "Conceptual relation for the article two-terminal overview.",
+        "status": "supported",
+        "sources": [
+          "papior2017",
+          "brandbyge2002",
+          "frensley1990"
+        ]
+      }
+    ]
+  },
+  "computational-science/atomistic-simulation/siesta-54-omm.md": {
+    "status": "pass",
+    "document_sha256": "e805d88fba11fdac8c4ca110034af45f58fb7f451aeb8486dd030356e0e84961",
+    "evidence": "refs/quality/evidence/siesta-54-omm-2026-11-08.md",
+    "evidence_sha256": "37a652b815820be32a6d599ad790ba94e9127ed11a66f3bb78e122c29d093d33",
+    "assets": {
+      "computational-science/atomistic-simulation/images/omm-2023-fig2.png": "b5a12b4e2a79c7ffbb101e4b639e3e29c4f35cfac5783bb1c7b6445d65ae872c",
+      "computational-science/atomistic-simulation/images/omm-workflow.svg": "4d7e065e17b982d19f6fa535c993d784b9d438c61cd02f1dde8bec690829b2e3"
+    },
+    "prior_evidence": [],
+    "supplemental_evidence": [
+      {
+        "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
+        "sha256": "353b6dae719bbd52eb8fcc6ba33e17d0fa64f60521fe7363a256bd6a596a4351"
+      }
+    ],
+    "coverage": {
+      "mode": "full",
+      "description": "SIESTA 5.4 native OMM의 점유 부분공간 functional, SCF·MD 반복, 입력 제약과 유사 이름의 solver 경로 구분을 설명한다."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer new_article_fact_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "siesta54": {
+        "provenance": "siesta-5.4-reference-manual",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
+        "location": "Calculation of the electronic structure; SolverOMM, SolverON, SolverELSI, SolverPEXSI and SolverCheSS"
+      },
+      "corsetti2014": {
+        "provenance": "corsetti-2014-omm",
+        "url": "https://arxiv.org/abs/1312.1549",
+        "location": "§§2.1–2.7; §§3–4"
+      },
+      "lebedeva2023": {
+        "provenance": "lebedeva-2023-modular-omm",
+        "url": "https://doi.org/10.1098/rsos.230063",
+        "location": "§§2–3, Table 1, Fig. 2, p. 6",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "OMM optimizes trial-orbital coefficients for the occupied subspace and its functional includes the nonorthogonal subspace overlap.",
+        "scope": "Zero-temperature integer occupation and the spin-degenerate simplified notation stated in the article.",
+        "status": "supported",
+        "sources": [
+          "corsetti2014",
+          "lebedeva2023"
+        ]
+      },
+      {
+        "claim": "SIESTA 5.4 native SolutionMethod OMM is documented as a cubic-scaling solver with version-specific options and constraints.",
+        "scope": "SIESTA 5.4 reference manual behavior; not generalized to ELSI backends.",
+        "status": "supported",
+        "sources": [
+          "siesta54",
+          "corsetti2014"
+        ]
+      },
+      {
+        "claim": "During SCF, density updates the Hamiltonian while the overlap remains fixed for fixed geometry; MD geometry changes require updated matrices and can reuse prior orbital coefficients as an initial guess.",
+        "scope": "Finite-range atomic orbital basis and documented OMM workflow.",
+        "status": "supported",
+        "sources": [
+          "siesta54",
+          "corsetti2014",
+          "lebedeva2023"
+        ]
+      },
+      {
+        "claim": "SIESTA 5.4 native OMM, historical Order-N, ELSI OMM backend and the 2023 modular BLOMM implementation are distinct routes.",
+        "scope": "Cited SIESTA 5.4 manual and modular OMM implementation.",
+        "status": "supported",
+        "sources": [
+          "siesta54",
+          "lebedeva2023"
+        ]
+      },
+      {
+        "claim": "Lebedeva et al. Fig. 2 reports the modular libOMM flow in which matrix representations are converted and a density matrix is returned.",
+        "scope": "2023 modular implementation, not the internal implementation of SIESTA 5.4 native OMM.",
+        "status": "reported-primary",
+        "sources": [
+          "lebedeva2023"
         ]
       }
     ]

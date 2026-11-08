@@ -6,13 +6,22 @@ description: Yim 등 2015년 자동화 제일원리 산화물 스크리닝의 �
 
 Yim 등은 다음 세대 전자소자용 유전체 후보를 찾기 위해 자동화된 제일원리 계산으로 산화물을 선별했다. 연구의 목표는 유전율이 높은 물질만 찾는 것이 아니라, 유전율과 전자 밴드갭을 함께 고려하는 것이었다. [1, Abstract; 2, bibliographic record]
 
+<figure markdown="span">
+
+  ![산화물 후보의 계산 밴드갭과 유전율을 나타내고 결합 선별 기준을 표시한 논문 Figure 4.](images/yim-2015-fig4.png)
+
+  <figcaption markdown="1">
+  **그림 1.** K. Yim et al., “Novel high-κ dielectrics for next-generation electronic devices screened by automated ab initio calculations,” *NPG Asia Materials* 7, e190 (2015), Fig. 4, [DOI](https://doi.org/10.1038/am.2015.57). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). 원문 PDF에서 페이지 여백과 논문 캡션을 덜어 내고 도판 영역을 수록했다. 축·데이터·색상은 수정하지 않았다.
+  </figcaption>
+</figure>
+
 ## 1. 연구 질문과 절차
 
-논문 초록은 1,800개가 넘는 산화물 구조를, 서론은 약 1,800개 구조를 언급하지만 Results는 1,762개를 계산했다고 보고한다. Results는 금속 및 불안정 구조를 제외한 1,158개를 밴드갭–유전율 지도에 표시한다. 원문은 초록·서론의 1,800개 초과 표현과 Results의 1,762개를 조정해 설명하지 않으므로, 두 수치를 별개의 논문 보고값으로 기록한다. 이는 논문 내부의 보고값을 옮긴 것이며 독립 재현을 뜻하지 않는다. [1, Abstract, Introduction, Results, and Fig. 4]
+논문 초록은 1,800개가 넘는 산화물 구조를, 서론은 약 1,800개 구조를 언급한다. Results에서는 1,762개 구조를 계산했다고 보고하고, 금속 및 불안정 구조를 제외한 1,158개를 밴드갭–유전율 지도에 표시한다. 원문은 초록·서론의 1,800개 초과 표현과 Results의 1,762개를 조정해 설명하지 않는다. 따라서 두 값을 각각 논문 보고값으로 기록하며, 독립 재현 결과로 해석하지 않는다. [1, Abstract, Introduction, Results, and Fig. 4]
 
 이 계산은 후보 공간을 줄이는 high-throughput 선별 단계다. 보고된 값은 논문이 사용한 구조와 계산 설정에 종속되며, 실제 공정 박막의 측정값이나 소자 검증과 동일하지 않다. [1, Methods and Results; 3, §1–2]
 
-이 연구 흐름의 물리 배경은 유전율과 밴드갭을 함께 보는 이유를 제공한다. 유전율이 높으면 같은 정전용량에서 물리 두께를 늘릴 수 있지만, 밴드 오프셋과 재료 안정성도 누설과 소자 동작에 관여한다. [1, Introduction; 3, §1–2]
+유전율이 높으면 같은 정전용량에서 물리 두께를 늘릴 수 있지만, 밴드 오프셋과 재료 안정성도 누설과 소자 동작에 관여한다. [1, Introduction; 3, §1–2]
 
 ## 2. 결과를 읽을 때
 

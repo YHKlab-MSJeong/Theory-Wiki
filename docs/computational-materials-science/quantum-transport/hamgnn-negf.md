@@ -6,9 +6,18 @@ description: HamGNN-NEGF의 Hamiltonian 학습, 비직교 KPM, 전극 self-energ
 
 HamGNN-NEGF는 작은 구조에서 얻은 일반 DFT Hamiltonian과 overlap 행렬 자료로 원자 환경과 행렬 요소의 관계를 학습하고, 큰 장치 구조의 Hamiltonian을 예측한 뒤 NEGF 수송에 넣는 방법이다. 저자들은 이를 통해 계산량을 줄이면서 고정 단면에서 채널 길이에 대한 선형 스케일링을 얻었다고 보고한다. 논문은 2026년 9월 공개된 arXiv v1 프리프린트다. [1, Abstract; §§I–II]
 
-![작은 구조의 DFT 행렬로 학습한 HamGNN이 큰 장치 Hamiltonian을 예측한다. 비직교 수송에 필요한 overlap 구성은 원문에 충분히 설명되어 있지 않다.](../../assets/hamgnn-negf-workflow.svg)
+<figure markdown="span">
 
-## 1. Hamiltonian 블록 반복과 무엇이 다른가
+  ![작은 구조의 DFT 행렬로 학습한 HamGNN이 큰 장치 Hamiltonian을 예측한다. 비직교 수송에 필요한 overlap 구성은 원문에 충분히 설명되어 있지 않다.](images/hamgnn-negf-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키의 개념도. 작은 DFT 구조에서 학습한 Hamiltonian 모델을 큰 원자구조에 적용하고 전극 self-energy, KPM, RGF로 이어지는 제안된 계산 흐름을 요약한다. 논문 도판을 복제하지 않았다.
+  </figcaption>
+</figure>
+
+논문 원그림 Figure 1은 [arXiv 논문 PDF](https://arxiv.org/pdf/2609.37058v1)에서 확인할 수 있다.
+
+## 1. Hamiltonian 블록 복제와 학습 예측
 
 짧은 구조의 DFT 결과를 이미 갖고 있고 균일 채널을 길게 만들려면 대표 Hamiltonian·overlap 블록을 반복하는 모델을 검토할 수 있다. HamGNN은 그 블록을 그대로 복사하지 않는다. 작은 구조의 DFT 행렬을 학습자료로 사용해 원자 배치에서 Hamiltonian을 예측한다. 비직교 기저의 계산에는 overlap S도 필요하지만, 논문은 큰 장치의 S를 어떤 절차로 구성하는지 충분히 설명하지 않는다. [1, §§II–III]
 
@@ -29,9 +38,7 @@ HamGNN은 원자 환경에 따라 새 Hamiltonian을 예측하므로 구조 변�
 3. **비직교 KPM으로 Fermi 준위를 정한다.** 일반화 고유값 스펙트럼의 DOS를 Chebyshev moments로 근사하고, 전자수 조건을 만족하는 \(\mu_F\)를 찾는다. 비직교 행렬 작용에는 overlap 선형계 풀이가 들어가며, 일반화 고유값을 직접 대각화하지 않는다. 수식과 수렴 기준은 [비직교 KPM 문서](nonorthogonal-kpm.md), 고정 Hamiltonian으로 수송하는 방법은 [DFTH-NEGF 문서](dfth-negf.md)를 참고한다. [1, §II; 2, Eqs. (7)–(9)]
 4. **RGF로 \(T(E)\)를 계산한다.** 산란영역을 principal layer로 나누고 인접 층 결합을 따라 Green 함수 정보를 재귀적으로 전달한다. [1, §II, Fig. 1; Methods, pp. 11–12]
 
-Results p. 5는 \(2\times2\times5\) Si 사례에서 KPM 수렴을 확인하고, KPM으로 얻은 \(E_F\)를 이후 NEGF 계산에 사용했다고 적는다. 반면 Methods p. 12는 benchmark systems의 \(E_F\)를 일반화 고유값 문제의 직접 대각화로 얻었다고 적는다. 프리프린트는 두 진술의 적용 대상 관계를 설명하지 않는다. 따라서 Results에 명시된 해당 Si 사례와 Methods의 benchmark 절차는 각각 기록하되, 모든 transmission benchmark에 KPM을 적용했다고 단정할 수는 없다. [1, Results, p. 5; Methods, p. 12]
-
-KPM은 Fermi 준위를, RGF는 transmission을 계산한다. 블록 반복과 달리 HamGNN은 장치 구조에서 Hamiltonian을 새로 예측한다.
+Results Fig. 3과 Supplementary Table 1은 \(2\times2\times5\) Si 사례에서 KPM 수렴을 확인하고, KPM으로 얻은 \(E_F\)를 이후 NEGF 계산에 사용했다고 적는다. 반면 Methods p. 12는 benchmark systems의 \(E_F\)를 일반화 고유값 문제의 직접 대각화로 얻었다고 적는다. 프리프린트는 두 진술의 적용 대상 관계를 설명하지 않는다. 따라서 Results에 명시된 해당 Si 사례와 Methods의 benchmark 절차는 각각 기록하되, 모든 transmission benchmark에 KPM을 적용했다고 단정할 수는 없다. [1, Results, Fig. 3 and Supplementary Table 1; Methods, p. 12]
 
 ## 4. 선형 스케일링이 성립하는 조건
 
