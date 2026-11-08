@@ -1,4 +1,4 @@
-{
+YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíÛž=Ñ:-jZ.¶›­–)Þ³rèi×^nè z»huæî€3Âûæ©¦XœjØ¨žÌ"¶az[¢wš¦'^nè z²èi×i•ú+i×b¶*'jPÏï€<‹!¶Úlÿø"¶›r‰¿¢wš¦++sú'x3Ë{
   "computational-materials-science/quantum-transport/landauer-transmission.md": {
     "status": "pass",
     "document_sha256": "f38b0c54f37641c61d0b63c904d443ccc5948068133f1316f03f7f962ecf313b",
@@ -497,1109 +497,16 @@
   "device-physics/mobility/defect-scattering.md": {
     "status": "pass",
     "document_sha256": "0d58789a120899d4d0fd84effa7a1bd5a50d1e70460fde6823bf7efedbbf6293",
-    "evidence": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
-    "evidence_sha256": "af7d40f736ab084d5f17e0c6f8a352f2350c2d60216a2605aca3670163d20494",
-    "assets": {
-      "assets/defect-scattering-model.svg": "763eaa76a25de0c6b5751262ee60e86feb6ddaa8d81542d83ed4ba2b23df84d5"
-    },
-    "coverage": {
-      "mode": "changes",
-      "description": "Defect ë„ì‹ì— ë‹¨ì¼ ê²°í•¨ matrix element ì •ì˜, normalization, disorder í‰ê·  ì œê³±í–‰ë ¬ì›ì†Œì™€ rate-level density/final-state sumì„ ë¶„ë¦¬í•´ ë°˜ì˜í–ˆë‹¤.",
-      "baseline_sha256": "0ffb3f41377d4e10a492dcc45e5ab8211859e63c66dda8fcbd0b17873134d826"
-    },
-    "reviewer": {
-      "role": "independent AI reviewer wiki_device_audit",
-      "independent": true,
-      "date": "2026-11-05"
-    },
-    "sources": {
-      "a": {
-        "provenance": "hwang",
-        "url": "https://arxiv.org/pdf/cond-mat/0608645",
-        "location": "(1)â€“(3)"
-      },
-      "b": {
-        "provenance": "kaasbjerg",
-        "url": "https://arxiv.org/pdf/1612.00469",
-        "location": "Â§II"
-      }
-    },
-    "findings": [
-      {
-        "claim": "defect scattering model",
-        "scope": "2D cases",
-        "status": "supported",
-        "sources": [
-          "a",
-          "b"
-        ]
-      },
-      {
-        "claim": "single-defect matrix element Mâ‚–â€²â‚–=âŸ¨kâ€²|Vâ±¼|kâŸ© is normalized before the disorder average of |M|Â²; independent-defect Born rate then uses defect density and a final-state sum, while one periodic supercell is not random-ensemble mobility",
-        "scope": "weak-disorder/Born treatment in the cited two-dimensional examples",
-        "status": "supported",
-        "sources": [
-          "a",
-          "b"
-        ]
-      }
-    ],
-    "prior_evidence": [
-      {
-        "path": "refs/quality/evidence/defect-scattering-2026-10-30.md",
-        "sha256": "c0e0c876b39a78f7fc9f6e1d05c07a206818bd6524fefc8ec3115bb5fe662f96"
-      }
-    ]
-  },
-  "computational-materials-science/quantum-transport/quantum-contact-resistance.md": {
-    "status": "pass",
-    "document_sha256": "729c90c905e0c9d58daa3ed08c1a8f8a848a25e017325436b70f75e23c4e2fee",
-    "evidence": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
-    "evidence_sha256": "7b98d12e743f2c869cbcddfc498cb4d8b108a7ebf506ffbed7ada1794a75ea0a",
-    "assets": {
-      "assets/quantum-contact-resistance.svg": "d2813113e291e55dbe6d3390c30c0ca149bbd3246ce9d3b3b6e9ac0ad2d92773"
-    },
-    "coverage": {
-      "mode": "changes",
-      "description": "ì±„ë„ degeneracyì™€ ì „ì²´ two-terminal ê°’, ëŒ€ì¹­ bookkeeping ë° ë¹„ëŒ€ì¹­ contactì˜ ì°¨ì´ë¥¼ í•œ ê·¸ë¦¼ì— ë‹´ì•˜ë‹¤.",
-      "baseline_sha256": "40b925378cb79b2689b5fb2c338b1b7dc92ea230c8ac559d472898db53cda290"
-    },
-    "reviewer": {
-      "role": "independent AI reviewers wiki_tooling and wiki_transport_diagram_review",
-      "independent": true,
-      "date": "2026-11-05"
-    },
-    "sources": {
-      "a": {
-        "provenance": "beenakker",
-        "url": "https://arxiv.org/pdf/cond-mat/9612179",
-        "location": "Â§I.C.2"
-      },
-      "b": {
-        "provenance": "feilhauer",
-        "url": "https://arxiv.org/pdf/1011.6193",
-        "location": "Â§I"
-      },
-      "mortensen": {
-        "provenance": "mortensen-et-al-1999",
-        "url": "https://arxiv.org/pdf/cond-mat/9907026",
-        "location": "Â§I"
-      },
-      "texier_montambaux": {
-        "provenance": "texier-montambaux-four-terminal-resistances",
-        "url": "https://gilles.montambaux.com/files/publications/reprints/189_four_terminal_resistances.pdf",
-        "location": "Â§2"
-      },
-      "landauer": {
-        "provenance": "landauer-conductance-determined-by-transmission-1989",
-        "url": "https://doi.org/10.1088/0953-8984/1/43/011",
-        "location": "Abstract"
-      }
-    },
-    "findings": [
-      {
-        "claim": "conductance quantum",
-        "scope": "zero-temperature linear response",
-        "status": "supported",
-        "sources": [
-          "a",
-          "b"
-        ]
-      },
-      {
-        "claim": "N fully transmitting spin-degenerate modes give G=(2eÂ²/h)N and R2t=h/(2eÂ²N)",
-        "scope": "ideal zero-temperature two-terminal, unit-transmission limit; spin degeneracy counted once",
-        "status": "supported",
-        "sources": [
-          "a",
-          "b"
-        ]
-      },
-      {
-        "claim": "equal half-per-contact values are a symmetry-based bookkeeping inference for the symmetric ideal model, not universal physical contact resistances",
-        "scope": "symmetric ideal two-terminal model; asymmetric contacts have no universal half assignment",
-        "status": "supported",
-        "sources": [
-          "a",
-          "mortensen"
-        ]
-      }
-    ],
-    "prior_evidence": [
-      {
-        "path": "refs/quality/evidence/quantum-contact-resistance-2026-10-30.md",
-        "sha256": "3ccb4d119ca235cf3f16eea3babd756710e9554cf08212dba40afab537d4ab99"
-      }
-    ]
-  },
-  "computational-materials-science/quantum-transport/scba-convergence.md": {
-    "status": "pass",
-    "document_sha256": "8279202afd0c89a08125c565e9a2354fb7c9037c6030e53bc02a4647082d27ca",
-    "evidence": "refs/quality/evidence/scba-workflow-2026-11-05.md",
-    "evidence_sha256": "0750f5412f5aa8b977f5d69625cddf0b39693514fbd7a21cbfe35617ca38424d",
-    "assets": {
-      "assets/scba-fixed-point.svg": "b9b63a2c647e08f820d3fd710dd4520c0df36eb6c62b400595a044d8b09a9285"
-    },
-    "prior_evidence": [
-      {
-        "path": "refs/quality/evidence/scba-convergence-2026-10-30.md",
-        "sha256": "fd3efd70bfaaee033d8665c3612f5c5c699d1b7a55ef3a44b463b31965508d81"
-      }
-    ],
-    "coverage": {
-      "mode": "changes",
-      "description": "SCBAì˜ Born/self-consistent ìš©ì–´ë¥¼ ê¸°ì¤€ ëª¨í˜• ì•žì—ì„œ ì •ì˜í•˜ê³  ê³ ì •ì  ë„ì‹ ì„¤ëª…ì„ ë³´ì™„í–ˆë‹¤.",
-      "baseline_sha256": "6a194a73c50ecd4b9abf8548b28d7f6d5e43c6af4f33db5d5d32f8e82b889021"
-    },
-    "reviewer": {
-      "role": "independent AI reviewer wiki_transport_diagram_review",
-      "independent": true,
-      "date": "2026-11-05"
-    },
-    "sources": {
-      "bescond": {
-        "provenance": "bescond-2013",
-        "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf",
-        "location": "Â§II, (1)â€“(2)"
-      },
-      "lee_sanvito": {
-        "provenance": "lee-sanvito-2008",
-        "url": "https://arxiv.org/pdf/0804.3389",
-        "location": "abstract; Â§II.B, Â§III.B, Â§V"
-      },
-      "mera": {
-        "provenance": "mera-pedersen-nikolic-2016",
-        "url": "https://arxiv.org/html/1512.06846",
-        "location": "Â§Iâ€“II, Â§V.1â€“2"
-      }
-    },
-    "findings": [
-      {
-        "claim": "SCBA fixed-point iteration maps Green functions to scattering self-energy and back through Dyson-Keldysh",
-        "scope": "stated steady-state scattering model",
-        "status": "supported",
-        "sources": [
-          "bescond",
-          "mera"
-        ]
-      },
-      {
-        "claim": "unmixed fixed-point residual differs from the mixed update size",
-        "scope": "iterative convergence diagnosis",
-        "status": "supported",
-        "sources": [
-          "lee_sanvito",
-          "bescond"
-        ]
-      },
-      {
-        "claim": "current, grid, causality, and optional electrostatic checks remain separate from residual convergence",
-        "scope": "numerical and model diagnostics",
-        "status": "supported",
-        "sources": [
-          "lee_sanvito",
-          "mera",
-          "bescond"
-        ]
-      },
-      {
-        "claim": "Born denotes the selected perturbative interaction self-energy approximation; self-consistency updates the selected Sigma[G], while interactions, bath, and diagram set remain model choices",
-        "scope": "the cited electron-phonon SCBA examples and steady-state NEGF iteration",
-        "status": "supported",
-        "sources": [
-          "bescond",
-          "lee_sanvito",
-          "mera"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/quantum-transport/scattering-qtbm.md": {
-    "status": "pass",
-    "document_sha256": "d331be396872b0417a5a8aaf47be3df95e53735a3e6ae30486cc97bba4b1a9fb",
-    "evidence": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
-    "evidence_sha256": "225d1a042aa354511931a3901e06a2860ca8e86228bddaa0fdff648a05c9ead8",
-    "assets": {
-      "assets/qtbm-workflow.svg": "8333b6f4447a4fb2111bfcbddfbcbe7553bedadd65fbf10f5ed0b45c902bc117"
-    },
-    "prior_evidence": [
-      {
-        "path": "refs/quality/evidence/scattering-qtbm-2026-10-30.md",
-        "sha256": "bb9688662e56eadc0ea3a6ab25a0b31cf8f1f3f774c8eda31d56272be50b20b3"
-      }
-    ],
-    "coverage": {
-      "mode": "full",
-      "description": "QTBM ê¸°ì´ˆì™€ ì‚°ëž€ í™•ìž¥ ë¬¸ì„œë¥¼ ìž¬êµ¬ì„±í•˜ê³  boundary, flux, signed energy-integrated current, closureì™€ evanescent mode ë²”ìœ„ë¥¼ ê²€í† í–ˆë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewers qtbm_citations_final, qtbm_evanescent_review, and wiki_transport_diagram_review",
-      "independent": true,
-      "date": "2026-11-05"
-    },
-    "sources": {
-      "frensley": {
-        "provenance": "frensley-1990",
-        "url": "https://personal.utdallas.edu/~frensley/technical/FrensleyRMP1990.pdf",
-        "location": "Appendix D, (D1)â€“(D6)"
-      },
-      "gehring": {
-        "provenance": "gehring-2003",
-        "url": "https://repositum.tuwien.at/bitstream/20.500.12708/12170/2/Gehring%20Andreas%20-%202003%20-%20Simulation%20of%20tunneling%20in%20semiconductor%20devices.pdf",
-        "location": "Â§3.5.4, (3.92)â€“(3.99); Â§3.5, (3.55)â€“(3.56)"
-      },
-      "shao": {
-        "provenance": "shao-porod-lent-kirkner-1995",
-        "url": "https://academicweb.nd.edu/~lent/pdf/nd/An_eigenvalue_method_for_open-boundary_quantum_transmission_problems.pdf",
-        "location": "Â§II, (2)"
-      },
-      "lake_pandey": {
-        "provenance": "lake-pandey-2006",
-        "url": "https://arxiv.org/pdf/cond-mat/0607219",
-        "location": "Â§VI.Câ€“D"
-      },
-      "papior": {
-        "provenance": "papior-2017",
-        "url": "https://arxiv.org/pdf/1607.04464",
-        "location": "Â§II, (1)â€“(4)"
-      },
-      "bruneau": {
-        "provenance": "bruneau-jaksic-last-pillet-2014",
-        "url": "https://arxiv.org/html/1408.0185",
-        "location": "Â§1.1, (1.2), (1.6)"
-      },
-      "kohler": {
-        "provenance": "kohler-lehmann-haenggi-2004",
-        "url": "https://arxiv.org/pdf/cond-mat/0409251",
-        "location": "Â§2.4, (16)â€“(18)"
-      },
-      "vyas": {
-        "provenance": "vyas-vandeput-fischetti-2020",
-        "url": "https://doi.org/10.1103/PhysRevApplied.13.014067",
-        "location": "Abstract"
-      },
-      "weinbub_kosik": {
-        "provenance": "weinbub-kosik-2022",
-        "url": "https://www.iue.tuwien.ac.at/pdf/ib_2022/JB2022_Weinbub_1.pdf",
-        "location": "Â§7.4"
-      },
-      "kosik": {
-        "provenance": "kosik-2004",
-        "url": "https://www.iue.tuwien.ac.at/phd/kosik/node96.html",
-        "location": "Â§7.2.6.1, (7.22)â€“(7.25)"
-      },
-      "heinz": {
-        "provenance": "heinz-2004",
-        "url": "https://iis-people.ee.ethz.ch/~schenk/theses/heinz.pdf",
-        "location": "Â§4.5"
-      },
-      "khomyakov": {
-        "provenance": "khomyakov-brocks-et-al-2005",
-        "url": "https://arxiv.org/pdf/cond-mat/0501609",
-        "location": "Â§III.Aâ€“B, (4)â€“(17)"
-      },
-      "sorensen": {
-        "provenance": "sorensen-hansen-petersen-et-al-2009",
-        "url": "https://arxiv.org/pdf/0804.4306",
-        "location": "Â§II.A, Â§III.A"
-      }
-    },
-    "findings": [
-      {
-        "claim": "incident, reflected and transmitted lead modes with an inhomogeneous open-boundary source",
-        "scope": "stationary single-particle QTBM",
-        "status": "supported",
-        "sources": [
-          "frensley",
-          "gehring",
-          "shao"
-        ]
-      },
-      {
-        "claim": "nonorthogonal open-boundary matrix includes overlap and lead-device coupling terms",
-        "scope": "schematic common form; source vector remains discretization and normalization dependent",
-        "status": "supported",
-        "sources": [
-          "lake_pandey",
-          "papior",
-          "gehring"
-        ]
-      },
-      {
-        "claim": "transmission is an outgoing-to-incoming flux ratio; amplitude squared requires unit-flux normalization",
-        "scope": "elastic propagating channels",
-        "status": "supported",
-        "sources": [
-          "gehring",
-          "shao"
-        ]
-      },
-      {
-        "claim": "energy-integrated two-terminal net current is an occupation-weighted signed sum over incoming modes at each energy",
-        "scope": "elastic coherent transport with the stated current-direction convention",
-        "status": "supported",
-        "sources": [
-          "bruneau",
-          "kohler"
-        ]
-      },
-      {
-        "claim": "a Pauli master equation is one published scattering extension combined with QTBM open boundaries",
-        "scope": "specific method example, not a definition of all scattering QTBM",
-        "status": "supported",
-        "sources": [
-          "vyas",
-          "weinbub_kosik"
-        ]
-      },
-      {
-        "claim": "an absorbing imaginary potential alone does not determine compensating in-scattering",
-        "scope": "loss-only model does not close a conserving inelastic transport calculation",
-        "status": "supported",
-        "sources": [
-          "kosik",
-          "heinz"
-        ]
-      },
-      {
-        "claim": "evanescent modes may be needed for boundary mode matching and can affect transmission when their tails span a short central region, while asymptotic flux channels are propagating modes",
-        "scope": "periodic-lead mode matching and finite two-probe devices",
-        "status": "supported",
-        "sources": [
-          "khomyakov",
-          "sorensen"
-        ]
-      }
-    ]
-  },
-  "computational-science/atomistic-simulation/dftb-large-scale.md": {
-    "status": "pass",
-    "document_sha256": "ec2bb020a8dd61278ed2cfbcb5ac9dd21b4def57ee72e011df318711fbb1aa42",
-    "evidence": "refs/quality/evidence/dftb-scc-workflow-2026-10-31.md",
-    "evidence_sha256": "8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72",
-    "assets": {
-      "assets/scc-workflow.svg": "a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"
-    },
-    "prior_evidence": [
-      {
-        "path": "refs/quality/evidence/dftb-large-scale-2026-10-30.md",
-        "sha256": "4a94c7b6ff2582a97782e36c630867a63ea81f6dcaba74de694698c9da1052da"
-      }
-    ],
-    "coverage": {
-      "mode": "meaning-preserving",
-      "description": "ì›ë³¸ SCC fixed-point ê·¸ë¦¼ê³¼ ì ‘ê·¼ì„± ì„¤ëª…ë§Œ ì¶”ê°€í–ˆìœ¼ë©° ê¸°ì¡´ ê³¼í•™ ì£¼ìž¥ê³¼ ì ìš© ë²”ìœ„ë¥¼ ë³´ì¡´í–ˆë‹¤.",
-      "baseline_sha256": "3561f23ebf9c3bebd45c9487b44a5ea7c5ea4f67eb53b432f43fa6db57f90fe2"
-    },
-    "reviewer": {
-      "role": "independent AI reviewer landauer_review",
-      "independent": true,
-      "date": "2026-10-31"
-    },
-    "sources": {
-      "a": {
-        "provenance": "koskinen-makinen-2009",
-        "url": "https://arxiv.org/pdf/0910.5861",
-        "location": "Â§II, Â§IX"
-      },
-      "b": {
-        "provenance": "hourahine-2020",
-        "url": "https://strathprints.strath.ac.uk/71868/1/Hourahine_etal_JCP_2020_DFTB_plus_a_software_package_for_efficient_approximate.pdf",
-        "location": "Â§II.A.2â€“3"
-      }
-    },
-    "findings": [
-      {
-        "claim": "SCC fixed-point workflow",
-        "scope": "SCC-DFTB charge convention and iteration",
-        "status": "supported",
-        "sources": [
-          "a",
-          "b"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/dielectric-response.md": {
-    "status": "pass",
-    "document_sha256": "837e3d50ec1d7f1d0f1ffc892c950dd9f0c148391e477c1e9f6b65ac7daacfb4",
-    "evidence": "refs/quality/evidence/dielectric-response-2026-11-06.md",
-    "evidence_sha256": "a219aa73819b3944a3e41283855fc1d7f8cfed88fd785bee057fa29f9c951db8",
-    "assets": {
-      "assets/dielectric-response-map.svg": "9a12f5c3a11c87a75213a52448d51fd446d04e224cf944c91f81e3b41a1c1dd9"
-    },
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "ìœ ì „ ì‘ë‹µì„ ì „ìžÂ·ì´ì˜¨ ì„±ë¶„ìœ¼ë¡œ ë‚˜ëˆ„ê³  ì¡°í™” í¬ë…¼ ëª¨ë“œì™€ Born ìœ íš¨ì „í•˜ë¥¼ ì—°ê²°í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature and diagram_audit",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "prx": {
-        "provenance": "takigawa-kiyohara-kumagai-prx-2026",
-        "url": "https://doi.org/10.1103/28wr-w896",
-        "location": "Abstract; Â§I notation; Â§II.A Eq. (2) Fig. 3; Â§II.B Eq. (3) Fig. 4 and Table III",
-        "kind": "primary-research"
-      },
-      "gonze": {
-        "provenance": "gonze-lee-1997",
-        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
-        "location": "Abstract; Â§III dynamical matrices; Â§IV electronic dielectric tensor; Â§V BEC; Â§VII sum rule; Â§VIII low-frequency response"
-      },
-      "baroni": {
-        "provenance": "baroni-et-al-2001",
-        "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "Â§Â§II.3.2, II.4.2â€“4.3; Â§V.6 anharmonic effects"
-      },
-      "robertson04": {
-        "provenance": "robertson-2004",
-        "url": "https://doi.org/10.1051/epjap:2004206",
-        "location": "Eq. (1), Â§Â§1â€“2; high-k gate dielectric constraints"
-      },
-      "robertson06": {
-        "provenance": "robertson-2006",
-        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
-        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
-      }
-    },
-    "findings": [
-      {
-        "claim": "Takigawa ë“±ì€ ì§„ê³µ ê¸°ì¤€ì„ í¬í•¨í•˜ëŠ” ê³ ì£¼íŒŒ ìœ ì „ìœ¨ì„ 1 + ì „ìž ìœ ì „ ê¸°ì—¬ë¡œ í‘œê¸°í•œë‹¤.",
-        "scope": "íŠ¹ì • ë…¼ë¬¸ì— ì‚¬ìš©ëœ í‘œê¸° conventionì˜ ê¸°ë¡ì´ë©° í‘œê¸°ë²• ì „ì²´ë¥¼ ë‹¨ì •í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "prx"
-        ]
-      },
-      {
-        "claim": "ì •ì  ìœ ì „ ì‘ë‹µì€ ê³ ì • ì´ì˜¨ ì „ìž í•­ê³¼ ê²©ìž ì´ì˜¨ í•­ìœ¼ë¡œ ë¶„í•´ë˜ë©°, ì´ì˜¨ ì‘ë‹µì€ DFPTì˜ BECì™€ í¬ë…¼ ì •ë³´ë¥¼ ì‚¬ìš©í•œë‹¤.",
-        "scope": "ì ˆì—°ì²´ì˜ ì„ í˜•Â·ì¡°í™” ì‘ë‹µ; SIì—ì„œ ìƒëŒ€ ìœ ì „ìœ¨ í…ì„œ",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "ì§ˆëŸ‰ ì •ê·œí™” í¬ë…¼ ëª¨ë“œì˜ ì´ì˜¨ ìœ ì „ ì‘ë‹µì€ ëª¨ë“œ ìœ íš¨ì „í•˜ì™€ ì£¼íŒŒìˆ˜ì— ì˜ì¡´í•˜ë©°, ì €ì£¼íŒŒ ëª¨ë“œëŠ” ì—­ì œê³± ê°€ì¤‘ì„ ë°›ëŠ”ë‹¤.",
-        "scope": "ì •ì  Î“ì  ì¡°í™” ì‘ë‹µ; ì˜ì£¼íŒŒìˆ˜ ë³‘ì§„ ëª¨ë“œëŠ” ì œì™¸",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "High-k ê²Œì´íŠ¸ ìž¬ë£Œì˜ ìœ ì „ìœ¨ì€ ë‘ê»˜Â·ë°´ë“œê°­Â·ë°´ë“œ ì •ë ¬Â·ê³„ë©´ ì¡°ê±´ê³¼ í•¨ê»˜ íŒë‹¨í•´ì•¼ í•œë‹¤.",
-        "scope": "ë²Œí¬ ê³„ì‚°ê°’ì—ì„œ ì†Œìž ì í•©ì„±ìœ¼ë¡œ ê³¼ë„ ì¼ë°˜í™” ê¸ˆì§€",
-        "status": "supported",
-        "sources": [
-          "robertson04",
-          "robertson06"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/born-effective-charge.md": {
-    "status": "pass",
-    "document_sha256": "89fe4f5952a36c27b1d8025815218bf29b55fcac1096d2e82ed1182a6b4a4a14",
-    "evidence": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
-    "evidence_sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "Born ìœ íš¨ì „í•˜ì˜ ì‘ë‹µ ì •ì˜ì™€ ê·¹ì„± ê²©ìžÂ·ì „ìžâ€“í¬ë…¼ ê³„ì‚°ì—ì„œì˜ ì—­í• ì„ ì„¤ëª…í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "gonze": {
-        "provenance": "gonze-lee-1997",
-        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
-        "location": "Abstract; Â§III dynamical matrices; Â§IV electronic dielectric tensor; Â§V BEC; Â§VII sum rule; Â§VIII low-frequency response"
-      },
-      "baroni": {
-        "provenance": "baroni-et-al-2001",
-        "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "Â§Â§II.3.2, II.4.2â€“4.3; Â§V.6 anharmonic effects"
-      },
-      "epw": {
-        "provenance": "epw-theory-docs",
-        "url": "https://docs.epw-code.org/Theory.html",
-        "location": "Eqs. (3)â€“(13), (28)â€“(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
-      },
-      "giustino": {
-        "provenance": "giustino-2017",
-        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
-        "location": "Â§Â§III.Aâ€“B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
-      }
-    },
-    "findings": [
-      {
-        "claim": "Born ìœ íš¨ì „í•˜ëŠ” ì›ìž ë³€ìœ„ì— ëŒ€í•œ ë¶„ê·¹ ë³€í™”ì˜ í…ì„œ ì‘ë‹µì´ë©° í˜•ì‹ ì‚°í™”ìˆ˜ì™€ ë™ì¼í•˜ì§€ ì•Šë‹¤.",
-        "scope": "ì ˆì—°ì²´ì—ì„œ ë¯¸ì†Œ ë³€ìœ„ ë° ì„ í˜• ì‘ë‹µ",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "BECì™€ ê³ ì£¼íŒŒ ìœ ì „ í…ì„œëŠ” polar long-range ì „ìžâ€“í¬ë…¼ í•­ì„ ì •í•˜ëŠ” ìž¥íŒŒìž¥ ë¬¼ë¦¬ëŸ‰ì´ë‹¤.",
-        "scope": "3D polar crystal, ìž¥íŒŒìž¥ ê·¹í•œ",
-        "status": "supported",
-        "sources": [
-          "epw",
-          "giustino"
-        ]
-      },
-      {
-        "claim": "ì¡°í™” ì´ì˜¨ ìœ ì „ ì‘ë‹µì€ BECë¿ ì•„ë‹ˆë¼ í¬ë…¼ ê³ ìœ ë²¡í„°ì™€ ì£¼íŒŒìˆ˜ë„ í•„ìš”ë¡œ í•œë‹¤.",
-        "scope": "ë‹¨ìœ„ì™€ ëª¨ë“œ ì •ê·œí™” ê·œì•½ì„ ê³ ì •í•œ bulk crystal",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/dfpt-dielectric-response.md": {
-    "status": "pass",
-    "document_sha256": "7d49f075feabd5eecdbbe523d1a793f83f5f555f4cc26c46150f6b33d775d4ca",
-    "evidence": "refs/quality/evidence/dfpt-dielectric-response-2026-11-06.md",
-    "evidence_sha256": "7d2d1529e29f193f90e1b476200d7c8eb51eaac18e4375cc53d82b876a056d70",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "DFPTì˜ ì „ìžÂ·ì›ìž ì„ í˜• ì‘ë‹µì—ì„œ ìœ ì „ í…ì„œë¥¼ ê³„ì‚°í•˜ê³  ê²€í† í•˜ëŠ” ê¸°ì¤€ì„ ì •ë¦¬í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "gonze": {
-        "provenance": "gonze-lee-1997",
-        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
-        "location": "Abstract; Â§III dynamical matrices; Â§IV electronic dielectric tensor; Â§V BEC; Â§VII sum rule; Â§VIII low-frequency response"
-      },
-      "baroni": {
-        "provenance": "baroni-et-al-2001",
-        "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "Â§Â§II.3.2, II.4.2â€“4.3; Â§V.6 anharmonic effects"
-      },
-      "stengel": {
-        "provenance": "stengel-spaldin-vanderbilt-2009",
-        "url": "https://doi.org/10.1038/nphys1185",
-        "location": "Main text on electric displacement, dielectric response and structural regimes"
-      }
-    },
-    "findings": [
-      {
-        "claim": "DFPTì˜ 1ì°¨ íŒŒë™í•¨ìˆ˜Â·ë°€ë„ ì‘ë‹µìœ¼ë¡œ BEC, ì „ìž ìœ ì „ í…ì„œì™€ ë™ì—­í•™ í–‰ë ¬ ë“± 2ì°¨ ì—ë„ˆì§€ ë¯¸ë¶„ëŸ‰ì„ ì–»ëŠ”ë‹¤.",
-        "scope": "DFT ê¸°ë°˜ ì„ í˜• ì‘ë‹µê³¼ ì¡°í™” ê²°ì • ê²©ìž",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "ì •ì  ìœ ì „ìœ¨ì˜ ì´ì˜¨ í•­ì—ëŠ” BECì™€ Î“ì  í¬ë…¼ ëª¨ë“œê°€ ë“¤ì–´ê°€ê³ , ìˆ˜ì¹˜ ê·œì•½Â·ìˆ˜ë ´ ì„¤ì •ì„ ë³„ë„ë¡œ í™•ì¸í•´ì•¼ í•œë‹¤.",
-        "scope": "ì¡°í™” ì ˆì—°ì²´, ê³„ì‚°ë³„ ë‹¨ìœ„Â·ì§ˆëŸ‰ ì •ê·œí™” ëª…ì‹œ",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "ì„ í˜• ì¡°í™” ì‘ë‹µì˜ ìˆ˜ë ´ì€ ìƒ ì•ˆì •ì„±, ë°•ë§‰ ê³„ë©´ ì„±ëŠ¥ ë˜ëŠ” ë¹„ì¡°í™” íš¨ê³¼ ê²€ì¦ì„ ëŒ€ì‹ í•˜ì§€ ì•ŠëŠ”ë‹¤.",
-        "scope": "ëª¨ë¸ ë²”ìœ„ì™€ ìž¬ë£ŒÂ·ì†Œìž ì£¼ìž¥ êµ¬ë¶„",
-        "status": "supported",
-        "sources": [
-          "baroni",
-          "stengel"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/high-k-screening.md": {
-    "status": "pass",
-    "document_sha256": "547e0fc138ff7d6a2439174ed9f5dd14a1a2af39688a23b81bfd909015557afd",
-    "evidence": "refs/quality/evidence/high-k-screening-2026-11-06.md",
-    "evidence_sha256": "0089d35e4843e67a7e4cb8cfc862da2ecf83c58d7d20680f9a4c9edff01b5371",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "High-k í›„ë³´ë¥¼ ë°´ë“œê°­ê³¼ ê³„ë©´Â·ê²°í•¨Â·ì•ˆì •ì„± ì¡°ê±´ì„ í¬í•¨í•´ í•´ì„í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "robertson04": {
-        "provenance": "robertson-2004",
-        "url": "https://doi.org/10.1051/epjap:2004206",
-        "location": "Eq. (1), Â§Â§1â€“2; high-k gate dielectric constraints"
-      },
-      "robertson06": {
-        "provenance": "robertson-2006",
-        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
-        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
-      },
-      "yim": {
-        "provenance": "yim-et-al-2015",
-        "url": "https://doi.org/10.1038/am.2015.57",
-        "location": "Abstract; Introduction; Methods; Results and Fig. 4",
-        "kind": "primary-research"
-      },
-      "lee": {
-        "provenance": "lee-et-al-2018",
-        "url": "https://doi.org/10.1038/s41598-018-33095-6",
-        "location": "Abstract; Methods; Results",
-        "kind": "primary-research"
-      }
-    },
-    "findings": [
-      {
-        "claim": "í‰í–‰íŒ ê·¼ì‚¬ì—ì„œ ê°™ì€ ì •ì „ìš©ëŸ‰ì€ ë†’ì€ ìœ ì „ìœ¨ì˜ ë” ë‘êº¼ìš´ ì ˆì—°ë§‰ìœ¼ë¡œ êµ¬í˜„í•  ìˆ˜ ìžˆë‹¤.",
-        "scope": "ì´ìƒí™”ëœ gate stack capacitance ê´€ê³„",
-        "status": "supported",
-        "sources": [
-          "robertson04",
-          "robertson06"
-        ]
-      },
-      {
-        "claim": "í° ìœ ì „ìœ¨ê³¼ ë„“ì€ ë°´ë“œê°­, ë°´ë“œ ì˜¤í”„ì…‹ ë° ê³„ë©´ ì•ˆì •ì„±ì„ í•¨ê»˜ ê³ ë ¤í•´ì•¼ í•œë‹¤.",
-        "scope": "ì‹¤ì œ ê²Œì´íŠ¸ ìŠ¤íƒ í›„ë³´ ì„ ë³„",
-        "status": "supported",
-        "sources": [
-          "robertson04",
-          "robertson06"
-        ]
-      },
-      {
-        "claim": "ì œì¼ì›ë¦¬ screeningì€ í›„ë³´êµ°ì„ ì¢ížˆëŠ” ê³„ì‚° ë‹¨ê³„ì´ë©° ì‹¤í—˜ ë°•ë§‰Â·ì†Œìž ê²€ì¦ê³¼ ê°™ì§€ ì•Šë‹¤.",
-        "scope": "2015 ì‚°í™”ë¬¼Â·2018 ë¹„ì‚°í™”ë¬¼ íƒìƒ‰ì˜ ë³´ê³  ë²”ìœ„",
-        "status": "supported",
-        "sources": [
-          "yim",
-          "lee"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/cases/yim-2015-high-k-oxides.md": {
-    "status": "pass",
-    "document_sha256": "e2ae8c3cb75d9e61289c3b3549a635b54a82327ad7339cf25b6b920c707d5bef",
-    "evidence": "refs/quality/evidence/yim-2015-high-k-oxides-2026-11-06.md",
-    "evidence_sha256": "34ef569a3e695c26d760ee603133ef41ab87f94161722a8758954e0046cdbd35",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "Yim ë“± 2015ë…„ high-throughput ì‚°í™”ë¬¼ ìŠ¤í¬ë¦¬ë‹ì˜ ì§ˆë¬¸ê³¼ ê²°ê³¼ í•´ì„ ë²”ìœ„ë¥¼ ê¸°ë¡í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "yim": {
-        "provenance": "yim-et-al-2015",
-        "url": "https://doi.org/10.1038/am.2015.57",
-        "location": "Abstract; Introduction; Methods; Results and Fig. 4",
-        "kind": "primary-research"
-      },
-      "robertson06": {
-        "provenance": "robertson-2006",
-        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
-        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
-      },
-      "robertson04": {
-        "provenance": "robertson-2004",
-        "url": "https://doi.org/10.1051/epjap:2004206",
-        "location": "Eq. (1), Â§Â§1â€“2; high-k gate dielectric constraints"
-      }
-    },
-    "findings": [
-      {
-        "claim": "Yim ë“±ì€ ì´ˆë¡Â·ì„œë¡ ì—ì„œ 1,800ê°œ ì´ˆê³¼ ë˜ëŠ” ì•½ 1,800ê°œ ì‚°í™”ë¬¼ êµ¬ì¡°ë¥¼, Resultsì—ì„œ 1,762ê°œ ê³„ì‚° êµ¬ì¡°ë¥¼ ë³´ê³ í•˜ê³  Fig. 4ì— 1,158ê°œë¥¼ í‘œì‹œí•œë‹¤.",
-        "scope": "ì›ë¬¸ ë‚´ë¶€ í‘œí˜„ ì°¨ì´ë¥¼ ê·¸ëŒ€ë¡œ ê¸°ë¡í•˜ë©° ë…ë¦½ ìž¬í˜„ ì£¼ìž¥ì€ í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "yim"
-        ]
-      },
-      {
-        "claim": "ì—°êµ¬ì˜ ìž¬ë£Œ ì„¤ê³„ ë¬¸ì œëŠ” ìœ ì „ìœ¨ë¿ ì•„ë‹ˆë¼ ëˆ„ì„¤ ì–µì œë¥¼ ìœ„í•œ í° ë°´ë“œê°­ê³¼ í•¨ê»˜ í›„ë³´ë¥¼ ê³ ë¥´ëŠ” ê²ƒì´ë‹¤.",
-        "scope": "ê²Œì´íŠ¸ ìœ ì „ì²´ ì„¤ê³„ ë§¥ë½",
-        "status": "supported",
-        "sources": [
-          "yim",
-          "robertson06"
-        ]
-      },
-      {
-        "claim": "ê³„ì‚°ìƒ í›„ë³´ í†µê³¼ëŠ” ë°•ë§‰Â·ê³„ë©´Â·ê³µì • ì‹ ë¢°ì„±ì˜ ê²€ì¦ì„ ëœ»í•˜ì§€ ì•ŠëŠ”ë‹¤.",
-        "scope": "ë²Œí¬ screening ê²°ê³¼ì˜ ì ìš© í•œê³„",
-        "status": "supported",
-        "sources": [
-          "yim",
-          "robertson04"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/cases/lee-2018-nonoxide-dielectrics.md": {
-    "status": "pass",
-    "document_sha256": "aca83a58f3600eda9745771d2fd8062d927749776b7552c58753efa205456818",
-    "evidence": "refs/quality/evidence/lee-2018-nonoxide-dielectrics-2026-11-06.md",
-    "evidence_sha256": "49210240bbf8cb6b573efae312caf303074506670819d1c7056faf7358489f98",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "Lee ë“± 2018ë…„ ë¹„ì‚°í™”ë¬¼ ìœ ì „ì²´ ìŠ¤í¬ë¦¬ë‹ì˜ ê³„ì‚° ëŒ€ìƒê³¼ í›„ë³´ ì£¼ìž¥ ë²”ìœ„ë¥¼ ì •ë¦¬í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "lee": {
-        "provenance": "lee-et-al-2018",
-        "url": "https://doi.org/10.1038/s41598-018-33095-6",
-        "location": "Abstract; Methods; Results",
-        "kind": "primary-research"
-      },
-      "gonze": {
-        "provenance": "gonze-lee-1997",
-        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
-        "location": "Abstract; Â§III dynamical matrices; Â§IV electronic dielectric tensor; Â§V BEC; Â§VII sum rule; Â§VIII low-frequency response"
-      },
-      "robertson04": {
-        "provenance": "robertson-2004",
-        "url": "https://doi.org/10.1051/epjap:2004206",
-        "location": "Eq. (1), Â§Â§1â€“2; high-k gate dielectric constraints"
-      }
-    },
-    "findings": [
-      {
-        "claim": "Lee ë“±ì€ 869ê°œ ì´ì› í™”í•©ë¬¼, ì ˆì—°ì²´ 449ê°œ, ì‚¼ì› ë¶ˆí™”ë¬¼ 415ê°œë¥¼ ì¡°ì‚¬í–ˆë‹¤ê³  ë³´ê³ í•œë‹¤.",
-        "scope": "ì›ë¬¸ ë³´ê³  ìˆ˜ì¹˜ì´ë©° ë…ë¦½ ìž¬í˜„ ì£¼ìž¥ì€ í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "lee"
-        ]
-      },
-      {
-        "claim": "Lee ë“±ì€ BaBeF4ì— ëŒ€í•´ ë°´ë“œê°­ 9.7 eVì™€ ìœ ì „ìœ¨ 17ì„ ë³´ê³ í•œë‹¤.",
-        "scope": "íŠ¹ì • êµ¬ì¡°ì™€ ì›ë¬¸ ê³„ì‚° ì„¤ì •ì˜ ë¬¸í—Œ ë³´ê³ ê°’ì´ë©° ë…ë¦½ ìž¬í˜„ì´ ì•„ë‹˜",
-        "status": "reported-primary",
-        "sources": [
-          "lee"
-        ]
-      },
-      {
-        "claim": "DFPT ê³„ì‚°ì€ Born ìœ íš¨ì „í•˜Â·í¬ë…¼ ì‘ë‹µì„ í¬í•¨í•´ ê²©ìž ìœ ì „ ê¸°ì—¬ë¥¼ í‰ê°€í•œë‹¤.",
-        "scope": "ì¡°í™” ì ˆì—°ì²´, ì›ë¬¸ì— ê¸°ìˆ ëœ VASP/DFPT pipeline",
-        "status": "supported",
-        "sources": [
-          "lee",
-          "gonze"
-        ]
-      },
-      {
-        "claim": "bulk screeningì—ì„œ í›„ë³´ë¡œ ì œì•ˆëœ ì‚¬ì‹¤ì€ ì‹¤í—˜ì  ì†Œìž ì„±ëŠ¥ì„ ë³´ì¦í•˜ì§€ ì•ŠëŠ”ë‹¤.",
-        "scope": "ìž¬ë£Œ í‰ê°€ ë‹¨ê³„ì˜ ê²½ê³„",
-        "status": "supported",
-        "sources": [
-          "lee",
-          "robertson04"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/ml-born-effective-charge.md": {
-    "status": "pass",
-    "document_sha256": "20126b7d689cf6d9439e7882f0e6eb31ace7a3881810835aa90b676f1627c023",
-    "evidence": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
-    "evidence_sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "SevenNet-Polarì˜ Born ìœ íš¨ì „í•˜ ì˜ˆì¸¡ ë²”ìœ„ì™€ ìœ ì „ìœ¨ ê³„ì‚°ì—ì„œì˜ ìž…ë ¥ ì—­í• ì„ êµ¬ë¶„í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "seven": {
-        "provenance": "lu-et-al-sevennet-polar-2026",
-        "url": "https://arxiv.org/abs/2607.14827",
-        "location": "v3 Abstract; Â§Â§2â€“4, 2026-07-21",
-        "kind": "primary-research"
-      },
-      "gonze": {
-        "provenance": "gonze-lee-1997",
-        "url": "https://doi.org/10.1103/PhysRevB.55.10355",
-        "location": "Abstract; Â§III dynamical matrices; Â§IV electronic dielectric tensor; Â§V BEC; Â§VII sum rule; Â§VIII low-frequency response"
-      },
-      "baroni": {
-        "provenance": "baroni-et-al-2001",
-        "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "Â§Â§II.3.2, II.4.2â€“4.3; Â§V.6 anharmonic effects"
-      },
-      "wilds": {
-        "provenance": "koh-et-al-wilds-2021",
-        "url": "https://proceedings.mlr.press/v139/koh21a.html",
-        "location": "Abstract; distribution shifts and in-/out-of-distribution evaluation"
-      }
-    },
-    "findings": [
-      {
-        "claim": "SevenNet-Polar ë…¼ë¬¸ì€ BEC ì „ìš© ì˜ˆì¸¡ê³¼ ì—ë„ˆì§€Â·íž˜Â·ì‘ë ¥Â·BEC ë‹¤ì¤‘ê³¼ì œ ëª¨ë¸ì„ ì œì‹œí•˜ê³ , BEC RMSE 0.0043e ë° 0.0029eë¥¼ ë³´ê³ í•œë‹¤.",
-        "scope": "ë…¼ë¬¸ì´ ì •ì˜í•œ ZrO2, Li3PO4 ë° perovskite ìžë£Œ ë¶„í• ì˜ ê²°ê³¼ì´ë©° ë…ë¦½ ìž¬í˜„ê°’ì´ ì•„ë‹˜",
-        "status": "reported-primary",
-        "sources": [
-          "seven"
-        ]
-      },
-      {
-        "claim": "BECë§Œìœ¼ë¡œ ì „ì²´ ìœ ì „ í…ì„œë¥¼ ì–»ì„ ìˆ˜ ì—†ê³ , í¬ë…¼ ëª¨ë“œì™€ ì „ìž ì‘ë‹µì´ ì¶”ê°€ë¡œ í•„ìš”í•˜ë‹¤.",
-        "scope": "bulk polar crystal, ì„ í˜•Â·ì¡°í™” ì‘ë‹µ",
-        "status": "supported",
-        "sources": [
-          "gonze",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "ì‹œí—˜ ë¶„í•  ì ìˆ˜ì™€ í•™ìŠµ ë¶„í¬ê°€ ë‹¬ë¼ì§€ëŠ” ì¡°ê±´ì˜ ì¼ë°˜í™”ëŠ” ë‹¤ë¥¸ ê²€ì¦ ì§ˆë¬¸ì´ë‹¤.",
-        "scope": "ì›ë¬¸ benchmarkì™€ ì¼ë°˜ì ì¸ distribution shift í‰ê°€ ê²½ê³„",
-        "status": "supported",
-        "sources": [
-          "seven",
-          "wilds"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/dielectric-response/cases/takigawa-2026-prx-ionic-dielectric-ml.md": {
-    "status": "pass",
-    "document_sha256": "5567a088436276e59b7637a74a01f88f35c87a7bdaec2e73eb9f2c4eae80cbe5",
-    "evidence": "refs/quality/evidence/takigawa-2026-prx-ionic-dielectric-ml-2026-11-06.md",
-    "evidence_sha256": "c11c4564d0a09c30906e0a4b30f541c027bfd82102ea5c41137ee51cc8509e39",
-    "assets": {},
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "Takigawa ë“± 2026ë…„ PRXì˜ factorized MLê³¼ ì´ì˜¨ ìœ ì „ í…ì„œ ì‚°ì¶œ ê²½ë¡œë¥¼ ì„¤ëª…í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "prx": {
-        "provenance": "takigawa-kiyohara-kumagai-prx-2026",
-        "url": "https://doi.org/10.1103/28wr-w896",
-        "location": "Abstract; Â§I notation; Â§II.A Eq. (2) Fig. 3; Â§II.B Eq. (3) Fig. 4 and Table III",
-        "kind": "primary-research"
-      },
-      "robertson06": {
-        "provenance": "robertson-2006",
-        "url": "https://doi.org/10.1088/0034-4885/69/2/R02",
-        "location": "Review sections on dielectric constant, band gap, offsets and interfaces"
-      }
-    },
-    "findings": [
-      {
-        "claim": "2026 PRX ë…¼ë¬¸ì€ BECì™€ í¬ë…¼ ë¬¼ì„±ì„ factorizeí•´ ì´ì˜¨ ìœ ì „ í…ì„œë¥¼ ê³„ì‚°í•˜ê³  ì „ìž ìœ ì „ ê¸°ì—¬ë¥¼ ë³„ë„ë¡œ ì˜ˆì¸¡í•˜ëŠ” joint modelì„ ì œì‹œí•œë‹¤.",
-        "scope": "ëª¨ë¸ êµ¬ì„±ì— ëŒ€í•œ ì›ë¬¸ ë³´ê³ ì´ë©° ë…ë¦½ ìž¬í˜„ ì£¼ìž¥ì€ í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "prx"
-        ]
-      },
-      {
-        "claim": "ë…¼ë¬¸ì€ direct modelê³¼ joint modelì„ 839ê°œ Î“ì  ì•ˆì • ì‚°í™”ë¬¼ì—ì„œ 5-fold CVë¡œ ë¹„êµí•˜ê³  log10 ê³ ìœ ê°’ ì˜¤ì°¨ RÂ²/RMSEë¥¼ ë³´ê³ í•œë‹¤.",
-        "scope": "ë…¼ë¬¸ ì •ì˜ ë°ì´í„° ë¶„í• ì˜ ê²°ê³¼ì´ë©° ë…ë¦½ ìž¬í˜„ê°’ìœ¼ë¡œ ì·¨ê¸‰í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "prx"
-        ]
-      },
-      {
-        "claim": "ë…¼ë¬¸ì€ í›„ë³´ í’€ 8,717ê°œì—ì„œ Î“ì  ì•ˆì •ì„± í™•ì¸ í›„ 4,654ê°œ, ML ìœ ì „ìœ¨Â·r2SCAN ë°´ë“œê°­ ì„ ë³„ 142ê°œ, PBEsol-DFPT í™•ì¸ 121ê°œë¥¼ ê±°ì³ DFPT ìœ ì „ìœ¨ê³¼ DDH ë°´ë“œê°­ì˜ ìµœì¢… FOM ê¸°ì¤€ìœ¼ë¡œ 31ê°œ í›„ë³´ë¥¼ ë‚¨ê²¼ë‹¤ê³  ë³´ê³ í•œë‹¤.",
-        "scope": "ë…¼ë¬¸ì´ ì •ì˜í•œ ìˆœì°¨ screening ìˆ˜ì¹˜Â·ê¸°ì¤€ì´ë©° ë…ë¦½ ìž¬í˜„ ì£¼ìž¥ì€ í•˜ì§€ ì•ŠìŒ",
-        "status": "reported-primary",
-        "sources": [
-          "prx"
-        ]
-      },
-      {
-        "claim": "ë…¼ë¬¸ì´ ì œì‹œí•œ í›„ë³´ íƒìƒ‰ì€ ê³„ì‚° ê¸°ë°˜ screeningì´ë©° ì‹¤í—˜ í•©ì„±Â·ë°•ë§‰ ê²€ì¦ê³¼ êµ¬ë¶„ëœë‹¤.",
-        "scope": "ë…¼ë¬¸ì´ ë³´ê³ í•œ screening ê²°ê³¼ì™€ í›„ë³´ë¬¼ì„± ì‚°ì¶œ ê²½ê³„",
-        "status": "supported",
-        "sources": [
-          "prx",
-          "robertson06"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md": {
-    "status": "pass",
-    "document_sha256": "5daa502470a743c1119b639c99d73cef8a94251c3ec2953bdf62d5f920a1994c",
-    "evidence": "refs/quality/evidence/electron-phonon-coupling-2026-11-06.md",
-    "evidence_sha256": "f70a584aafd7b48ee57415c7b520a4e1e70eb40722e4d60071d8c3b000acd075",
-    "assets": {
-      "assets/eph-workflow.svg": "0baaecd332809a54ccb53c8116016ceab3ec38b4b945abd164e04151568eb766"
-    },
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "íž˜ìƒìˆ˜Â·ë™ì—­í•™ í–‰ë ¬Â·í¬ë…¼ ëª¨ë“œì™€ ì „ìžâ€“í¬ë…¼ ê²°í•© í–‰ë ¬ì›ì†Œì˜ ê´€ê³„ë¥¼ ì—°ê²°í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer eph_sources and diagram_audit",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "giustino": {
-        "provenance": "giustino-2017",
-        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
-        "location": "Â§Â§III.Aâ€“B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
-      },
-      "baroni": {
-        "provenance": "baroni-et-al-2001",
-        "url": "https://doi.org/10.1103/RevModPhys.73.515",
-        "location": "Â§Â§II.3.2, II.4.2â€“4.3; Â§V.6 anharmonic effects"
-      },
-      "epw": {
-        "provenance": "epw-theory-docs",
-        "url": "https://docs.epw-code.org/Theory.html",
-        "location": "Eqs. (3)â€“(13), (28)â€“(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
-      }
-    },
-    "findings": [
-      {
-        "claim": "íž˜ìƒìˆ˜ëŠ” ì—ë„ˆì§€ Hessianì´ë©° Fourier ë³€í™˜ê³¼ ì›ìž ì§ˆëŸ‰ ê°€ì¤‘ìœ¼ë¡œ ë™ì—­í•™ í–‰ë ¬ì„ ë§Œë“¤ê³ , ê·¸ ê³ ìœ ê°’ì€ í¬ë…¼ ì£¼íŒŒìˆ˜ ì œê³±ì´ë‹¤.",
-        "scope": "ì¡°í™” ê²°ì •; ë¬¸ì„œì— ê³ ì •í•œ Fourier ë¶€í˜¸Â·ê³ ìœ ë²¡í„° ê·œì•½",
-        "status": "supported",
-        "sources": [
-          "giustino",
-          "baroni"
-        ]
-      },
-      {
-        "claim": "EPC í–‰ë ¬ì›ì†ŒëŠ” í¬ë…¼ ëª¨ë“œì˜ 1ì°¨ í¼í…ì…œ ë³€í™”ê°€ ì „ìž ìƒíƒœ ì „ì´ì— ê²°í•©í•˜ëŠ” ì§„í­ì´ë‹¤.",
-        "scope": "ì£¼ê¸° ê²°ì •ì˜ harmonic DFPT; prefactorì™€ normalization convention ëª…ì‹œ",
-        "status": "supported",
-        "sources": [
-          "giustino",
-          "epw"
-        ]
-      },
-      {
-        "claim": "ê·¹ì„± long-range FrÃ¶hlich contributionì€ BECì™€ epsilon-infinityì— ì˜ì¡´í•˜ê³  ë‹¨ê±°ë¦¬ ë³´ê°„ê³¼ ë³„ë„ ì²˜ë¦¬ëœë‹¤.",
-        "scope": "polar 3D crystal, long-wavelength treatment",
-        "status": "supported",
-        "sources": [
-          "epw",
-          "giustino"
-        ]
-      }
-    ]
-  },
-  "computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md": {
-    "status": "pass",
-    "document_sha256": "cc6fbbaa662464a31b4e01d8b4155dc950b6ed89508f62ae3d683a4b8e0e85a4",
-    "evidence": "refs/quality/evidence/electron-phonon-self-energy-2026-11-06.md",
-    "evidence_sha256": "2cff6f97fde555a50f34612eefd7787668e993a360c785e7fd2cc8832aa8867c",
-    "assets": {
-      "assets/eph-self-energy.svg": "c455b61dbb0de41df1faab0a9840151c33a50fcc0f2fd56f4b5f83a255d0f8a8"
-    },
-    "prior_evidence": [],
-    "coverage": {
-      "mode": "full",
-      "description": "Fanâ€“Migdalê³¼ Debyeâ€“Waller self-energy ë° ì¤€ìž…ìž ê·¼ì‚¬ì˜ ì—ë„ˆì§€Â·ìˆ˜ëª… í•´ì„ì„ ì„¤ëª…í•œë‹¤."
-    },
-    "reviewer": {
-      "role": "independent AI reviewer eph_sources and diagram_audit",
-      "independent": true,
-      "date": "2026-11-06"
-    },
-    "sources": {
-      "epw": {
-        "provenance": "epw-theory-docs",
-        "url": "https://docs.epw-code.org/Theory.html",
-        "location": "Eqs. (3)â€“(13), (28)â€“(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
-      },
-      "giustino": {
-        "provenance": "giustino-2017",
-        "url": "https://doi.org/10.1103/RevModPhys.89.015003",
-        "location": "Â§Â§III.Aâ€“B, V.B; force constants, e-ph matrix elements, AHC self-energy and lifetimes"
-      },
-      "ponce23": {
-        "provenance": "ponce-et-al-2023",
-        "url": "https://doi.org/10.1063/5.0131009",
-        "location": "Review sections on Fan and Debye-Waller terms and calculation approximations"
-      }
-    },
-    "findings": [
-      {
-        "claim": "Fanâ€“Migdalì€ ë™ì  1ì°¨ EPC ì œê³± í•­ì´ê³  Debyeâ€“WallerëŠ” ì •ì  2ì°¨ í¼í…ì…œ í•­ì´ë‹¤.",
-        "scope": "ì¡°í™” AHC, band-diagonal ê·¼ì‚¬ì™€ retarded convention",
-        "status": "supported",
-        "sources": [
-          "epw",
-          "giustino"
-        ]
-      },
-      {
-        "claim": "ì—ë„ˆì§€ ì´ë™ì€ ì‹¤ìˆ˜ë¶€ì™€ ì—°ê²°ë˜ê³  í—ˆìˆ˜ë¶€ëŠ” ì¤€ìž…ìž ë°˜í­Â·ìˆ˜ëª…ê³¼ ì—°ê²°ë˜ì§€ë§Œ peakê°€ ìž˜ ì •ì˜ëœ ì¡°ê±´ì—ì„œë§Œ ë‹¨ìˆœì‹ì„ ì“¸ ìˆ˜ ìžˆë‹¤.",
-        "scope": "retarded electron self-energy; half-width convention ëª…ì‹œ",
-        "status": "supported",
-        "sources": [
-          "epw",
-          "giustino"
-        ]
-      },
-      {
-        "claim": "pole, on-shell, adiabatic AHC ê³„ì‚°ì€ ì„œë¡œ ë‹¤ë¥¸ ì—ë„ˆì§€ í‰ê°€ ë° í¬ë…¼ ê·¼ì‚¬ë¥¼ ì‚¬ìš©í•œë‹¤.",
-        "scope": "ê·¼ì‚¬ ê°€ì • ë° broadeningÂ·k/q ìˆ˜ë ´ì„ ë¶„ë¦¬",
-        "status": "supported",
-        "sources": [
-          "giustino",
-          "ponce23"
-        ]
-      }
-    ]
-  }
-}
+    "evidence": "refs/quality/evidence/defect-scußt¶‰žËkºwµç[ÜHŽˆœÛ\ˆÑÜž\Ý[Û™Ë]Ø]™[[™Ý™X]Y[‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™\È‹ˆ™Ú]\Ý[›È‚ˆBˆBˆBˆKˆ˜ÛÛ\]][Û˜[[X]\šX[Ë\ØÚY[˜ÙKÙ[XÝ›Û‹\Û›Û‹XÛÝ\[™ËÙ[XÝ›Û‹\Û›Û‹\Ù[‹Y[™\™ÞK›YŽˆÂˆœÝ]\ÈŽˆœ\ÜÈ‹ˆ™ØÝ[Y[ÜÚLMˆŽˆ˜ØÍ™˜˜˜XMŒLÌXLYMMYÎML™YMLŒ˜YLÙŽØMŽLNXM‹ˆ™]šY[˜ÙHŽˆœ™YœËÜ]X[]KÙ]šY[˜ÙKÙ[XÝ›Û‹\Û›Û‹\Ù[‹Y[™\™ÞKLŒ‹LLKL‹›Y‹ˆ™]šY[˜ÙWÜÚLMˆŽˆŒ˜Ù™™ŽMÙ™MMMXMLŒÍŒL™YY™ÍÎÍŽNNLØLÍŒÍÎYMÙ™˜ØÎÌ˜XNØÈ‹ˆ˜\ÜÙ]ÈŽˆÂˆ˜\ÜÙ]ËÙ\\Ù[‹Y[™\™ÞKœÝ™ÈŽˆ˜ÍMXŒY˜ŒMYŒY˜XXŒNNMLXÌÌØML˜ØÌŒ™™M™YŽØLMYŽN‚ˆKˆœš[Ü—Ù]šY[˜ÙHŽˆ×Kˆ˜ÛÝ™\˜YÙHŽˆÂˆ›[ÙHŽˆ™[‹ˆ™\ØÜš\[ÛˆŽˆ‘˜[¸ $ÓZYÙ[:¬ïXžYx $ÕØ[\ˆÙ[‹Y[™\™ÞH:ì#È;) ;'¡{'¤:­ï; «;'f;%ä:á";)à0­û"&:ê¡H;em;!'{'a;!):ê¡{eg:âéˆ‚ˆKˆœ™]šY]Ù\ˆŽˆÂˆœ›ÛHŽˆš[™\[™[RH™]šY]Ù\ˆ\ÜÛÝ\˜Ù\È[™XYÜ˜[WØ]Y]‹ˆš[™\[™[ŽˆYKˆ™]HŽˆŒŒ‹LLKLˆ‚ˆKˆœÛÝ\˜Ù\ÈŽˆÂˆ™\ÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ™\Ë][ÜžKYØÜÈ‹ˆ\›ŽˆšÎ‹ËÙØÜË™\ËXÛÙK›Ü™ËÕ[ÜžKš[‹ˆ›ØØ][ÛˆŽˆ‘\\Ëˆ
+Êx $ÊLÊK
+Ž
+x $ÊÍŠNÈÙXÝ[ÛœÈÛ›ÛœËK\X]š^[[Y[ËÛ™Ë\˜[™ÙH\›\ËÙ[‹Y[™\™ÞH‚ˆKˆ™Ú]\Ý[›ÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ™Ú]\Ý[›ËLŒMÈ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLLËÔ™]“[Ù\ËŽKŒMLÈ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRRKx $Ð‹‹ŽÈ›Ü˜ÙHÛÛœÝ[ËK\X]š^[[Y[ËRÈÙ[‹Y[™\™ÞH[™Y™][Y\È‚ˆKˆœÛ˜ÙLŒÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÛ˜ÙKY]X[LŒŒÈ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLŒËÍKŒLÌLH‹ˆ›ØØ][ÛˆŽˆ”™]šY]ÈÙXÝ[ÛœÈÛˆ˜[ˆ[™XžYKUØ[\ˆ\›\È[™Ø[Ý[][Ûˆ\›Þ[X][ÛœÈ‚ˆBˆKˆ™š[™[™ÜÈŽˆÂˆÂˆ˜ÛZ[HŽˆ‘˜[¸ $ÓZYÙ[;'`:ãæ{( H{,*TÈ;(':¬ìH;ek{'m:¬èXžYx $ÕØ[\ºâ¥;(%{( H»,*;co;ad;!g;ek{'m:âéˆ‹ˆœØÛÜHŽˆ»(l;feRË˜[™YXYÛÛ˜[:­ï; «;&`™]\™YÛÛ™[[Ûˆ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™\È‹ˆ™Ú]\Ý[›È‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ»%ä:á";)à;'m:ãæ{'`;"é;"&:í ;&`;%ì:¬¬:ä&:¬è;eâ;"&:í :â¥;) ;'¡{'¤:ì&;cëp­û"&:ê¡z¬ï;%ì:¬¬:ä&;)à:éãXZú¬ ;'¦;(%{'f:ä';(l:¬m;%ä;!':éã:âê;"';"ç{'a;$î;"&;'¢:âéˆ‹ˆœØÛÜHŽˆœ™]\™Y[XÝ›ÛˆÙ[‹Y[™\™ÞNÈ[‹]ÚYÛÛ™[[Ûˆ:ê¡{"ç‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™\È‹ˆ™Ú]\Ý[›È‚ˆBˆKˆÂˆ˜ÛZ[HŽˆœÛKÛ‹\Ú[YXX˜]XÈRÈ:¬á; ¬;'`;!':èg:âé:én;%ä:á";)à;câz¬ :ì#È;cë:áo:­ï; «:éo; «;&ª{eg:âéˆ‹ˆœØÛÜHŽˆº­ï; «:¬ ;(%H:ì#Èœ›ØY[š[™ð­ÚËÜH;"&:è-;'a:í¡:é«‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™Ú]\Ý[›È‹ˆœÛ˜ÙLŒÈ‚ˆBˆBˆBˆKˆ˜ÛÛ\]][Û˜[[X]\šX[Ë\ØÚY[˜ÙKÜ]X[[K]˜[œÜÜÛÛ™ËXÚ[›™[]˜[œÜÜ›YŽˆÂˆ™]šY[˜ÙHŽˆœ™YœËÜ]X[]KÙ]šY[˜ÙKÛÛ™ËXÚ[›™[]˜[œÜÜLŒ‹LLKL›Y‹ˆ˜\ÜÙ]ÈŽˆÂˆ˜\ÜÙ]ËÛÛ™ËXÚ[›™[[Y]ÙËœÝ™ÈŽˆ™™LÙ˜™MŽL˜Œ˜ØØYLLØØLÍLNŒ˜ØÙMŒ™MÌXXŽLÎÙXMLØÌXÎMÍŒXÈ‚ˆKˆ˜ÛÝ™\˜YÙHŽˆÂˆ›[ÙHŽˆ™[‹ˆ™\ØÜš\[ÛˆŽˆ»'¤{'`•:î%:ègH:ì&:ìíKÜ™\‹Sˆ•S[Z[ÛšX[ˆ;"&;!¨{'f;'¡zè)p­ú¬á; ¬:êª{dg0­ûeg:¬á:éo:îa:­d;eg:âéˆ‚ˆKˆœ™]šY]Ù\ˆŽˆÂˆœ›ÛHŽˆš[™\[™[RH™]šY]Ù\ˆ[Z[ÛšX[—ÜØÛÜNÈÜ™\‹SˆÜ›ÜÜË\™]šY]ÈÜ™\—Û—ÜÛÝ\˜Ù\È‹ˆš[™\[™[ŽˆYKˆ™]HŽˆŒŒ‹LLKL‚ˆKˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÛÛ\‹LŒ‹\ÚY\ÝH‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÌMLËNNÌMÌLKÌÌˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRRx $Õ’H˜\Ú\ËÛX]š^[[Y[ÎÈ0©ÖRRHÜ™\‹Sˆ[˜Ý[Û˜[È0©ÖUˆ˜[œÜÜ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆœÚY\ÝHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK\™Y™\™[˜ÙKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÜÚY\ÝKš[‹ˆ›ØØ][ÛˆŽˆØ[Ý[][ÛˆÙˆ[XÝ›ÛšXÈÝXÝ\™NÈÛÛ™\“ÓŽÈÓ‹™]NÈÓ‹”˜ÓÑŽÈÛÛ™\ÚTÔÎÈ‘QÑˆ\]X][ÛœÎÈ˜[”ÒQTÕH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆKˆ˜[œÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK]˜[œËYÝZYKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÝ˜[œËš[‹ˆ›ØØ][ÛˆŽˆ••‘[XË‹’ÎÈš[˜Ú\[^Y\ˆ[\˜XÝ[ÛœÎÈØ[Ý[][Ûˆ[YH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆKˆž›ÝHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆž›ÝKLŒKYY\‹[™YÙˆ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÎÜÍMLLKLNLËMˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRx $ÒRRNÈ\Kˆ
+JK\\Ëˆ
+Êx $Ê
+KšYËˆKY]ÙÈÓ•YT‹TÒÈ[Ù[‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆš[HŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ›]KLŒ‹Z[YÛ›‹[™YÙ‹X\ž]‹]ŒH‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËÜ‹ÌŒKŒÍÌNŒH‹ˆ›ØØ][ÛˆŽˆXœÝ˜XÝ[›ÙXÝ[Û‹™\Ý[Ë\ØÝ\ÜÚ[Û‹Y]Ù[™Ý\[Y[\žH[™›Ü›X][ÛŽÈÜXÚYšXÈYÙH[™šYÝ\™HØØ][ÛœÈ[ˆ\XÛH‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆœ\[ÜˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœ\[Ü‹LŒMË]˜[œÚY\ÝH‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËØXœËÌMŒËŒ‹ˆ›ØØ][ÛˆŽˆ“‘QÑˆ[™™XÝ\œÚ]™H˜[œÜÜ›Ü›X[\ÛNÈ›ØÚË\ÝXÝ\™Y˜[œÜÜØ[Ý[][ÛœÈ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆBˆKˆ™š[™[™ÜÈŽˆÂˆÂˆ˜ÛZ[HŽˆ’[Z[ÛšX[ˆ›ØÚÈÝ]Ú[™ËÜ™\‹Sˆ•[™S[Z[ÛšX[ˆ˜[œÜÜ\™HY™™\™[ÛÛ\]][Û˜[\ÚÜÎˆX]š^\ÜÙ[X›K\™ÙK\Þ\Ý[H[XÝ›ÛšXË\ÝXÝ\™HÛÛ][Û‹[™[š\›Û›Y[X˜\ÙYX]š^™YXÝ[Û‹ˆ‹ˆœØÛÜHŽˆ“ØØ[^™Y[Ü˜š][™\™\Ù[][Ûˆ[™Ú]YÜ™\‹S‹ÓS[\[Y[][ÛœÈ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆ‹ˆœÚY\ÝH‹ˆž›ÝH‹ˆš[H‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ”‘ÑˆØØ[[™È\È[™X\ˆ[ˆÚ[›™[^Y\ˆÛÝ[Û›HÚ[ˆš[˜Ú\[[^Y\ˆÚ^™KÜ›ÜÜË\ÙXÝ[Û‹[™[™\™ÞKÝ˜[œÝ™\œÙKZÈÙ][™ÜÈ\™Hš^Yˆ‹ˆœØÛÜHŽˆ›ØÚË]šYXYÛÛ˜[ÛÚ\™[˜[œÜÜØ[Ý[][ÛœÈ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ˜[œÈ‹ˆš[H‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ‘Ø]H[XÝ›ÜÝ]XÜÈ[™\]YÚ\™ÙH\™H›Ý›ÙXÙYžHÚ[\H™\X]Y[Z[ÛšX[ˆ›ØÚÜÎÈ^XÚ]‘QÑ‹TÚ\ÜÛÛˆÛÝ\[™ÈX^H™H™YYYˆ‹ˆœØÛÜHŽˆ‘]šXÙ\ÈÚ\™HØ]HÝ[X[Üˆ›Û™\]Z[Xœš][HÚ\™ÙHY™™XÝÈH\™Ù]ØœÙ\˜X›H‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÚY\ÝH‹ˆž›ÝH‚ˆBˆBˆKˆœÝ]\ÈŽˆœ\ÜÈ‹ˆ™ØÝ[Y[ÜÚLMˆŽˆŽLLÌÎYYNX™X˜ÎXX™MÍLMMLÌŒMXNXMØNXÍLÎŽNYYYXØÙ™‹ˆ™]šY[˜ÙWÜÚLMˆŽˆ˜ÙŽØÙ™LYŽLÍ™™M™YYY˜YŽMYMÎLÌŽŒŒYŒÙØMXÍYŒMÙŒÎXŽH‹ˆœš[Ü—Ù]šY[˜ÙHŽˆ×BˆKˆ˜ÛÛ\]][Û˜[[X]\šX[Ë\ØÚY[˜ÙKÜ]X[[K]˜[œÜÜÚ[Z[ÛšX[‹X›ØÚË\Ý]Ú[™Ë›YŽˆÂˆ™]šY[˜ÙHŽˆœ™YœËÜ]X[]KÙ]šY[˜ÙKÚ[Z[ÛšX[‹X›ØÚË\Ý]Ú[™ËLŒ‹LLKL›Y‹ˆ˜\ÜÙ]ÈŽˆßKˆ˜ÛÝ™\˜YÙHŽˆÂˆ›[ÙHŽˆ™[‹ˆ™\ØÜš\[ÛˆŽˆºîa;)àz­d;e¢zè+š[˜Ú\[^Y\‹;%í:é¬:¬¯z¬á‘QÑ‹Ô‘Ñˆ:ì#È:¬è;(%H:î%:ègH:­ï; «:éo;!):ê¡{eg:âéˆ‚ˆKˆœ™]šY]Ù\ˆŽˆÂˆœ›ÛHŽˆš[™\[™[RH™]šY]Ù\ˆ[Z[ÛšX[—ÜØÛÜH‹ˆš[™\[™[ŽˆYKˆ™]HŽˆŒŒ‹LLKL‚ˆKˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÛÛ\‹LŒ‹\ÚY\ÝH‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÌMLËNNÌMÌLKÌÌˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRRx $Õ’H˜\Ú\ËÛX]š^[[Y[ÎÈ0©ÖRRHÜ™\‹Sˆ[˜Ý[Û˜[È0©ÖUˆ˜[œÜÜ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆœÚY\ÝHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK\™Y™\™[˜ÙKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÜÚY\ÝKš[‹ˆ›ØØ][ÛˆŽˆØ[Ý[][ÛˆÙˆ[XÝ›ÛšXÈÝXÝ\™NÈÛÛ™\“ÓŽÈÓ‹™]NÈÓ‹”˜ÓÑŽÈÛÛ™\ÚTÔÎÈ‘QÑˆ\]X][ÛœÎÈ˜[”ÒQTÕH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆKˆ˜[œÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK]˜[œËYÝZYKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÝ˜[œËš[‹ˆ›ØØ][ÛˆŽˆ••‘[XË‹’ÎÈš[˜Ú\[^Y\ˆ[\˜XÝ[ÛœÎÈØ[Ý[][Ûˆ[YH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆKˆž›ÝHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆž›ÝKLŒKYY\‹[™YÙˆ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÎÜÍMLLKLNLËMˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRx $ÒRRNÈ\Kˆ
+JK\\Ëˆ
+Êx $Ê
+KšYËˆKY]ÙÈÓ•YT‹TÒÈ[Ù[‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆš[HŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ›]KLŒ‹Z[YÛ›‹[™YÙ‹X\ž]‹]ŒH‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËÜ‹ÌŒKŒÍÌNŒH‹ˆ›ØØ][ÛˆŽˆXœÝ˜XÝ[›ÙXÝ[Û‹™\Ý[Ë\ØÝ\ÜÚ[Û‹Y]Ù[™Ý\[Y[\žH[™›Ü›X][ÛŽÈÜXÚYšXÈYÙH[™šYÝ\™HØØ][ÛœÈ[ˆ\XÛH‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆœ\[ÜˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœ\[Ü‹LŒMË]˜[œÚY\ÝH‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËØXœËÌMŒËŒ‹ˆ›ØØ][ÛˆŽˆ“‘QÑˆ[™™XÝ\œÚ]™H˜[œÜÜ›Ü›X[\ÛNÈ›ØÚË\ÝXÝ\™Y˜[œÜÜØ[Ý[][ÛœÈ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆBˆKˆ™š[™[™ÜÈŽˆÂˆÂˆ˜ÛZ[HŽˆH›Û›ÜÙÛÛ˜[ØØ[^™Y[Ü˜š][˜\Ú\È™\]Z\™\È™\Ù\š[™È›Ý[™È[™Z\ˆ[\‹[^Y\ˆX]š^[[Y[Ëˆ‹ˆœØÛÜHŽˆ”ÒQTÕKÕ˜[œÈØØ[^™Y]ÛZXË[Ü˜š][X]š^™\™\Ù[][Ûˆ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆ‹ˆœÚY\ÝH‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ“Ü[‹X›Ý[™\žH˜[œÜÜ\Ù\È[XÝ›ÙHÙ[‹Y[™\™ÚY\Ë[™š[˜Ú\[[^Y\ˆÛÝ\[™È˜[™ÙH]\ÝØ]\ÙžH˜[œÜÜÛÛ™\ˆ\ÜÝ[\[ÛœËˆ‹ˆœØÛÜHŽˆ•ÛËY[XÝ›ÙHš[š]HØØ]\š[™Ë\™YÚ[ÛˆÛÚ\™[‘QÑˆ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ˜[œÈ‹ˆœ\[Üˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ”‘ÑˆÛÜÝ\È[™X\ˆ[ˆH[X™\ˆÙˆ^Y\œÈ]š^Y›ØÚÈ[Y[œÚ[Ûˆ[™Ù\È›Ý[\H[™X\ˆÛÜÝÚ[ˆÜ›ÜÜË\ÙXÝ[ÛˆÜ›ÝÜËˆ‹ˆœØÛÜHŽˆ›ØÚË]šYXYÛÛ˜[˜[œÜÜÚ]š^YÜ›ÜÜË\ÙXÝ[Ûˆ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ˜[œÈ‹ˆš[H‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ”™\X]Yš^Y[Z[ÛšX[ˆ›ØÚÜÈÈ›ÝÜ™X]HØ]KZ[™XÙYÝ[X[ØÚ\™ÙHÚ[™Ù\ÈÜˆY™XÝ\ÜXÚYšXÈ[XÝ›ÛšXÈÝXÝ\™Kˆ‹ˆœØÛÜHŽˆ‘]šXÙH[Ù[ÈZ[žH™\X][™Èš^YX]š^›ØÚÜÈ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÚY\ÝH‹ˆž›ÝH‚ˆBˆBˆKˆœÝ]\ÈŽˆœ\ÜÈ‹ˆ™ØÝ[Y[ÜÚLMˆŽˆŒØÌŽMÍÙ˜ÌYXMLÌÌŽY™ŽŒÙMÍ˜˜Ø˜ÙYÍMÙYXÌÌMÎØÎ˜ÙŽYˆ‹ˆ™]šY[˜ÙWÜÚLMˆŽˆÙÙNØÌÌLØ˜ÙXŽXŽLŽXÎXLL˜ŽL˜™Í˜ÎMXÌÙŒ™MÙÎLÙÙÍ™LÈ‹ˆœš[Ü—Ù]šY[˜ÙHŽˆ×BˆKˆ˜ÛÛ\]][Û˜[[X]\šX[Ë\ØÚY[˜ÙKÜ]X[[K]˜[œÜÜÛ[Z[Z[ÛšX[‹]˜[œÜÜ›YŽˆÂˆ™]šY[˜ÙHŽˆœ™YœËÜ]X[]KÙ]šY[˜ÙKÛ[Z[Z[ÛšX[‹]˜[œÜÜLŒ‹LLKL›Y‹ˆ˜\ÜÙ]ÈŽˆßKˆ˜ÛÝ™\˜YÙHŽˆÂˆ›[ÙHŽˆ™[‹ˆ™\ØÜš\[ÛˆŽˆ‘YT‹TÒËÑLû&`[QÓ“‹S‘QÑ»'f;ef{"­p­û&";.(H:¬¯zèg;&`:áo:ë.:ìí:¬è:ì¥;'!:éo:­k:í¡;eg:âéˆ‚ˆKˆœ™]šY]Ù\ˆŽˆÂˆœ›ÛHŽˆš[™\[™[RH™]šY]Ù\ˆ[Z[ÛšX[—ÜØÛÜH‹ˆš[™\[™[ŽˆYKˆ™]HŽˆŒŒ‹LLKL‚ˆKˆœÛÝ\˜Ù\ÈŽˆÂˆ™Y\ˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆž›ÝKLŒKYY\‹[™YÙˆ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÎÜÍMLLKLNLËMˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRx $ÒRRNÈ\Kˆ
+JK\\Ëˆ
+Êx $Ê
+KšYËˆKY]ÙÈÓ•YT‹TÒÈ[Ù[‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆš[YÛ›ˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ›]KLŒ‹Z[YÛ›‹[™YÙ‹X\ž]‹]ŒH‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËÜ‹ÌŒKŒÍÌNŒH‹ˆ›ØØ][ÛˆŽˆXœÝ˜XÝ[›ÙXÝ[Û‹™\Ý[Ë\ØÝ\ÜÚ[Û‹Y]Ù[™Ý\[Y[\žH[™›Ü›X][ÛŽÈÜXÚYšXÈYÙH[™šYÝ\™HØØ][ÛœÈ[ˆ\XÛH‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆ˜[œÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK]˜[œËYÝZYKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÝ˜[œËš[‹ˆ›ØØ][ÛˆŽˆ••‘[XË‹’ÎÈš[˜Ú\[^Y\ˆ[\˜XÝ[ÛœÎÈØ[Ý[][Ûˆ[YH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆBˆKˆ™š[™[™ÜÈŽˆÂˆÂˆ˜ÛZ[HŽˆ“ØØ[Y[š\›Û›Y[[Z[ÛšX[ˆ™YXÝ[Ûˆ\È\Ý[˜Ýœ›ÛH™\X][™È[ˆ[™XYHÛÛ\]YX]š^›ØÚËˆ‹ˆœØÛÜHŽˆ‘YTˆ[š\›Û›Y[Y\[™[ÒËÑLÈ[™[QÓ“‹S‘QÑˆY]ÙÈÚ]Y\™H‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™Y\ˆ‹ˆš[YÛ›ˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ‘YTˆ™\ÜÈHN›H™\›ËXšX\ÈÓ•˜[œÛZ\ÜÚ[ÛˆØ\ÙH[™HÙ\\˜]HH›HØ]KXÛÛ›ÛYÓ•Q‘U‘QÑ‹TÚ\ÜÛÛˆØ\ÙH\Ú[™È[š\›Û›Y[Y\[™[ÒÈ[Z[ÛšX[œËˆ‹ˆœØÛÜHŽˆ”™\ÜY[Ù[Ú^™K[™Ú[][][Ûˆ\\È[ˆHÚ]YÓ•\XØ][Ûˆ‹ˆœÝ]\ÈŽˆœ™\ÜY\š[X\žH‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ™Y\ˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ’[QÓ“ˆ™\ÜÈTÚKT˜[œÛZ\ÜÚ[ÛˆPQ\ÈÙˆKÌIKËŽ‰K[™‹ŒIH›ÜˆHÜXÚYšYY\™Ù\ˆÝXÝ\™\Ëˆ‹ˆœØÛÜHŽˆ•H\\¸ &\È™\›ËXšX\ÈTÚKT]\Ù]Ü][™\™Ù]Ù[ÈÛ›H‹ˆœÝ]\ÈŽˆœ™\ÜY\š[X\žH‹ˆœÛÝ\˜Ù\ÈŽˆÂˆš[YÛ›ˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ•H™\ÜYÜ™X]\‹][‹LLÜYY\ÛÛ\\™\ÈÌŒ8 $Í]ÛHÞ\Ý[\ÈYØZ[œÝ[HÙ[‹XÛÛœÚ\Ý[•S‘QÑ‹›ÝH\™XÝÛÛ\\š\ÛÛˆÛˆHÜ™X]\‹][‹LLX]ÛHØ\Ù\Ëˆ‹ˆœØÛÜHŽˆ]]Üœø &HÜXÚYšXÈ™[˜ÚX\šÈ[ˆ™\Ý[È[™Ý\[Y[\žHšYËˆÎ‹ˆœÝ]\ÈŽˆœ™\ÜY\š[X\žH‹ˆœÛÝ\˜Ù\ÈŽˆÂˆš[YÛ›ˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ•H™\›ËXšX\È[Z[ÛšX[ˆ\›Þ[X][Ûˆ›Üˆš[š]HšX\È\È™\Ù[Y›ÜˆÙXZÛH›Û›[™X\ˆ˜[œÜÜ[™\È›ÝÝ]YÈÛÝ™\ˆÝ›Û™È›Û›[™X\š]HÜˆ‘‹ˆ‹ˆœØÛÜHŽˆ‘š[š]KXšX\È˜[Y][Ûˆ[™Ý]Y[Z]È[ˆÚ]Y\–]ˆŒH‹ˆœÝ]\ÈŽˆœ™\ÜY\š[X\žH‹ˆœÛÝ\˜Ù\ÈŽˆÂˆš[YÛ›ˆ‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ•H\\ˆ\ØÜšX™\È\™ÙKY]šXÙH™YXÝ[Ûˆ[™›Û›ÜÙÛÛ˜[˜[œÜÜ]Ù\È›Ý[HÜXÚYžHH\™ÙKY]šXÙHÝ™\›\ÈÛÛœÝXÝ[Ûˆ][ˆ]È^ˆ‹ˆœØÛÜHŽˆ”™\›ÙXÚXš[]H[™›Ü›X][Ûˆ]˜Z[X›H[ˆ\–]ˆŒH™\Ý[È[™Y]Ù‹ˆœÝ]\ÈŽˆœ™\ÜY\š[X\žH‹ˆœÛÝ\˜Ù\ÈŽˆÂˆš[YÛ›ˆ‚ˆBˆBˆKˆœÝ]\ÈŽˆœ\ÜÈ‹ˆ™ØÝ[Y[ÜÚLMˆŽˆXØMXNLM˜ŒÙLÍ˜NYØLMMYMŒÌŽÎYŒ™ŒŒ™™MM˜ÌLÌ˜ÌÍ™ŒÙYYH‹ˆ™]šY[˜ÙWÜÚLMˆŽˆŒÌŒXŒÎX™˜ÎŒMLXLÍXLLÍØXØNŒN˜LÙYLMYLN˜™Ù‹ˆœš[Ü—Ù]šY[˜ÙHŽˆ×BˆKˆ˜ÛÛ\]][Û˜[\ØÚY[˜ÙKØ]ÛZ\ÝXË\Ú[][][Û‹ÛÜ™\‹[‹Y›YŽˆÂˆ™]šY[˜ÙHŽˆœ™YœËÜ]X[]KÙ]šY[˜ÙKÛÜ™\‹[‹YLŒ‹LLKL›Y‹ˆ˜\ÜÙ]ÈŽˆßKˆ˜ÛÝ™\˜YÙHŽˆÂˆ›[ÙHŽˆ™[‹ˆ™\ØÜš\[ÛˆŽˆ“Ü™\‹S»'f:­k{!£;!,p­û"©;/ ;'o:éàKÒQTÕHÓQÈ:­k;f!ÛÛ™\ˆ:­k:í¡:ì#È;'©{,a:á$:î%:ègH:ì&:ìíz¬ï;'f;,*;'m:éo;!):ê¡{eg:âéˆ‚ˆKˆœ™]šY]Ù\ˆŽˆÂˆœ›ÛHŽˆš[™\[™[RH™]šY]Ù\ˆÜ™\—Û—ÜÛÝ\˜Ù\È‹ˆš[™\[™[ŽˆYKˆ™]HŽˆŒŒ‹LLKL‚ˆKˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÛÛ\‹LŒ‹\ÚY\ÝH‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLÌMLËNNÌMÌLKÌÌˆ‹ˆ›ØØ][ÛˆŽˆ°©ð©ÒRRx $Õ’H˜\Ú\ËÛX]š^[[Y[ÎÈ0©ÖRRHÜ™\‹Sˆ[˜Ý[Û˜[È0©ÖUˆ˜[œÜÜ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆœÚY\ÝHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆœÚY\ÝK\™Y™\™[˜ÙKMK‹ˆ\›ŽˆšÎ‹ËÙØÜËœÚY\ÝK\›Ú™XÝ›Ü™ËÜ›Ú™XÝËÜÚY\ÝKÙ[‹ÍKÜ™Y™\™[˜ÙKÜÚY\ÝKš[‹ˆ›ØØ][ÛˆŽˆØ[Ý[][ÛˆÙˆ[XÝ›ÛšXÈÝXÝ\™NÈÛÛ™\“ÓŽÈÓ‹™]NÈÓ‹”˜ÓÑŽÈÛÛ™\ÚTÔÎÈ‘QÑˆ\]X][ÛœÎÈ˜[”ÒQTÕH‹ˆšÚ[™Žˆœš[X\žKYØÝ[Y[][Ûˆ‚ˆKˆšÛÚˆŽˆÂˆœ›Ý™[˜[˜ÙHŽˆšÛÚ‹LNNM‹[™X\œÚYÚY™\ÜÈ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLLËÔ\Ô™]“]Í‹ŒÌMŽ‹ˆ›ØØ][ÛˆŽˆXœÝ˜XÝÈˆÌMŽ8 $ÌÌMŽH‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆ˜™[žšHŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ˜™[žšKX›Ú]Ë\˜^›ÝZËLŒLÈ‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLLÍËÌLMNH‹ˆ›ØØ][ÛˆŽˆ°©ÌH[›ÙXÝ[ÛŽÈ0©ð©ÍLLˆÛˆÜXÝ˜[\›Ú™XÝÜˆXØ^H[™[\\˜]\™KÙØ\\[™[˜ÙH‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆšÚ[HŽˆÂˆœ›Ý™[˜[˜ÙHŽˆšÚ[K[X]\šKYØ[KLNNMH‹ˆ\›ŽˆšÎ‹ËÙÚK›Ü™ËÌLŒLLËÔ\Ô™]‹L‹ŒM‹ˆ›ØØ][ÛˆŽˆXœÝ˜XÝ[™Ü˜š][X˜\ÙYÊŠH[™\™ÞH[˜Ý[Û˜[‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆKˆ˜Ú\ÜÈŽˆÂˆœ›Ý™[˜[˜ÙHŽˆ›[Ú‹Y]X[LŒMËXÚ\ÜÈ‹ˆ\›ŽˆšÎ‹ËØ\ž]‹›Ü™ËØXœËÌMÌŒLLˆ‹ˆ›ØØ][ÛˆŽˆÚXž\Ú]ˆ^[œÚ[Û‹[œÚ]K[X]š^Ø[Ý[][Û‹0©ð©ÒRKŒ¸ $ÒRKŒÈ[™RRKŒˆ‹ˆšÚ[™Žˆœš[X\žK\™\ÙX\˜Ú‚ˆBˆKˆ™š[™[™ÜÈŽˆÂˆÂˆ˜ÛZ[HŽˆ“Ü™\‹Sˆ\™Ù]È[™X\ˆØØ[[™È[™\ˆØØ[]KÜÜ\œÚ]H\ÜÝ[\[ÛœÎÈ[œÚ]K[X]š^Ù™‹YXYÛÛ˜[XØ^H\ÈÛ™H˜\Ú\È›ÜˆØØ[^™Y[˜Ø][Û‹ˆ‹ˆœØÛÜHŽˆ“ØØ[^™Y[Ü˜š][[™[œÚ]K[X]š^[™X\‹\ØØ[[™ÈY]ÙÎÈˆ[™š^YXÜ›ÜÜË\ÙXÝ[ÛˆØ]™X]È\ÈÝ]Y‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆ‹ˆšÛÚˆ‹ˆ˜™[žšH‚ˆBˆKˆÂˆ˜ÛZ[HŽˆ’\ÝÜšXØ[ÒQTÕHÜ™\‹Sˆ\Ù\ÈØØ[^™YØ[›šY\‹[ZÙH[˜Ý[ÛœÈ[™ÓQÈ˜[™Y[™\™ÞH[˜Ý[Û˜[Èš[š]HØØ[^˜][Ûˆ[˜Ø][Ûˆ™\]Z\™\ÈXØÝ\˜XÞKØÛÛ™\™Ù[˜ÙHÚXÚÜËˆ‹ˆœØÛÜHŽˆ”ÛÛ\ˆ][ˆ\ÝÜšXØ[ÛÛ][Û“Y]ÙÜ™\“‹ÒÓQÈ›Ü›][][Ûˆ‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆœÛÛ\ˆ‹ˆšÚ[H‹ˆœÚY\ÝH‚ˆBˆKˆÂˆ˜ÛZ[HŽˆÚTÔÈ\ÈHÜ\œÙHX]š^Y[˜Ý[Û‹Ù[œÚ]K[X]š^›Ý]H\Ú[™ÈÚXž\Ú]ˆÛ[›ÛZX[Ë›ÝHÛ[›ÛZX[^[œÚ[ÛˆÙˆH[Z[ÛšX[ˆ]Ù[ŽÈÒQTÕHKX™[È]È[\[Y[][Ûˆ^\š[Y[[[™ØÝ[Y[È™Y™\œ™YÜXÝ˜[ÛÛ™][ÛœËˆ‹ˆœØÛÜHŽˆÚTÔÈY[]H[™™\œÚ[Û‹\ÜXÚYšXÈÒQTÕHKÛÛ™\ˆÝZY[˜ÙH‹ˆœÝ]\ÈŽˆœÝ\ÜY‹ˆœÛÝ\˜Ù\ÈŽˆÂˆ˜Ú\ÜÈ‹ˆœÚY\ÝH‚ˆBˆBˆKˆœÝ]\ÈŽˆœ\ÜÈ‹ˆ™ØÝ[Y[ÜÚLMˆŽˆÍYN˜LYYNMŒL˜™˜ÌŒYY˜ØØ™™ÙØLÌŒMX˜YLYL˜ÙXXLÌMÈ‹ˆ™]šY[˜ÙWÜÚLMˆŽˆŒÙL™XÌÍMÍŒMÍYŽLÍÎ˜XÎXLÌØÎNLÍXÌNYŒÍÍÍ˜YMMM˜ŒÍMYNH‹ˆœš[Ü—Ù]šY[˜ÙHŽˆ×BˆBŸB

@@ -1,10 +1,1 @@
-# Quantum transport
-
-![Reservoir, electrode self-energy, central scattering region and current, with NEGF, QTBM and Landauer as complementary descriptions.](../../assets/open-transport-overview.svg)
-
-- [Non-equilibrium Green's function (NEGF)](negf.md)
-- [Landauer transport and transmission](landauer-transmission.md)
-- [Landauerâ€“BÃ¼ttiker transport](landauer-buttiker.md)
-- [Quantum contact resistance](quantum-contact-resistance.md)
-- [SCBA convergence](scba-convergence.md)
-- [Scattering QTBM method](scattering-qtbm.md)
+.†uæî‚«¶‡^nè</¾jše‰Æ­Š‰ìÂ+a¶ uº'yªbuæî‚«.†v™_¢¶v+b¢v¥ğ¾øÈ²m¦Ïÿ‚+a¹·(›ú'yªb²·?¢wƒ<²2VçGVÒG&ç7÷'@ ¢µ&W6W'fö—"ÂVÆV7G&öFR6VÆbÖVæW&w’Â6VçG&Â66GFW&–ær&Vv–öâæB7W'&VçBÂv—F‚äTtbÂD$ÒæBÆæFVW"26ö×ÆVÖVçF'’FW67&—F–öç2åÒ‚ââòââö76WG2ö÷Vâ×G&ç7÷'BÖ÷fW'f–Wrç7fr ¢Ò´æöâÖWV–Æ–'&—VÒw&VVâw2gVæ7F–öâ„äTtb•Ò†æVvbæÖB¢Ò´ÆæFVW"G&ç7÷'BæBG&ç6Ö—76–öåÒ†ÆæFVW"×G&ç6Ö—76–öâæÖB¢Ò´ÆæFVW.(	4,;ÇGF–¶W"G&ç7÷'EÒ†ÆæFVW"Ö'WGF–¶W"æÖB¢ÒµVçGVÒ6öçF7B&W6—7Fæ6UÒ‡VçGVÒÖ6öçF7B×&W6—7Fæ6RæÖB¢Òµ44$6öçfW&vVæ6UÒ‡66&Ö6öçfW&vVæ6RæÖB¢Òµ66GFW&–ærD$ÒÖWF†öEÒ‡66GFW&–ær×F&ÒæÖB¢Ò´ÆöærÖ6†ææVÂ†Ö–ÇFöæ–âÖöFVÇ2æBG&ç7÷'EÒ†ÆöærÖ6†ææVÂ×G&ç7÷'BæÖB 
