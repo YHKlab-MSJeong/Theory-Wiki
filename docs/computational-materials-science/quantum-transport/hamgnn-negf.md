@@ -25,9 +25,11 @@ HamGNN은 원자 환경에 따라 새 Hamiltonian을 예측하므로 구조 변�
 계산은 다음 네 단계로 이어진다.
 
 1. **큰 장치의 원자 구조를 입력한다.** HamGNN은 원자 환경을 바탕으로 device Hamiltonian H를 예측한다. 비직교 계산에는 overlap S도 필요하지만, 큰 장치의 S를 구성하는 절차는 논문에서 명확히 설명하지 않는다.
-2. **정적 장치 행렬에 전극 self-energy를 붙인다.** Self-energy는 별도의 bulk DFT 전자구조 계산에서 가져온다. 이 경로는 열린 경계 수송을 수행하면서 매번 전하밀도를 갱신해 Hamiltonian을 다시 만드는 Full-NEGF의 self-consistent loop를 생략한다.
-3. **비직교 KPM으로 Fermi 준위를 정한다.** 비직교 기저의 일반화 고유값 문제 \(Hc_i=\epsilon_i S c_i\)를 다루며, overlap 행렬을 포함한 연산의 Chebyshev moments로 상태밀도(density of states, DOS)를 복원하고 전자수 조건에 맞는 Fermi 준위를 찾는다. 이 단계는 전체 고유값을 명시적으로 대각화하지 않는 것을 목표로 한다.
+2. **정적 장치 행렬에 전극 self-energy를 붙인다.** 전극 self-energy는 전극 bulk DFT의 H, S와 계면 coupling으로 구성한다. 이 경로는 열린 경계 수송을 수행하면서 매번 전하밀도를 갱신해 Hamiltonian을 다시 만드는 Full-NEGF의 self-consistent loop를 생략한다.
+3. **비직교 KPM으로 Fermi 준위를 정한다.** 일반화 고유값 스펙트럼의 DOS를 Chebyshev moments로 근사하고, 전자수 조건을 만족하는 \(\mu_F\)를 찾는다. 비직교 행렬 작용에는 overlap 선형계 풀이가 들어가며, 일반화 고유값을 직접 대각화하지 않는다. 수식과 수렴 기준은 [비직교 KPM 문서](nonorthogonal-kpm.md), 고정 Hamiltonian으로 수송하는 방법은 [DFTH-NEGF 문서](dfth-negf.md)를 참고한다. [1, §II; 2, Eqs. (7)–(9)]
 4. **RGF로 \(T(E)\)를 계산한다.** 산란영역을 principal layer로 나누고 인접 층 결합을 따라 Green 함수 정보를 재귀적으로 전달한다. [1, §II, Fig. 1; Methods, pp. 11–12]
+
+Results p. 5는 \(2\times2\times5\) Si 사례에서 KPM 수렴을 확인하고, KPM으로 얻은 \(E_F\)를 이후 NEGF 계산에 사용했다고 적는다. 반면 Methods p. 12는 benchmark systems의 \(E_F\)를 일반화 고유값 문제의 직접 대각화로 얻었다고 적는다. 프리프린트는 두 진술의 적용 대상 관계를 설명하지 않는다. 따라서 Results에 명시된 해당 Si 사례와 Methods의 benchmark 절차는 각각 기록하되, 모든 transmission benchmark에 KPM을 적용했다고 단정할 수는 없다. [1, Results, p. 5; Methods, p. 12]
 
 KPM은 Fermi 준위를, RGF는 transmission을 계산한다. 블록 반복과 달리 HamGNN은 장치 구조에서 Hamiltonian을 새로 예측한다.
 
@@ -63,7 +65,7 @@ HSE06 결과 역시 별도의 Hamiltonian 자료로 다시 학습한 예시다. 
 - 정적 전극 self-energy와 비자기일관 Hamiltonian이 목표 전위·전하 조건을 대표하는가?
 - 유한 바이어스가 약한 비선형 영역에 있는가? 그 범위를 벗어나면 어떤 기준 계산으로 확인할 것인가?
 
-HamGNN-NEGF는 매번 full DFT-NEGF를 풀지 않고 긴 장치 행렬을 만들 수 있는 경로다. 예측의 적용 범위는 학습자료, 정적 Hamiltonian 가정, KPM/RGF 설정과 목표 장치 검증으로 정해진다. 이 논문은 사용자의 MoS₂/Au 구조를 직접 검증한 사례는 아니다.
+HamGNN-NEGF는 매번 full DFT-NEGF를 풀지 않고 긴 장치 행렬을 만들 수 있는 경로다. 예측의 적용 범위는 학습자료, 정적 Hamiltonian 가정, KPM/RGF 설정과 목표 장치 검증으로 정해진다. 논문에서 시험한 재료와 접촉을 벗어나는 전이는 별도로 검증해야 한다.
 
 ## 8. 함께 보기
 
@@ -71,7 +73,10 @@ HamGNN-NEGF는 매번 full DFT-NEGF를 풀지 않고 긴 장치 행렬을 만들
 - [Hamiltonian 블록 확장과 RGF](hamiltonian-block-stitching.md)
 - [ML Hamiltonian 수송 개요](ml-hamiltonian-transport.md)
 - [전자구조 대규모 solver의 역할](../../computational-science/atomistic-simulation/electronic-structure-solvers.md)
+- [비직교 KPM으로 Fermi 준위 찾기](nonorthogonal-kpm.md)
+- [DFTH-NEGF](dfth-negf.md)
 
 ## 9. 참고 자료
 
 1. B. Liu et al., “Linear-Scaling Quantum Transport from Machine-Learning Density Functional Theory Hamiltonians,” arXiv:2609.37058v1 (2026), [abstract](https://arxiv.org/abs/2609.37058), [PDF](https://arxiv.org/pdf/2609.37058v1), submitted 2026-09-29. Preprint.
+2. H. Röder, R. N. Silver, D. A. Drabold, and J. J. Dong, “Kernel polynomial method for a nonorthogonal electronic-structure calculation of amorphous diamond,” *Physical Review B* **55**, 15382–15385 (1997), [DOI](https://doi.org/10.1103/PhysRevB.55.15382), Eqs. (7)–(9).
