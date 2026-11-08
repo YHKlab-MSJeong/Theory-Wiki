@@ -4,7 +4,7 @@ description: 비직교 기저의 Chebyshev moments로 DOS와 Fermi 준위를 근
 
 # 비직교 KPM으로 Fermi 준위 찾기
 
-비직교 국소 기저의 Kohn–Sham 문제는 \(H\mathbf{c}_i=E_iS\mathbf{c}_i\)로 표현한다. Kernel polynomial method (KPM)은 Chebyshev 다항식의 moments로 전체 상태밀도(density of states, DOS)를 근사하므로 모든 고유값을 직접 구하지 않아도 된다. DOS와 점유 함수를 적분해 목표 전자수를 맞추는 것은 이 근사를 Fermi 준위 탐색에 사용하는 후속 절차다. Röder 등의 원 연구는 비직교 전자구조의 DOS 계산을 보였고, HamGNN-NEGF 논문은 이를 수송 workflow에 연결한다. 다만 해당 논문의 Results와 Methods에는 KPM과 직접 대각화가 각각 보고되어 적용 범위에 설명되지 않은 차이가 있다(5절). [1, Eqs. (1)–(9); 2, §§II–III]
+[비직교 국소 기저](../../computational-science/atomistic-simulation/localized-basis-sets.md)의 Kohn–Sham 문제는 \(H\mathbf{c}_i=E_iS\mathbf{c}_i\)로 표현한다. Kernel polynomial method (KPM)은 Chebyshev 다항식의 moments로 전체 상태밀도(density of states, DOS)를 근사하므로 모든 고유값을 직접 구하지 않아도 된다. DOS와 점유 함수를 적분해 목표 전자수를 맞추는 것은 이 근사를 Fermi 준위 탐색에 사용하는 후속 절차다. Röder 등의 원 연구는 비직교 전자구조의 DOS 계산을 보였고, HamGNN-NEGF 논문은 이를 수송 workflow에 연결한다. 다만 해당 논문의 Results와 Methods에는 KPM과 직접 대각화가 각각 보고되어 적용 범위에 설명되지 않은 차이가 있다(5절). [1, Eqs. (1)–(9); 2, §§II–III]
 
 <figure markdown="span">
 
@@ -19,7 +19,7 @@ description: 비직교 기저의 Chebyshev moments로 DOS와 Fermi 준위를 근
 
 \(H\)는 Hamiltonian 행렬이고 \(S\)는 overlap 행렬이다. \(S\)가 양의 정부호인 비직교 기저에서 일반화 고유값 \(E_i\)를 직접 모두 구하는 대신, KPM은 스펙트럼 전체를 다항식 계수로 요약한 뒤 DOS를 복원한다. KPM은 개별 고유값과 고유벡터를 모두 출력하는 고유값 solver가 아니다. 따라서 특정 고유상태의 에너지나 파동함수가 필요하면 별도의 방법을 써야 한다. [1, Eq. (1); 3, §§II–III]
 
-KPM에서 얻는 DOS와 \(\mu_F\)는 주어진 Hamiltonian, overlap, 점유 규약 및 목표 전자수에 해당한다. 이 방법 자체가 transmission이나 수송 전류를 계산하지는 않는다. HamGNN-NEGF workflow에서는 KPM으로 \(\mu_F\)를 정한 뒤 RGF로 transmission을 계산한다. [2, §II]
+KPM에서 얻는 DOS와 \(\mu_F\)는 주어진 Hamiltonian, overlap, 점유 규약 및 목표 전자수에 해당한다. 이 방법 자체가 transmission이나 수송 전류를 계산하지는 않는다. HamGNN-NEGF workflow에서는 KPM으로 \(\mu_F\)를 정한 뒤 [RGF](hamiltonian-block-stitching.md)로 transmission을 계산한다. [2, §II]
 
 ## 2. 일반화 고유값 문제의 KPM 연산자 표현
 

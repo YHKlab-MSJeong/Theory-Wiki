@@ -53,6 +53,26 @@ E_{n\mathbf k}(T)
 
 retarded self-energy의 실수부는 준입자 피크의 에너지 이동, 허수부는 스펙트럼 폭과 수명에 연결된다. 이 조화·대각 근사의 Debye–Waller 항은 실수이므로 폭은 \(\operatorname{Im}\Sigma^{\mathrm{FM}}\)에서 온다. 날카로운 준입자 피크가 있을 때 에너지 반폭은 \(\Gamma=Z|\operatorname{Im}\Sigma^{\mathrm{FM}}|\), 수명은 \(\tau=\hbar/(2\Gamma)\)로 표현할 수 있다. 여기서 \(Z=[1-\partial_{\mathcal E}\operatorname{Re}\Sigma]^{-1}\)이고 \(\mathcal E=\hbar\omega\)는 에너지 변수다. \(\Gamma\)는 반치폭이며 전체폭은 \(2\Gamma\)다. 준입자 피크가 넓거나 비대각 성분이 중요한 경우 이 단순 수명식은 적절하지 않을 수 있다. [1, Eqs. 30–34; 2, §V.B]
 
+
+### (1) Green 함수와 스펙트럼에서 읽기
+
+밴드 대각 근사에서 에너지 변수 \(\mathcal E\)를 사용하면 retarded Green 함수와 상태 하나의 spectral function은
+
+\[
+G^r_{n\mathbf k}(\mathcal E)=
+\frac{1}{\mathcal E-\varepsilon_{n\mathbf k}-\Sigma^r_{n\mathbf k}(\mathcal E)},
+\qquad
+A_{n\mathbf k}(\mathcal E)=-\frac{1}{\pi}\operatorname{Im}G^r_{n\mathbf k}(\mathcal E)
+\]
+
+로 정의할 수 있다. 여기서 \(\Sigma^r\)는 선택한 상호작용의 retarded self-energy이며 이 문서에서는 Fan–Migdal과 Debye–Waller 기여를 포함한다. \(A\)의 \(1/\pi\) 정규화는 [NEGF 문서](../quantum-transport/negf.md)의 \(i(G^r-G^a)\) 정의와 \(A_{\rm NEGF}=2\pi A\)의 관계이므로 수치 비교 시 convention을 맞춰야 한다. [1, Eqs. (28)–(32); 2, §V.B]
+
+???+ example "일정한 폭을 갖는 단일 준위"
+
+    예시로 \(\Sigma^r=\Delta-i\gamma\), \(\gamma>0\)가 에너지에 무관하면 \(A=\gamma/[\pi\{(\mathcal E-\varepsilon-\Delta)^2+\gamma^2\}]\)다. 피크 중심은 \(\varepsilon+\Delta\), 전체 반치폭은 \(2\gamma\)이며 이 예시에서는 \(Z=1\)이다. \(\gamma=10\) meV이면 확률 수명 \(\hbar/(2\gamma)\)은 약 32.9 fs다. 특정 물질의 계산값이 아닌 산술 예시다.
+
+평형 준입자 self-energy를 평가하는 것과 열린 장치에서 산란 self-energy를 \(G\)에 되먹여 반복하는 [SCBA](../quantum-transport/scba-convergence.md)는 계산 설정과 목적이 다르다. 어느 Green 함수와 포논 bath를 사용했는지 명시해야 한다. [1, “Electron self-energy”; 2, §V.B]
+
 ## 4. 수렴과 주장 범위
 
 조밀한 \(\mathbf k,\mathbf q\) 적분, Wannier 보간 창, broadening \(\eta\), 극성 장거리 항 처리를 각각 바꾸어 결과의 안정성을 확인한다. 온도, 화학퍼텐셜, 전자·포논 점유와 사용한 구조를 기록한다. 수치 수렴과 self-energy 근사의 타당성은 별도로 판단해야 한다. [1, “Wannier-Fourier interpolation” and “Electron self-energy”; 2, §V.B]

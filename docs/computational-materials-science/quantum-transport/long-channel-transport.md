@@ -40,6 +40,12 @@ HamGNN-NEGF의 학습 Hamiltonian, 비직교 KPM, RGF 연결과 적용 경계는
 - **결함·도핑·기하 변화가 있는 긴 채널의 행렬을 만든다:** 학습 Hamiltonian의 해당 환경 검증과 전극 정렬을 확인한다.
 - **게이트와 비평형 전하가 중요하다:** NEGF–Poisson 또는 TranSIESTA와 같은 전위·전하 자기일관 절차가 모델에 포함되는지 확인한다. 학습 모델을 썼다는 사실만으로 이 되먹임이 자동으로 포함되지는 않는다. [2, “NEGF equations,” “TranSIESTA,” and “TBtrans”; 3, §§III.2–III.3; 4, Abstract and main text]
 
+
+???+ note "선형 스케일링이라고 부르는 계산 단계"
+
+    고정된 단면과 층당 행렬 차원에서 RGF의 한 에너지·횡방향 \(k\)점 풀이 비용은 층 수에 대해 선형으로 증가할 수 있다. 전체 전류 계산에는 에너지와 \(k\)점 적분, 접촉, 전위의 자기일관 반복이 더해진다. 반면 Order-N DFT의 \(N\)은 큰 구조의 원자 또는 기저 수에 대한 전자구조 풀이의 스케일링을 가리킨다. 따라서 두 선형성의 변수를 함께 기록해야 한다. [2, “Calculation time”; 5, §1, Eqs. (9)–(12)]
+
+
 세 방법의 수식과 사례는 [Hamiltonian 블록 확장과 RGF](hamiltonian-block-stitching.md), [Order-N DFT](../../computational-science/atomistic-simulation/order-n-dft.md), [학습 Hamiltonian 기반 수송](ml-hamiltonian-transport.md)에서 각각 다룬다. 기본 NEGF의 \(H\), \(S\), 전극 self-energy와 전류 정의는 [NEGF 문서](negf.md)를 참고한다.
 
 ## 3. 참고 자료
@@ -48,3 +54,4 @@ HamGNN-NEGF의 학습 Hamiltonian, 비직교 KPM, RGF 연결과 적용 경계는
 2. SIESTA developers, [SIESTA 5.4 reference manual](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html), “Calculation of the electronic structure,” “SolverON,” “NEGF equations”; [TBtrans user guide](https://docs.siesta-project.org/projects/siesta/en/5.4/reference/tbtrans.html), “Principal layer interactions.”
 3. J. Zou et al., “Deep learning accelerated quantum transport simulations in nanoelectronics: from break junctions to field-effect transistors,” *npj Computational Materials* **11**, 375 (2025), [§§II–III](https://doi.org/10.1038/s41524-025-01853-6).
 4. B. Liu et al., “Linear-Scaling Quantum Transport from Machine-Learning Density Functional Theory Hamiltonians,” arXiv:2609.37058v1 (2026), [Abstract, Introduction, Results, and Discussion](https://arxiv.org/abs/2609.37058v1).
+5. M. Wimmer and K. Richter, “Optimal block-tridiagonalization of matrices for coherent charge transport,” *Journal of Computational Physics* **228**, 8548–8565 (2009), [§1, Eqs. (9)–(12)](https://arxiv.org/abs/0806.2739).

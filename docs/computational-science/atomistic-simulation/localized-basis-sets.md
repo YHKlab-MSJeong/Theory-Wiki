@@ -17,6 +17,29 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 
 ## 1. Semicore 처리와 basis 크기의 구분
 
+
+### (1) 궤도와 overlap 행렬
+
+원자 \(A\)를 중심으로 하는 국소 원자궤도는 반지름 성분과 구면조화함수의 곱 \(\phi_{A\zeta lm}(\mathbf r)=R_{A\zeta l}(|\mathbf r-\mathbf R_A|)Y_{lm}(\widehat{\mathbf r-\mathbf R_A})\)으로 나타낼 수 있다. \(l,m\)은 각운동량 채널이며 \(\zeta\)는 같은 채널에서의 서로 다른 방사 함수를 구별한다. SIESTA의 유한 범위 원자궤도는 cutoff 반경 밖에서 0이다. 반경이 떨어진 두 함수가 겹치지 않으면 그 overlap 원소는 0이다. [1, “Basis sets”; 7, §§III–V]
+
+파동함수 \(\psi_i=\sum_\mu c_{\mu i}\phi_\mu\)를 변분하면
+
+\[
+Hc_i=\epsilon_iSc_i,\qquad
+H_{\mu\nu}=\langle\phi_\mu|\hat H|\phi_\nu\rangle,\quad
+S_{\mu\nu}=\langle\phi_\mu|\phi_\nu\rangle
+\]
+
+라는 일반화 고유값 문제가 된다. 서로 다른 원자 위 궤도도 겹치므로 일반적으로 \(S\ne I\)다. 계수 밀도행렬을 \(P=\sum_i f_i c_ic_i^\dagger\), \(c_i^\dagger Sc_j=\delta_{ij}\)로 정의하면 전자수는 \(N_e=\mathrm{Tr}(PS)\)다. 비직교 기저에서 대각합 \(\mathrm{Tr}(P)\)만으로 전자수를 읽지 않는다. [7, §§III–V; 8, Eqs. (6), (10)–(12), (32)]
+
+양의 정부호 \(S\)의 대칭 역제곱근을 구할 수 있다면 \(\bar H=S^{-1/2}HS^{-1/2}\)의 표준 고유값 문제로 바꿀 수 있다. 이는 **같은 유한 기저공간**을 좌표 변환하는 것이며, 처음부터 다른 함수와 cutoff를 선택한 기저를 자동으로 같은 정확도로 만들어 주지 않는다. 직교화 행렬은 일반적으로 원래의 엄격한 국소성·희소성을 보존하지 않을 수도 있다. 이러한 overlap은 [Hamiltonian 블록 확장과 RGF](../../computational-materials-science/quantum-transport/hamiltonian-block-stitching.md)와 [비직교 KPM](../../computational-materials-science/quantum-transport/nonorthogonal-kpm.md)에도 들어간다. [7, §§III–VI; 8, §§2–3]
+
+???+ example "겹침이 큰 두 기저의 수치 조건"
+
+    정규화된 두 함수의 overlap이 실수 \(s\)이면 \(S=\bigl(\begin{smallmatrix}1&s\\s&1\end{smallmatrix}\bigr)\)이고 고유값은 \(1\pm s\)다. \(|s|=0.9\)이면 조건수는 \((1+|s|)/(1-|s|)=19\)다. \(|s|\to1\)에서 선형 종속에 가까워져 역행렬과 일반화 고유값 계산이 민감해진다. 이는 행렬의 가상 예시이며 실제 기저의 수렴 결과가 아니다.
+
+### (2) Semicore와 zeta는 무엇을 바꾸는가
+
 | 선택 | 정하는 내용 | 확인할 정보 |
 |---|---|---|
 | Pseudopotential의 semicore | 어떤 전자를 core에 두고 어떤 전자를 명시적 valence에 포함하는가 | ion/PSML 파일의 valence 설정, 전자 수, semicore 채널 |
@@ -56,3 +79,5 @@ description: 국소 원자궤도 기저의 크기와 semicore 선택을 구분�
 4. J. Quhe et al., “A sub-10 nm monolayer ReS₂ transistor for low-power applications,” *J. Mater. Chem. C* **7**, 1108 (2019), [Supporting Information, p. 1, Fig. S1](https://www.rsc.org/suppdata/c8/tc/c8tc05863f/c8tc05863f1.pdf).
 5. M. Szabó et al., “Electron transport through metal/MoS₂ interfaces,” *Nano Letters* **19**, 3647 (2019), [arXiv:1912.04847](https://arxiv.org/abs/1912.04847), §§II–III.
 6. S. Ducry et al., “A Hybrid Mode-Space/Real-Space Scheme for DFT+NEGF Device Simulations,” *SISPAD* (2019), [pp. 70–72, Figs. 2 and 4](https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf).
+7. J. M. Soler et al., “The SIESTA method for ab initio order-N materials simulation,” *J. Phys.: Condens. Matter* **14**, 2745 (2002), [§§III–VI](https://arxiv.org/html/cond-mat/0111138).
+8. L. Lin et al., “Accelerating atomic orbital-based electronic structure calculation via pole expansion and selected inversion,” *J. Phys.: Condens. Matter* **25**, 295501 (2013), [§§2–3](https://arxiv.org/html/1202.2159).

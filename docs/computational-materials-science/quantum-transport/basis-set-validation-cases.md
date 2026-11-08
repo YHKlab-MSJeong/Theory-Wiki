@@ -4,7 +4,7 @@ description: 원자궤도 basis를 수송에 사용하거나 비교한 문헌 �
 
 # 수송 계산의 basis 검증 사례
 
-문헌에서 작은 basis를 사용했다는 사실과 작은 basis가 목표 수송 물리량에 대해 검증되었다는 주장은 다르다. 아래 사례는 저자가 보고한 비교 범위를 기준으로 정리한다. 다른 물질·pseudopotential·접촉 구조에 결과를 그대로 적용하지 않는다.
+문헌에서 작은 [국소 원자궤도 basis](../../computational-science/atomistic-simulation/localized-basis-sets.md)를 사용했다는 사실과 작은 basis가 목표 수송 물리량에 대해 검증되었다는 주장은 다르다. 아래 사례는 저자가 보고한 비교 범위를 기준으로 정리한다. 다른 물질·pseudopotential·접촉 구조에 결과를 그대로 적용하지 않는다.
 
 ## 1. MoS₂/산화물 트랜지스터: 원소별 basis를 섞은 검증
 
@@ -48,7 +48,7 @@ Szabó 등은 VASP 계산에서 얻은 층별 Hamiltonian을 maximally localized
 
 ## 5. 밴드 일치와 접촉 수송
 
-Ducry 등의 mode-space 연구는 원자궤도 basis 크기를 줄인 연구와 구분해야 한다. CP2K의 DZVP basis를 유지하고 전극 모드 수를 줄이는 변환을 비교했다. Cu 밴드의 최대 오차가 2 eV 창에서 0.047 meV였지만, 모든 금속 전극 블록을 mode-space로 처리하면 V=0.2 V에서 전류가 거의 20% 낮아졌다. 계면 real-space 블록을 남긴 설정에서는 보고된 전류 오차가 1% 미만이었다. 이는 basis 축소 결과가 아니라, 밴드 적합도만으로 device 전류를 보장할 수 없음을 보여주는 별도의 근사 사례다. [6, pp. 70–72, Figs. 2, 4]
+Ducry 등의 [mode-space 연구](mode-space-transport.md)는 원자궤도 basis 크기를 줄인 연구와 구분해야 한다. CP2K의 DZVP basis를 유지하고 전극 모드 수를 줄이는 변환을 비교했다. Cu 밴드의 최대 오차가 2 eV 창에서 0.047 meV였지만, 모든 금속 전극 블록을 mode-space로 처리하면 V=0.2 V에서 전류가 거의 20% 낮아졌다. 계면 real-space 블록을 남긴 설정에서는 보고된 전류 오차가 1% 미만이었다. 이는 basis 축소 결과가 아니라, 밴드 적합도만으로 device 전류를 보장할 수 없음을 보여주는 별도의 근사 사례다. [6, pp. 70–72, Figs. 2, 4]
 
 ## 6. 해석 범위
 

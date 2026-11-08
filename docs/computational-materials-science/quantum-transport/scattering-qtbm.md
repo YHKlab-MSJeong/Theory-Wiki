@@ -13,7 +13,7 @@ quantum transmitting boundary method (QTBM)은 열린 전극에 연결된 유한
 \[
 \psi_L=\chi_{Ln}^{+}+\sum_m r_{mn}\chi_{Lm}^{-},
 \qquad
-\psi_R=\sum_m t_{mn}\chi_{Rm}^{+}.
+\psi_R=\sum_m t_{mn}\chi_{Rm}^{-}.
 \]
 
 여기서 \(\chi_{\alpha m}^{+}\), \(\chi_{\alpha m}^{-}\)는 lead \(\alpha\)에서 각각 소자로 들어가는 모드와 소자에서 나가는 모드이며, \(r_{mn}\), \(t_{mn}\)은 반사·투과 진폭이다. 실제 계산은 transverse subband 또는 복수 orbital이 있어 여러 propagating mode를 갖는 lead에도 확장할 수 있다. Mode matching에서는 evanescent mode도 경계조건을 맞추는 데 필요할 수 있다. 이 모드는 먼 lead의 독립적인 flux-normalized incoming/outgoing channel은 아니지만, 그 꼬리가 소자 내부를 가로지를 만큼 소자가 짧으면 transmission에 영향을 줄 수 있다. [2, Appendix D, 식 (D1)–(D6); 3, §3.5.4, 식 (3.92)–(3.99); 4, §II; 13, §III.A–B, 식 (4)–(17); 14, §II.A, §III.A]
@@ -56,15 +56,22 @@ T_{\beta m\leftarrow\alpha n}(E)
 
 따라서 일반적으로 wavefunction 계수의 절댓값 제곱만으로 transmission을 얻을 수는 없다. 입사·출사 모드가 unit-flux로 정규화되어 있으면 \(T=|t|^2\)지만, 동일한 wavefunction-amplitude 정규화를 사용했다면 각 lead의 group velocity와 mode flux를 반영해야 한다. 여러 모드의 transmission을 합하면 에너지별 total transmission을 얻는다. [3, §3.5, 식 (3.55)–(3.56); 4, §II; 13, §III.B, 식 (16)–(17); 14, §II.A]
 
+???+ example "파동 진폭과 전송 확률"
+
+    하나의 전파 모드만 있는 1차원 양쪽 lead에서 입사파 진폭을 1, 출사파의 진폭을 \(t\)로 두고, 각 모드가 같은 밀도 정규화로 기술된다고 하자. 입사와 출사의 양의 속도 크기를 \(v_L,v_R\)라 하면 \(T=(v_R/v_L)|t|^2\)다. 예를 들어 \(v_R/v_L=2\), \(|t|^2=0.3\)이면 \(T=0.6\)이다. 이는 flux를 계산하는 가상 예제다. 이산 기저에서 계수의 정규화가 단면 격자 간격 등을 포함하면 그 규약에 맞는 flux를 써야 한다. [13, §III.B, 식 (16)–(17); 14, §II.A]
+
+    실제 퍼텐셜이 에너지 손실이나 흡수를 만들지 않는 탄성 문제에서 왼쪽 lead에서 입사한 유일 모드의 반사율을 \(R\)이라 하면 \(R+T=1\)이다. 수치 결과에서 이 관계가 깨지면 모드 정규화, 경계조건과 선형계 오차를 살펴본다. [2, Appendix D; 13, §III.B]
+
+
 QTBM은 입사 모드 하나에 대한 산란 상태를 계산한다. reservoir가 실제로 채우는 정도는 \(f_\alpha(E)\)로 따로 정한다. 두 단자 순전류는 정한 양의 방향에 따라 좌·우 reservoir 입사 상태의 기여를 부호를 붙여 합산하므로, 점유를 곱한 mode 전류를 단순한 양의 flux 합처럼 다루면 안 된다. 탄성·결맞음 한계에서 이 합은 Landauer 식의 \(f_L-f_R\)로 나타난다. 같은 조건의 전류 적분은 [Landauer transport and transmission](landauer-transmission.md)에서 다룬다. QTBM의 경계조건 자체가 Fermi 점유, 전자-phonon collision 또는 carrier population update를 대신하지 않는다. [2, Appendix D; 3, §3.5.4; 5, 초록; 9, §1.1, 식 (1.2), (1.6); 10, §2.4, 식 (16)–(18)]
 
 ## 4. NEGF와의 연결
 
-같은 \(H_C,S_C\)와 lead boundary를 쓰는 탄성 정상상태 문제에서는 QTBM의 입사 모드별 산란 상태와 NEGF의 retarded open-boundary 연산자가 같은 열린 경계 문제를 표현한다. Gehring은 scattering이 없는 경우 QTBM의 계수 행렬이 retarded Green function의 역행렬과 같음을 보인다. 차이는 계산의 주된 대상에 있다. QTBM은 지정한 입사 모드의 wavefunction을 직접 풀고, NEGF는 전극 결합을 포함한 \(G^r\), 점유를 반영하는 \(G^<\), 전하와 전류를 계산한다. 두 표현의 이 관계는 비탄성 산란을 자동 포함한다는 뜻은 아니다. [2, Appendix D; 3, §3.5.4, 식 (3.99); 6, §VI.C–D]
+같은 \(H_C,S_C\)와 lead boundary를 쓰는 탄성 정상상태 문제에서는 QTBM의 입사 모드별 산란 상태와 NEGF의 retarded open-boundary 연산자가 같은 열린 경계 문제를 표현한다. Gehring은 scattering이 없는 경우 QTBM의 계수 행렬이 retarded Green function의 역행렬과 같음을 보인다. 차이는 계산의 주된 대상에 있다. QTBM은 지정한 입사 모드의 wavefunction을 직접 풀고, [NEGF](negf.md)는 전극 결합을 포함한 \(G^r\), 점유를 반영하는 \(G^<\), 전하와 전류를 계산한다. 두 표현의 이 관계는 비탄성 산란을 자동 포함한다는 뜻은 아니다. [2, Appendix D; 3, §3.5.4, 식 (3.99); 6, §VI.C–D]
 
 ## 5. 별도 산란 모형을 결합하는 경우
 
-산란을 추가하려면 QTBM 경계조건 외에 전이율이나 self-energy, in-scattering과 out-scattering, 그리고 점유를 닫는 방정식이 필요하다. 한 구체적 사례에서는 ballistic QTBM으로 open boundary를 처리하고 Pauli master equation으로 전자-phonon 및 surface-roughness 산란을 계산한다. 이는 가능한 결합 방식 하나이며 scattering QTBM 전체를 정의하는 유일한 closure는 아니다. [5, 초록; 12, §7.4]
+산란을 추가하려면 QTBM 경계조건 외에 전이율이나 self-energy, in-scattering과 out-scattering, 그리고 점유를 닫는 방정식이 필요하다. 한 구체적 사례에서는 ballistic QTBM으로 open boundary를 처리하고 Pauli master equation으로 전자–phonon 및 [계면 거칠기 산란](../../device-physics/mobility/surface-roughness-scattering.md)을 계산한다. 이는 가능한 결합 방식 하나이며 scattering QTBM 전체를 정의하는 유일한 closure는 아니다. [5, 초록; 12, §7.4]
 
 허수 흡수 퍼텐셜 \(-iW\)는 선택한 상태의 out-scattering 또는 loss를 표현할 수 있지만, 대응하는 in-scattering과 reservoir·phonon bath의 점유를 스스로 정하지 않는다. 따라서 loss 항만 추가한 계산을 보존적인 비탄성 산란 모형으로 간주할 수 없다. in/out 항의 관계와 점유 갱신을 같은 모형 안에서 명시해야 한다. [7, §7.2.6.1, 식 (7.22)–(7.25); 8, §4.5]
 

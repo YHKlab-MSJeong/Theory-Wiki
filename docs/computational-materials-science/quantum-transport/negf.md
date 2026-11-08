@@ -58,6 +58,19 @@ A(E)=G^r(E)[\Gamma_L(E)+\Gamma_R(E)]G^a(E)
 
 가 성립한다. 이 식은 상태가 존재할 수 있는 에너지 구조를 말할 뿐 점유를 뜻하지 않는다. bound state가 있으면 전극 self-energy만으로 그 점유가 유일하게 정해지지 않을 수 있으므로, 위 등식과 아래의 점유식에 그 예외를 그대로 적용해서는 안 된다. [1, 식 (2)–(3), (6), §III.B; 2, §VI.C; 5, 초록 및 §§II–IV]
 
+???+ example "한 에너지 준위의 공명과 전극 결합"
+
+    직교 기저의 스핀 분해된 단일 준위 \(\epsilon_0\)가 양쪽 전극에 결합하고, 관심 에너지 범위에서 \(\Sigma_\alpha^r=-i\Gamma_\alpha/2\)가 일정하다고 가정한다. 이 wide-band 예시에서는 일정한 실수 에너지 이동을 \(\epsilon_0\)에 포함한다. \(\Gamma_L>0\), \(\Gamma_R>0\), \(\Gamma=\Gamma_L+\Gamma_R\)이면 위 Green 함수와 전송식으로부터
+
+    \[
+    G^r=\frac{1}{E-\epsilon_0+i\Gamma/2},\quad
+    A=\frac{\Gamma}{(E-\epsilon_0)^2+(\Gamma/2)^2},\quad
+    T=\frac{\Gamma_L\Gamma_R}{(E-\epsilon_0)^2+(\Gamma/2)^2}
+    \]
+
+    를 얻는다. 두 \(\Gamma\)와 \(E,\epsilon_0\)는 같은 에너지 단위이며, 이 Lorentzian의 반치전폭은 \(\Gamma\)다. 공명 중심에서 \(T=4\Gamma_L\Gamma_R/(\Gamma_L+\Gamma_R)^2\)이므로 양쪽 결합이 같을 때만 1이다. 상태가 존재하는 \(A\)와 양쪽 전극을 연결하는 \(T\)가 다른 양이라는 점이 드러난다. 상호작용, 다중 준위 및 에너지 의존 전극 self-energy를 생략한 해석용 예시다. [2, §VI.C–D; 4, §III.A, §V]
+
+
 ## 3. Lesser Green 함수와 전하밀도
 
 비상호작용 전극에서 오는 lesser self-energy는
@@ -105,7 +118,7 @@ T(E)=\operatorname{Tr}[\Gamma_LG^r\Gamma_RG^a]
 
 ## 5. 상호작용, bound state와 계산의 한계
 
-전자–포논 또는 전자–전자 상호작용을 포함하면 \(\Sigma_\mathrm{int}^{r,<,>}\)가 \(G\)와 전류식에 추가된다. 이 경우 \(G^<\)에는 전극 항뿐 아니라 \(\Sigma_\mathrm{int}^<\)가 들어가며, 단순한 \(T=\operatorname{Tr}[\Gamma_LG^r\Gamma_RG^a]\) 하나가 항상 전체 전류를 나타내지는 않는다. 근사 self-energy를 쓸 때는 어떤 산란 기작과 diagram 또는 self-consistent 절차를 포함했는지 밝혀야 한다. [6, §§II–III; 7, 초록 및 §II]
+[전자–포논 결합](../electron-phonon-coupling/electron-phonon-coupling.md) 또는 전자–전자 상호작용을 포함하면 \(\Sigma_\mathrm{int}^{r,<,>}\)가 \(G\)와 전류식에 추가된다. 이 경우 \(G^<\)에는 전극 항뿐 아니라 \(\Sigma_\mathrm{int}^<\)가 들어가며, 단순한 \(T=\operatorname{Tr}[\Gamma_LG^r\Gamma_RG^a]\) 하나가 항상 전체 전류를 나타내지는 않는다. 근사 self-energy를 쓸 때는 어떤 산란 기작과 diagram 또는 self-consistent 절차를 포함했는지 밝혀야 한다. 전자–포논 self-energy의 구성은 [전자 자기 에너지](../electron-phonon-coupling/electron-phonon-self-energy.md), 반복 갱신의 수렴은 [SCBA](scba-convergence.md)에서 다룬다. [6, §§II–III; 7, 초록 및 §II]
 
 전극과 분리된 bound state는 별도의 경계 사례다. 연속 상태의 density는 lead self-energy로 정할 수 있지만, 평형화 기작이 없으면 bound state의 density matrix는 초기 조건 또는 약하게 도입한 보조 reservoir에 의존할 수 있다. 따라서 계산에서 매우 좁은 공명, 전극 결합이 0인 상태, 혹은 비정상적인 charge가 나타나면 에너지 mesh를 미세화하는 것만으로 해결됐다고 판단하지 말고 해당 상태의 점유 규칙을 따로 확인해야 한다. [5, 초록 및 §§III–V; 2, §IV; 3, §2]
 

@@ -28,7 +28,7 @@ SIESTA 5.4의 native Orbital Minimization Method (OMM)는 Kohn–Sham 행렬을 
 
 ## 1. OMM이 구하는 대상
 
-한 SCF 단계에서 유효 Hamiltonian과 overlap matrix는 각각 \(H\), \(S\)다. \(m\)개의 비직교 원자 궤도 기저에서 표준 Kohn–Sham 문제는
+한 SCF 단계에서 유효 Hamiltonian과 overlap matrix는 각각 \(H\), \(S\)다. 이 기저와 overlap의 정의는 [국소 원자궤도 기저](localized-basis-sets.md)에서 설명한다. \(m\)개의 비직교 원자 궤도 기저에서 표준 Kohn–Sham 문제는
 
 \[
 H\mathbf c_i=\varepsilon_i S\mathbf c_i
@@ -98,7 +98,7 @@ D=2CC^\dagger,
 
 ## 3. SCF·MD 반복에서의 사용과 스케일링
 
-OMM은 SCF 반복 안에서 전자상태를 구하는 solver다. 각 SCF 단계에서 주어진 \(H\), \(S\)로 점유 부분공간을 minimization하고, 그로부터 얻은 density matrix를 사용해 다음 Hamiltonian을 구성한다. MD의 새 원자 배치에서는 \(H\), \(S\)가 변하지만 앞 단계의 orbital coefficients를 초기 추정값으로 재사용할 수 있다. 공식 manual은 첫 MD step의 처음 몇 SCF cycle은 대각화보다 느릴 수 있으며, 그 이후에는 계수 재사용으로 계산 시간이 줄 수 있다고 설명한다. 이는 반복 계산에서의 가능성이지 모든 시스템에 대한 보장된 속도 향상은 아니다. [1, “SolverOMM”; 2, §2.5.2, Eq. (18), §3]
+OMM은 SCF 반복 안에서 전자상태를 구하는 solver다. PEXSI·CheSS와 ELSI의 역할은 [전자구조 solver 비교](electronic-structure-solvers.md)에서 함께 살펴볼 수 있다. 각 SCF 단계에서 주어진 \(H\), \(S\)로 점유 부분공간을 minimization하고, 그로부터 얻은 density matrix를 사용해 다음 Hamiltonian을 구성한다. MD의 새 원자 배치에서는 \(H\), \(S\)가 변하지만 앞 단계의 orbital coefficients를 초기 추정값으로 재사용할 수 있다. 공식 manual은 첫 MD step의 처음 몇 SCF cycle은 대각화보다 느릴 수 있으며, 그 이후에는 계수 재사용으로 계산 시간이 줄 수 있다고 설명한다. 이는 반복 계산에서의 가능성이지 모든 시스템에 대한 보장된 속도 향상은 아니다. [1, “SolverOMM”; 2, §2.5.2, Eq. (18), §3]
 
 SIESTA의 유한 범위 원자궤도 기저에서는 \(H\)와 \(S\)가 희소할 수 있다. \(\texttt{OMM.UseSparse}\)를 사용하면 일부 희소행렬–밀집행렬 곱셈 비용을 밀집행렬 곱셈의 \(O(m^3)\)에서 \(O(m^2)\)로 낮출 수 있다. 그러나 이 최적화가 native OMM 전체를 선형 스케일링으로 바꾸지는 않는다. Corsetti의 분석은 전처리 행렬이 일반적으로 희소하지 않고, 촐레스키 분해도 희소성을 없앨 수 있어 전체 solver의 스케일링은 여전히 \(O(m^3)\)이라고 명시한다. [1, “OMM.UseSparse”; 2, §2.6]
 

@@ -24,6 +24,40 @@ description: OMM, PEXSI, ELSI와 CheSS의 전자구조 계산 역할을 Order-N 
 | **CheSS** (Chebyshev Sparse Solvers) | Chebyshev 다항식으로 희소 matrix function을 계산하는 라이브러리다. 밀도행렬, 행렬 거듭제곱, 선택 구간의 고유값 등을 대상으로 한다. | 희소성, 스펙트럼 폭과 원하는 오차가 다항식 계산량에 영향을 준다. SIESTA 5.4 설명은 CheSS 연동을 실험적 기능으로 표시한다. [1, SolverCheSS; 4] |
 | **ELSI** (ELectronic Structure Infrastructure) | 전자구조 코드와 solver 라이브러리 사이의 공통 인터페이스·소프트웨어 기반이다. 코드가 지원되는 여러 solver 중 하나를 같은 API 계열로 선택하도록 연결한다. | 독립적인 수치 알고리즘 이름이 아니다. 사용 가능한 backend는 ELSI와 solver의 버전 및 빌드 옵션에 따라 달라진다. 정확도와 스케일링은 선택된 backend가 결정한다. [1, SolverELSI; 2; 5] |
 
+
+### (1) 공통 입력과 출력: 밀도행렬
+
+원자궤도 기저의 한 spin·\(k\)점에 대해 \(Hc_i=\epsilon_iSc_i\), \(c_i^\dagger Sc_j=\delta_{ij}\)라 하자. 점유수 \(f_i\)로 만든 밀도행렬 \(P=\sum_i f_i c_ic_i^\dagger\)은 전자수 \(N_e=\mathrm{Tr}(PS)\)와 전자밀도 구성에 들어간다. 유한 온도에서는 화학퍼텐셜 \(\mu\)를 전자수에 맞춰야 한다. solver는 이 단계에서 \(P\) 또는 그에 필요한 원소를 구하고, host DFT 코드는 전하와 퍼텐셜을 새로 계산해 SCF 반복을 이어간다. 힘 계산에는 에너지 밀도행렬이나 원자 이동에 따른 overlap 변화 등 추가 정보도 필요할 수 있다. [2, §§I–II; 6, §§2–3, Eqs. (10)–(15), (27)–(28)]
+
+### (2) PEXSI: pole과 selected inversion
+
+실수 대칭 \(H,S\)에 대해 Lin 등의 pole expansion은 밀도행렬을 개념적으로
+
+\[
+P\approx\operatorname{Im}\sum_{l=1}^{N_p}
+\omega_l[H-(z_l+\mu)S]^{-1}
+\]
+
+로 근사한다. \(z_l,\omega_l\)는 사용한 Fermi 함수 근사의 복소 pole과 가중치, \(N_p\)는 pole 수다. 스핀 인자와 가중치의 구체적 정의는 구현의 convention에 포함된다. 각 pole마다 복소 이동된 행렬을 분해하고, selected inversion은 전하·에너지·힘 등에 필요한 역행렬 원소를 선택적으로 계산한다. 필요한 원소의 인덱스 집합은 관측량과 행렬의 희소 구조에 의존한다. \(\mu\) 탐색과 pole 수·근사 정확도도 함께 수렴시켜야 한다. [3, Introduction; 6, §§2–3, Eqs. (13)–(15), (27)–(28)]
+
+???+ example "선택된 역행렬 원소의 의미"
+
+    \(A=\bigl(\begin{smallmatrix}2&1\\1&2\end{smallmatrix}\bigr)\)라면 \((A^{-1})_{11}=2/3\)이다. 원래 행렬의 \(A_{11}\)만 떼어 역수 \(1/2\)를 구한 것과 다르다. selected inversion은 전체 행렬의 결합을 고려한 뒤 필요한 역행렬 원소를 구한다. 이 행렬은 계산 원리를 보여주는 예시다.
+
+### (3) CheSS: 다항식과 희소성
+
+직교 기저에서 Hamiltonian 스펙트럼을 \([-1,1]\)로 조정한 \(\widetilde H\)에 대한 Chebyshev 전개를 예로 들면
+
+\[
+T_0=I,\quad T_1=\widetilde H,\quad
+T_{n+1}=2\widetilde H T_n-T_{n-1},\qquad
+f(\widetilde H)\approx\sum_{n=0}^{M}a_nT_n(\widetilde H).
+\]
+
+\(f\)는 점유를 정하는 함수이고 \(M\)은 절단 차수다. 실제 비직교 계산에서는 overlap을 포함한 행렬 함수와 해당 구현의 정규화를 사용하므로 위 직교 기저 예제를 \(f(H)\)로 그대로 대입하지 않는다. 차수를 늘리고 희소 행렬의 절단 기준을 바꾸며 밀도행렬·전자수·에너지·힘을 확인한다. 스펙트럼 폭, 전자 온도 또는 gap, 목표 오차가 필요한 차수에 영향을 준다. 자세한 Chebyshev 재귀와 비직교 행렬 처리는 [비직교 KPM](../../computational-materials-science/quantum-transport/nonorthogonal-kpm.md)을 참고할 수 있으나, KPM의 DOS 복원과 CheSS의 밀도행렬 계산은 목표 관측량과 구현이 다르다. [4, §§II–III; 1, “SolverCheSS”]
+
+[OMM 전용 문서](siesta-54-omm.md)는 trial-orbital functional, 점유 부분공간과 SIESTA 5.4 구현 제약을 설명한다. ELSI는 위 알고리즘들을 호출하는 interface이므로 선택된 backend와 설치 버전을 반드시 기록한다. [1, “SolverELSI”, “SolverOMM”; 2, §§I–II]
+
 이 표의 “대규모”나 “선형 스케일링”은 입력 크기가 커질수록 항상 유리하다는 약속이 아니다. 예를 들어 SIESTA 문서는 대부분의 중간 크기 계산이 대각화 또는 OMM을 사용하며 Order-N이나 PEXSI의 이점이 없을 수 있다고 설명한다. 비교할 때는 실제 기저 크기, 희소 연결, k점, 메모리, 병렬 자원과 수렴 결과를 본다. [1, Calculation of the electronic structure; 3, Introduction]
 
 Hourahine 등은 DFTB+의 비자기일관 전하(non-self-consistent charge, non-SCC), spin-non-polarized, \(\Gamma\)-점 계산 두 예제에서 밀도행렬 구성 시간을 비교했다. Fig. 5(c)는 CNT 사례에서 MKL 대각화, ELPA2와 PEXSI를, Fig. 5(d)는 Si supercell 사례에서 MKL 대각화, ELPA2와 NTPoly를 비교한다. 서로 다른 구조에서 비교한 solver 조합이므로 이 그림을 보편적인 성능 순위로 해석하지 않는다. [8, §III.A.1, Fig. 5(c,d)]

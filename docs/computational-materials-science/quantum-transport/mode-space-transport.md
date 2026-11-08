@@ -4,7 +4,7 @@ description: 횡방향 모드로 NEGF 기저를 축소하는 방법과 접촉·�
 
 # Mode-space 표현과 수송 계산
 
-Mode-space는 원자 궤도나 실공간 격자로 표현한 수송 문제를 횡방향 모드 기저에서 다시 표현하는 방법이다. 완전한 기저의 좌표변환과 일부 모드만 남기는 축소는 구별해야 한다. 일반 비직교 원자궤도 기저에서 변환행렬이 유클리드 내적 기준의 unitary일 필요는 없으며, 직교화한 기저에서는 unitary 변환으로 표현된다. 전자는 표현 변경이고, 후자는 물리 상태의 절단이다. 모드 사이 결합까지 제거하면 추가 근사가 된다. 이 문서는 정상상태 2단자 nonequilibrium Green’s function (NEGF)을 기준으로 투영, 접촉, 밀도·전류, 산란과 검증 조건을 정리한다. [1, §§II.B, IV; 2, “Tight Binding Mode Space Model”; 3, §§2.1–2.6]
+Mode-space는 원자 궤도나 실공간 격자로 표현한 수송 문제를 횡방향 모드 기저에서 다시 표현하는 방법이다. 완전한 기저의 좌표변환과 일부 모드만 남기는 축소는 구별해야 한다. 일반 [비직교 원자궤도 기저](../../computational-science/atomistic-simulation/localized-basis-sets.md)에서 변환행렬이 유클리드 내적 기준의 unitary일 필요는 없으며, 직교화한 기저에서는 unitary 변환으로 표현된다. 전자는 표현 변경이고, 후자는 물리 상태의 절단이다. 모드 사이 결합까지 제거하면 추가 근사가 된다. 이 문서는 정상상태 2단자 [nonequilibrium Green’s function (NEGF)](negf.md)을 기준으로 투영, 접촉, 밀도·전류, 산란과 검증 조건을 정리한다. [1, §§II.B, IV; 2, “Tight Binding Mode Space Model”; 3, §§2.1–2.6]
 
 <figure markdown="span">
 
@@ -30,6 +30,17 @@ S^{\mathrm{MS}}_{ij}=U_i^\dagger S_{ij}U_j
 모드는 보통 각 단면의 횡방향 고유문제에서 얻는다. 유효질량 모형에서는 횡방향 Schrödinger 방정식의 고유상태가 모드가 될 수 있다. 원자론적 tight-binding (TB) 모형에서는 단면 Hamiltonian의 고유상태를 에너지와 \(k\)-공간 범위에서 모으고, 직교화·정제해 축소 기저를 구성할 수 있다. Afzalian 등의 최적화된 nanowire TB 기저에서는 관심 에너지 창과 전체 Brillouin zone을 표본화했다. 반쪽 Brillouin zone만 표본화한 경우에는 표본에서 빠진 영역에 비물리적인 분산이 남을 수 있었다. 따라서 필요한 표본 범위는 기저 생성법, 대칭 처리와 수송 대상에 따라 정한다. [1, §II.B; 2, “Results: A Tight-Binding Mode-Space Model,” pp. 3–4, “Methods,” p. 7, Eqs. (1)–(7); 3, §2.1, Eqs. (5)–(7)]
 
 완전한 모드 집합으로 기저를 변환하면 원래 계산과 동등하다. 선택한 \(n\)개 모드가 원래 \(N\)개 기저보다 적을 때 \(n\ll N\)인 축소 표현을 얻지만, 생략된 모드의 전파·evanescent 상태 및 산란 경로는 결과에 영향을 줄 수 있다. 따라서 mode-space 자체가 자동으로 정확한 것은 아니다. [1, §II.B; 2, “Methods,” p. 7; 3, §2.1]
+
+???+ note "생략한 모드가 남기는 효과"
+
+    기저 전체를 보존한 표현에서 유지할 부분공간을 \(P\), 제거할 부분을 \(Q\)라 하고, 전체 열린경계 Green kernel을 \(K(z)=zS-H-\Sigma_L-\Sigma_R\)로 놓자. \(K_{QQ}\)가 가역인 에너지에서 블록 소거를 하면 정확한 유지 공간 Green 함수는
+
+    \[
+    G_{PP}^r=\left[K_{PP}-K_{PQ}K_{QQ}^{-1}K_{QP}\right]^{-1}
+    \]
+
+    이다. 여기서 P와 Q는 같은 완전 기저에서 나눈 행·열 블록의 표기이며, \(G_{PP}\)는 \(K^{-1}\)의 해당 블록이다. 비직교 기저에서 이 표기를 별도 정의 없이 직교 projector로 해석하지 않는다. 오른쪽 두 번째 항은 제거한 공간으로 갔다가 돌아오는 효과를 나타내며 일반적으로 에너지에 의존한다. 단순한 부분공간 투영으로 \(K_{PP}^{-1}\)만 쓰면 이 항을 보존하지 않는다. 따라서 선택한 에너지 창 밖 모드도 결합이나 가상 전이를 통해 결과에 영향을 줄 수 있다. 이 식은 완전 기저의 행렬 소거에서 얻은 설명용 항등식이며, 모든 실제 mode-space 구현이 이 보정을 명시적으로 계산한다는 뜻은 아니다. [1, §II.B; 9, §III.A; 11, §III.C.1]
+
 
 아래 예는 모드 절단을 한 밴드 비교로 점검하는 방법을 보여준다. Carrillo-Nuñez 등은 3 nm 두께의 \(\langle111\rangle\) Si nanowire에서 K-space와 mode-space Hamiltonian의 밴드를 비교했다. 저자들은 \(E_v-E_n=0.6\,\mathrm{eV}\) 창에서 얻은 mode-space 밴드가 약 \(-1.7\,\mathrm{eV}\)보다 높은 에너지에서 원래 K-space 밴드를 잘 재현한다고 보고한다. 이는 해당 구조와 에너지 창의 밴드 검증이며, 다른 기하·산란·전류 조건의 정확도를 보장하지 않는다. [12, Fig. 2, p. 5]
 
@@ -99,7 +110,7 @@ uncoupled-mode는 단순한 계산 선택이 아니라 intermode coupling을 제
 
 ## 5. 산란과 self-consistent Born approximation
 
-Mode-space에 phonon 같은 비탄성 산란을 넣으려면 \(H\)만 투영해서는 충분하지 않다. 전자–포논 상호작용 vertex도 \(U\)로 변환하고, 그 결과 산란 self-energy를 현재 \(G^{r,<,>}_{\mathrm{MS}}\)에서 계산해야 한다. self-consistent Born approximation (SCBA)은 변환된 산란 self-energy와 Green 함수를 고정점까지 반복 갱신한다. Poisson self-consistency가 함께 있으면 산란 반복과 electrostatic 반복을 구분해 기록한다. [3, §§2.3–2.6, Eqs. (8)–(11); 6, §II.2]
+Mode-space에 phonon 같은 비탄성 산란을 넣으려면 \(H\)만 투영해서는 충분하지 않다. 전자–포논 상호작용 vertex도 \(U\)로 변환하고, 그 결과 산란 self-energy를 현재 \(G^{r,<,>}_{\mathrm{MS}}\)에서 계산해야 한다. [self-consistent Born approximation (SCBA)](scba-convergence.md)은 변환된 산란 self-energy와 Green 함수를 고정점까지 반복 갱신한다. Poisson self-consistency가 함께 있으면 산란 반복과 electrostatic 반복을 구분해 기록한다. [3, §§2.3–2.6, Eqs. (8)–(11); 6, §II.2]
 
 변환한 electron–phonon form factor는 retained mode index 네 개를 포함할 수 있어, 해당 계산에서 상호작용 연산이 커질 수 있다. Lemus 등은 form factor의 off-diagonal 성분을 제거하는 근사에서 intermode scattering을 생략했다. 이 산란 근사를 써도 정확한 밀도 계산에는 mode off-diagonal Green 함수 성분이 중요하다고 보고했다. 논문의 주요 benchmark 계산은 retarded self-energy의 실수부를 생략했고, 그 실수부의 효과는 별도 InAs TFET 조건에서 분석했다. 따라서 산란 포함 시에는 form-factor 근사, mode-space SCBA 반복 기준, retarded self-energy 처리와 비교한 관측량을 함께 명시한다. [3, §§2.3–2.6, §§3.1–3.5, Figs. 2–6]
 

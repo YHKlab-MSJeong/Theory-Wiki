@@ -125,6 +125,21 @@ J_\alpha^Q
 
 probe의 화학 퍼텐셜과 온도를 모두 미지수로 두고 \(J_p^N=J_p^Q=0\)을 풀면 thermoelectric probe 또는 voltage–temperature probe가 된다. 이 조건은 ‘국소 전압’이나 ‘국소 온도’를 직접 측정한 값이 아니라, 약결합된 이상 probe 모형이 만족하는 값으로 해석해야 한다. [4, 식 (2)–(10) 및 adiabatic case; 6, 초록 및 §II]
 
+???+ example "세 단자 voltage probe의 선형 응답"
+
+    양쪽 전극 \(L,R\)과 probe \(p\)가 같은 온도이고 자기장이 없어 선형 conductance가 방향 대칭이라고 하자. 위의 \(\mathcal G_{\alpha\beta}\)를 이용해 \(I_p=0\)을 풀면
+
+    \[
+    V_p=\frac{\mathcal G_{pL}V_L+\mathcal G_{pR}V_R}
+    {\mathcal G_{pL}+\mathcal G_{pR}},\qquad
+    G_{\mathrm{eff}}=\mathcal G_{LR}+
+    \frac{\mathcal G_{Lp}\mathcal G_{pR}}
+    {\mathcal G_{Lp}+\mathcal G_{pR}}.
+    \]
+
+    분모가 0이 아니고 온도차가 없다는 조건에서 위 식은 이 문서의 선형 전류식에 \(V_p\)를 대입해 얻는다. 직접 \(L\to R\) 경로와 순전류가 0인 probe를 거치는 기여가 보인다. \(I_p=0\)은 에너지별 유량이 0이라는 뜻은 아니므로 dephasing probe의 조건과 구별한다. \(p\)가 양쪽에서 완전히 분리되면 위 식으로 그 전위를 정할 수 없다. [4, isothermal case; 5, §II]
+
+
 <figure markdown="span">
 
   ![다중 reservoir의 방향별 transmission을 부호가 있는 단자 전류로 합산하고, voltage·voltage–temperature·dephasing probe의 서로 다른 조건으로 연결한다.](images/landauer-buttiker-probes.svg)

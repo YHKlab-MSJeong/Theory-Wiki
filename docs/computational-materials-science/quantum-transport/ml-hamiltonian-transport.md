@@ -4,7 +4,7 @@ description: DeePTB-NEGF와 HamGNN-NEGF가 작은 DFT 자료에서 긴 채널의
 
 # 학습 Hamiltonian 기반 장채널 수송
 
-작은 원자구조에서 DFT 전자구조를 학습하고, 긴 구조의 각 국소 환경에 모델을 적용해 Hamiltonian을 예측한 뒤 NEGF로 수송을 계산하는 방법이 보고되어 있다. 이 방식은 대표 Hamiltonian 블록을 그대로 반복하는 것과 다르다. 새 구조의 각 국소 환경에 따라 행렬 요소를 다시 예측한다. 그렇다고 예측 행렬이 DFT 자기일관 계산과 동등하거나 학습 범위 밖에서도 정확하다는 뜻은 아니다. [1, §§II–III; 2, Abstract, Introduction, Results, and Discussion]
+작은 원자구조에서 DFT 전자구조를 학습하고, 긴 구조의 각 국소 환경에 모델을 적용해 Hamiltonian을 예측한 뒤 NEGF로 수송을 계산하는 방법이 보고되어 있다. 이 방식은 [대표 Hamiltonian 블록을 그대로 반복하는 방식](hamiltonian-block-stitching.md)과 다르다. 새 구조의 각 국소 환경에 따라 행렬 요소를 다시 예측한다. 그렇다고 예측 행렬이 DFT 자기일관 계산과 동등하거나 학습 범위 밖에서도 정확하다는 뜻은 아니다. [1, §§II–III; 2, Abstract, Introduction, Results, and Discussion]
 
 DeePTB-NEGF 논문의 Figure 1은 [출판사 논문 페이지](https://www.nature.com/articles/s41524-025-01853-6)에서 확인할 수 있다. [1, Fig. 1]
 
@@ -41,7 +41,7 @@ h^{\mathrm{env}}_{ll'\zeta}
 
 ### (2) HamGNN-NEGF
 
-2026년 arXiv 원고는 작은 주기 구조의 ground-state DFT Hamiltonian으로 모델을 훈련하고 큰 장치의 \(H\)를 예측한다. 이후 DFT에서 얻은 전극 self-energy, 비직교 kernel polynomial method (KPM)의 Fermi 준위 탐색, recursive Green's function (RGF)을 연결한다. 저자들은 채널 길이에 대한 선형 스케일링이 **단면 크기와 계산 설정을 고정했을 때** 성립한다고 보고한다. 이 방법은 full DFT-NEGF training data나 매 transport iteration의 DFT 자기일관 계산을 요구하지 않는다고 설명한다. [2, Abstract, Introduction, and Results]
+2026년 arXiv 원고는 작은 주기 구조의 ground-state DFT Hamiltonian으로 모델을 훈련하고 큰 장치의 \(H\)를 예측한다. 이후 DFT에서 얻은 전극 self-energy, [비직교 kernel polynomial method (KPM)](nonorthogonal-kpm.md)의 Fermi 준위 탐색, [recursive Green's function (RGF)](hamiltonian-block-stitching.md)을 연결한다. 저자들은 채널 길이에 대한 선형 스케일링이 **단면 크기와 계산 설정을 고정했을 때** 성립한다고 보고한다. 이 방법은 full DFT-NEGF training data나 매 transport iteration의 DFT 자기일관 계산을 요구하지 않는다고 설명한다. [2, Abstract, Introduction, and Results]
 
 Pt–Si–Pt 사례에서 저자들은 \(1\times1\times2\), \(1\times1\times3\), \(1\times1\times4\) Si supercell 자료로 학습하고 더 긴 구조를 평가했다. zero-bias transmission의 보고된 평균 절대 오차는 \(2\times2\times5\)에서 1.71%, \(2\times2\times7\)에서 3.86%, \(2\times2\times10\)에서 6.25%였다. 이 값은 해당 자료 분할과 모델의 원문 보고값이지 독립 재현값이나 다른 물질의 오차 범위가 아니다. [2, Results, Fig. 3, Supplementary Fig. S4(b,c)]
 

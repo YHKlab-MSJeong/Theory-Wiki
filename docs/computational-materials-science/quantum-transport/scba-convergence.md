@@ -23,9 +23,36 @@ G_{n}^{r}(E)=\left[g^{-1}(E)-\Sigma_{\mathrm{contacts}}^{r}(E)-\Sigma_{\mathrm{s
   </figcaption>
 </figure>
 
+
+### (1) 전자–포논 산란과 에너지 연결
+
+한 포논을 흡수하거나 방출하는 산란에서는 전자 에너지가 \(\hbar\omega_\nu\)만큼 달라진다. 따라서 조화 평형 포논 bath의 전자–포논 SCBA self-energy는 같은 에너지의 \(G(E)\)만이 아니라 \(G(E\pm\hbar\omega_\nu)\)도 결합한다. 계수에는 포논 점유와 electron–phonon 행렬원소가 들어가며, lesser/greater 및 retarded 성분의 정확한 부호·계수는 Green 함수와 Fourier 변환 규약에 맞춰야 한다. [Lee–Sanvito, §II.B, Eqs. (15)–(18)](https://arxiv.org/pdf/0804.3389), [Bescond et al., §II](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf)
+
+이 때문에 관심 있는 전류 적분 창만 잘라 계산하면 창 밖에서 산란해 들어오는 상태를 누락할 수 있다. bath 온도, 포논 에너지, energy window와 간격을 함께 수렴시켜야 한다. 결합 행렬원소의 물리적 정의와 흡수·방출 전이는 [전자–포논 결합](../electron-phonon-coupling/electron-phonon-coupling.md), 평형 전자 self-energy의 해석은 [전자 self-energy](../electron-phonon-coupling/electron-phonon-self-energy.md)에서 설명한다.
+
+### (2) 열린 경계의 점유 갱신
+
+정상상태의 통상적인 Keldysh 구성에서는
+
+\[
+G^<(E)=G^r(E)\,\bigl[\Sigma_L^<(E)+\Sigma_R^<(E)+\Sigma_{\rm scatt}^<(E)\bigr]G^a(E)
+\]
+
+와 같이 전극과 산란의 lesser self-energy를 함께 사용한다. 이는 초기 상관이나 결합되지 않은 bound-state 기여를 별도로 다룰 필요가 없는 경우의 표현이다. \(G^r\)만 갱신하고 산란의 점유 성분을 빠뜨리면 같은 SCBA 고정점 문제가 아니다. lead의 역할과 기본 정의는 [NEGF](negf.md)를 참고한다. [Bescond et al., §II](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf), [Mera et al., §V.1](https://arxiv.org/html/1512.06846)
+
 ## 2. 수치 수렴의 최소 조건
 
 혼합된 iterate의 변화량이 작다는 것만으로 고정점 수렴을 선언하면 안 된다. mixing coefficient가 작으면 update가 작아져도 residual \(\lVert F[G]-G\rVert\)은 남을 수 있다. 따라서 (i) retarded와 lesser Green function 또는 self-energy의 residual, (ii) charge와 Poisson loop를 포함했으면 electrostatic residual, (iii) energy grid·integration window 변화에 대한 안정성을 서로 구분해 점검한다. 초기값과 energy range가 다른 self-consistent solution으로 이어질 수 있다는 사례가 보고되어 있다. [Lee–Sanvito, §III.B, 식 (41), (44); §V, Fig. 14–15](https://arxiv.org/pdf/0804.3389), [Bescond et al., §II](https://in4.iue.tuwien.ac.at/pdfs/sispad2013/21-3.pdf)
+
+
+선형 mixing을 예로 들어 갱신할 대상 \(X\)와 고정점 함수 \(F\)에 대해
+
+\[
+r_n=F(X_n)-X_n,\qquad
+X_{n+1}=X_n+\alpha r_n
+\]
+
+으로 놓자. \(\alpha\)가 0.01이고 한 성분의 residual이 0.1이면 update는 0.001이다. 이 단순 예시는 작은 update가 residual 자체의 작음을 의미하지 않는 이유를 보여준다. 실제 계산에서는 대상 성분·에너지·행렬 크기에 대한 norm과 절대/상대 기준을 정의하고, 동일한 기준으로 반복을 비교한다. mixing 자체의 수렴은 산란 근사의 타당성을 입증하지 않는다. [Lee–Sanvito, §III.B; Mera et al., §V.2]
 
 ## 3. conservation과 analytic structure
 

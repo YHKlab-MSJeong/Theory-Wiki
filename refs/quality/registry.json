@@ -1,9 +1,9 @@
 {
   "computational-materials-science/quantum-transport/landauer-transmission.md": {
     "status": "pass",
-    "document_sha256": "52c21d662b062aebec4531947a92c2a805243134a16220d7944950ad376b7939",
-    "evidence": "refs/quality/evidence/landauer-current-window-2026-11-05.md",
-    "evidence_sha256": "ece9119b2a9776e462bfca8f1e29408d03b40bcd15d49aca40b4483c3e8a4c3f",
+    "document_sha256": "18eb80e293c9343adb067f3abc05d11fefa6d562d19ef37b4e796bb99f153566",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/landauer-current-window.svg": "964fa82b36e851e57a58af26c5c3c4f40f3302b2d446a5b8c5fbc5f8db026115"
     },
@@ -15,17 +15,21 @@
       {
         "path": "refs/quality/evidence/landauer-2026-10-28-transition.md",
         "sha256": "d890b076dc0505e4b271da1de93cfac1ef114bc1a7caf9b963d078c8b0042732"
+      },
+      {
+        "path": "refs/quality/evidence/landauer-current-window-2026-11-05.md",
+        "sha256": "ece9119b2a9776e462bfca8f1e29408d03b40bcd15d49aca40b4483c3e8a4c3f"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "전극 점유 차이와 T(E,V)를 전류 적분으로 잇고, V→0과 Θ→0의 극한을 분리해 그렸다.",
-      "baseline_sha256": "6813c06ec99cb1753640a9c20f4bbb99eaad46d7ee8b205c83feab444d8bd2d0"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "52c21d662b062aebec4531947a92c2a805243134a16220d7944950ad376b7939"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "bruneau": {
@@ -109,14 +113,23 @@
           "bruneau",
           "kohler"
         ]
+      },
+      {
+        "claim": "선형응답 전도도는 −df/dE로 가중된 전송이며 한 계단 모드는 역치가 화학퍼텐셜과 같으면 절반이다.",
+        "scope": "유한 온도, 에너지에 독립적인 단위 계단 transmission 및 선형 응답",
+        "status": "supported",
+        "sources": [
+          "bruneau",
+          "kohler"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/negf.md": {
     "status": "pass",
-    "document_sha256": "9ff3f58690c41ce0cc17973551d0ae7c35936575b52276d874d50eefeddce80c",
-    "evidence": "refs/quality/evidence/negf-workflow-2026-11-05.md",
-    "evidence_sha256": "a70ff611c42c3a5b452cd47d3a3a9f2b22678c20a4877f8e2aa9da7473af0104",
+    "document_sha256": "b0d6eaf44abb820bafbd40f08f3e3134e752f53a3037492640b4074df3139b1b",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/negf-workflow.svg": "7b09623a14e4e32579c94fa40e584eb22d7421e313bd5d872189d494d2267f7a"
     },
@@ -124,17 +137,21 @@
       {
         "path": "refs/quality/evidence/negf-2026-10-28.md",
         "sha256": "28668709c323386ca6ef65d77ffeb8a7add4b61e74b63e40b8e0e3ab1c1e0861"
+      },
+      {
+        "path": "refs/quality/evidence/negf-workflow-2026-11-05.md",
+        "sha256": "a70ff611c42c3a5b452cd47d3a3a9f2b22678c20a4877f8e2aa9da7473af0104"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "기존 NEGF 설명은 유지하고, 독립 검토에서 드러난 도식 입력의 혼동을 고쳐 lead 구조·결합, reservoir 점유, 전체 lead-current 식을 구분했다.",
-      "baseline_sha256": "295dc1507854ad621b2b31277e8c80d96eb878be8c866e2fda15945b3daa66a0"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "9ff3f58690c41ce0cc17973551d0ae7c35936575b52276d874d50eefeddce80c"
     },
     "reviewer": {
-      "role": "independent AI reviewers diagram_final_review and wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "papior": {
@@ -197,26 +214,35 @@
           "papior",
           "brandbyge"
         ]
+      },
+      {
+        "claim": "단일 준위 wide-band 모형의 spectral function과 transmission은 전극 결합의 합과 곱에 각각 의존한다.",
+        "scope": "직교 단일 준위, 양의 두 coupling, 일정한 retarded self-energy",
+        "status": "supported",
+        "sources": [
+          "lake_pandey",
+          "brandbyge"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/landauer-buttiker.md": {
     "status": "pass",
-    "document_sha256": "a1b2bfc18daed44eb7bf438212d3a7cda75289b5e5b4b385df1f5bdb0a17f470",
-    "evidence": "refs/quality/evidence/landauer-buttiker-probes-2026-11-05.md",
-    "evidence_sha256": "9363bd0ff7ed17dace2215aea3e3b016637357766e531b7f5eedde5b1901b7bf",
+    "document_sha256": "b43e8f34ac5a40281336e4110e30c9ce3da71753daeb9f279dcc4187663018e4",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/landauer-buttiker-probes.svg": "d63cb66382aaf1221faf9c78cc14efaf06caa14a18999aafd34682ddd15528cb"
     },
     "coverage": {
       "mode": "changes",
-      "description": "각 방향 Tαβ를 독립 표기로 두고 단자 전류식과 세 종류 probe 조건을 분리했다.",
-      "baseline_sha256": "968c206595e71fec96a186d0a0c96924c6a9f5e3a766ec39d798e1e385216f42"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "a1b2bfc18daed44eb7bf438212d3a7cda75289b5e5b4b385df1f5bdb0a17f470"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "papior": {
@@ -314,32 +340,45 @@
           "sanchez_serra",
           "shastry_stafford"
         ]
+      },
+      {
+        "claim": "전압 probe의 단자 전류를 0으로 두면 probe 퍼텐셜과 유효 두 단자 전도도를 소거해 얻는다.",
+        "scope": "isothermal 선형응답의 세 단자, transmission 정의 및 가역적 소거 조건",
+        "status": "supported",
+        "sources": [
+          "sanchez_serra",
+          "forster"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/landauer-buttiker-2026-10-29.md",
         "sha256": "623d0a0a5a2dc7b2d6d032a5073f16beb0058c9d8eebde9084c923cb955f90e3"
+      },
+      {
+        "path": "refs/quality/evidence/landauer-buttiker-probes-2026-11-05.md",
+        "sha256": "9363bd0ff7ed17dace2215aea3e3b016637357766e531b7f5eedde5b1901b7bf"
       }
     ]
   },
   "device-physics/mobility/inversion-layer-mobility.md": {
     "status": "pass",
-    "document_sha256": "4ccb37a0187bb06bebceaed87adae6bf036f30eb51c5ab56f6164284142c4017",
-    "evidence": "refs/quality/evidence/inversion-layer-mobility-2026-11-05.md",
-    "evidence_sha256": "c02e2d884dc5db5735eab6ee2fe240e807ed2bb99a4d0ee634bda2dd1db54d80",
+    "document_sha256": "3c7d9a29d434f1c026ac75c5828b9e0a23720c4c0233d0e834f318ef71af5658",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "device-physics/mobility/images/inversion-layer-mobility.svg": "ba1228b23fc91dc7710ae5780f8ccc1b812aedc9d38d3b4018bb4164dbdddb74"
     },
     "coverage": {
       "mode": "changes",
-      "description": "gate, oxide, semiconductor 및 계면 sheet density의 위치와 저전계 μeff 정의를 연결했다.",
-      "baseline_sha256": "2602c765dcc8745ffce2086313e563198d5d823523531de0ba3243b6087ac7b6"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "4ccb37a0187bb06bebceaed87adae6bf036f30eb51c5ab56f6164284142c4017"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_device_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
@@ -350,7 +389,19 @@
       "b": {
         "provenance": "yeh",
         "url": "https://ir.lib.nycu.edu.tw/server/api/core/bitstreams/a0ea6421-70c5-4a1b-a274-35599989b584/content",
-        "location": "§III"
+        "location": "§IV.A Eqs.(16)–(18)"
+      },
+      "kong": {
+        "url": "https://doi.org/10.1109/16.974720",
+        "location": "§II Eqs.(1)–(3), measured series resistance",
+        "provenance": "kong-yeow-yao-2001",
+        "kind": "primary-research"
+      },
+      "lin2016": {
+        "url": "https://doi.org/10.1109/TED.2016.2532604",
+        "location": "§§I, IV, apparent mobility and ballistic regime",
+        "provenance": "lin-ingaas-2016",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -371,32 +422,45 @@
           "a",
           "b"
         ]
+      },
+      {
+        "claim": "저전계 두 단자 직렬 저항의 보정과 짧은 채널의 apparent mobility는 조건을 구분해야 한다.",
+        "scope": "일정 직렬 저항과 diffusive channel 모형; ballistic 장치 일반화 제외",
+        "status": "supported",
+        "sources": [
+          "kong",
+          "lin2016"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/inversion-layer-mobility-2026-10-30.md",
         "sha256": "32e9a9be4edea65f3a675edcc91e7c048207d3af9f1614db59958784ba491138"
+      },
+      {
+        "path": "refs/quality/evidence/inversion-layer-mobility-2026-11-05.md",
+        "sha256": "c02e2d884dc5db5735eab6ee2fe240e807ed2bb99a4d0ee634bda2dd1db54d80"
       }
     ]
   },
   "device-physics/mobility/matthiessens-rule.md": {
     "status": "pass",
-    "document_sha256": "2dc8373fd60b72c77612db06aa2706649e63c76092819799b06ca7a1a028f444",
-    "evidence": "refs/quality/evidence/matthiessen-rates-2026-11-05.md",
-    "evidence_sha256": "6d7ffa5f2709afb6956cc2bf6f5900685480ca61abaf23a08727decc20d36408",
+    "document_sha256": "ae66412bc25afb56d44b2ed13643be587ed632654f50aaad35ada78f1fc063e1",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "device-physics/mobility/images/matthiessen-rates.svg": "80afbfd99df77a72f3e255191225e7a9e30a0df59ba01f7c66063bc12ce480cb"
     },
     "coverage": {
       "mode": "changes",
-      "description": "에너지별 rate 합과 평균된 이동도 역수 합을 서로 다른 단계로 그렸다.",
-      "baseline_sha256": "23fbfaf51452a963572f3f4f0a3ec58f93b93b7e2167d5d7ccd9af9934ee0463"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "2dc8373fd60b72c77612db06aa2706649e63c76092819799b06ca7a1a028f444"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_device_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
@@ -408,6 +472,18 @@
         "provenance": "lundstrom",
         "url": "https://arxiv.org/pdf/1603.03132",
         "location": "§6"
+      },
+      "kaasbjerg": {
+        "url": "https://arxiv.org/pdf/1612.00469",
+        "location": "§II.A Eqs.(2)–(3), transport weighting",
+        "provenance": "kaasbjerg-low-jauho-2019",
+        "kind": "primary-research"
+      },
+      "hwang": {
+        "url": "https://arxiv.org/pdf/cond-mat/0608645",
+        "location": "p.2 Eq.(1), 2D transport integral",
+        "provenance": "hwang-das-sarma-2006",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -428,32 +504,45 @@
           "a",
           "b"
         ]
+      },
+      {
+        "claim": "에너지별 역산란시간 가산과 에너지 평균 후의 역이동도 가산은 일반적으로 교환되지 않는다.",
+        "scope": "등방적 단일 2D 포물선 밴드, 동일한 평형 가중치와 완화시간 근사",
+        "status": "supported",
+        "sources": [
+          "kaasbjerg",
+          "hwang"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/matthiessens-rule-2026-10-30.md",
         "sha256": "c0a1afd4e1451417e93016aeba26a5e8e4d2d7347cbc186aad17c2511a44974f"
+      },
+      {
+        "path": "refs/quality/evidence/matthiessen-rates-2026-11-05.md",
+        "sha256": "6d7ffa5f2709afb6956cc2bf6f5900685480ca61abaf23a08727decc20d36408"
       }
     ]
   },
   "device-physics/mobility/surface-roughness-scattering.md": {
     "status": "pass",
-    "document_sha256": "f57bb3dfbc49334b53e0ee1167089522d2b85ff220b09d9e4f94dc3ffd6cc83a",
-    "evidence": "refs/quality/evidence/surface-roughness-scattering-2026-11-05.md",
-    "evidence_sha256": "54d28e9b47fceb28d566a9b2d1ca4da7c6579dd94d9f111085d8e8b3d68d4954",
+    "document_sha256": "06f2deb9f5004c7f1e128f1cd3ec7eb688fa719b6878236e588f543ebeb29cfc",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "device-physics/mobility/images/surface-roughness-scattering.svg": "f0667f494f871c5ca3e9060da06c7a9a767e32e71fb6c6dad3ba563690824b25"
     },
     "coverage": {
       "mode": "changes",
-      "description": "높이 통계, C(r)/S(q), 전위 matrix element, elastic transition rate의 순서를 나타냈다.",
-      "baseline_sha256": "35380d50d6c935f2aaf907e8636ba427ffe25be2f5be017679273e16d4ba0675"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "f57bb3dfbc49334b53e0ee1167089522d2b85ff220b09d9e4f94dc3ffd6cc83a"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_device_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
@@ -485,43 +574,68 @@
           "a",
           "b"
         ]
+      },
+      {
+        "claim": "지수형과 Gaussian 계면 상관함수의 2D Fourier spectrum은 q 의존성과 정규화가 다르다.",
+        "scope": "등방성 병진불변, 명시한 sqrt(2) correlation length 및 Fourier convention",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/surface-roughness-scattering-2026-10-30.md",
         "sha256": "41d5db4adf56e8ad8a19e5fa7de386c3314e9d96e6b5b379ffd64443f5fb1a85"
+      },
+      {
+        "path": "refs/quality/evidence/surface-roughness-scattering-2026-11-05.md",
+        "sha256": "54d28e9b47fceb28d566a9b2d1ca4da7c6579dd94d9f111085d8e8b3d68d4954"
       }
     ]
   },
   "device-physics/mobility/defect-scattering.md": {
     "status": "pass",
-    "document_sha256": "0ebd574342ae85cc3bc225ac13859249bd03a1cce8c7f79abe80691307c9f503",
-    "evidence": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
-    "evidence_sha256": "af7d40f736ab084d5f17e0c6f8a352f2350c2d60216a2605aca3670163d20494",
+    "document_sha256": "db999f3ca6d8e2d821611164cdc4cab5cedc6c715a66f2739c381d0239c74028",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "device-physics/mobility/images/defect-scattering-model.svg": "763eaa76a25de0c6b5751262ee60e86feb6ddaa8d81542d83ed4ba2b23df84d5"
     },
     "coverage": {
       "mode": "changes",
-      "description": "Defect 도식에 단일 결함 matrix element 정의, normalization, disorder 평균 제곱행렬원소와 rate-level density/final-state sum을 분리해 반영했다.",
-      "baseline_sha256": "0ffb3f41377d4e10a492dcc45e5ab8211859e63c66dda8fcbd0b17873134d826"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "0ebd574342ae85cc3bc225ac13859249bd03a1cce8c7f79abe80691307c9f503"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_device_audit",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
         "provenance": "hwang",
         "url": "https://arxiv.org/pdf/cond-mat/0608645",
-        "location": "(1)–(3)"
+        "location": "p.2 Eq.(1), transport rate and screening"
       },
       "b": {
         "provenance": "kaasbjerg",
         "url": "https://arxiv.org/pdf/1612.00469",
         "location": "§II"
+      },
+      "ferreira": {
+        "url": "https://arxiv.org/abs/1010.4026",
+        "location": "§III.A Eqs.(45)–(49), T-matrix",
+        "provenance": "ferreira-2011-graphene",
+        "kind": "primary-research"
+      },
+      "jang": {
+        "url": "https://doi.org/10.1126/sciadv.abn3181",
+        "location": "Eq.(3), remote impurity exponential distance",
+        "provenance": "jang-2022-remote",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -542,32 +656,45 @@
           "a",
           "b"
         ]
+      },
+      {
+        "claim": "결함 산란은 single-defect 정규화와 수송 각도 가중을 요구하며 원격 전하의 screened potential에는 거리 인자가 들어간다.",
+        "scope": "독립 희석 결함, Born 전이율, 이상적 2D 차폐 모델",
+        "status": "supported",
+        "sources": [
+          "a",
+          "jang"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/defect-scattering-2026-10-30.md",
         "sha256": "c0e0c876b39a78f7fc9f6e1d05c07a206818bd6524fefc8ec3115bb5fe662f96"
+      },
+      {
+        "path": "refs/quality/evidence/defect-scattering-model-2026-11-05.md",
+        "sha256": "af7d40f736ab084d5f17e0c6f8a352f2350c2d60216a2605aca3670163d20494"
       }
     ]
   },
   "computational-materials-science/quantum-transport/quantum-contact-resistance.md": {
     "status": "pass",
-    "document_sha256": "87da14f16e5c72b9fb9eb201896d3f9f2c42d24ca939b03dbeb5a86d81cfbcef",
-    "evidence": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
-    "evidence_sha256": "7b98d12e743f2c869cbcddfc498cb4d8b108a7ebf506ffbed7ada1794a75ea0a",
+    "document_sha256": "e953c7a7fdd4a4ad9285761a1ac2af1e5476f87580d86f9750540754a00f2961",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/quantum-contact-resistance.svg": "d2813113e291e55dbe6d3390c30c0ca149bbd3246ce9d3b3b6e9ac0ad2d92773"
     },
     "coverage": {
       "mode": "changes",
-      "description": "채널 degeneracy와 전체 two-terminal 값, 대칭 bookkeeping 및 비대칭 contact의 차이를 한 그림에 담았다.",
-      "baseline_sha256": "40b925378cb79b2689b5fb2c338b1b7dc92ea230c8ac559d472898db53cda290"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "87da14f16e5c72b9fb9eb201896d3f9f2c42d24ca939b03dbeb5a86d81cfbcef"
     },
     "reviewer": {
-      "role": "independent AI reviewers wiki_tooling and wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
@@ -623,20 +750,33 @@
           "a",
           "mortensen"
         ]
+      },
+      {
+        "claim": "부분 투과를 포함한 단일 모드의 두 단자 저항은 h/(e²T)이며 spin 및 degeneracy 정의가 필요하다.",
+        "scope": "단일 spin-resolved 채널, 선형 응답, T>0",
+        "status": "supported",
+        "sources": [
+          "a",
+          "b"
+        ]
       }
     ],
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/quantum-contact-resistance-2026-10-30.md",
         "sha256": "3ccb4d119ca235cf3f16eea3babd756710e9554cf08212dba40afab537d4ab99"
+      },
+      {
+        "path": "refs/quality/evidence/quantum-contact-resistance-2026-11-05.md",
+        "sha256": "7b98d12e743f2c869cbcddfc498cb4d8b108a7ebf506ffbed7ada1794a75ea0a"
       }
     ]
   },
   "computational-materials-science/quantum-transport/scba-convergence.md": {
     "status": "pass",
-    "document_sha256": "1f2ce7e805a1a1580be30b5016620e8c0fe8a44c78ee8718cf07657843fa2f90",
-    "evidence": "refs/quality/evidence/scba-workflow-2026-11-05.md",
-    "evidence_sha256": "0750f5412f5aa8b977f5d69625cddf0b39693514fbd7a21cbfe35617ca38424d",
+    "document_sha256": "d8a39ee0662223c47444ee8ff52a7524ff4737bb7319a19deff2c042cff41da8",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/scba-fixed-point.svg": "b9b63a2c647e08f820d3fd710dd4520c0df36eb6c62b400595a044d8b09a9285"
     },
@@ -644,17 +784,21 @@
       {
         "path": "refs/quality/evidence/scba-convergence-2026-10-30.md",
         "sha256": "fd3efd70bfaaee033d8665c3612f5c5c699d1b7a55ef3a44b463b31965508d81"
+      },
+      {
+        "path": "refs/quality/evidence/scba-workflow-2026-11-05.md",
+        "sha256": "0750f5412f5aa8b977f5d69625cddf0b39693514fbd7a21cbfe35617ca38424d"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "SCBA의 Born/self-consistent 용어를 기준 모형 앞에서 정의하고 고정점 도식 설명을 보완했다.",
-      "baseline_sha256": "6a194a73c50ecd4b9abf8548b28d7f6d5e43c6af4f33db5d5d32f8e82b889021"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "1f2ce7e805a1a1580be30b5016620e8c0fe8a44c78ee8718cf07657843fa2f90"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "bescond": {
@@ -711,14 +855,23 @@
           "lee_sanvito",
           "mera"
         ]
+      },
+      {
+        "claim": "전자–포논 SCBA는 에너지 이동된 Green 함수 및 lesser self-energy를 반복 결합하며 residual과 mixing update는 구별된다.",
+        "scope": "선택한 Born diagram, 정상상태 Keldysh와 초기 상관·고립 bound state에 대한 조건",
+        "status": "supported",
+        "sources": [
+          "bescond",
+          "lee_sanvito"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/scattering-qtbm.md": {
     "status": "pass",
-    "document_sha256": "e431b2cb288b1920fe9b3aaf6795878cfb499b6f72f1c2c75944311e7d58d4c7",
-    "evidence": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
-    "evidence_sha256": "225d1a042aa354511931a3901e06a2860ca8e86228bddaa0fdff648a05c9ead8",
+    "document_sha256": "2d2510993bb47f8f603d9cb68ca76913a534b8c9473f07f93e0536ce5565af0a",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/qtbm-workflow.svg": "8333b6f4447a4fb2111bfcbddfbcbe7553bedadd65fbf10f5ed0b45c902bc117"
     },
@@ -726,16 +879,21 @@
       {
         "path": "refs/quality/evidence/scattering-qtbm-2026-10-30.md",
         "sha256": "bb9688662e56eadc0ea3a6ab25a0b31cf8f1f3f774c8eda31d56272be50b20b3"
+      },
+      {
+        "path": "refs/quality/evidence/scattering-qtbm-2026-11-05.md",
+        "sha256": "225d1a042aa354511931a3901e06a2860ca8e86228bddaa0fdff648a05c9ead8"
       }
     ],
     "coverage": {
-      "mode": "full",
-      "description": "QTBM 기초와 산란 확장 문서를 재구성하고 boundary, flux, signed energy-integrated current, closure와 evanescent mode 범위를 검토했다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "e431b2cb288b1920fe9b3aaf6795878cfb499b6f72f1c2c75944311e7d58d4c7"
     },
     "reviewer": {
-      "role": "independent AI reviewers qtbm_citations_final, qtbm_evanescent_review, and wiki_transport_diagram_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-05"
+      "date": "2026-11-09"
     },
     "sources": {
       "frensley": {
@@ -869,14 +1027,23 @@
           "khomyakov",
           "sorensen"
         ]
+      },
+      {
+        "claim": "소자 입사를 +로 정의하면 좌측 입사 시 우측 출사는 − 모드이며 전송률은 mode flux로 정규화한다.",
+        "scope": "탄성 결맞음 산란, 정의된 lead-local 부호 규약",
+        "status": "supported",
+        "sources": [
+          "khomyakov",
+          "frensley"
+        ]
       }
     ]
   },
   "computational-science/atomistic-simulation/dftb-large-scale.md": {
     "status": "pass",
-    "document_sha256": "39e828ead74ee02b23603624f0a7487ffb4ee3c18a5b83c3d41c8540289d884d",
-    "evidence": "refs/quality/evidence/dftb-scc-workflow-2026-10-31.md",
-    "evidence_sha256": "8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72",
+    "document_sha256": "8975c64f5d4ca0d08402145fa451209b341c31bb35b297dea14b48a9547ab15d",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-science/atomistic-simulation/images/scc-workflow.svg": "a5b52b942dfe7f32085ef43aeb11ed487005026f0e45d137cb7a380c87eda58d"
     },
@@ -884,17 +1051,21 @@
       {
         "path": "refs/quality/evidence/dftb-large-scale-2026-10-30.md",
         "sha256": "4a94c7b6ff2582a97782e36c630867a63ea81f6dcaba74de694698c9da1052da"
+      },
+      {
+        "path": "refs/quality/evidence/dftb-scc-workflow-2026-10-31.md",
+        "sha256": "8dacb444cec572465d41acc1ca4cf74ef0a7cd48eaf9aa07ae4651329b590a72"
       }
     ],
     "coverage": {
-      "mode": "meaning-preserving",
-      "description": "원본 SCC fixed-point 그림과 접근성 설명만 추가했으며 기존 과학 주장과 적용 범위를 보존했다.",
-      "baseline_sha256": "3561f23ebf9c3bebd45c9487b44a5ea7c5ea4f67eb53b432f43fa6db57f90fe2"
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "39e828ead74ee02b23603624f0a7487ffb4ee3c18a5b83c3d41c8540289d884d"
     },
     "reviewer": {
-      "role": "independent AI reviewer landauer_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-10-31"
+      "date": "2026-11-09"
     },
     "sources": {
       "a": {
@@ -906,6 +1077,12 @@
         "provenance": "hourahine-2020",
         "url": "https://strathprints.strath.ac.uk/71868/1/Hourahine_etal_JCP_2020_DFTB_plus_a_software_package_for_efficient_approximate.pdf",
         "location": "§II.A.2–3"
+      },
+      "yang2007": {
+        "url": "https://theory.rutgers.edu/resources/pdfs/Yang_JPhysChemA_2007_v111_p10861.pdf",
+        "location": "§II pp.10862–10864, SCC energy and Hamiltonian",
+        "provenance": "yang-2007-scc-dftb",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -917,26 +1094,41 @@
           "a",
           "b"
         ]
+      },
+      {
+        "claim": "비직교 Mulliken 전자수와 SCC-DFTB Hamiltonian 보정은 전자 점유 과잉 Δq convention에서 정의된다.",
+        "scope": "DFTB2, 전자수 부호, 중성 기준 및 주기계의 추가 합",
+        "status": "supported",
+        "sources": [
+          "b",
+          "yang2007"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/dielectric-response.md": {
     "status": "pass",
-    "document_sha256": "9313f64da4a46fa9c82845f9d46d0aa4c846dfbe60cd052335a83331788c4ecd",
-    "evidence": "refs/quality/evidence/dielectric-response-2026-11-06.md",
-    "evidence_sha256": "a219aa73819b3944a3e41283855fc1d7f8cfed88fd785bee057fa29f9c951db8",
+    "document_sha256": "1604d04c8b8293a62b96c47f0087695867171323c879f3a509689e83cb44de85",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/dielectric-response/images/dielectric-response-map.svg": "9a12f5c3a11c87a75213a52448d51fd446d04e224cf944c91f81e3b41a1c1dd9"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/dielectric-response-2026-11-06.md",
+        "sha256": "a219aa73819b3944a3e41283855fc1d7f8cfed88fd785bee057fa29f9c951db8"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "유전 응답을 전자·이온 성분으로 나누고 조화 포논 모드와 Born 유효전하를 연결한다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "9313f64da4a46fa9c82845f9d46d0aa4c846dfbe60cd052335a83331788c4ecd"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature and diagram_audit",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "prx": {
@@ -1000,6 +1192,15 @@
         "sources": [
           "robertson04",
           "robertson06"
+        ]
+      },
+      {
+        "claim": "전기장에 대한 분극 변화는 SI 감수율 텐서와 상대 유전 텐서로 기술한다.",
+        "scope": "절연체의 선형 응답, 평형 분극 기준 및 결정축 투영",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
         ]
       }
     ]
@@ -1722,21 +1923,27 @@
   },
   "computational-materials-science/electron-phonon-coupling/electron-phonon-coupling.md": {
     "status": "pass",
-    "document_sha256": "c3c803f7986e267c860babd9a43af148b768412685bfd12a28b74e5ca3795a39",
-    "evidence": "refs/quality/evidence/electron-phonon-coupling-2026-11-06.md",
-    "evidence_sha256": "f70a584aafd7b48ee57415c7b520a4e1e70eb40722e4d60071d8c3b000acd075",
+    "document_sha256": "8fc6ec771b25b474e4109722bcdd84dbd19b352c717728fc2a6e4d12d479a2c9",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/electron-phonon-coupling/images/eph-workflow.svg": "0baaecd332809a54ccb53c8116016ceab3ec38b4b945abd164e04151568eb766"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/electron-phonon-coupling-2026-11-06.md",
+        "sha256": "f70a584aafd7b48ee57415c7b520a4e1e70eb40722e4d60071d8c3b000acd075"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "힘상수·동역학 행렬·포논 모드와 전자–포논 결합 행렬원소의 관계를 연결한다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "c3c803f7986e267c860babd9a43af148b768412685bfd12a28b74e5ca3795a39"
     },
     "reviewer": {
-      "role": "independent AI reviewer eph_sources and diagram_audit",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "giustino": {
@@ -1753,6 +1960,18 @@
         "provenance": "epw-theory-docs",
         "url": "https://docs.epw-code.org/Theory.html",
         "location": "Eqs. (3)–(13), (28)–(36); sections Phonons, e-ph matrix elements, long-range terms, self-energy"
+      },
+      "gpaw": {
+        "url": "https://gpaw.readthedocs.io/documentation/elph/elph.html",
+        "location": "Electron-phonon coupling, reciprocal-space matrix element and absorption/emission",
+        "provenance": "gpaw-elph-documentation",
+        "kind": "primary-research"
+      },
+      "pourfath": {
+        "url": "https://www.iue.tuwien.ac.at/phd/pourfath/node49.html",
+        "location": "Electron-phonon interaction and scattering processes",
+        "provenance": "pourfath-transport",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -1782,26 +2001,41 @@
           "epw",
           "giustino"
         ]
+      },
+      {
+        "claim": "전자–포논 흡수와 방출은 각각 k+q와 k−q 최종 상태, Bose 점유 및 에너지 보존을 포함한다.",
+        "scope": "조화 포논 bath, 약결합 황금률, 유한 결정 정규화",
+        "status": "supported",
+        "sources": [
+          "giustino",
+          "gpaw"
+        ]
       }
     ]
   },
   "computational-materials-science/electron-phonon-coupling/electron-phonon-self-energy.md": {
     "status": "pass",
-    "document_sha256": "31e130953c3b3a5aa68d7e88ba7d250510a0b78bd6388fb20d54d0e09b325c1f",
-    "evidence": "refs/quality/evidence/electron-phonon-self-energy-2026-11-06.md",
-    "evidence_sha256": "2cff6f97fde555a50f34612eefd7787668e993a360c785e7fd2cc8832aa8867c",
+    "document_sha256": "b7aed14e009e26e19ec2a8dc39ec4e91513d8b727307f5c9b71ac6e672d602bc",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/electron-phonon-coupling/images/eph-self-energy.svg": "c455b61dbb0de41df1faab0a9840151c33a50fcc0f2fd56f4b5f83a255d0f8a8"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/electron-phonon-self-energy-2026-11-06.md",
+        "sha256": "2cff6f97fde555a50f34612eefd7787668e993a360c785e7fd2cc8832aa8867c"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Fan–Migdal과 Debye–Waller self-energy 및 준입자 근사의 에너지·수명 해석을 설명한다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "31e130953c3b3a5aa68d7e88ba7d250510a0b78bd6388fb20d54d0e09b325c1f"
     },
     "reviewer": {
-      "role": "independent AI reviewer eph_sources and diagram_audit",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-09"
     },
     "sources": {
       "epw": {
@@ -1847,23 +2081,32 @@
           "giustino",
           "ponce23"
         ]
+      },
+      {
+        "claim": "retarded Green 함수의 허수부로 스펙트럼 함수를 정의하며 일정한 복소 self-energy는 Lorentzian 피크와 수명을 준다.",
+        "scope": "밴드 대각·단일 준위 예시, energy-independent self-energy",
+        "status": "supported",
+        "sources": [
+          "epw",
+          "giustino"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/long-channel-transport.md": {
-    "evidence": "refs/quality/evidence/long-channel-transport-kpm-dfth-links-2026-11-08.md",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
     },
     "coverage": {
       "mode": "changes",
-      "description": "Added explicit links that identify DFTH-NEGF and nonorthogonal KPM as separate steps in the HamGNN workflow.",
-      "baseline_sha256": "e7da664b4f3807761be85246357d48d1860ab08496c65d194d65062303c825b7"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "3806c05e657624888d1d9c30277ee507a1f334456208d52f70b78ba609ea0278"
     },
     "reviewer": {
-      "role": "independent AI reviewer diagram_final_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "soler": {
@@ -1932,38 +2175,51 @@
           "siesta",
           "zou"
         ]
+      },
+      {
+        "claim": "RGF와 Order-N DFT의 선형성은 서로 다른 크기 변수와 고정 조건을 갖는다.",
+        "scope": "고정 단면·에너지/k점에 대한 RGF, 고정 연결 범위의 DFT",
+        "status": "supported",
+        "sources": [
+          "papior",
+          "soler"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "3806c05e657624888d1d9c30277ee507a1f334456208d52f70b78ba609ea0278",
-    "evidence_sha256": "8d86634cbfc18c44826452690ec95f907fb1ddad223c048f78d40983b438f6d5",
+    "document_sha256": "e15e94b94d59c352bf68c608a49828b9e3ca2ba85641ffe3624710dc938c9d71",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/long-channel-transport-crosslink-2026-11-08.md",
         "sha256": "ad31332ee4ecd3ea5517db479679bb0f3182d05de36343c0b73597a8fbdb4834"
+      },
+      {
+        "path": "refs/quality/evidence/long-channel-transport-kpm-dfth-links-2026-11-08.md",
+        "sha256": "8d86634cbfc18c44826452690ec95f907fb1ddad223c048f78d40983b438f6d5"
       }
     ]
   },
   "computational-materials-science/quantum-transport/hamiltonian-block-stitching.md": {
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/block-stitching.svg": "3d66c848a1e7b380971932d0693f8f385cc7a9a2d1efeaeb2038c67556885788"
     },
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "d50ca8e43e1ace7dc040a7f1265a2207148735bdd2f549033eafa77d3cb7ef5f"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "087e6d430d2b482cbd5ca69d0f0fbd5a85c6949b6cc8e7bb810f42d2afe21e85"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "soler": {
         "provenance": "soler-2002-siesta",
         "url": "https://doi.org/10.1088/0953-8984/14/11/302",
-        "location": "§§III–VI basis/matrix elements; §XIV Order-N functional",
+        "location": "§§III–VI, XIII, localized basis and order-N",
         "kind": "primary-research"
       },
       "siesta": {
@@ -1993,7 +2249,7 @@
       "papior": {
         "provenance": "papior-2017-transiesta",
         "url": "https://arxiv.org/abs/1607.04464",
-        "location": "§III.C.1, Eqs. (17)–(18); recursive Green function method",
+        "location": "§III.C.1, Eqs.(17)–(18); §III.E electrostatics",
         "kind": "primary-research"
       },
       "wimmer": {
@@ -2048,32 +2304,45 @@
           "soler",
           "tbtrans"
         ]
+      },
+      {
+        "claim": "인접 principal layer의 좌측 연결 Green 함수는 비직교 K=zS−H 블록을 재귀적으로 소거해 계산한다.",
+        "scope": "전극 self-energy가 첫·마지막 층에 작용하고 인접층 결합인 경우",
+        "status": "supported",
+        "sources": [
+          "wimmer",
+          "papior"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "087e6d430d2b482cbd5ca69d0f0fbd5a85c6949b6cc8e7bb810f42d2afe21e85",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "88c02049080cb0a982a30d31ce0cead4dcd75cb1e67727eb5fee6bee8a378e98",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/hamiltonian-block-stitching-2026-11-08.md",
         "sha256": "eab98566cdd5ac4bf52c468db60eb886c7a9bc4009f5a46e9c47efe48e0cd171"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ]
   },
   "computational-materials-science/quantum-transport/ml-hamiltonian-transport.md": {
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/ml-hamiltonian-overview.svg": "8438aa63b6c07600cf291a9007c2a192744c1cd4ad346bd3c3568c39e82d6784"
     },
     "coverage": {
-      "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "4efc76ac3ace20d2204c2094df938cae54516a9689bd9106c58cc1f4ba2af102"
+      "mode": "meaning-preserving",
+      "description": "기존 개념의 문맥 링크",
+      "baseline_sha256": "5f125fb0920da0b01cd3588da67c6684edce15ccf6f2d4263ce01d29d83eabdf"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "deeptb": {
@@ -2156,8 +2425,8 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "5f125fb0920da0b01cd3588da67c6684edce15ccf6f2d4263ce01d29d83eabdf",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "332c0e32bca79a342542a250d0c20660638c1c70b170a33f80f491837e3120eb",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/ml-hamiltonian-transport-2026-11-08.md",
@@ -2166,24 +2435,28 @@
       {
         "path": "refs/quality/evidence/ml-hamiltonian-transport-crosslink-2026-11-08.md",
         "sha256": "ad84ca31e3f2f44627c0b1dd1dc6c66f24f44bf7f336486f3ec5e285feedfd93"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ]
   },
   "computational-science/atomistic-simulation/order-n-dft.md": {
-    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
     "assets": {
       "computational-science/atomistic-simulation/images/order-n-locality.svg": "ea37f85f45b4a1843154356ab31755ea7e9cd9789b91c60b2d0de074f4857640",
       "computational-science/atomistic-simulation/images/onetep-2020-fig7.png": "824baf69a7658e10b23544401fcfd1e712d4834f78356fa75a1cc6a813985f42"
     },
     "coverage": {
       "mode": "changes",
-      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
-      "baseline_sha256": "5279b2506bee0c4563b0a7d7b3e58ea95f29042c898ae551eda5a0553a9aadf6"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "215b6f3c6d9c95b9ad576d4bda0c7d6e99483d73bd3b82effd69120757309cc8"
     },
     "reviewer": {
-      "role": "independent AI reviewers inventory and paper_figs",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "soler": {
@@ -2275,11 +2548,20 @@
         "sources": [
           "onetep2020"
         ]
+      },
+      {
+        "claim": "비직교 단일 스핀 밀도행렬은 정수 점유에서 PSP=P이며 희소 저장만으로 전체 실행시간의 선형성을 보장하지 않는다.",
+        "scope": "고정 연결 수 및 0 K 정수 점유와 별도의 전체 solver 비용",
+        "status": "supported",
+        "sources": [
+          "soler",
+          "benzi"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "215b6f3c6d9c95b9ad576d4bda0c7d6e99483d73bd3b82effd69120757309cc8",
-    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "document_sha256": "0bbd6e1e57799f4fccc42739ccbf71b0a3419dce32843527ee59516ce3b9f644",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/order-n-dft-2026-11-08.md",
@@ -2288,14 +2570,18 @@
       {
         "path": "refs/quality/evidence/order-n-dft-crosslink-2026-11-08.md",
         "sha256": "e761f9596a215c315d3cfe9fe44470248712c9122184784c7666bca41f1e9984"
+      },
+      {
+        "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+        "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
       }
     ]
   },
   "computational-science/atomistic-simulation/localized-basis-sets.md": {
     "status": "pass",
-    "document_sha256": "40cf679931d2535499a1828baee81f7cf26fe401c196d7b15eae89f1cd3980b6",
-    "evidence": "refs/quality/evidence/localized-basis-sets-scope-update-2026-11-08.md",
-    "evidence_sha256": "82396241fd67b10a53e2a4545c4a96dc0decbfd6d60e5e156645c363a3716d8a",
+    "document_sha256": "75ec2d9b7cc3c9176556898c5087aa5e8d1710a99f5aa1e287c01ad5c7139be8",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-science/atomistic-simulation/images/basis-validation-workflow.svg": "3c4fed395b49c6fbdb9b53975ab4d66038ef033794d6e6b66c41a970112d69b1"
     },
@@ -2303,17 +2589,21 @@
       {
         "path": "refs/quality/evidence/localized-basis-sets-2026-11-08.md",
         "sha256": "6ad8194204d4331db8672ccc3e31eee44027ff74feafc1cb2922a7f4b369fc90"
+      },
+      {
+        "path": "refs/quality/evidence/localized-basis-sets-scope-update-2026-11-08.md",
+        "sha256": "82396241fd67b10a53e2a4545c4a96dc0decbfd6d60e5e156645c363a3716d8a"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "Removed personal MoS2 device guidance while retaining general basis-selection claims and literature examples.",
-      "baseline_sha256": "add66656416f75a1a024ceaf49cf7d52458e27497e1c85cb05c9bd2d1addd198"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "40cf679931d2535499a1828baee81f7cf26fe401c196d7b15eae89f1cd3980b6"
     },
     "reviewer": {
-      "role": "independent AI reviewer kpm_dfth_science_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "siesta": {
@@ -2351,6 +2641,18 @@
         "url": "https://in4.iue.tuwien.ac.at/pdfs/sispad2019/SISPAD_4.1.pdf",
         "location": "pp. 70–72, Figs. 2 and 4",
         "kind": "primary-research"
+      },
+      "soler": {
+        "url": "https://arxiv.org/html/cond-mat/0111138",
+        "location": "§§III–VI, localized basis and overlap",
+        "provenance": "soler-2002-siesta",
+        "kind": "primary-research"
+      },
+      "lin2013": {
+        "url": "https://arxiv.org/html/1202.2159",
+        "location": "Eqs.(6), (10)–(12), (32), nonorthogonal density matrix",
+        "provenance": "lin-2013-pexsi",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -2381,14 +2683,23 @@
           "quhe",
           "ducry_mode"
         ]
+      },
+      {
+        "claim": "양의 정부호 overlap의 비직교 기저에서 일반화 고유값 문제와 N=Tr(PS)가 성립한다.",
+        "scope": "기저 선형독립, 점유수와 spin/k점 convention 명시",
+        "status": "supported",
+        "sources": [
+          "soler",
+          "lin2013"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/basis-set-validation-cases.md": {
     "status": "pass",
-    "document_sha256": "42540248b7fb32cd3679fb5a777a104bd68884dfb9b66a3c813f57f393722868",
-    "evidence": "refs/quality/evidence/basis-set-validation-figure-update-2026-11-08.md",
-    "evidence_sha256": "94dcff5873abd5a669bae5824089c1d7677f908c5d99cac760882ac5ba1d3a43",
+    "document_sha256": "f178cb93e65a0cf5be401f62ebed3f9a30e91c335b32d4858f1a73fa8bbfd0f4",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/afzalian-2021-fig1.png": "6b397b51838334b39a1d74c4badb55d828332b8b1d8c9b574eba81f65971100d",
       "computational-materials-science/quantum-transport/images/afzalian-2021-fig2.png": "578dac7c2ef68fae399deef8f05c3a67750a7421aa5b270ba261fff094046975"
@@ -2397,6 +2708,10 @@
       {
         "path": "refs/quality/evidence/basis-set-validation-cases-2026-11-08.md",
         "sha256": "fbe717fa013799cd2720ab55065dbe60d391b5fd2599ce7ae98c96465ad33092"
+      },
+      {
+        "path": "refs/quality/evidence/basis-set-validation-figure-update-2026-11-08.md",
+        "sha256": "94dcff5873abd5a669bae5824089c1d7677f908c5d99cac760882ac5ba1d3a43"
       }
     ],
     "supplemental_evidence": [
@@ -2406,14 +2721,14 @@
       }
     ],
     "coverage": {
-      "mode": "changes",
-      "description": "기존 여섯 문헌 사례 설명을 유지하고, Afzalian et al. Fig. 2의 Hamiltonian 표현 비교 원그림과 범위 제한 설명을 추가했다.",
-      "baseline_sha256": "48b8105ddbc21838f569d1e3fcb4801bc56cb43fd35c6d81c51d525f49ebd553"
+      "mode": "meaning-preserving",
+      "description": "기존 개념의 문맥 링크",
+      "baseline_sha256": "42540248b7fb32cd3679fb5a777a104bd68884dfb9b66a3c813f57f393722868"
     },
     "reviewer": {
-      "role": "independent AI reviewers paper_figure_audit and basis_solver_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "ducry2026": {
@@ -2520,9 +2835,9 @@
   },
   "computational-science/atomistic-simulation/electronic-structure-solvers.md": {
     "status": "pass",
-    "document_sha256": "1414e9ca4b89dc4b1e4ff8d724da07011f9c6bae24d86a9bb8ab61741bcc97b5",
-    "evidence": "refs/quality/evidence/electronic-structure-solvers-figure-update-2026-11-08.md",
-    "evidence_sha256": "d0cb3d1382a1e50c60f5ebe0980b087392245be6152dbba124676f0e2e3d0d4f",
+    "document_sha256": "a1cf19d22f04704b59a15c58a0bbfdeff8a787ec2ae678b866fb4c577d517d86",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-science/atomistic-simulation/images/dftbplus-hourahine-2020-fig5-cd.png": "c3b499a0a9615e85decac3a8b1d4721027bc4cc84483475f14eccea7a7d62ab3",
       "computational-science/atomistic-simulation/images/solver-and-transport-roles.svg": "065f4ff39a336fb3c398995a4a348a4267c67e6b78be4237b813320d8b12acaa"
@@ -2531,6 +2846,10 @@
       {
         "path": "refs/quality/evidence/electronic-structure-solvers-2026-11-08.md",
         "sha256": "94769dcd1491312d16ec62016285092f5286d558be66aceece5f59bc0ccedcaa"
+      },
+      {
+        "path": "refs/quality/evidence/electronic-structure-solvers-figure-update-2026-11-08.md",
+        "sha256": "d0cb3d1382a1e50c60f5ebe0980b087392245be6152dbba124676f0e2e3d0d4f"
       }
     ],
     "supplemental_evidence": [
@@ -2541,13 +2860,13 @@
     ],
     "coverage": {
       "mode": "changes",
-      "description": "기존 solver 설명을 유지하고 Hourahine et al. Fig. 5(c,d) 원그림, 비-SCC·spin·k-point benchmark 조건 및 해석 한계를 추가했다.",
-      "baseline_sha256": "4e5b996ed7aa843e6f18f8083a515a52d3c82a81b53d99657706a619e5fbb4c6"
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "1414e9ca4b89dc4b1e4ff8d724da07011f9c6bae24d86a9bb8ab61741bcc97b5"
     },
     "reviewer": {
-      "role": "independent AI reviewers paper_figure_audit and basis_solver_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "siesta": {
@@ -2652,6 +2971,15 @@
         "sources": [
           "hourahine2020"
         ]
+      },
+      {
+        "claim": "PEXSI는 pole마다 이동 행렬 역의 선택 원소를, CheSS는 Chebyshev 전개로 행렬 함수를 계산한다.",
+        "scope": "실수 대칭 H,S의 PEXSI와 직교 기저 Chebyshev 설명 예시",
+        "status": "supported",
+        "sources": [
+          "pexsi2013",
+          "chess"
+        ]
       }
     ]
   },
@@ -2752,9 +3080,9 @@
   },
   "computational-materials-science/quantum-transport/dfth-negf.md": {
     "status": "pass",
-    "document_sha256": "108f3046c3b68f2223fa5bcfed9ce0d3961f09eb27b0c3f37c3a8881e3713292",
-    "evidence": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
-    "evidence_sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1",
+    "document_sha256": "ce4fef06ac53607e272d7579fa1024a358a595f1c5650fec8096d8073fe94143",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/dfth-negf-workflow.svg": "a2854b49a9b6eb5cc0875d2eb1c532a8e8505bb215d414768557daf26e656114"
     },
@@ -2762,15 +3090,19 @@
       {
         "path": "refs/quality/evidence/dfth-negf-2026-11-08.md",
         "sha256": "6ad46638abc4941b8f84df3f32c3702a55638b28093de24c25a3858d5cfa5641"
+      },
+      {
+        "path": "refs/quality/evidence/dielectric-paper-depth-review-2026-11-09.md",
+        "sha256": "2676b2599f683b029962bdf84c01b623d7b3feb111e1a7f029759573b7681be1"
       }
     ],
     "coverage": {
       "mode": "meaning-preserving",
-      "description": "이론 링크·서식",
-      "baseline_sha256": "ec8ff055836992c3309b1afbffdb5ea04c96a0f2cfef2e6d2e81ec9b35e2ba68"
+      "description": "기존 개념의 문맥 링크",
+      "baseline_sha256": "108f3046c3b68f2223fa5bcfed9ce0d3961f09eb27b0c3f37c3a8881e3713292"
     },
     "reviewer": {
-      "role": "independent AI reviewers paper_inventory, papers_yim_lee, paper_takigawa and integrating reviewer, as scoped in evidence",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
       "date": "2026-11-09"
     },
@@ -2849,22 +3181,28 @@
   },
   "computational-materials-science/quantum-transport/nonorthogonal-kpm.md": {
     "status": "pass",
-    "document_sha256": "76f7914b06cf674bac2f7b68c002ca502da436c7613c54e418f26db13639dd45",
-    "evidence": "refs/quality/evidence/nonorthogonal-kpm-2026-11-08.md",
-    "evidence_sha256": "f85ae09800bbea36fa731fb29f298534b38facb35f0c22cb6dc35fe2c66317b4",
+    "document_sha256": "40a48abc03992ec291d53b7795c2855ebfb0f89667fce6f9f38fe1241386d8a8",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/kpm-gibbs-oscillations.svg": "f56c84f24e8a683fc83eb5efba6068185569c28a8b7d04a159c98163aa929f61",
       "computational-materials-science/quantum-transport/images/nonorthogonal-kpm-workflow.svg": "a2086c0860666ca96258a2e1c5eb48062458bdaa5616cc3fa75a3e1e8c77a4c5"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/nonorthogonal-kpm-2026-11-08.md",
+        "sha256": "f85ae09800bbea36fa731fb29f298534b38facb35f0c22cb6dc35fe2c66317b4"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "비직교 generalized eigenproblem, Chebyshev DOS, electron-number Fermi search, KPM convergence and HamGNN scope."
+      "mode": "meaning-preserving",
+      "description": "기존 개념의 문맥 링크",
+      "baseline_sha256": "76f7914b06cf674bac2f7b68c002ca502da436c7613c54e418f26db13639dd45"
     },
     "reviewer": {
-      "role": "independent AI reviewer kpm_dfth_science_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "roder": {
@@ -2942,14 +3280,19 @@
   },
   "computational-materials-science/quantum-transport/mode-space-transport.md": {
     "status": "pass",
-    "document_sha256": "e443166a0ee7b79b3017aee9d5120870cd4292bd7b8b32598f03b73cd4ceaa7c",
-    "evidence": "refs/quality/evidence/mode-space-transport-2026-11-08.md",
-    "evidence_sha256": "55818cde0ac1a71029bffd71216e174e71004c0e844380144cf6d94cab6d9daa",
+    "document_sha256": "4d2e73f4fb9cd990bd1cbe8b6c867134c9c77f16aa404cad457cd75d2638dfc5",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/carrillo-nunez-2020-fig2.png": "50319c7751a8aea3eb6e8d656a788cdb0c169f8847e59984929e01ac9b35b305",
       "computational-materials-science/quantum-transport/images/mode-space-workflow.svg": "5956a3a7296665507243c04e26189dbce77a3fdc9824381c56b989ba439efcf1"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/mode-space-transport-2026-11-08.md",
+        "sha256": "55818cde0ac1a71029bffd71216e174e71004c0e844380144cf6d94cab6d9daa"
+      }
+    ],
     "supplemental_evidence": [
       {
         "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
@@ -2957,13 +3300,14 @@
       }
     ],
     "coverage": {
-      "mode": "full",
-      "description": "Mode-space 표현, 접촉과 비직교 overlap, 점유·밀도·전류, 모드 결합 및 산란 근사와 RGF 비용 조건을 설명한다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "e443166a0ee7b79b3017aee9d5120870cd4292bd7b8b32598f03b73cd4ceaa7c"
     },
     "reviewer": {
-      "role": "independent AI reviewers new_article_fact_review, mode_space_factcheck, and paper_figure_audit",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "luisier2006": {
@@ -3055,18 +3399,32 @@
         "sources": [
           "carrillo2020"
         ]
+      },
+      {
+        "claim": "완전 기저의 유지·제거 행렬 블록에서 Schur complement는 제거 공간의 에너지 의존 결합을 준다.",
+        "scope": "KQQ 가역, 비직교 K=zS−H−Σ 행·열 블록",
+        "status": "supported",
+        "sources": [
+          "luisier2006",
+          "papior2017"
+        ]
       }
     ]
   },
   "computational-materials-science/quantum-transport/overview.md": {
     "status": "pass",
-    "document_sha256": "734599feb33072669f4e11978a2bb4515aa26fe04832a62bc11cd6c9ba9229ba",
-    "evidence": "refs/quality/evidence/open-transport-overview-2026-11-08.md",
-    "evidence_sha256": "092712316594a45c21e6fcb2cb8a2db30136699ba1541284ce232d73f38a8b14",
+    "document_sha256": "e6eb1f615f6dc5908c533103e8f553ae5eadb75e6a8aaa4e0b047f295c331450",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-materials-science/quantum-transport/images/open-transport-overview.svg": "4371cc5a657c9c740a73b810549afcab8026b5e5f3a46ecd6a185c8da3fbfaac"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/open-transport-overview-2026-11-08.md",
+        "sha256": "092712316594a45c21e6fcb2cb8a2db30136699ba1541284ce232d73f38a8b14"
+      }
+    ],
     "supplemental_evidence": [
       {
         "path": "refs/quality/evidence/overview-diagrams-2026-10-31.md",
@@ -3074,13 +3432,14 @@
       }
     ],
     "coverage": {
-      "mode": "full",
-      "description": "두 단자 정상상태 탄성·결맞음 수송에서 NEGF, QTBM과 Landauer 관계의 역할을 구분한다."
+      "mode": "changes",
+      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
+      "baseline_sha256": "734599feb33072669f4e11978a2bb4515aa26fe04832a62bc11cd6c9ba9229ba"
     },
     "reviewer": {
-      "role": "independent AI reviewer new_article_fact_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "papior2017": {
@@ -3151,19 +3510,33 @@
           "brandbyge2002",
           "frensley1990"
         ]
+      },
+      {
+        "claim": "열린 경계 전극의 self-energy와 reservoir 점유는 서로 다른 입력이며 탄성 한계의 순전류는 점유 차이에 의존한다.",
+        "scope": "정상상태 두 단자와 동온 평형 조건",
+        "status": "supported",
+        "sources": [
+          "papior2017",
+          "brandbyge2002"
+        ]
       }
     ]
   },
   "computational-science/atomistic-simulation/siesta-54-omm.md": {
     "status": "pass",
-    "document_sha256": "e805d88fba11fdac8c4ca110034af45f58fb7f451aeb8486dd030356e0e84961",
-    "evidence": "refs/quality/evidence/siesta-54-omm-2026-11-08.md",
-    "evidence_sha256": "37a652b815820be32a6d599ad790ba94e9127ed11a66f3bb78e122c29d093d33",
+    "document_sha256": "353cd03500af3b516a66eb164a558b155d001e9a9bc7a49f904e15e6c100448f",
+    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
     "assets": {
       "computational-science/atomistic-simulation/images/omm-2023-fig2.png": "b5a12b4e2a79c7ffbb101e4b639e3e29c4f35cfac5783bb1c7b6445d65ae872c",
       "computational-science/atomistic-simulation/images/omm-workflow.svg": "4d7e065e17b982d19f6fa535c993d784b9d438c61cd02f1dde8bec690829b2e3"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/siesta-54-omm-2026-11-08.md",
+        "sha256": "37a652b815820be32a6d599ad790ba94e9127ed11a66f3bb78e122c29d093d33"
+      }
+    ],
     "supplemental_evidence": [
       {
         "path": "refs/quality/evidence/paper-figure-reuse-2026-11-08.md",
@@ -3171,13 +3544,14 @@
       }
     ],
     "coverage": {
-      "mode": "full",
-      "description": "SIESTA 5.4 native OMM의 점유 부분공간 functional, SCF·MD 반복, 입력 제약과 유사 이름의 solver 경로 구분을 설명한다."
+      "mode": "meaning-preserving",
+      "description": "기존 개념의 문맥 링크",
+      "baseline_sha256": "e805d88fba11fdac8c4ca110034af45f58fb7f451aeb8486dd030356e0e84961"
     },
     "reviewer": {
-      "role": "independent AI reviewer new_article_fact_review",
+      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
       "independent": true,
-      "date": "2026-11-08"
+      "date": "2026-11-09"
     },
     "sources": {
       "siesta54": {

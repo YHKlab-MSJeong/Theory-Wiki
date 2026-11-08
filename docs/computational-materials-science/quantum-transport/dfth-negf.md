@@ -52,7 +52,7 @@ DFTH-NEGF에서는 수송 자기일관 피드백을 생략한다. 고정된 주�
 
 ## 3. DFTH-NEGF와 HamGNN-NEGF의 관계
 
-이 논문에서 DFTH-NEGF는 수송 계산부를 뜻한다. Figure 1의 HamGNN-NEGF 경로에서 학습 모델을 빼고 기존 DFT로 계산한 Hamiltonian을 넣으면 DFTH-NEGF가 된다. HamGNN-NEGF에서는 같은 종류의 수송 계산에 들어가는 device Hamiltonian을 학습된 모델이 예측한다. 따라서 차이는 NEGF 자체보다 장치 Hamiltonian을 만드는 방법에 있다. [1, Fig. 1 caption]
+이 논문에서 DFTH-NEGF는 수송 계산부를 뜻한다. Figure 1의 [HamGNN-NEGF](hamgnn-negf.md) 경로에서 학습 모델을 빼고 기존 DFT로 계산한 Hamiltonian을 넣으면 DFTH-NEGF가 된다. HamGNN-NEGF에서는 같은 종류의 수송 계산에 들어가는 device Hamiltonian을 학습된 모델이 예측한다. 따라서 차이는 NEGF 자체보다 장치 Hamiltonian을 만드는 방법에 있다. [1, Fig. 1 caption]
 
 전극 Hamiltonian과 overlap에서 self-energy를 만드는 일, 중심부 Hamiltonian을 고정하는 일, \(G^r\)에서 transmission을 계산하는 일은 서로 다른 단계다. 특히 학습 Hamiltonian을 사용해도 고정 전위가 적절한지, 전극 정렬이 맞는지, 열린계 전하 변화가 작다는 점이 자동으로 보장되지는 않는다.
 

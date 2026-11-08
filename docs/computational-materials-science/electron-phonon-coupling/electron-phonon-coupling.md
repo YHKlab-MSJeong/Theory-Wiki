@@ -64,13 +64,34 @@ g_{mn\nu}(\mathbf k,\mathbf q)
 
 대표적 계산 흐름은 전자 바닥상태 DFT, DFPT 포논·퍼텐셜 응답, 거친 \(\mathbf k/\mathbf q\) 격자에서 \(g\) 계산, Wannier 공간 보간, 조밀 격자에서의 적분이다. Wannier 보간은 적은 수의 직접 계산을 조밀 격자로 확장하는 계산 기법이지만, Wannier 함수의 국소화와 에너지 창 및 격자 수렴을 따로 확인해야 한다. [1, §III; 2, “Wannier-Fourier interpolation”]
 
-극성 절연체에서는 장거리 Fröhlich 항이 \(\mathbf q\to0\)에서 특이해질 수 있다. 이 항은 BEC와 \(\varepsilon^\infty\)에 연결되므로, 짧은 범위 항의 단순 보간에 맡기지 않고 장거리 기여를 분리하는 처리가 필요하다. [1, §III.B; 2, “Long-range contributions”]
+극성 절연체에서는 장거리 Fröhlich 항이 \(\mathbf q\to0\)에서 특이해질 수 있다. 이 항은 [Born 유효전하(BEC)](../dielectric-response/born-effective-charge.md)와 고정 이온 [전자 유전 텐서](../dielectric-response/dielectric-response.md) \(\varepsilon^\infty\)에 연결되므로, 짧은 범위 항의 단순 보간에 맡기지 않고 장거리 기여를 분리하는 처리가 필요하다. [1, §III.B; 2, “Long-range contributions”]
 
-## 4. 의미와 적용 범위
+
+## 4. 행렬원소에서 흡수·방출 전이율까지
+
+조화 포논 bath와 약한 전자–포논 상호작용을 가정하면 초기 전자 \((n,\mathbf k)\)에서 최종 밴드 \(m\)으로 가는 개별 포논 모드의 전이율을 Fermi 황금률로 표현할 수 있다. 포논 \((\mathbf q,\nu)\)의 Bose 점유수를 \(N_{\mathbf q\nu}\)라고 하자. 흡수에서는 최종 전자 파수가 \(\mathbf k+\mathbf q\), 방출에서는 \(\mathbf k-\mathbf q\)다. 파수의 동등성은 역격자 벡터를 법으로 판단한다. 위 절의 단위 셀 정규화 행렬원소 \(g\)를 쓰고, 유한 Born–von Kármán 결정의 단위 셀 수를 \(N_{\rm cell}\)이라 두면
+
+\[
+W^{\mathrm{abs}}_{n\mathbf k\to m,\mathbf k+\mathbf q}=
+\frac{2\pi}{\hbar N_{\rm cell}}|g_{mn\nu}(\mathbf k,\mathbf q)|^2
+N_{\mathbf q\nu}\,\delta(\varepsilon_{m,\mathbf k+\mathbf q}-\varepsilon_{n\mathbf k}-\hbar\omega_{\mathbf q\nu}),
+\]
+\[
+W^{\mathrm{em}}_{n\mathbf k\to m,\mathbf k-\mathbf q}=
+\frac{2\pi}{\hbar N_{\rm cell}}|g_{nm\nu}(\mathbf k-\mathbf q,\mathbf q)|^2
+(N_{\mathbf q\nu}+1)\,\delta(\varepsilon_{m,\mathbf k-\mathbf q}-\varepsilon_{n\mathbf k}+\hbar\omega_{\mathbf q\nu}).
+\]
+
+두 번째 식의 행렬원소는 역방향 흡수 진폭의 Hermitian 켤레를 사용한 것이다. 각 식의 \(1/N_{\rm cell}\)은 유한 결정의 단일 포논 연산자 정규화에서 왔다. 구현마다 단위 셀과 Fourier 정규화에 이 인자를 포함시키는 방법이 다르므로 전체 \(\mathbf q\) 합과 함께 비교해야 한다. \(\delta\)는 전자가 포논 에너지만큼 얻거나 잃는 에너지 보존을 나타낸다. 이 식은 한 모드의 전이 확률밀도이며 전체 산란률을 구하려면 가능한 최종 밴드와 \(\mathbf q,\nu\)를 합해야 한다. 점유된 전자계에서는 초기·최종 전자 점유와 Pauli 차단도 별도로 반영한다. [1, §§III.B, V.B; 2, Eq. (28)]
+온도가 0 K인 이상적인 평형 포논 bath에서는 \(N=0\)이므로 이 항의 흡수는 사라지지만, 빈 최종 전자 상태가 에너지 보존을 만족하면 자발 방출은 남는다. 예를 들어 밴드 바닥보다 20 meV 높은 전자가 50 meV 포논을 방출할 때, 같은 밴드에 그보다 낮은 최종 상태가 없으면 해당 **밴드 내** 방출 경로는 막힌다. 다른 밴드나 산란 경로의 존재까지 배제한 예시는 아니다.
+
+최종 상태의 점유와 방향까지 고려한 전자 self-energy 및 [이동도 계산](../../device-physics/mobility/inversion-layer-mobility.md)은 이 행렬원소를 사용하는 서로 다른 계산이다. 준입자 수명과 운동량 완화시간도 일반적으로 같은 양이 아니다. 비평형 장치에서 전자–포논 산란을 self-energy로 반복하는 접근은 [SCBA](../quantum-transport/scba-convergence.md)에서 설명한다. [1, §§V–VI; 3, transport formulation]
+
+## 5. 의미와 적용 범위
 
 큰 \(|g|^2\)는 특정 밴드·파수·포논 모드에서 강한 결합을 뜻할 수 있지만, 단일 행렬원소만으로 전체 수송도, 초전도 전이온도, 밴드 이동이나 수명을 단정할 수는 없다. 이들은 상태 합, 점유, 에너지 보존, 결정 대칭과 적분 규약을 포함하는 별도의 계산량이다. 전자 self-energy의 Fan–Migdal 및 Debye–Waller 기여는 [하위 문서](electron-phonon-self-energy.md)에서 다룬다. [1, §V; 2, “Self-energies and coupling strength”]
 
-## 5. 참고 문헌
+## 6. 참고 문헌
 
 1. F. Giustino, “Electron-phonon interactions from first principles,” *Reviews of Modern Physics* **89**, 015003 (2017), https://doi.org/10.1103/RevModPhys.89.015003.
 2. EPW project, “Theory,” https://docs.epw-code.org/Theory.html.

@@ -18,6 +18,11 @@ G=\frac{e^2}{h}\sum_n T_n,
 
 이며 \(T_n\)은 spin을 이미 분리해 센 channel \(n\)의 transmission이다. 따라서 \(N\)개의 spin-degenerate mode가 모두 \(T=1\)이면 \(R_{2\mathrm{t}}=h/(2e^2N)\)이다. 이 유한 값은 disorder가 없는 channel에도 reservoir와 mode matching이 있는 두 단자 측정에서 나타나는 contact contribution이다. [Beenakker, §I.C.2](https://arxiv.org/pdf/cond-mat/9612179), [Feilhauer–Moško, §I, 식 (11), (15)](https://arxiv.org/pdf/1011.6193)
 
+???+ example "불완전한 단일 모드"
+
+    두 스핀이 같은 transmission \(T=0.5\)를 갖는 하나의 orbital mode를 가정하자. 영온도 선형 응답에서 \(G=(2e^2/h)T=e^2/h\), 따라서 두 단자 저항은 약 \(25.8\,\mathrm{k\Omega}\)다. 같은 모드가 완전 투과이면 \(h/(2e^2)\simeq12.9\,\mathrm{k\Omega}\)다. 이 예는 전송 저하에 따른 두 단자 결과를 보여주며, 그 차이를 각 계면의 직렬 저항으로 자동 배분하지 않는다. 유한 온도와 에너지 의존 \(T\)의 가중은 [Landauer 전송](landauer-transmission.md)의 선형 응답식을 사용한다. [1, §I.C.2; 2, §I]
+
+
 ## 3. 접촉 저항 분배의 한계
 
 대칭 이상 모형에서는 \(h/(2e^2N)\)를 양쪽 접촉에 \(h/(4e^2N)\)씩 배분하는 bookkeeping을 쓸 수 있다. 하지만 비대칭 contact, 반사, mode mismatch가 있으면 각 contact에 고유하고 보편적인 half-quantum resistance를 할당할 수 없다. 실제 contact의 transmission은 contact material과 geometry에 의존하므로 이 bookkeeping을 계면의 고유 물성으로 읽으면 안 된다. [Mortensen et al., §I](https://arxiv.org/pdf/cond-mat/9907026), [Beenakker, §I.C](https://arxiv.org/pdf/cond-mat/9612179)

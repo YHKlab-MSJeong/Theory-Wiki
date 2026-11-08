@@ -63,6 +63,20 @@ G=\frac{e^2}{h}\sum_\sigma T_\sigma(\mu,0).
 
 위 유도는 Fermi 함수의 Taylor 전개와 영도 극한에 따른다. [1, 식 (1.6); 2, 식 (16)–(17)]
 
+???+ example "유한 온도에서 채널이 열리는 모습"
+
+    온도 가중 함수는
+
+    \[
+    -\frac{\partial f}{\partial E}=
+    \frac{1}{4k_B\Theta}\operatorname{sech}^2\!\left(\frac{E-\mu}{2k_B\Theta}\right)
+    \]
+
+    이며 에너지에 대해 적분하면 1이다. 그 반치전폭은 \(4\operatorname{arcosh}(\sqrt2)k_B\Theta\simeq3.53k_B\Theta\)다. 따라서 conductance는 정확히 \(E=\mu\)의 한 점만이 아니라 그 주변 transmission을 가중 평균한다. 위의 Fermi 함수에서 직접 계산한 결과다. [1, §1.1; 2, §2.4]
+
+    예를 들어 스핀 등을 포함한 축퇴도 \(g\)가 고정이고 하나의 이상 채널이 \(E_0\)부터 열려 \(T(E)=\Theta_H(E-E_0)\)인 모형에서는 \(G=(g e^2/h)f(E_0)\)다. \(\Theta_H\)는 Heaviside 계단이며 절대온도 \(\Theta\)와 다르다. \(E_0=\mu\)라면 \(f(E_0)=1/2\)여서 유한 온도 conductance는 열린 채널 양자값의 절반이다. 이는 열적 계단 퍼짐을 보여주는 가상 예제다. 영온도 양자화와 채널 수는 [양자 접촉 저항](quantum-contact-resistance.md)을 참고한다.
+
+
 <figure markdown="span">
 
   ![전극의 점유 차이와 에너지별 transmission을 곱해 전류를 적분하고, 선형 응답과 영도 극한에서 conductance로 이어지는 과정을 보여준다.](images/landauer-current-window.svg)

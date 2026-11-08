@@ -4,7 +4,7 @@ description: 작은 DFT의 비직교 Hamiltonian 블록을 이어 긴 채널의 
 
 # Hamiltonian 블록 확장과 RGF
 
-짧은 원자구조에서 계산한 국소 Hamiltonian을 길이 방향으로 반복하면 긴 채널의 행렬 모형을 만들 수 있다. 이 방법은 반복할 행렬과 연결 블록을 조립하는 근사다. 확장된 모든 원자에 대해 새 Kohn–Sham 전하와 퍼텐셜을 자기일관적으로 계산하는 Order-N DFT와는 다르다. [1, §XIV; 2, “Calculation of electronic structure”]
+짧은 원자구조에서 계산한 국소 Hamiltonian을 길이 방향으로 반복하면 긴 채널의 행렬 모형을 만들 수 있다. 이 방법은 반복할 행렬과 연결 블록을 조립하는 근사다. 확장된 모든 원자에 대해 새 Kohn–Sham 전하와 퍼텐셜을 자기일관적으로 계산하는 Order-N DFT와는 다르다. [1, §XIII; 2, “Calculation of electronic structure”]
 
 <figure markdown="span">
   ![양쪽 전극 self-energy 사이에 채널의 Hamiltonian과 overlap 층 블록을 반복하고 인접 층 결합을 포함하는 열린 경계 모형.](images/block-stitching.svg)
@@ -56,13 +56,29 @@ T(E)=\operatorname{Tr}\!\left[\Gamma_LG^r\Gamma_RG^a\right],
 \Gamma_\alpha=i(\Sigma_\alpha^r-\Sigma_\alpha^a)
 \]
 
-로 표현된다. 전류 적분과 비평형 점유는 [NEGF 문서](negf.md)를 따른다. [2, “NEGF equations,” “TBT.Elec.<>.HS,” “Principal layer interactions”; 3, §§II–III]
+로 표현된다. 전류 적분과 비평형 점유는 [NEGF 문서](negf.md)를 따른다. [2, “NEGF equations,” “TBT.Elec.<>.HS,” “Principal layer interactions”; 4, §§II, IV.A]
 
 결합 범위가 한 층보다 길면 principal layer를 더 크게 잡아 결합이 인접 블록으로만 보이게 해야 한다. SIESTA TBtrans 안내서는 전극이 이웃 초격자 하나와만 상호작용하는 principal layer 조건을 확인하도록 요구하며, 이를 무시하면 비물리 결과가 날 수 있다고 경고한다. [2, “Principal layer interactions”]
 
 ## 3. RGF의 계산 복잡도
 
 Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬을 한 번에 구하는 대신, 블록 삼중대각 구조를 따라 층별 Green 함수와 자기 에너지를 순차적으로 갱신한다. 조밀한 층 블록의 차원 \(M_b\)를 고정하면 central scattering region에서 한 에너지·횡방향 \(k\)-점의 재귀 계산은 층 수 \(N_z\)에 따라 대략 \(O(N_z M_b^3)\)로 증가한다. 따라서 **단면 크기와 블록 차원을 고정한 채 길이만 늘릴 때** 이 부분의 비용은 채널 길이에 대해 선형이다. 단면을 넓히면 \(M_b\)가 커지고 비용이 빠르게 증가할 수 있다. 이 추정에는 전극 surface Green 함수 계산, 에너지 적분, 자기일관 반복이 포함되지 않는다. [3, §1, Eqs. (9)–(12), pp. 4–5; 4, §III.C.1, Eqs. (17)–(18)]
+
+
+### (1) 한 층씩 붙이는 재귀식
+
+\(K_{ij}(z)=zS_{ij}-H_{ij}\)로 두고 \(N\ge2\)개의 층에서 전극 self-energy가 각각 첫 층과 마지막 층에만 작용하며, 왼쪽으로부터 \(i\)층까지의 부분계가 오른쪽 전극과 아직 연결되지 않았다고 하자. 왼쪽 전극만 접속된 첫 층의 Green 함수와 그 뒤의 왼쪽 연결 Green 함수는 블록 소거로
+
+\[
+g_1^L=\left[K_{11}-\Sigma_L^r\right]^{-1},\qquad
+g_i^L=\left[K_{ii}-K_{i,i-1}g_{i-1}^L K_{i-1,i}\right]^{-1}
+\quad(2\le i\le N)
+\]
+
+로 구한다. 마지막 층에 오른쪽 전극을 연결할 때는 \(i=N\)의 대괄호 안에 \(-\Sigma_R^r\)를 추가한다. \(g_i^L\)는 **잘라 둔 부분계**의 마지막 층 Green 함수이므로, 일반적으로 양쪽 전극을 모두 연결한 전체 소자의 \(G_{ii}^r\)와 같지 않다. 전송과 공간별 밀도에 필요한 비대각 블록이나 나머지 대각 블록은 추가 재귀 또는 역방향 단계를 통해 구한다. [3, §1, Eqs. (9)–(12); 4, §III.C.1, Eqs. (17)–(18)]
+
+여기서 \(K_{i,i-1}\)과 \(K_{i-1,i}\)는 각각 \(zS-H\)의 방향별 블록이다. 같은 복소 \(z\)에서 한쪽 블록을 다른 쪽의 단순 켤레전치로 치환하지 않는다. 이 재귀는 인접 층 밖 결합이 없도록 principal layer를 선택한 경우에 성립한다. 모드 수를 줄여 각 층의 차원을 낮추는 접근과 재귀 풀이의 차이는 [mode-space 수송](mode-space-transport.md)을 참고한다. [3, §1; 4, §III.C.1]
+
 
 ## 4. 블록 복제가 맞는 조건과 어긋나는 조건
 
@@ -75,7 +91,7 @@ Recursive Green's function (RGF)은 전체 산란영역의 조밀한 역행렬�
 - 채널 길이에 따라 달라지는 전하 재분포와 접촉 유도 전위·전하 변화의 자기일관 되먹임
 - 전자–포논 등 비탄성 산란
 
-이 항들이 목표 물성에 중요하면, 전위의 자기일관 갱신이나 검증된 수송 Hamiltonian 모델을 추가해야 한다. 예를 들어 TranSIESTA의 NEGF–Poisson 반복은 비평형 전하와 전위를 맞추는 경로이며, 고정 \(H\) 블록 복제만으로 대체되지 않는다. [2, “TranSIESTA,” “NEGF equations”; 4, §§III.2–III.3]
+이 항들이 목표 물성에 중요하면, 전위의 자기일관 갱신이나 검증된 수송 Hamiltonian 모델을 추가해야 한다. 예를 들어 TranSIESTA의 NEGF–Poisson 반복은 비평형 전하와 전위를 맞추는 경로이며, 고정 \(H\) 블록 복제만으로 대체되지 않는다. [2, “TranSIESTA,” “NEGF equations”; 4, §III.E, “Electrostatics in NEGF”]
 
 ## 5. 재현 가능한 확인 순서
 
