@@ -1603,17 +1603,17 @@
     ]
   },
   "computational-materials-science/quantum-transport/long-channel-transport.md": {
-    "evidence": "refs/quality/evidence/long-channel-transport-crosslink-2026-11-08.md",
+    "evidence": "refs/quality/evidence/long-channel-transport-kpm-dfth-links-2026-11-08.md",
     "assets": {
       "assets/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
     },
     "coverage": {
       "mode": "changes",
-      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
-      "baseline_sha256": "91339dee849bebc89abde750e488153215a9a4ca9c44de38b8e9d5d0ad49ccfd"
+      "description": "Added explicit links that identify DFTH-NEGF and nonorthogonal KPM as separate steps in the HamGNN workflow.",
+      "baseline_sha256": "e7da664b4f3807761be85246357d48d1860ab08496c65d194d65062303c825b7"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_coverage",
+      "role": "independent AI reviewer diagram_final_review",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1687,12 +1687,12 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "e7da664b4f3807761be85246357d48d1860ab08496c65d194d65062303c825b7",
-    "evidence_sha256": "ad31332ee4ecd3ea5517db479679bb0f3182d05de36343c0b73597a8fbdb4834",
+    "document_sha256": "18a5601537c61eb8c1ac6707ee2310f1b02677aad0ed379702ae28eb18568ca0",
+    "evidence_sha256": "8d86634cbfc18c44826452690ec95f907fb1ddad223c048f78d40983b438f6d5",
     "prior_evidence": [
       {
-        "path": "refs/quality/evidence/long-channel-transport-2026-11-08.md",
-        "sha256": "cf83cfe1f9342f6df4e42eeefadb95e7904c28b201f07dca4d1c45f057f39b81"
+        "path": "refs/quality/evidence/long-channel-transport-crosslink-2026-11-08.md",
+        "sha256": "ad31332ee4ecd3ea5517db479679bb0f3182d05de36343c0b73597a8fbdb4834"
       }
     ]
   },
@@ -1977,19 +1977,25 @@
   },
   "computational-science/atomistic-simulation/localized-basis-sets.md": {
     "status": "pass",
-    "document_sha256": "add66656416f75a1a024ceaf49cf7d52458e27497e1c85cb05c9bd2d1addd198",
-    "evidence": "refs/quality/evidence/localized-basis-sets-2026-11-08.md",
-    "evidence_sha256": "6ad8194204d4331db8672ccc3e31eee44027ff74feafc1cb2922a7f4b369fc90",
+    "document_sha256": "30ee7b1783977b4b770ef711e3874e34e777798cf0097afb49ad6ca4957ddc8e",
+    "evidence": "refs/quality/evidence/localized-basis-sets-scope-update-2026-11-08.md",
+    "evidence_sha256": "82396241fd67b10a53e2a4545c4a96dc0decbfd6d60e5e156645c363a3716d8a",
     "assets": {
       "assets/basis-validation-workflow.svg": "3c4fed395b49c6fbdb9b53975ab4d66038ef033794d6e6b66c41a970112d69b1"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/localized-basis-sets-2026-11-08.md",
+        "sha256": "6ad8194204d4331db8672ccc3e31eee44027ff74feafc1cb2922a7f4b369fc90"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Semicore/basis definitions, target-observable validation steps and local-device claim boundary."
+      "mode": "changes",
+      "description": "Removed personal MoS2 device guidance while retaining general basis-selection claims and literature examples.",
+      "baseline_sha256": "add66656416f75a1a024ceaf49cf7d52458e27497e1c85cb05c9bd2d1addd198"
     },
     "reviewer": {
-      "role": "independent AI reviewer basis_solver_review",
+      "role": "independent AI reviewer kpm_dfth_science_review",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -2279,19 +2285,25 @@
   },
   "computational-materials-science/quantum-transport/hamgnn-negf.md": {
     "status": "pass",
-    "document_sha256": "460a52db1467f6a1ef3701e164004008fe82ef6447ba12016ccf75bf1f9187a1",
-    "evidence": "refs/quality/evidence/hamgnn-negf-2026-11-08.md",
-    "evidence_sha256": "146168ce00f6fb9a04b57deeced9c1d9f3c48720ef61016e37102f963acc7e95",
+    "document_sha256": "31fde86a76f1d3c71a280520b7cf4ba045aeb0101a7390e8c035b8d7d9437a4c",
+    "evidence": "refs/quality/evidence/hamgnn-negf-update-2026-11-08.md",
+    "evidence_sha256": "fb92b1a02c628ad21f0e7da29c606a8ffdd92635bbf56ad5b469f1025908fd0d",
     "assets": {
       "assets/hamgnn-negf-workflow.svg": "eca76dfaf59103aa1e462392712c6cc2e6bd281b540490e00410a680fe3cbcda"
     },
-    "prior_evidence": [],
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/hamgnn-negf-2026-11-08.md",
+        "sha256": "146168ce00f6fb9a04b57deeced9c1d9f3c48720ef61016e37102f963acc7e95"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "HamGNN-NEGF training, nonorthogonal KPM, electrode self-energy, RGF, scaling conditions and validation limits."
+      "mode": "changes",
+      "description": "KPM workflow and the paper’s Results/Methods Fermi-level reporting difference were clarified.",
+      "baseline_sha256": "460a52db1467f6a1ef3701e164004008fe82ef6447ba12016ccf75bf1f9187a1"
     },
     "reviewer": {
-      "role": "independent AI reviewer hamgnn_content_review",
+      "role": "independent AI reviewer kpm_dfth_science_review",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -2350,6 +2362,197 @@
         "status": "reported-primary",
         "sources": [
           "liu2026"
+        ]
+      },
+      {
+        "claim": "Results p. 5 explicitly describes KPM Fermi-level convergence and use in the 2×2×5 Si NEGF case, while Methods p. 12 says benchmark Fermi levels came from direct diagonalization; the preprint does not reconcile the scope.",
+        "scope": "Report each section separately and do not assign a single procedure to every transmission benchmark.",
+        "status": "reported-primary",
+        "sources": [
+          "liu2026"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/nonorthogonal-kpm.md": {
+    "status": "pass",
+    "document_sha256": "be99667ddd3071e5ce997b6ea046950dc7cb15eb757f747da9152712fb8be3ba",
+    "evidence": "refs/quality/evidence/nonorthogonal-kpm-2026-11-08.md",
+    "evidence_sha256": "c9f60253cc2c40012c2c7b563d0d7241f5606187f9f4520082ec7a3630682c63",
+    "assets": {
+      "assets/nonorthogonal-kpm-workflow.svg": "de6a455d2a7680fed444613002397f0bfb1cb2c05cffc8aecc7a090379a577af"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "비직교 generalized eigenproblem, Chebyshev DOS, electron-number Fermi search, KPM convergence and HamGNN scope."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer kpm_dfth_science_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "roder": {
+        "provenance": "roder-1997-nonorthogonal-kpm",
+        "url": "https://doi.org/10.1103/PhysRevB.55.15382",
+        "location": "Eqs. (1)–(9), pp. 15382–15385",
+        "kind": "primary-research"
+      },
+      "hamgnn": {
+        "provenance": "liu-2026-hamgnn-negf-arxiv-v1",
+        "url": "https://arxiv.org/pdf/2609.37058v1",
+        "location": "§II and Fig. 1 pp. 3–4; Results p. 5 and Supplementary Table 1; Methods p. 12",
+        "kind": "primary-research"
+      },
+      "weisse": {
+        "provenance": "weisse-2006-kpm-review",
+        "url": "https://doi.org/10.1103/RevModPhys.78.275",
+        "location": "§§2–4"
+      }
+    },
+    "findings": [
+      {
+        "claim": "비직교 Kohn–Sham 문제는 일반화 고유값 문제로 표현되며, KPM moments로 전체 고유값을 직접 구하지 않고 DOS를 근사한다.",
+        "scope": "양의 정부호 overlap의 국소 기저 스펙트럼.",
+        "status": "supported",
+        "sources": [
+          "roder",
+          "weisse"
+        ]
+      },
+      {
+        "claim": "Röder 등의 비직교 KPM은 overlap 선형계를 반복적으로 풀어 행렬 작용을 계산하며, 명시적 조밀 S 역행렬을 만들지 않는다.",
+        "scope": "인용한 비직교 KPM 구현.",
+        "status": "reported-primary",
+        "sources": [
+          "roder"
+        ]
+      },
+      {
+        "claim": "Chebyshev moment 수와 무작위 trace 벡터 수는 서로 다른 DOS 해상도와 stochastic trace 오차를 조절하고, kernel은 DOS 피크를 평활화한다.",
+        "scope": "KPM DOS 근사의 해상도와 표본 오차.",
+        "status": "supported",
+        "sources": [
+          "roder",
+          "weisse"
+        ]
+      },
+      {
+        "claim": "전자수 적분의 목표 조건으로 Fermi 준위를 정하며, HamGNN workflow에서 KPM은 RGF transmission 계산과 구분된다.",
+        "scope": "지정된 Hamiltonian, overlap, 점유 정의 및 paper workflow.",
+        "status": "supported",
+        "sources": [
+          "roder",
+          "hamgnn"
+        ]
+      },
+      {
+        "claim": "HamGNN preprint Results p. 5는 2×2×5 Si 사례의 KPM 및 이후 NEGF 사용을, Methods p. 12는 benchmark Fermi 준위의 직접 대각화를 각각 기술한다.",
+        "scope": "preprint가 두 기술의 적용 대상 관계를 설명하지 않으므로 benchmark 전부의 방법을 하나로 단정하지 않는다.",
+        "status": "reported-primary",
+        "sources": [
+          "hamgnn"
+        ]
+      },
+      {
+        "claim": "HamGNN 논문은 희소 행렬 KPM 비용을 O(Nmom Nrand N)으로 제시하지만, 비직교 overlap solve와 그 수렴도 실제 작업량에 영향을 준다.",
+        "scope": "고정 moment, random-vector, 수렴 설정의 점근 비용.",
+        "status": "supported",
+        "sources": [
+          "hamgnn",
+          "roder"
+        ]
+      }
+    ]
+  },
+  "computational-materials-science/quantum-transport/dfth-negf.md": {
+    "status": "pass",
+    "document_sha256": "be676c75d1269949ce680e1092a88d2d2ec537e312f9538006df8841156f108c",
+    "evidence": "refs/quality/evidence/dfth-negf-2026-11-08.md",
+    "evidence_sha256": "9b5ea793c32907eb177afca76ddd5073cfe71cb079c56987686d152d71686041",
+    "assets": {
+      "assets/dfth-negf-workflow.svg": "a2854b49a9b6eb5cc0875d2eb1c532a8e8505bb215d414768557daf26e656114"
+    },
+    "prior_evidence": [],
+    "coverage": {
+      "mode": "full",
+      "description": "DFTH-NEGF static-H assumptions, nonorthogonal open-boundary equations, Full-NEGF comparison and finite-bias limits."
+    },
+    "reviewer": {
+      "role": "independent AI reviewer kpm_dfth_science_review",
+      "independent": true,
+      "date": "2026-11-08"
+    },
+    "sources": {
+      "liu": {
+        "provenance": "liu-2026-hamgnn-negf-arxiv-v1",
+        "url": "https://arxiv.org/pdf/2609.37058v1",
+        "location": "Introduction; §II and Fig. 1; Results p. 4; Discussion pp. 9–10; Methods p. 12",
+        "kind": "primary-research"
+      },
+      "siesta": {
+        "provenance": "siesta-reference-5.4",
+        "url": "https://docs.siesta-project.org/projects/siesta/en/5.4/reference/siesta.html",
+        "location": "NEGF equations; TranSIESTA overview",
+        "kind": "primary-documentation"
+      },
+      "papior": {
+        "provenance": "papior-2017-transiesta",
+        "url": "https://doi.org/10.1016/j.cpc.2016.09.022",
+        "location": "§II, Eqs. (1)–(4); §III.B; §IV.A",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "이 문서는 DFTH-NEGF를 Liu et al. preprint에서 사용한 용어로 한정하며, 논문 경로는 static periodic DFT Hamiltonian과 lead self-energy로 열린계 transmission을 계산하고 transport Hamiltonian feedback을 생략한다.",
+        "scope": "해당 논문의 Fig. 1 workflow.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "비직교 Green function, broadening 및 coherent two-terminal Caroli transmission은 H, S와 lead self-energy를 포함하며, 계면 partition 세부사항은 구현 규약을 따른다.",
+        "scope": "steady-state single-particle NEGF.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "papior"
+        ]
+      },
+      {
+        "claim": "TranSIESTA full-NEGF 경로는 열린계 밀도 계산으로 중심 Hamiltonian을 갱신하는 self-consistent loop를 포함한다.",
+        "scope": "TranSIESTA transport implementation.",
+        "status": "supported",
+        "sources": [
+          "siesta",
+          "papior"
+        ]
+      },
+      {
+        "claim": "저자들은 Au–benzenedithiol–Au와 Stone–Wales CNT 비교에서 DFTH-NEGF transmission의 거의 일치와 계산시간 18.3%, 27.4% 감소를 보고한다.",
+        "scope": "논문의 Fig. 2 두 benchmark 사례만.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "finite-bias H0 approximation은 zero-bias Hamiltonian을 고정하므로 fully self-consistent finite-bias NEGF와 다르며 논문은 weakly nonlinear regime으로 제한한다.",
+        "scope": "논문에서 시험한 bias, material, energy window and settings.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
+        ]
+      },
+      {
+        "claim": "Fermi-level procedure는 Results p. 5의 KPM 기술과 Methods p. 12의 benchmark direct-diagonalization 기술이 적용 대상 관계를 해결하지 않은 채 병존한다.",
+        "scope": "모든 transmission benchmark에 하나의 procedure가 쓰였다고 단정하지 않는다.",
+        "status": "reported-primary",
+        "sources": [
+          "liu"
         ]
       }
     ]
