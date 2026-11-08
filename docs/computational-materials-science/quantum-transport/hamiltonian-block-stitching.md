@@ -6,6 +6,11 @@ description: 작은 DFT의 비직교 Hamiltonian 블록을 이어 긴 채널의 
 
 짧은 원자구조에서 계산한 국소 Hamiltonian을 길이 방향으로 반복하면 긴 채널의 행렬 모형을 만들 수 있다. 이 방법은 반복할 행렬과 연결 블록을 조립하는 근사다. 확장된 모든 원자에 대해 새 Kohn–Sham 전하와 퍼텐셜을 자기일관적으로 계산하는 Order-N DFT와는 다르다. [1, §XIV; 2, “Calculation of electronic structure”]
 
+<figure markdown="span">
+  ![양쪽 전극 self-energy 사이에 채널의 Hamiltonian과 overlap 층 블록을 반복하고 인접 층 결합을 포함하는 열린 경계 모형.](images/block-stitching.svg)
+  <figcaption markdown="1">균일 채널의 블록 확장과 열린 경계를 나타낸 위키 자체 도식이다. 층 사이의 Hamiltonian과 overlap 결합도 필요하며, RGF는 조립된 블록 구조를 따라 계산한다. [2, “Principal layer interactions”; 3, §1][도식 크게 보기](images/block-stitching.svg)</figcaption>
+</figure>
+
 ## 1. 기저 확장과 행렬 블록
 
 국소 원자궤도 기저에서는 단일 전자 상태를

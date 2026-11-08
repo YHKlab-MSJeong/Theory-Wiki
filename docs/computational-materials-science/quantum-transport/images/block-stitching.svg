@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" role="img">
+<rect width="1200" height="280" fill="white"/>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#34495e"/></marker></defs>
+<text x="600" y="40" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#172b3a">Repeated channel blocks and open boundaries</text>
+<rect x="24" y="78" width="265" height="105" rx="9" fill="#edf4f7" stroke="#34596b" stroke-width="2"/>
+<text x="156.5" y="119" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#172b3a">Left contact</text>
+<text x="156.5" y="151" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#283f4d">self-energy ΣL</text>
+<path d="M292 130 H311" stroke="#34495e" stroke-width="2"/>
+<rect x="315" y="78" width="265" height="105" rx="9" fill="#edf4f7" stroke="#34596b" stroke-width="2"/>
+<text x="447.5" y="119" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#172b3a">Channel layer 1</text>
+<text x="447.5" y="151" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#283f4d">H₀, S₀</text>
+<path d="M583 130 H602" stroke="#34495e" stroke-width="2"/>
+<rect x="606" y="78" width="265" height="105" rx="9" fill="#edf4f7" stroke="#34596b" stroke-width="2"/>
+<text x="738.5" y="119" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#172b3a">Channel layer 2 … N</text>
+<text x="738.5" y="151" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#283f4d">H₀, S₀</text>
+<path d="M874 130 H893" stroke="#34495e" stroke-width="2"/>
+<rect x="897" y="78" width="265" height="105" rx="9" fill="#edf4f7" stroke="#34596b" stroke-width="2"/>
+<text x="1029.5" y="119" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="bold" fill="#172b3a">Right contact</text>
+<text x="1029.5" y="151" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#283f4d">self-energy ΣR</text>
+<text x="600" y="235" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#3e4e58">Adjacent layers require both H and S coupling. RGF uses the resulting block structure.</text>
+</svg>

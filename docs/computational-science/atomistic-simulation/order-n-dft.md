@@ -6,6 +6,11 @@ description: 국소 전자 상태를 이용해 큰 구조의 DFT 전자구조 �
 
 Order-N 또는 \(O(N)\) DFT는 원자 수나 기저함수 수가 커질 때 계산 시간과 메모리가 계 크기에 선형으로 비례하도록 설계한 전자구조 방법을 가리킨다. 여기서 \(N\)은 문헌과 코드에 따라 원자 수 또는 기저함수 수를 뜻한다. 원자당 기저함수 수가 일정할 때 두 크기는 비례하지만, 단면·기저 크기를 함께 키우면 실제 계산량은 단순한 \(O(N)\) 법칙을 따르지 않을 수 있다. [1, Abstract and §XIII; 2, “Calculation of the electronic structure”]
 
+<figure markdown="span">
+  ![밀도행렬의 국소적 감쇠와 유한 절단을 이용해 희소 연산으로 전자구조와 밀도를 계산하는 개념도.](images/order-n-locality.svg)
+  <figcaption markdown="1">전자 국소성을 선형 스케일링 전자구조 계산에 이용하는 위키 자체 도식이다. 절단 오차는 국소화 범위와 전자 상태 조건에 의존한다. 선형 스케일링은 절단 범위와 연결 수가 고정되고 나머지 계산 비용도 적절히 제어되는 조건에서 기대한다. [1, §§VI, XIII; 4, §§4, 8][도식 크게 보기](images/order-n-locality.svg)</figcaption>
+</figure>
+
 ## 1. 밀도행렬의 국소성과 선형 스케일링
 
 표준 Kohn–Sham DFT는 일반적으로 일반화 고유값 문제를 풀고 점유 상태를 합산한다. 기저함수 수를 \(M\)이라 할 때 밀집 행렬 대각화는 대표적으로 \(O(M^3)\) 비용을 가지므로 큰 계에서 병목이 된다. 선형 스케일링 방법은 국소 기저의 희소성, 밀도행렬의 공간적 감쇠, 또는 국소화된 점유 궤도 등을 이용해 먼 비대각 행렬 성분이나 국소 상태의 범위를 제한하고 연산 수를 줄인다. 이는 장거리 Coulomb 또는 Poisson 항이 저절로 사라진다는 뜻은 아니다. [1, §§III, VI, XIII; 2, “Calculation of the electronic structure”; 3, Abstract; 4, §1]
@@ -38,6 +43,13 @@ E^{\mathrm{KMG}}=
 
 실제 선형 스케일링에는 원자당 기저함수 수가 일정하고, 행렬 연결 범위와 국소화 반경이 계 크기와 함께 무한히 늘지 않는 조건이 필요하다. 작은 계산에서는 행렬 구축 외의 solver·통신 비용이 우세할 수 있어 asymptotic \(O(N)\) 이점이 아직 나타나지 않을 수 있다. [1, §§VI, XIII; 2, “Calculation of the electronic structure”]
 
+ONETEP 논문은 hybrid 교환-상관 함수를 사용한 네 가닥 고분자 사슬에서 원자 수에 따른 계산 시간을 보고한다. 그림의 선형 회귀는 작은 두 계를 제외하며, 표기된 기울기는 해당 구조·계산 설정·하드웨어에서 얻은 결과다. [6, §IV.B.1.b, Fig. 7]
+
+<figure markdown="span">
+  ![ONETEP 논문에서 고분자 사슬의 원자 수에 따른 hybrid 함수 계산 시간 측정값과 작은 두 계를 제외한 선형 회귀.](images/onetep-2020-fig7.png)
+  <figcaption markdown="1">J. C. A. Prentice et al., “The ONETEP linear-scaling density functional theory program,” *J. Chem. Phys.* 152, 174111 (2020), Fig. 7, [DOI](https://doi.org/10.1063/5.0004445), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). 네 가닥 고분자 사슬을 32개 계산 노드에서 계산한 시간이며, 선형 회귀는 가장 작은 두 계를 제외한다. 원문 PDF에서 그림 영역을 잘랐고 데이터·축·범례는 수정하지 않았다.</figcaption>
+</figure>
+
 OMM·PEXSI·ELSI·CheSS의 알고리즘과 코드별 역할은 [전자구조 대규모 solver 문서](electronic-structure-solvers.md)에서 따로 비교한다.
 
 현재 SIESTA 5.4 문서는 historical `SolverON`이 점유·비점유 상태가 명확히 분리된 계에만 작동하며, 사용과 안정성 측면에서 취약하다고 경고한다. 같은 문서는 별도의 OMM, PEXSI, ELSI 및 CheSS solver도 소개한다. 따라서 논문 속 \(O(N)\) 원리와 현재 코드에서 특정 solver가 안정적·효율적으로 작동한다는 주장은 따로 확인해야 한다. [2, “Calculation of the electronic structure,” “SolverON,” “SolverOMM,” “SolverPEXSI,” “SolverCheSS”]
@@ -55,3 +67,4 @@ Order-N DFT는 큰 구조 전체의 전자구조와 전하를 직접 구하려�
 3. W. Kohn, “Density Functional and Density Matrix Method Scaling Linearly with the Number of Atoms,” *Phys. Rev. Lett.* **76**, 3168 (1996), [Nearsightedness of electronic matter](https://doi.org/10.1103/PhysRevLett.76.3168).
 4. M. Benzi, P. Boito, N. Razouk, “Decay properties of spectral projectors with applications to electronic structure,” *SIAM Review* **55**, 3–64 (2013), https://doi.org/10.1137/100814019.
 5. J. Kim, F. Mauri, and G. Galli, “Total-energy global optimizations using nonorthogonal localized orbitals,” *Phys. Rev. B* **52**, 1640 (1995), [abstract and orbital-based energy functional](https://doi.org/10.1103/PhysRevB.52.1640).
+6. J. C. A. Prentice et al., “The ONETEP linear-scaling density functional theory program,” *J. Chem. Phys.* **152**, 174111 (2020), [§IV.B.1.b, Fig. 7](https://doi.org/10.1063/5.0004445).

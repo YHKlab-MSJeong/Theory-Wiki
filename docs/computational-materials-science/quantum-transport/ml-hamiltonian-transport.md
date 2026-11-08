@@ -8,6 +8,11 @@ description: DeePTB-NEGF와 HamGNN-NEGF가 작은 DFT 자료에서 긴 채널의
 
 DeePTB-NEGF 논문의 Figure 1은 [출판사 논문 페이지](https://www.nature.com/articles/s41524-025-01853-6)에서 확인할 수 있다. [1, Fig. 1]
 
+<figure markdown="span">
+  ![작은 구조의 DFT 자료로 모형을 학습한 후 큰 원자 구조의 Hamiltonian을 예측하고 NEGF 수송을 계산하는 흐름.](images/ml-hamiltonian-overview.svg)
+  <figcaption markdown="1">학습 Hamiltonian을 이용한 수송의 공통 단계를 표현한 위키 자체 도식이다. 학습 표적, overlap 구성과 Poisson 자기일관성은 사용한 모델과 사례별로 확인해야 한다. [1, §§II–III; 2, Results][도식 크게 보기](images/ml-hamiltonian-overview.svg)</figcaption>
+</figure>
+
 ## 1. 학습 모델이 Hamiltonian을 만드는 두 방식
 
 | 접근 | 학습·예측 대상 | 긴 구조로의 확장 | 수송 자기일관성 |

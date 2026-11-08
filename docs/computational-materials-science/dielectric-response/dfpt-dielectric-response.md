@@ -6,6 +6,15 @@ description: DFPT에서 전자 응답, Born 유효전하, 힘상수와 포논을
 
 밀도범함수 섭동이론(density-functional perturbation theory, DFPT)은 평형 상태 주변에서 원자 변위와 전기장에 대한 전자계의 선형 응답을 계산한다. 이 응답으로 전자 유전 텐서, Born 유효전하, 동역학 행렬과 포논을 일관된 제일원리 틀 안에서 얻는다. [1, §§III–V; 2, §§II.3.2, II.4.2–4.3]
 
+<figure markdown="span">
+
+  ![DFPT에서 전기장 응답과 원자 변위 응답을 계산하고, Born 전하와 포논을 결합해 정적 유전 텐서를 얻는 흐름.](images/dfpt-dielectric-workflow.svg)
+
+  <figcaption markdown="1">
+  이 위키에서 제작한 흐름도. 고정 이온 전자 응답과 Born 전하·포논에 의한 이온 응답을 결합한다. 조화 절연체의 정적 응답을 나타내며 본문의 참고 문헌 [1, 2]를 따른다.
+  [도식 크게 보기](images/dfpt-dielectric-workflow.svg)</figcaption>
+</figure>
+
 ## 1. 계산되는 유전 응답
 
 조화 절연체의 정적 유전 텐서는 고정 이온 전자 응답 \(\varepsilon^\infty\)와 격자 이온 응답의 합으로 쓸 수 있다.

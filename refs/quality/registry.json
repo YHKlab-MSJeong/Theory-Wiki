@@ -1006,19 +1006,27 @@
   },
   "computational-materials-science/dielectric-response/born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "1e79b2587c3b860138c08af83afc258667eb9621b1f82722b71026c9310a097c",
-    "evidence": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
-    "evidence_sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477",
-    "assets": {},
-    "prior_evidence": [],
+    "document_sha256": "5b67a5374621e086ba6a53d90a1f5edb5334f6f3a20b982e55ea9e1c8c5b1b8c",
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/born-effective-charge-response.svg": "c2e84840370b28e3749ed390690228fddfafe87e7284882c20f47891f04caead"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/born-effective-charge-2026-11-06.md",
+        "sha256": "46ad40c109c5333133900cce73064bca3c9e2edc01a0f625181a7f6540ecb477"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "Born 유효전하의 응답 정의와 극성 격자·전자–포논 계산에서의 역할을 설명한다."
+      "mode": "changes",
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "1e79b2587c3b860138c08af83afc258667eb9621b1f82722b71026c9310a097c"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-08"
     },
     "sources": {
       "gonze": {
@@ -1069,24 +1077,41 @@
           "gonze",
           "baroni"
         ]
+      },
+      {
+        "claim": "BEC는 절연체의 미소 원자 변위와 분극 선형 응답으로 정의한다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/dfpt-dielectric-response.md": {
     "status": "pass",
-    "document_sha256": "7d49f075feabd5eecdbbe523d1a793f83f5f555f4cc26c46150f6b33d775d4ca",
-    "evidence": "refs/quality/evidence/dfpt-dielectric-response-2026-11-06.md",
-    "evidence_sha256": "7d2d1529e29f193f90e1b476200d7c8eb51eaac18e4375cc53d82b876a056d70",
-    "assets": {},
-    "prior_evidence": [],
+    "document_sha256": "8c5ce526f70b2774e9144f5c89f27e7afccd9891aef9bd4ca86997c1e23e3d56",
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/dfpt-dielectric-workflow.svg": "e3d14d4dfbb2cbefb38c3278831e6fdcd9825987e5491e0cf4291960be657118"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/dfpt-dielectric-response-2026-11-06.md",
+        "sha256": "7d2d1529e29f193f90e1b476200d7c8eb51eaac18e4375cc53d82b876a056d70"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "DFPT의 전자·원자 선형 응답에서 유전 텐서를 계산하고 검토하는 기준을 정리한다."
+      "mode": "changes",
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "7d49f075feabd5eecdbbe523d1a793f83f5f555f4cc26c46150f6b33d775d4ca"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-08"
     },
     "sources": {
       "gonze": {
@@ -1132,28 +1157,44 @@
           "baroni",
           "stengel"
         ]
+      },
+      {
+        "claim": "조화 절연체의 정적 유전 응답은 전자 및 Born 전하와 포논에 의한 이온 응답을 포함한다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
+        ]
       }
     ]
   },
   "computational-materials-science/dielectric-response/high-k-screening.md": {
     "status": "pass",
-    "document_sha256": "241ece2089e0d3693a7f0c1c6469e61845ab79241ee700ff96e49493a7af63de",
-    "evidence": "refs/quality/evidence/high-k-screening-update-2026-11-08.md",
-    "evidence_sha256": "5eb941dbcb2f409497576fbf207c4930d622373a5cc072766e40865a79fb2868",
-    "assets": {},
+    "document_sha256": "8ac184c932a24ad92435f38f9434e73a610358e9c809235c211b5a03a14e0f76",
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/high-k-selection.svg": "dd8bbfa1f3e0d61b04a0316699f7b0331ab5573b7c24d78107bc15d7044d5cd1",
+      "computational-materials-science/dielectric-response/images/lee-2018-fig5.png": "3ff44e655eae1a9966820c34e21b8db8f37493cd76ba23104d50b53c248dbfd1"
+    },
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/high-k-screening-2026-11-06.md",
         "sha256": "0089d35e4843e67a7e4cb8cfc862da2ecf83c58d7d20680f9a4c9edff01b5371"
+      },
+      {
+        "path": "refs/quality/evidence/high-k-screening-update-2026-11-08.md",
+        "sha256": "5eb941dbcb2f409497576fbf207c4930d622373a5cc072766e40865a79fb2868"
       }
     ],
     "coverage": {
       "mode": "changes",
-      "description": "기존 high-k screening 원리를 유지하고 Takigawa et al. 후보 선별값, Fig. 4 설명 및 도판 권리·접근 범위를 추가했다.",
-      "baseline_sha256": "547e0fc138ff7d6a2439174ed9f5dd14a1a2af39688a23b81bfd909015557afd"
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "241ece2089e0d3693a7f0c1c6469e61845ab79241ee700ff96e49493a7af63de"
     },
     "reviewer": {
-      "role": "independent AI reviewers new_article_fact_review and paper_figure_rights_audit",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1177,7 +1218,7 @@
       "lee": {
         "provenance": "lee-et-al-2018",
         "url": "https://doi.org/10.1038/s41598-018-33095-6",
-        "location": "Abstract; Methods; Results",
+        "location": "Abstract; Methods; Results; Fig. 5, Methods",
         "kind": "primary-research"
       },
       "takigawa_screening": {
@@ -1221,6 +1262,23 @@
         "status": "reported-primary",
         "sources": [
           "takigawa_screening"
+        ]
+      },
+      {
+        "claim": "유전체 선별에서 밴드갭과 유전율 외에 계면과 안정성을 검토한다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "robertson06",
+          "yim"
+        ]
+      },
+      {
+        "claim": "Lee 등의 Fig. 5는 불화물의 유전율·밴드갭과 선별 후보, HfO₂ 비교점을 보고한다.",
+        "scope": "논문 계산과 선별 조건",
+        "status": "reported-primary",
+        "sources": [
+          "lee"
         ]
       }
     ],
@@ -1372,19 +1430,27 @@
   },
   "computational-materials-science/dielectric-response/ml-born-effective-charge.md": {
     "status": "pass",
-    "document_sha256": "0b75c5bc6e825d7853f961787401965846d751606a43c532e59c833fffdf0337",
-    "evidence": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
-    "evidence_sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284",
-    "assets": {},
-    "prior_evidence": [],
+    "document_sha256": "22da0df98eb835e3d51ff5387ccb1150543f2464586aa1a62a3325c9751d1c76",
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "assets": {
+      "computational-materials-science/dielectric-response/images/sevennet-polar-outputs.svg": "165e53ff9152eb708e3ba14ce29aa6aa77bc8db095106d5cab97ea14e4c3d988"
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/ml-born-effective-charge-2026-11-06.md",
+        "sha256": "dd5bf258dad48b87d5acb71a018ba54864fd31feca570238c7ce288ace098284"
+      }
+    ],
     "coverage": {
-      "mode": "full",
-      "description": "SevenNet-Polar의 Born 유효전하 예측 범위와 유전율 계산에서의 입력 역할을 구분한다."
+      "mode": "changes",
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "0b75c5bc6e825d7853f961787401965846d751606a43c532e59c833fffdf0337"
     },
     "reviewer": {
-      "role": "independent AI reviewer dielectric_literature",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
-      "date": "2026-11-06"
+      "date": "2026-11-08"
     },
     "sources": {
       "seven": {
@@ -1434,6 +1500,15 @@
         "sources": [
           "seven",
           "wilds"
+        ]
+      },
+      {
+        "claim": "BEC만으로 전체 유전율이 정해지지 않으며 포논과 전자 응답이 추가로 필요하다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "gonze",
+          "baroni"
         ]
       }
     ]
@@ -1730,14 +1805,17 @@
     ]
   },
   "computational-materials-science/quantum-transport/hamiltonian-block-stitching.md": {
-    "evidence": "refs/quality/evidence/hamiltonian-block-stitching-2026-11-08.md",
-    "assets": {},
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "assets": {
+      "computational-materials-science/quantum-transport/images/block-stitching.svg": "3d66c848a1e7b380971932d0693f8f385cc7a9a2d1efeaeb2038c67556885788"
+    },
     "coverage": {
-      "mode": "full",
-      "description": "비직교 행렬, principal layer, 열린 경계 NEGF/RGF 및 고정 블록 근사를 설명한다."
+      "mode": "changes",
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "d50ca8e43e1ace7dc040a7f1265a2207148735bdd2f549033eafa77d3cb7ef5f"
     },
     "reviewer": {
-      "role": "independent AI reviewer hamiltonian_scope",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1821,23 +1899,39 @@
           "siesta",
           "zou"
         ]
+      },
+      {
+        "claim": "비직교 층 블록 모형은 H, S 및 층간 결합을 사용한다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "soler",
+          "tbtrans"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "d50ca8e43e1ace7dc040a7f1265a2207148735bdd2f549033eafa77d3cb7ef5f",
-    "evidence_sha256": "eab98566cdd5ac4bf52c468db60eb886c7a9bc4009f5a46e9c47efe48e0cd171",
-    "prior_evidence": []
+    "document_sha256": "087e6d430d2b482cbd5ca69d0f0fbd5a85c6949b6cc8e7bb810f42d2afe21e85",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/hamiltonian-block-stitching-2026-11-08.md",
+        "sha256": "eab98566cdd5ac4bf52c468db60eb886c7a9bc4009f5a46e9c47efe48e0cd171"
+      }
+    ]
   },
   "computational-materials-science/quantum-transport/ml-hamiltonian-transport.md": {
-    "evidence": "refs/quality/evidence/ml-hamiltonian-transport-crosslink-2026-11-08.md",
-    "assets": {},
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "assets": {
+      "computational-materials-science/quantum-transport/images/ml-hamiltonian-overview.svg": "8438aa63b6c07600cf291a9007c2a192744c1cd4ad346bd3c3568c39e82d6784"
+    },
     "coverage": {
       "mode": "changes",
-      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
-      "baseline_sha256": "5ca4ea916b63e36a9d007a00948d95e632839f2df22fe564f6c132c36d63ef5e"
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "4efc76ac3ace20d2204c2094df938cae54516a9689bd9106c58cc1f4ba2af102"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_coverage",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1910,28 +2004,44 @@
         "sources": [
           "hamgnn"
         ]
+      },
+      {
+        "claim": "학습된 국소 환경 모형으로 큰 구조의 Hamiltonian을 구성해 수송을 계산할 수 있다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "deeptb",
+          "hamgnn"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "4efc76ac3ace20d2204c2094df938cae54516a9689bd9106c58cc1f4ba2af102",
-    "evidence_sha256": "ad84ca31e3f2f44627c0b1dd1dc6c66f24f44bf7f336486f3ec5e285feedfd93",
+    "document_sha256": "5f125fb0920da0b01cd3588da67c6684edce15ccf6f2d4263ce01d29d83eabdf",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/ml-hamiltonian-transport-2026-11-08.md",
         "sha256": "321b0f6679bdfc8b2551a02741a134b407aca840f0180ba3f5d515e1888fbdcd"
+      },
+      {
+        "path": "refs/quality/evidence/ml-hamiltonian-transport-crosslink-2026-11-08.md",
+        "sha256": "ad84ca31e3f2f44627c0b1dd1dc6c66f24f44bf7f336486f3ec5e285feedfd93"
       }
     ]
   },
   "computational-science/atomistic-simulation/order-n-dft.md": {
-    "evidence": "refs/quality/evidence/order-n-dft-crosslink-2026-11-08.md",
-    "assets": {},
+    "evidence": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
+    "assets": {
+      "computational-science/atomistic-simulation/images/order-n-locality.svg": "ea37f85f45b4a1843154356ab31755ea7e9cd9789b91c60b2d0de074f4857640",
+      "computational-science/atomistic-simulation/images/onetep-2020-fig7.png": "824baf69a7658e10b23544401fcfd1e712d4834f78356fa75a1cc6a813985f42"
+    },
     "coverage": {
       "mode": "changes",
-      "description": "새 전용 페이지를 가리키는 교차 링크만 추가했으며 과학적 주장은 변경하지 않았다.",
-      "baseline_sha256": "475d580ba1ee961026bfc021ddafccb66ff7d7a3214d249bb5d4e1e2b7eaa317"
+      "description": "새 그림·캡션 및 관련 문단의 과학적 의미와 재사용 조건",
+      "baseline_sha256": "5279b2506bee0c4563b0a7d7b3e58ea95f29042c898ae551eda5a0553a9aadf6"
     },
     "reviewer": {
-      "role": "independent AI reviewer wiki_coverage",
+      "role": "independent AI reviewers inventory and paper_figs",
       "independent": true,
       "date": "2026-11-08"
     },
@@ -1971,6 +2081,12 @@
         "url": "https://arxiv.org/abs/1704.00512",
         "location": "Chebyshev expansion, density-matrix calculation, §§II.2–II.3 and III.2",
         "kind": "primary-research"
+      },
+      "onetep2020": {
+        "provenance": "prentice-2020-onetep",
+        "url": "https://doi.org/10.1063/5.0004445",
+        "location": "§IV.B.1.b, Fig. 7, PDF p. 10",
+        "kind": "primary-research"
       }
     },
     "findings": [
@@ -2002,15 +2118,36 @@
           "chess",
           "siesta"
         ]
+      },
+      {
+        "claim": "밀도행렬의 국소성 및 절단은 선형 스케일링 전자구조 방법의 기반이다.",
+        "scope": "해당 문서에 추가한 도식의 조건",
+        "status": "supported",
+        "sources": [
+          "kohn",
+          "benzi"
+        ]
+      },
+      {
+        "claim": "ONETEP 저자들은 네 가닥 고분자 사슬의 hybrid XC 계산 시간과 작은 두 점을 제외한 선형 회귀를 보고했다.",
+        "scope": "Iridis5 32개 노드와 논문의 cutoff 조건",
+        "status": "reported-primary",
+        "sources": [
+          "onetep2020"
+        ]
       }
     ],
     "status": "pass",
-    "document_sha256": "5279b2506bee0c4563b0a7d7b3e58ea95f29042c898ae551eda5a0553a9aadf6",
-    "evidence_sha256": "e761f9596a215c315d3cfe9fe44470248712c9122184784c7666bca41f1e9984",
+    "document_sha256": "215b6f3c6d9c95b9ad576d4bda0c7d6e99483d73bd3b82effd69120757309cc8",
+    "evidence_sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/order-n-dft-2026-11-08.md",
         "sha256": "0ce08dbec3576175f690378fac9a33c8e90c4f5c019d634376ad65556b3495e9"
+      },
+      {
+        "path": "refs/quality/evidence/order-n-dft-crosslink-2026-11-08.md",
+        "sha256": "e761f9596a215c315d3cfe9fe44470248712c9122184784c7666bca41f1e9984"
       }
     ]
   },

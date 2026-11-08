@@ -6,6 +6,15 @@ description: Born 유효전하를 원자 변위와 거시 분극 사이의 동�
 
 Born 유효전하(Born effective charge, BEC)는 원자의 형식 산화수와 같은 정전기적 전하가 아니다. 결정에서 원자 하나를 조금 움직였을 때 거시 분극이 얼마나 변하는지를 나타내는 텐서이며, 전기장에 대한 원자 힘의 응답으로도 정의할 수 있다. [1, §V; 2, §II.3.2]
 
+<figure markdown="span">
+
+  ![Born 유효전하의 개념도. 절연 결정에서 원자 변위에 따른 전자 재배치와 분극의 변화를 선형 응답으로 나타낸다.](images/born-effective-charge-response.svg)
+
+  <figcaption markdown="1">
+  이 위키에서 제작한 개념도. 원자 변위에 따른 거시 분극의 변화율로 Born 유효전하를 정의한다. 원자 변위와 전기장에 대한 선형 응답의 관계는 본문의 참고 문헌 [1, 2]를 따른다.
+  [도식 크게 보기](images/born-effective-charge-response.svg)</figcaption>
+</figure>
+
 ## 1. 정의와 단위
 
 셀 부피를 \(\Omega\), 원자 \(\kappa\)의 변위를 \(u_{\kappa\beta}\), 분극 성분을 \(P_\alpha\)라 하면 SI 정의는

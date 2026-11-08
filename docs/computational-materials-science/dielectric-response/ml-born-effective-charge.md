@@ -6,6 +6,15 @@ description: SevenNet-Polar가 예측하는 Born 유효전하와 그것이 유�
 
 SevenNet-Polar는 에너지·힘·응력 예측을 확장해 Born 유효전하(BEC)도 예측하도록 만든 등변 그래프 신경망 프레임워크다. BEC 전용 모델과 에너지·힘·응력·BEC 다중과제 모델은 출력과 학습 자료 범위가 다르다. 2026년 7월 21일 갱신된 arXiv v3를 기준으로 한다. [1, Abstract and §2; 2, model and usage documentation]
 
+<figure markdown="span">
+
+  ![SevenNet-Polar의 원자 구조 입력과 Born 유효전하 출력, 다중과제 모델의 에너지·힘·응력 출력을 나타낸 흐름.](images/sevennet-polar-outputs.svg)
+
+  <figcaption markdown="1">
+  이 위키에서 제작한 흐름도. SevenNet-Polar가 예측하는 양을 논문 [1]에 따라 정리했다. 유전율 계산에는 별도의 포논 정보와 전자 응답이 필요하다 [3].
+  [도식 크게 보기](images/sevennet-polar-outputs.svg)</figcaption>
+</figure>
+
 ## 1. 모델 출력과 유전 응답의 연결
 
 BEC는 원자 변위에 따른 분극 응답을 나타낸다. SevenNet-Polar의 BEC 출력은 극성 격자 응답 계산의 중요한 입력이지만, BEC만으로 전체 유전 텐서가 정해지는 것은 아니다. 이온 유전율에는 포논 주파수와 고유벡터도 필요하고, 전자 기여 \(\varepsilon^\infty\)도 따로 포함된다. [1, Abstract; 3, §§V, VIII]
