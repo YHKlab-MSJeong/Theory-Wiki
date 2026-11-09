@@ -63,7 +63,9 @@ nav:
           - SCBA convergence: computational-materials-science/quantum-transport/scba-convergence.md
           - Long-channel transport: computational-materials-science/quantum-transport/long-channel-transport.md
           - Hamiltonian block extension and RGF: computational-materials-science/quantum-transport/hamiltonian-block-stitching.md
+          - Hod divide and conquer: computational-materials-science/quantum-transport/hod-divide-and-conquer.md
           - ML Hamiltonian transport: computational-materials-science/quantum-transport/ml-hamiltonian-transport.md
+          - DeePTB-NEGF: computational-materials-science/quantum-transport/deeptb-negf.md
           - DFTH-NEGF: computational-materials-science/quantum-transport/dfth-negf.md
           - Nonorthogonal KPM: computational-materials-science/quantum-transport/nonorthogonal-kpm.md
           - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md

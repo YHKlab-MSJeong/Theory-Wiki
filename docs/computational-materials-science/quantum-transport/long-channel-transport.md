@@ -29,6 +29,8 @@ description: 작은 DFT Hamiltonian 확장, Order-N DFT, 학습 Hamiltonian 수�
 
 HamGNN-NEGF의 학습 Hamiltonian, 비직교 KPM, RGF 연결과 적용 경계는 [독립 문서](hamgnn-negf.md)에서 자세히 설명한다. 정적 DFT Hamiltonian으로 열린계 수송을 계산하는 방법은 [DFTH-NEGF](dfth-negf.md), 전자수 조건으로 Fermi 준위를 찾는 비직교 KPM은 [별도 문서](nonorthogonal-kpm.md)에서 다룬다.
 
+행렬 반복의 구체적 사례는 [Hod 등의 D&C](hod-divide-and-conquer.md), 국소 환경을 학습한 행렬 구성은 [DeePTB-NEGF](deeptb-negf.md)에서 확인한다.
+
 ## 2. 채널 길이를 늘릴 때 먼저 정할 질문
 
 완전히 주기적인 균일 채널을 긴 산란영역으로 표현하려는 경우에는 대표 단위의 행렬 블록을 반복하는 모델을 만들 수 있다. 반면 실제 트랜지스터에서는 전극 접합, 게이트 전위, 도핑, 결함, 변형과 전하 재분포가 채널 위치에 따라 달라질 수 있다. 이 효과를 무시하고 한 블록을 복제하면 계산은 길어져도 해당 공간 변화를 Hamiltonian에 새로 반영하지 않는다. [1, §XIII; 2, TBT.Elec.<>.Bulk and principal-layer guidance; 3, §§III.2–III.3]

@@ -13,6 +13,8 @@ DeePTB-NEGF 논문의 Figure 1은 [출판사 논문 페이지](https://www.natur
   <figcaption markdown="1">학습 Hamiltonian을 이용한 수송의 공통 단계를 표현한 위키 자체 도식이다. 학습 표적, overlap 구성과 Poisson 자기일관성은 사용한 모델과 사례별로 확인해야 한다. [1, §§II–III; 2, Results][도식 크게 보기](images/ml-hamiltonian-overview.svg)</figcaption>
 </figure>
 
+SK 적분의 방향 의존성, 환경 보정과 CNT 학습 및 수송 계산은 [DeePTB와 NEGF 수송](deeptb-negf.md)에서 자세히 다룬다.
+
 ## 1. 학습 모델이 Hamiltonian을 만드는 두 방식
 
 | 접근 | 학습·예측 대상 | 긴 구조로의 확장 | 수송 자기일관성 |

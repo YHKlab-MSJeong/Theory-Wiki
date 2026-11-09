@@ -2094,17 +2094,17 @@
     ]
   },
   "computational-materials-science/quantum-transport/long-channel-transport.md": {
-    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/long-channel-methods.svg": "6ff53fbde6852b62ccada13ca3518262ccd8a62d171ab938dcea503c0ec9761c"
     },
     "coverage": {
-      "mode": "changes",
-      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
-      "baseline_sha256": "3806c05e657624888d1d9c30277ee507a1f334456208d52f70b78ba609ea0278"
+      "mode": "meaning-preserving",
+      "description": "관련 신규 논문 문서로 연결하는 링크 추가",
+      "baseline_sha256": "e15e94b94d59c352bf68c608a49828b9e3ca2ba85641ffe3624710dc938c9d71"
     },
     "reviewer": {
-      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
+      "role": "independent wiki_audit and source reviews, link integration",
       "independent": true,
       "date": "2026-11-09"
     },
@@ -2187,8 +2187,8 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "e15e94b94d59c352bf68c608a49828b9e3ca2ba85641ffe3624710dc938c9d71",
-    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
+    "document_sha256": "71214d3f6f09f3fe40578daf1ee113d8c4d3cd601d4eee95fc403d553630c465",
+    "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/long-channel-transport-crosslink-2026-11-08.md",
@@ -2197,21 +2197,25 @@
       {
         "path": "refs/quality/evidence/long-channel-transport-kpm-dfth-links-2026-11-08.md",
         "sha256": "8d86634cbfc18c44826452690ec95f907fb1ddad223c048f78d40983b438f6d5"
+      },
+      {
+        "path": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+        "sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476"
       }
     ]
   },
   "computational-materials-science/quantum-transport/hamiltonian-block-stitching.md": {
-    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/block-stitching.svg": "3d66c848a1e7b380971932d0693f8f385cc7a9a2d1efeaeb2038c67556885788"
     },
     "coverage": {
-      "mode": "changes",
-      "description": "추가한 이론, 예제, 한계 및 이론 간 링크",
-      "baseline_sha256": "087e6d430d2b482cbd5ca69d0f0fbd5a85c6949b6cc8e7bb810f42d2afe21e85"
+      "mode": "meaning-preserving",
+      "description": "관련 신규 논문 문서로 연결하는 링크 추가",
+      "baseline_sha256": "88c02049080cb0a982a30d31ce0cead4dcd75cb1e67727eb5fee6bee8a378e98"
     },
     "reviewer": {
-      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
+      "role": "independent wiki_audit and source reviews, link integration",
       "independent": true,
       "date": "2026-11-09"
     },
@@ -2316,8 +2320,8 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "88c02049080cb0a982a30d31ce0cead4dcd75cb1e67727eb5fee6bee8a378e98",
-    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
+    "document_sha256": "01ba419b82caac039d75f8dd35fff3ab518d29884fe7246bc8cac7561909cd51",
+    "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/hamiltonian-block-stitching-2026-11-08.md",
@@ -2326,21 +2330,25 @@
       {
         "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
         "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
+      },
+      {
+        "path": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+        "sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476"
       }
     ]
   },
   "computational-materials-science/quantum-transport/ml-hamiltonian-transport.md": {
-    "evidence": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+    "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
     "assets": {
       "computational-materials-science/quantum-transport/images/ml-hamiltonian-overview.svg": "8438aa63b6c07600cf291a9007c2a192744c1cd4ad346bd3c3568c39e82d6784"
     },
     "coverage": {
       "mode": "meaning-preserving",
-      "description": "기존 개념의 문맥 링크",
-      "baseline_sha256": "5f125fb0920da0b01cd3588da67c6684edce15ccf6f2d4263ce01d29d83eabdf"
+      "description": "관련 신규 논문 문서로 연결하는 링크 추가",
+      "baseline_sha256": "332c0e32bca79a342542a250d0c20660638c1c70b170a33f80f491837e3120eb"
     },
     "reviewer": {
-      "role": "independent reviewers atomistic_theory, mobility_theory, transport_theory and integrating reviewer as scoped in evidence",
+      "role": "independent wiki_audit and source reviews, link integration",
       "independent": true,
       "date": "2026-11-09"
     },
@@ -2425,8 +2433,8 @@
       }
     ],
     "status": "pass",
-    "document_sha256": "332c0e32bca79a342542a250d0c20660638c1c70b170a33f80f491837e3120eb",
-    "evidence_sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476",
+    "document_sha256": "6addb2a63772f93fadc17d45dd7c1002071b133204350b84055359011a7de8e8",
+    "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5",
     "prior_evidence": [
       {
         "path": "refs/quality/evidence/ml-hamiltonian-transport-2026-11-08.md",
@@ -2439,6 +2447,10 @@
       {
         "path": "refs/quality/evidence/missing-figure-review-2026-11-08.md",
         "sha256": "bb5ac102e72e729230c8c387e6959d139b1852a6ae173f770b198f93c9b50b39"
+      },
+      {
+        "path": "refs/quality/evidence/theory-depth-review-2026-11-09.md",
+        "sha256": "7af92ffa282d5dd5cbe0b942ceb48968fd9bce841d458731ae0035371590a476"
       }
     ]
   },
@@ -3618,5 +3630,186 @@
         ]
       }
     ]
+  },
+  "computational-materials-science/quantum-transport/hod-divide-and-conquer.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 논문과 이론 문서 전체"
+    },
+    "reviewer": {
+      "role": "independent reviewer hod; reviewed complete article, corrected contact limitation and re-reviewed",
+      "independent": true,
+      "date": "2026-11-09"
+    },
+    "sources": {
+      "hod": {
+        "provenance": "hod-2006-dc",
+        "url": "https://doi.org/10.1063/1.2349482",
+        "location": "§§II.A–D, III; Eqs. (3), (6)–(8), (16)–(24); Figs. 1–6",
+        "kind": "primary-research"
+      },
+      "zou": {
+        "provenance": "zou-2025-deeptb-negf",
+        "url": "https://doi.org/10.1038/s41524-025-01853-6",
+        "location": "Results framework, open boundary, NEGF–Poisson, CNT FET; Methods Datasets and Training Settings; Fig. 5; Supplementary §S4",
+        "kind": "primary-research"
+      },
+      "gu": {
+        "provenance": "gu-2024-deeptb",
+        "url": "https://doi.org/10.1038/s41467-024-51006-4",
+        "location": "Results theoretical framework and neural network architecture, Eqs. (1)–(8)",
+        "kind": "primary-research"
+      },
+      "sk": {
+        "provenance": "slater-koster-1954",
+        "url": "https://doi.org/10.1103/PhysRev.94.1498",
+        "location": "§III, Table I",
+        "kind": "primary-research"
+      },
+      "papior": {
+        "provenance": "papior-2017-transiesta",
+        "url": "https://arxiv.org/abs/1607.04464",
+        "location": "§III NEGF and recursive calculations",
+        "kind": "primary-research"
+      },
+      "soler": {
+        "provenance": "soler-2002-siesta",
+        "url": "https://doi.org/10.1088/0953-8984/14/11/302",
+        "location": "§14 order-N functional",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Hod D&C procedures, proof of concept, correlation values and limitations are attributed to the paper.",
+        "scope": "Hod 2006 specific molecular model and low-bias conditions",
+        "status": "reported-primary",
+        "sources": [
+          "hod"
+        ]
+      },
+      {
+        "claim": "Nonorthogonal open-boundary Green function combines H, S and lead self-energies.",
+        "scope": "Elastic coherent single-particle two-terminal transport",
+        "status": "supported",
+        "sources": [
+          "hod",
+          "papior"
+        ]
+      },
+      {
+        "claim": "Fixed-block repetition and order-N self-consistent DFT have distinct objectives.",
+        "scope": "Distinction between approximation and scaling method",
+        "status": "supported",
+        "sources": [
+          "hod",
+          "soler"
+        ]
+      }
+    ],
+    "assets": {},
+    "document_sha256": "de94417cf1d78cea043726b58dbbcc2e13d70f0535ff96c9758e16bd872f137b",
+    "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
+    "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5"
+  },
+  "computational-materials-science/quantum-transport/deeptb-negf.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 논문과 이론 문서 전체"
+    },
+    "reviewer": {
+      "role": "independent reviewer deeptb; cross-reviewed by wiki_audit; corrections reviewed again",
+      "independent": true,
+      "date": "2026-11-09"
+    },
+    "sources": {
+      "hod": {
+        "provenance": "hod-2006-dc",
+        "url": "https://doi.org/10.1063/1.2349482",
+        "location": "§§II.A–D, III; Eqs. (3), (6)–(8), (16)–(24); Figs. 1–6",
+        "kind": "primary-research"
+      },
+      "zou": {
+        "provenance": "zou-2025-deeptb-negf",
+        "url": "https://doi.org/10.1038/s41524-025-01853-6",
+        "location": "Results framework, open boundary, NEGF–Poisson, CNT FET; Methods Datasets and Training Settings; Fig. 5; Supplementary §S4",
+        "kind": "primary-research"
+      },
+      "gu": {
+        "provenance": "gu-2024-deeptb",
+        "url": "https://doi.org/10.1038/s41467-024-51006-4",
+        "location": "Results theoretical framework and neural network architecture, Eqs. (1)–(8)",
+        "kind": "primary-research"
+      },
+      "sk": {
+        "provenance": "slater-koster-1954",
+        "url": "https://doi.org/10.1103/PhysRev.94.1498",
+        "location": "§III, Table I",
+        "kind": "primary-research"
+      },
+      "papior": {
+        "provenance": "papior-2017-transiesta",
+        "url": "https://arxiv.org/abs/1607.04464",
+        "location": "§III NEGF and recursive calculations",
+        "kind": "primary-research"
+      },
+      "soler": {
+        "provenance": "soler-2002-siesta",
+        "url": "https://doi.org/10.1088/0953-8984/14/11/302",
+        "location": "§14 order-N functional",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "SK angular coefficients express two-center hopping; pp illustrative values follow from the angular formulas.",
+        "scope": "Real p orbitals and explicit direction-cosine convention",
+        "status": "supported",
+        "sources": [
+          "gu",
+          "sk"
+        ]
+      },
+      {
+        "claim": "Gu DeePTB model environment-dependent SK, onsite, training and orthogonal-basis assumptions are as reported.",
+        "scope": "2024 DeePTB-SK paper",
+        "status": "reported-primary",
+        "sources": [
+          "gu"
+        ]
+      },
+      {
+        "claim": "Zou DeePTB transport training, E3 and SK distinction, alignment, CNT results, doped contacts and gate-work-function condition are as reported.",
+        "scope": "2025 CNT and break junction models",
+        "status": "reported-primary",
+        "sources": [
+          "zou"
+        ]
+      },
+      {
+        "claim": "NEGF expresses coherent two-terminal transmission using lead self-energies and the retarded Green function.",
+        "scope": "Elastic single-particle NEGF",
+        "status": "supported",
+        "sources": [
+          "zou",
+          "papior"
+        ]
+      },
+      {
+        "claim": "Block repetition differs from local-environment-dependent Hamiltonian prediction.",
+        "scope": "Hod periodic chain and DeePTB-SK",
+        "status": "supported",
+        "sources": [
+          "hod",
+          "zou"
+        ]
+      }
+    ],
+    "assets": {},
+    "document_sha256": "0bd30ac9263aee1bedb186097c8174997ea2c262cc1fda4b5d89a2936cd4617d",
+    "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
+    "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5"
   }
 }

@@ -11,6 +11,8 @@ description: 작은 DFT의 비직교 Hamiltonian 블록을 이어 긴 채널의 
   <figcaption markdown="1">균일 채널의 블록 확장과 열린 경계를 나타낸 위키 자체 도식이다. 층 사이의 Hamiltonian과 overlap 결합도 필요하며, RGF는 조립된 블록 구조를 따라 계산한다. [2, “Principal layer interactions”; 3, §1][도식 크게 보기](images/block-stitching.svg)</figcaption>
 </figure>
 
+실제 DFT 행렬을 이용해 긴 분자를 구성한 사례는 [Hod 등의 divide and conquer 논문](hod-divide-and-conquer.md)에서 단계별로 살펴본다.
+
 ## 1. 기저 확장과 행렬 블록
 
 국소 원자궤도 기저에서는 단일 전자 상태를
