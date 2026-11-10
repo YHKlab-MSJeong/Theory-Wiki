@@ -40,7 +40,7 @@ DeePTB 공식 입력 문서에서 `model_options.embedding.method`는 `"lem"` �
 
 ## 6. 참고 자료
 
-1. DeePTB-E3/SLEM 연구진, [ICLR 2025 논문 원문](https://openreview.net/pdf?id=kpq3IIjUD3), Appendix G “LIMITATION” 및 관련 방법 절.
+1. Z. Zhouyin et al., “Learning local equivariant representations for quantum operators,” [ICLR 2025 논문 원문](https://openreview.net/pdf?id=kpq3IIjUD3), Appendix G “LIMITATION” 및 관련 방법 절.
 2. DeePTB 개발팀, [E3TB advanced input](https://github.com/deepmodeling/DeePTB/blob/main/docs/advanced/e3tb/advanced_input.md), “model_options”.
 3. DeePTB 개발팀, [Tutorial 4: DeePTB-E3](https://deeptb.readthedocs.io/en/latest/quick_start/hands_on/tutorial4_E3_si.html), “More Method”, “Model Architecture”.
 4. DeePTB 개발팀, [DeePTB-E3: Bulk Silicon](https://deeptb.readthedocs.io/en/latest/quick_start/hands_on/e3tb_hands_on.html), “model_options”.
