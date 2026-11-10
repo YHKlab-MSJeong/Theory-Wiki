@@ -72,7 +72,13 @@ H'=H+\lambda S
 
 이다. \(w_\alpha\)는 겹치는 조각의 중복 계산을 조정하는 분할 가중치다. 밀도행렬 기반 구현에서는 기저 블록에 대응하는 분할 규칙을 사용한다. 모든 D&C-DFT가 위의 동일한 가중 함수 또는 buffer 구현을 사용하는 것은 아니다. [2, Abstract; 3, Abstract; 7, D&C lecture]
 
-국소 조각의 계산만 반복한다고 전역 Coulomb 상호작용이 사라지는 것은 아니다. LS3DF 등은 장거리 정전기를 다루기 위해 전체 시스템에 대해 Poisson 방정식을 풀면서 비용이 큰 양자역학 계산은 조각별로 나누어 처리한다. [4, discussion of global Poisson; 8, §III LS3DF algorithm] 이때의 **global Poisson**은 D&C-DFT의 특정 구현 전략을 설명하며, Hod식 조립이나 DeePTB의 \(\lambda S\)에 일반적으로 포함되는 단계는 아니다.
+국소 조각의 계산만 반복한다고 전역 Coulomb 상호작용이 사라지는 것은 아니다. 특히 LS3DF는 단순한 (w_\alpha\) 가중합이 아니라 부호 \(\alpha(F)=\pm1\)를 가진 서로 다른 크기의 fragment 밀도를 조립하는 형태를 사용한다. Wang의 2014년 리뷰에서 전체 밀도는
+
+\[
+\rho(\mathbf r)=\sum_F\alpha(F)\rho_F(\mathbf r)
+\]
+
+로 기술된다. 조립된 밀도에서 얻은 global potential을 각 fragment에 전달하고, 전체 시스템의 Poisson 방정식으로 장거리 Coulomb 효과를 취급한다. [4, LS3DF discussion, Eq. (5), Figs. 7 and 10] 이 방식의 부호 조립을 앞 절의 partition-of-unity (w_\alpha\)와 같은 알고리즘이라고 단정하면 안 된다. 이때의 **global Poisson**은 D&C-DFT의 특정 구현 전략을 설명하며, Hod식 조립이나 DeePTB의 \(\lambda S\)에 일반적으로 포함되는 단계는 아니다.
 
 ## 4. 어느 접근을 선택할 것인가
 
