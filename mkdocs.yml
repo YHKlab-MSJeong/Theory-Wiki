@@ -71,6 +71,11 @@ nav:
           - HamGNN-NEGF: computational-materials-science/quantum-transport/hamgnn-negf.md
   - Computational science:
       - Overview: computational-science/index.md
+      - Machine learning:
+          - Index: computational-science/machine-learning/index.md
+          - e3nn: computational-science/machine-learning/e3nn.md
+          - LEM and SLEM: computational-science/machine-learning/lem-slem.md
+          - Machine learning glossary: computational-science/machine-learning/machine-learning-glossary.md
       - Atomistic simulation:
           - Index: computational-science/atomistic-simulation/index.md
           - Localized basis sets: computational-science/atomistic-simulation/localized-basis-sets.md
@@ -78,3 +83,4 @@ nav:
           - SIESTA 5.4 OMM: computational-science/atomistic-simulation/siesta-54-omm.md
           - Order-N DFT: computational-science/atomistic-simulation/order-n-dft.md
           - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md
+          - Divide-and-conquer and H plus lambda S: computational-science/atomistic-simulation/divide-and-conquer-h-plus-lambda-s.md
