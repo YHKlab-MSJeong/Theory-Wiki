@@ -32,7 +32,11 @@ description: 원자계 머신러닝과 학습 Hamiltonian 논문을 읽을 때 �
 
 DFT는 비교 대상과 목표에 따라 high-fidelity 참조가 될 수도 있지만, 실험의 완전한 정답과 동일하지 않다. 같은 ‘fidelity’라는 단어라도 기준 DFT, 더 높은 수준의 전자구조 계산, 실험 측정 중 무엇을 말하는지 명시해야 한다.
 
-## 3. 오차와 손실 함수
+## 3. Multi-fidelity의 출처와 비교 기준
+
+Peherstorfer, Willcox, Gunzburger의 서베이는 여러 모형이 서로 다른 계산 비용과 fidelity를 가질 때 저비용 모형을 활용하면서 고비용 기준 모형을 함께 유지하는 접근을 정리한다. 여기서 높은 fidelity는 **특정 응용에서 요구하는 기준에 더 가깝다**는 상대적 표현이지 모든 물리 관측량에서 정확도가 우수함을 보장하는 절대적 등급이 아니다. 따라서 ML-DFT 논문에서는 DFT의 함수형·기저·구조·수렴 조건이 무엇인지, 고정된 기준과 비교했는지 확인한다. [5, Abstract; 6, Abstract]
+
+## 4. 오차와 손실 함수
 
 기준값 \(y_i\), 예측값 \(\hat y_i\), 표본 수 \(N\)에 대해
 
@@ -43,7 +47,7 @@ DFT는 비교 대상과 목표에 따라 high-fidelity 참조가 될 수도 있�
 
 MAE와 RMSE의 단위는 \(y\)와 같고, RMSE는 큰 잔차의 제곱에 더 민감하다. **Loss**는 학습 중 최적화하는 목적함수이고 **metric**은 성능 보고 지표이므로 동일하지 않을 수 있다. 행렬 원소 단위의 MAE와 band gap, transmission 등의 관측량 오차도 서로 다른 평가다.
 
-## 4. 대칭성과 그래프 학습
+## 5. 대칭성과 그래프 학습
 
 | 용어 | 뜻 |
 |---|---|
@@ -58,17 +62,20 @@ MAE와 RMSE의 단위는 \(y\)와 같고, RMSE는 큰 잔차의 제곱에 더 �
 
 관련 설명: [e3nn](e3nn.md), [LEM/SLEM](lem-slem.md).
 
-## 5. 학습·배포 결과 해석
+## 6. 학습·배포 결과 해석
 
 **Data efficiency**는 원하는 성능을 얻는 데 필요한 학습자료의 양과 관련된다. 모델 사이 비교 시 같은 데이터 분할과 성능 기준을 쓰는지 확인한다. **Inference**는 학습된 모델로 예측하는 단계이며, 추론 속도와 학습 비용은 별개이다. **Out-of-distribution (OOD)**은 학습 및 통상 평가 분포와 다른 입력·조건을 뜻하고, 단순히 이전에 보지 않은 표본과는 구별해야 한다.
 
 논문에서 “DFT-level fidelity”라고 할 때는 구체적으로 무엇을 비교했는지(행렬, 밴드, 힘, 수송), 어느 구조를 시험했는지, 기준이 무엇인지를 먼저 확인한다. 지표 이름보다 **표적·단위·자료 분할·기준 계산·평가 범위**가 중요하다.
 
-## 6. 참고 자료
+## 7. 참고 자료
 
 1. e3nn 개발팀, [공식 문서](https://docs.e3nn.org/en/latest/), “What is e3nn?” 및 “Irreps”.
 2. e3nn 개발팀, [Equivariance Testing](https://docs.e3nn.org/en/latest/guide/equivar_testing.html), equivariance error의 정의와 수치 검사.
 3. DeePTB 개발팀, [E3TB advanced input](https://github.com/deepmodeling/DeePTB/blob/main/docs/advanced/e3tb/advanced_input.md), 모델 옵션, loss 설정과 embedding 정의.
 4. J. Zou et al., [학습 Hamiltonian과 수송 계산](https://doi.org/10.1038/s41524-025-01853-6) (2025), 학습 표적과 관측량 기반 검증 사례.
 
-> 편집 메모: fidelity의 multi-fidelity 정의, 자료 분할·OOD 및 오차 지표에 대해서는 별도 독립 원문 대조를 완료한 다음에만 게시한다.
+5. B. Peherstorfer, K. Willcox, M. Gunzburger, [“Survey of Multifidelity Methods in Uncertainty Propagation, Inference, and Optimization”](https://doi.org/10.1137/16M1082469), *SIAM Review* **60**, 550–591 (2018), Abstract.
+6. [“Multi-Fidelity Methods for Optimization: A Survey”](https://doi.org/10.1145/3801959) (2026), Abstract.
+
+> 편집 메모: 데이터 누출·OOD 및 지표 정의에 대해서는 독립 원문 대조를 완료한 다음에만 게시한다.
