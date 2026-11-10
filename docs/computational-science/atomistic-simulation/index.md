@@ -5,3 +5,4 @@
 - [SIESTA 5.4의 Orbital Minimization Method](siesta-54-omm.md)
 - [Order-N DFT](order-n-dft.md)
 - [대규모 원자론 시뮬레이션을 위한 DFTB](dftb-large-scale.md)
+- [Divide-and-conquer의 두 의미와 H+λS](divide-and-conquer-h-plus-lambda-s.md)
