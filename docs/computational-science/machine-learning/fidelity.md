@@ -2,7 +2,7 @@
 description: 머신러닝에서 fidelity가 가리키는 참조 대상과 다중 충실도·설명 충실도의 차이를 설명한다.
 ---
 
-# Fidelity와 다중 충실도
+# Fidelity and multi-fidelity learning
 
 **Fidelity(충실도)**는 데이터·모형·설명이 참조 대상의 특성이나 동작을 얼마나 충실하게 표현하는지를 나타내는 말이다. 과학 시뮬레이션에서는 모형과 데이터의 근사 수준, 설명 가능한 머신러닝에서는 원 모델의 예측을 재현하는 정도에 쓰인다. 논문을 읽을 때는 fidelity의 **참조 대상, 평가 범위, 측정 방법**을 함께 확인한다. 아래 정의는 각 문헌의 용례를 종합한 것이다. [1, Introduction; 2, §2; 3, §3 “Empirical Evaluation”]
 
@@ -14,7 +14,7 @@ description: 머신러닝에서 fidelity가 가리키는 참조 대상과 다중
 
 **Multi-fidelity learning(다중 충실도 학습)**은 서로 다른 수준의 자료나 모형을 결합해 관심 대상의 예측을 개선하는 접근이다. 많은 저비용 자료에 소량의 고비용 자료를 결합하는 구성이 사용된다. 수준 사이의 관계를 활용하므로, 저충실도 결과가 어떤 입력 구간에서 유효하고 어떤 구간에서 잘못된 추세를 보이는지도 확인한다. [1, Abstract and §§2–3; 4, §§1–3]
 
-재료 연구의 실제 예로 Chen 등은 많은 PBE 밴드갭 자료와 더 높은 수준의 전자구조 계산 및 실험 자료를 결합한 그래프 신경망을 제시했다. 이 논문에서 PBE 자료는 low-fidelity 자료로 사용되었다. 여기서 붙인 수준 이름은 해당 밴드갭 학습 문제와 자료 구성에 따른다. [5, Abstract and Results]
+재료 연구의 실제 예로 Chen 등은 많은 Perdew–Burke–Ernzerhof (PBE) 밴드갭 자료와 더 높은 수준의 전자구조 계산 및 실험 자료를 결합한 그래프 신경망을 제시했다. 이 논문에서 PBE 자료는 low-fidelity 자료로 사용되었다. 여기서 붙인 수준 이름은 해당 밴드갭 학습 문제와 자료 구성에 따른다. [5, Abstract and Results]
 
 <a id="surrogate-model"></a>
 
@@ -22,13 +22,13 @@ description: 머신러닝에서 fidelity가 가리키는 참조 대상과 다중
 
 **Surrogate model(대리모형)**은 비용이 큰 계산 등의 입력–출력 관계를 근사하여 대신 평가하는 모형이다. 신경망이나 Gaussian process로 구성할 수 있다. 대리모형을 평가할 때는 기준 계산과의 차이뿐 아니라 입력 범위와 관심 출력도 함께 정한다. [1, §2(a); 4, §1.3; 5, Introduction and Results “Multi-fidelity Graph Networks”]
 
-위키의 DeePTB 사례에서는 DFT 자료에서 학습한 모형으로 Hamiltonian을 구성한 뒤 수송을 계산한다. 이때 밴드, Hamiltonian 원소, transmission은 각각 비교할 수 있는 출력이다. 해당 논문의 학습 표적과 수송 검증은 관련 문서에서 살펴본다. [DeePTB와 NEGF 수송](../../computational-materials-science/quantum-transport/deeptb-negf.md)
+위키의 DeePTB 사례에서는 density functional theory (DFT) 자료에서 학습한 모형으로 Hamiltonian을 구성한 뒤 수송을 계산한다. 이때 밴드, Hamiltonian 원소, transmission은 각각 비교할 수 있는 출력이다. 해당 논문의 학습 표적과 수송 검증은 관련 문서에서 살펴본다. [DeePTB와 NEGF 수송](../../computational-materials-science/quantum-transport/deeptb-negf.md)
 
 <a id="explanation-fidelity"></a>
 
 ## 2. 설명의 fidelity
 
-설명 가능한 인공지능(explainable artificial intelligence, XAI)에서 fidelity는 설명 모델 \(g\)가 설명 대상 모델 \(f\)의 동작을 재현하는 정도를 가리킨다. 분류 모델 추출의 한 지표는 다음과 같다. [2, §2; 3, §3 “Empirical Evaluation”]
+설명 가능한 인공지능인 explainable artificial intelligence (XAI)에서 fidelity는 설명 모델 \(g\)가 설명 대상 모델 \(f\)의 동작을 재현하는 정도를 가리킨다. 분류 모델 추출의 한 지표는 다음과 같다. [2, §2; 3, §3 “Empirical Evaluation”]
 
 \[
 \operatorname{Fidelity}(g,f)
@@ -54,7 +54,7 @@ description: 머신러닝에서 fidelity가 가리키는 참조 대상과 다중
 
 ### (2) Local fidelity
 
-LIME(Local Interpretable Model-agnostic Explanations)은 특정 입력 \(x\) 주변에서 원 모델을 근사하는 설명 모델을 구한다. 논문은 근접도 가중치 \(\pi_x(z)\)로 주변 샘플 \(z\)에 가중치를 주는 local fidelity 손실을 사용한다. 설명용 표현을 \(z'\)라 하면 [2, §§3.1–3.2 and Eq. (2)]
+Local Interpretable Model-agnostic Explanations (LIME)은 특정 입력 \(x\) 주변에서 원 모델을 근사하는 설명 모델을 구한다. 논문은 근접도 가중치 \(\pi_x(z)\)로 주변 샘플 \(z\)에 가중치를 주는 local fidelity 손실을 사용한다. 설명용 표현을 \(z'\)라 하면 [2, §§3.1–3.2 and Eq. (2)]
 
 \[
 \mathcal L(f,g,\pi_x)

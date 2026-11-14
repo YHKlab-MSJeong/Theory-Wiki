@@ -80,6 +80,10 @@ nav:
           - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md
       - Machine learning:
           - Index: computational-science/machine-learning/index.md
-          - ML glossary: computational-science/machine-learning/glossary.md
-          - Fidelity: computational-science/machine-learning/fidelity.md
-          - CNN kernel and receptive field: computational-science/machine-learning/cnn-kernel-receptive-field.md
+          - Machine learning glossary: computational-science/machine-learning/glossary.md
+          - Fidelity and multi-fidelity learning: computational-science/machine-learning/fidelity.md
+          - CNN kernels and receptive fields: computational-science/machine-learning/cnn-kernel-receptive-field.md
+          - Training and optimization: computational-science/machine-learning/training-and-optimization.md
+          - Evaluation and transferability: computational-science/machine-learning/evaluation-and-transferability.md
+          - Representations and symmetry: computational-science/machine-learning/representation-and-symmetry.md
+          - Data augmentation: computational-science/machine-learning/data-augmentation.md

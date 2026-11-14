@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+<rect width="920" height="410" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#243441"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif" fill="#172531">
+<text x="460" y="31" font-size="23" text-anchor="middle">Split by original group</text>
+<rect x="20" y="155" width="205" height="90" rx="7" fill="#f0f2f4" stroke="#243441" stroke-width="1.6"/>
+<text x="122.5" y="193.5" font-size="20" text-anchor="middle">Original groups</text>
+<text x="122.5" y="220.5" font-size="20" text-anchor="middle">A, B, C, D</text>
+<rect x="320" y="60" width="205" height="80" rx="7" fill="#e6f0f7" stroke="#243441" stroke-width="1.6"/>
+<text x="422.5" y="93.5" font-size="20" text-anchor="middle">Training</text>
+<text x="422.5" y="120.5" font-size="20" text-anchor="middle">A, B</text>
+<rect x="320" y="160" width="205" height="80" rx="7" fill="#f0f2f4" stroke="#243441" stroke-width="1.6"/>
+<text x="422.5" y="193.5" font-size="20" text-anchor="middle">Validation</text>
+<text x="422.5" y="220.5" font-size="20" text-anchor="middle">C</text>
+<rect x="320" y="260" width="205" height="80" rx="7" fill="#f0f2f4" stroke="#243441" stroke-width="1.6"/>
+<text x="422.5" y="293.5" font-size="20" text-anchor="middle">Test</text>
+<text x="422.5" y="320.5" font-size="20" text-anchor="middle">D</text>
+<rect x="620" y="60" width="275" height="80" rx="7" fill="#fff1dd" stroke="#243441" stroke-width="1.6"/>
+<text x="757.5" y="93.5" font-size="20" text-anchor="middle">Training augmentation</text>
+<text x="757.5" y="120.5" font-size="20" text-anchor="middle">A1, A2, B1, B2</text>
+<polyline points="225,200 265,200 265,100 320,100" fill="none" stroke="#243441" stroke-width="1.8" marker-end="url(#arrow)"/>
+<polyline points="225,200 320,200" fill="none" stroke="#243441" stroke-width="1.8" marker-end="url(#arrow)"/>
+<polyline points="225,200 265,200 265,300 320,300" fill="none" stroke="#243441" stroke-width="1.8" marker-end="url(#arrow)"/>
+<polyline points="525,100 620,100" fill="none" stroke="#243441" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="463" y="382" font-size="18" text-anchor="middle">Each transformed copy retains its original group.</text>
+</g>
+</svg>

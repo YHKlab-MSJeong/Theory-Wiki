@@ -1,5 +1,9 @@
-# 머신러닝
+# Machine learning
 
-- [머신러닝 용어 찾아보기](glossary.md)
-- [Fidelity와 다중 충실도](fidelity.md)
-- [CNN의 Kernel과 Receptive Field](cnn-kernel-receptive-field.md)
+- [Machine learning glossary](glossary.md)
+- [Fidelity and multi-fidelity learning](fidelity.md)
+- [CNN kernels and receptive fields](cnn-kernel-receptive-field.md)
+- [Training and optimization](training-and-optimization.md)
+- [Evaluation and transferability](evaluation-and-transferability.md)
+- [Representations and symmetry](representation-and-symmetry.md)
+- [Data augmentation](data-augmentation.md)

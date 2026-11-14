@@ -6,4 +6,4 @@
 
 ## Machine learning
 
-- [머신러닝 용어와 개념](machine-learning/index.md)
+- [Machine learning](machine-learning/index.md)

@@ -2,9 +2,9 @@
 description: CNN의 kernel·channel·stride·padding·dilation과 receptive field를 정의와 계산 예제로 설명한다.
 ---
 
-# CNN의 Kernel과 Receptive Field
+# CNN kernels and receptive fields
 
-합성곱 신경망(convolutional neural network, CNN)은 격자 형태 자료에서 국소적인 가중합을 반복해 특징을 계산한다. 논문에 나오는 kernel size, channel, receptive field를 이해하려면 각 크기를 **어느 층의 어떤 좌표에서 측정하는지** 확인하면 된다. 영상의 높이·너비를 예로 들되, 같은 원리는 1차원 시계열이나 3차원 격자에도 적용된다. [1, §§9.1–9.2; 2, Problem setup]
+Convolutional neural network (CNN)은 합성곱 신경망으로, 격자 형태 자료에서 국소적인 가중합을 반복해 특징을 계산한다. 논문에 나오는 kernel size, channel, receptive field를 이해하려면 각 크기를 **어느 층의 어떤 좌표에서 측정하는지** 확인하면 된다. 영상의 높이·너비를 예로 들되, 같은 원리는 1차원 시계열이나 3차원 격자에도 적용된다. [1, §§9.1–9.2; 2, Problem setup]
 
 <a id="kernel-and-channel"></a>
 
@@ -12,7 +12,7 @@ description: CNN의 kernel·channel·stride·padding·dilation과 receptive fiel
 
 **Kernel(커널)**은 국소 가중합에 사용하는 가중치 배열을 가리킨다. **Filter(필터)**도 관련 문헌과 구현에서 이 가중치에 쓰이는 이름이다. 용어와 함께 배열 shape를 확인하면 연결 관계를 알 수 있다. 일반적인 2차원 convolution에서 출력 채널 하나를 계산하는 가중치는 \(C_{\mathrm{in}}\times k_h\times k_w\)개다. 여기서 \(C_{\mathrm{in}}\)은 입력 채널 수, \(k_h,k_w\)는 공간 방향의 kernel size다. [1, §9.5; 3, Variables; 4, 연산 설명]
 
-**Channel(채널)**은 같은 공간 위치의 성분을 구분하는 축이다. RGB 영상의 세 성분과 중간 층에서 학습한 여러 특징 채널이 여기에 해당한다. **Feature map(특징 맵)**은 공간 좌표에 특징 값을 배열한 출력이다. 채널 하나의 \(H\times W\) 배열을 가리키거나 전체 \(H\times W\times C\) 출력을 가리키는 문맥이 있으므로, shape를 함께 읽는다. [2, Problem setup; 4, 입력·출력 정의]
+**Channel(채널)**은 같은 공간 위치의 성분을 구분하는 축이다. red–green–blue (RGB) 영상의 세 성분과 중간 층에서 학습한 여러 특징 채널이 여기에 해당한다. **Feature map(특징 맵)**은 공간 좌표에 특징 값을 배열한 출력이다. 채널 하나의 \(H\times W\) 배열을 가리키거나 전체 \(H\times W\times C\) 출력을 가리키는 문맥이 있으므로, shape를 함께 읽는다. 여기서 \(H,W,C\)는 각각 특징 맵의 높이, 너비, 채널 수다. [2, Problem setup; 4, 입력·출력 정의]
 
 ### (1) 가중치와 출력의 크기
 
@@ -23,10 +23,10 @@ description: CNN의 kernel·channel·stride·padding·dilation과 receptive fiel
 \[
 y_{o,u,v}=b_o+\sum_{c=1}^{C_{\mathrm{in}}}
 \sum_{a=0}^{k_h-1}\sum_{b=0}^{k_w-1}
-W_{o,c,a,b}\,x_{c,u+a,v+b}.
+\mathcal W_{o,c,a,b}\,x_{c,u+a,v+b}.
 \]
 
-\(o,c\)는 출력·입력 채널, \(u,v\)는 출력의 공간 인덱스다. 이 식에서 \(x\)는 **해당 층의 입력 feature map**이다. 첫 층에서는 원 입력 영상이고, 다음 층에서는 앞 층이 계산한 특징 값이다. 그룹 convolution에서는 그룹에 속한 입력 채널들끼리 연결하므로 가중치 shape도 함께 확인한다. [3, groups; 4, patch 추출 설명]
+\(y\)는 출력, \(x\)는 입력, \(\mathcal W\)는 가중치, \(b_o\)는 출력 채널 \(o\)의 bias다. \(o,c\)는 출력·입력 채널, \(u,v\)는 출력 공간 인덱스이고 \(a,b\)는 kernel 내부의 높이·너비 인덱스다. 이 식에서 \(x\)는 **해당 층의 입력 feature map**이다. 첫 층에서는 원 입력 영상이고, 다음 층에서는 앞 층이 계산한 특징 값이다. 그룹 convolution에서는 그룹에 속한 입력 채널들끼리 연결하므로 가중치 shape도 함께 확인한다. [3, groups; 4, patch 추출 설명]
 
 <a id="stride-padding-dilation"></a>
 
@@ -57,12 +57,12 @@ n_{\mathrm{out}}=
 
 <figure markdown="span">
   ![5×5 입력을 stride 1의 3×3 convolution 두 층에 통과시키면 3×3 특징 맵과 출력 하나가 생기며, 최종 출력은 원 입력 5×5 전체에 연결된다.](images/cnn-receptive-field.svg)
-  <figcaption markdown="1">Kernel size \(3\times3\), stride 1, dilation 1, padding 0인 두 층을 보여 주는 위키 자체 도식이다. 마지막 층의 \(3\times3\) window는 첫 특징 맵에 놓이고, 원 입력으로 추적한 receptive field는 \(5\times5\)다. 설명용 격자이며 실제 학습 결과를 사용하지 않았다. [2, Single-path networks] [크게 보기](images/cnn-receptive-field.svg)</figcaption>
+  <figcaption markdown="1">Kernel size $3\times3$, stride 1, dilation 1, padding 0인 두 층을 보여 주는 위키 자체 도식이다. 마지막 층의 $3\times3$ window는 첫 특징 맵에 놓이고, 원 입력으로 추적한 receptive field는 $5\times5$다. 설명용 격자이며 실제 학습 결과를 사용하지 않았다. [2, Single-path networks] [크게 보기](images/cnn-receptive-field.svg)</figcaption>
 </figure>
 
 ### (1) 크기를 누적하는 식
 
-단일 경로의 국소 convolution·pooling 층을 가정한다. 원 입력에서 잰 RF 폭을 \(R_\ell\), 이웃 출력 원소의 원 입력 기준 간격을 \(J_\ell\)로 두면 초기값과 점화식은 다음과 같다. [2, Single-path networks의 식을 순방향으로 정리]
+단일 경로의 국소 convolution·pooling 층을 가정한다. 층 번호 \(\ell\)에서 \(k_\ell,s_\ell,d_\ell\)은 각각 kernel size, stride, dilation이다. 원 입력에서 잰 RF 폭을 \(R_\ell\), 이웃 출력 원소의 원 입력 기준 간격을 \(J_\ell\)로 두면 초기값과 점화식은 다음과 같다. [2, Single-path networks의 식을 순방향으로 정리]
 
 \[
 R_0=J_0=1,\qquad

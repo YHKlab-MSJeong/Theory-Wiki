@@ -3815,11 +3815,12 @@
   "computational-science/machine-learning/fidelity.md": {
     "status": "pass",
     "coverage": {
-      "mode": "full",
-      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+      "mode": "meaning-preserving",
+      "description": "영문 대표제목·약어 확장·기호 설명·캡션 표기와 인용 번호의 의미보존 교정",
+      "baseline_sha256": "3bb7bc5c687faeba5090e7b6f4269a6f4035babd2e1960a325ab84c7e0d5fa55"
     },
     "reviewer": {
-      "role": "independent scientific reviewers ml_fidelity_research",
+      "role": "independent ml_rules_audit and glossary section reviewers",
       "independent": true,
       "date": "2026-11-15"
     },
@@ -3929,19 +3930,26 @@
         ]
       }
     ],
-    "document_sha256": "3bb7bc5c687faeba5090e7b6f4269a6f4035babd2e1960a325ab84c7e0d5fa55",
-    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
-    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
-    "assets": {}
+    "document_sha256": "f22db8d6fae462528b77e03112617630143e9effae5364acb13520f894dcb11b",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
+    "assets": {},
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+        "sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef"
+      }
+    ]
   },
   "computational-science/machine-learning/cnn-kernel-receptive-field.md": {
     "status": "pass",
     "coverage": {
-      "mode": "full",
-      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+      "mode": "meaning-preserving",
+      "description": "영문 대표제목·약어 확장·기호 설명·캡션 표기와 인용 번호의 의미보존 교정",
+      "baseline_sha256": "39688c61695dd033a8f7deb105c4536ed418d8c6e831f583cd2dc7fd15d220d2"
     },
     "reviewer": {
-      "role": "independent scientific reviewers ml_cnn_research",
+      "role": "independent ml_rules_audit and glossary section reviewers",
       "independent": true,
       "date": "2026-11-15"
     },
@@ -4037,21 +4045,28 @@
         ]
       }
     ],
-    "document_sha256": "39688c61695dd033a8f7deb105c4536ed418d8c6e831f583cd2dc7fd15d220d2",
-    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
-    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
+    "document_sha256": "1ddaf3e873a5279e2285bb68205ac9b418dc2eba32a1b8a6c1e00ed8bebec443",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
     "assets": {
       "computational-science/machine-learning/images/cnn-receptive-field.svg": "a6577d1c30e6b2a5f00b85788c200bdf2b2a4d549d353a2b50622e255fa0db80"
-    }
+    },
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+        "sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef"
+      }
+    ]
   },
   "computational-science/machine-learning/glossary.md": {
     "status": "pass",
     "coverage": {
-      "mode": "full",
-      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+      "mode": "changes",
+      "description": "용어 추가 정의·내부 링크와 RGLee 형식/표기 재확인",
+      "baseline_sha256": "c4700f39cac03a1235705eed2d74244a6fd7af632c1def0d954e914e823adcb6"
     },
     "reviewer": {
-      "role": "independent scientific reviewers ml_fidelity_research and ml_cnn_research, respective sections",
+      "role": "independent ml_rules_audit and glossary section reviewers",
       "independent": true,
       "date": "2026-11-15"
     },
@@ -4114,6 +4129,174 @@
         "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/c8067ad1937f728f51288b3eb986afaa-Paper.pdf",
         "provenance": "luo-li-urtasun-zemel-2016-erf",
         "location": "§§2–3, particularly §2 and §3.1",
+        "kind": "primary-research"
+      },
+      "expansion_bookOpt": {
+        "url": "https://www.deeplearningbook.org/contents/optimization.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§8.1.1, 8.1.3, 8.3.1, Eqs.8.3 and 8.9, Algorithm8.1",
+        "kind": "textbook"
+      },
+      "expansion_d2lLinear": {
+        "url": "https://d2l.ai/chapter_linear-regression/linear-regression.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§3.1.1.2 Eqs3.1.5–3.1.7; §3.1.1.4 Eqs3.1.10–3.1.11",
+        "kind": "textbook"
+      },
+      "expansion_bookReg": {
+        "url": "https://www.deeplearningbook.org/contents/regularization.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§7.1,7.1.1,7.4,7.8",
+        "kind": "textbook"
+      },
+      "expansion_d2lDecay": {
+        "url": "https://d2l.ai/chapter_linear-regression/weight-decay.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§3.7.1 Eqs3.7.2–3.7.3",
+        "kind": "textbook"
+      },
+      "expansion_bookGrad": {
+        "url": "https://www.deeplearningbook.org/contents/numerical.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§4.3 Eq4.5, §4.3.1 Eqs4.8–4.9",
+        "kind": "textbook"
+      },
+      "expansion_d2lGD": {
+        "url": "https://d2l.ai/chapter_optimization/gd.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§§12.3.1–12.3.2",
+        "kind": "textbook"
+      },
+      "expansion_d2lBatch": {
+        "url": "https://d2l.ai/chapter_optimization/minibatch-sgd.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§12.5.2 Eqs12.5.1–12.5.2",
+        "kind": "textbook"
+      },
+      "expansion_metrics": {
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "Regression metrics; Multioutput",
+        "kind": "primary-documentation"
+      },
+      "expansion_chai": {
+        "url": "https://gmd.copernicus.org/articles/7/1247/2014/",
+        "provenance": "chai-draxler-2014",
+        "location": "§§1–3, definitions and RMSE>=MAE",
+        "kind": "primary-research"
+      },
+      "expansion_schnet": {
+        "url": "https://arxiv.org/pdf/1706.08566",
+        "provenance": "schutt-2017-schnet",
+        "location": "§§3–4.2 Eqs2–5, embeddings, invariant energy, equivariant force; §5 benchmarks",
+        "kind": "primary-research"
+      },
+      "expansion_kapoor": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10499856/",
+        "provenance": "kapoor-narayanan-2023",
+        "location": "Leakage taxonomy L1.2/L1.4/L3.2/L3.3",
+        "kind": "primary-research"
+      },
+      "expansion_skPitfall": {
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "§12.2 leakage, preprocessing fit only on training",
+        "kind": "primary-documentation"
+      },
+      "expansion_skCV": {
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "Grouped data, time series, data transformation",
+        "kind": "primary-documentation"
+      },
+      "expansion_bookML": {
+        "url": "https://www.deeplearningbook.org/contents/ml.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§5.2–5.3 and 5.11.2",
+        "kind": "textbook"
+      },
+      "expansion_liOOD": {
+        "url": "https://arxiv.org/pdf/2406.06489",
+        "provenance": "li-et-al-2024-materials-ood",
+        "location": "§II.D Inspecting materials representations, pp6–7",
+        "kind": "primary-research"
+      },
+      "expansion_pan": {
+        "url": "https://www.cse.cuhk.edu.hk/~sinnopan/publications/TLsurvey_0822.pdf",
+        "provenance": "pan-yang-2010-transfer-learning",
+        "location": "§2 domains/tasks and definitions",
+        "kind": "review"
+      },
+      "expansion_yosinski": {
+        "url": "https://arxiv.org/pdf/1411.1792",
+        "provenance": "yosinski-clune-bengio-lipson-2014",
+        "location": "Introduction and Experimental setup, feature freezing and fine tuning",
+        "kind": "primary-research"
+      },
+      "expansion_bartok": {
+        "url": "https://arxiv.org/html/1209.3140v3",
+        "provenance": "bartok-kondor-csanyi-2013",
+        "location": "§§I–III and V.1, descriptors and completeness",
+        "kind": "primary-research"
+      },
+      "expansion_behler": {
+        "url": "https://aiichironakano.github.io/cs653/Behler-NNPES-PRL07.pdf",
+        "provenance": "behler-parrinello-2007",
+        "location": "pp146401-2–4 Eqs2–5 radial/angular symmetry functions, cutoff and long range",
+        "kind": "primary-research"
+      },
+      "expansion_vaswani": {
+        "url": "https://arxiv.org/html/1706.03762v7",
+        "provenance": "vaswani-2017-transformer",
+        "location": "§§3.2.1–3.2.3 Eq1 and §3.4",
+        "kind": "primary-research"
+      },
+      "expansion_bahdanau": {
+        "url": "https://arxiv.org/html/1409.0473v7",
+        "provenance": "bahdanau-cho-bengio-2015",
+        "location": "§3.1 Eqs5–6 weighted sum",
+        "kind": "primary-research"
+      },
+      "expansion_tfn": {
+        "url": "https://arxiv.org/html/1802.08219v3",
+        "provenance": "geometric-tfn-nequip-family",
+        "location": "§§3.1–3.3 and 5.2 scalar/vector/rank2 transformations",
+        "kind": "primary-research"
+      },
+      "expansion_grisafi": {
+        "url": "https://arxiv.org/pdf/1709.06757",
+        "provenance": "grisafi-wilkins-csanyi-ceriotti-2018",
+        "location": "pp1–3, Eqs3 and 8, Cartesian tensor laws and inversion",
+        "kind": "primary-research"
+      },
+      "expansion_nequip": {
+        "url": "https://arxiv.org/pdf/2101.03164",
+        "provenance": "geometric-tfn-nequip-family",
+        "location": "Results Equivariance Eqs1–3,6–7, Fig1, Neural equivariant interatomic potentials, cutoff and periodic neighbor images",
+        "kind": "primary-research"
+      },
+      "expansion_gilmer": {
+        "url": "https://proceedings.mlr.press/v70/gilmer17a/gilmer17a.pdf",
+        "provenance": "gilmer-2017-mpnn",
+        "location": "§2 Eqs1–3 message/update/readout; §5.2 global graph elements",
+        "kind": "primary-research"
+      },
+      "expansion_augChen": {
+        "url": "https://www.jmlr.org/papers/volume21/20-163/20-163.pdf",
+        "provenance": "chen-dobriban-lee-2020",
+        "location": "§3.1 pp7–8 Eqs1–5 and Algorithm1; §4.2 population risk",
+        "kind": "primary-research"
+      },
+      "expansion_shorten": {
+        "url": "https://doi.org/10.1186/s40537-019-0197-0",
+        "provenance": "shorten-khoshgoftaar-2019",
+        "location": "Introduction; online/offline augmentation; rotation label preservation; noise injection; mixing images",
+        "kind": "review"
+      },
+      "expansion_mixup": {
+        "url": "https://arxiv.org/pdf/1710.09412",
+        "provenance": "zhang-cisse-dauphin-lopezpaz-2018",
+        "location": "§2 p3 mixture input and label equations",
         "kind": "primary-research"
       }
     },
@@ -4171,11 +4354,735 @@
           "luo",
           "araujo"
         ]
+      },
+      {
+        "claim": "Loss, empirical objective and penalty use the stated sum/mean conventions.",
+        "scope": "Finite differentiable supervised-learning objective and explicit normalization",
+        "sources": [
+          "expansion_bookOpt",
+          "expansion_d2lLinear",
+          "expansion_bookReg",
+          "expansion_d2lDecay"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Gradient descent and the mini-batch gradient follow the stated updates and sampling assumptions.",
+        "scope": "Euclidean differentiable objective; unbiasedness at fixed parameters with uniform index sampling",
+        "sources": [
+          "expansion_bookGrad",
+          "expansion_d2lGD",
+          "expansion_bookOpt",
+          "expansion_d2lBatch"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "MAE/MSE/RMSE and aggregation follow the stated formulas and units.",
+        "scope": "Scalar equal-weight case; explicit vector/per-structure aggregation choices",
+        "sources": [
+          "expansion_metrics",
+          "expansion_chai",
+          "expansion_schnet"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Leakage can arise from preprocessing, duplicate originals and non-independent groups.",
+        "scope": "Grouped and time-ordered evaluation questions",
+        "sources": [
+          "expansion_kapoor",
+          "expansion_skPitfall",
+          "expansion_skCV"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Interpolation, extrapolation and OOD depend on the chosen representation and training domain.",
+        "scope": "1D illustrative interval and material descriptors",
+        "sources": [
+          "expansion_bookML",
+          "expansion_liOOD"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Transferability, feature reuse and fine-tuning require explicit source/target and adaptation conditions.",
+        "scope": "Yosinski protocol and Pan domain/task definitions; synthetic target errors are own arithmetic",
+        "sources": [
+          "expansion_pan",
+          "expansion_yosinski",
+          "expansion_schnet"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Atomic descriptors and learned embeddings encode specified local geometry and species.",
+        "scope": "Relative environment, radial/angular features and learned categorical vectors",
+        "sources": [
+          "expansion_bartok",
+          "expansion_behler",
+          "expansion_schnet",
+          "expansion_vaswani"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Attention combines values with input-dependent normalized scores.",
+        "scope": "General attention principle from independent original models",
+        "sources": [
+          "expansion_vaswani",
+          "expansion_bahdanau"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Scalar, vector and rank2 properties follow their specified equivariance and parity rules.",
+        "scope": "Active proper rotations and separately stated inversion assumptions",
+        "sources": [
+          "expansion_tfn",
+          "expansion_grisafi"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Cutoff defines local graph neighborhoods; repeated local updates propagate information along paths.",
+        "scope": "Fixed local graph with atom-only initial states for L-hop bound; global paths and readout distinguished",
+        "sources": [
+          "expansion_behler",
+          "expansion_nequip",
+          "expansion_gilmer",
+          "expansion_schnet"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Augmentation averages losses over chosen transformations with matching target rules.",
+        "scope": "Specified transformation distribution and validity assumptions; online/offline variants",
+        "sources": [
+          "expansion_augChen",
+          "expansion_shorten"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Noise injection and original-group splitting require label validity and evaluation separation.",
+        "scope": "Observation noise versus changed physical structures; shared originals and time correlations",
+        "sources": [
+          "expansion_shorten",
+          "expansion_kapoor",
+          "expansion_skPitfall",
+          "expansion_skCV"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Mixup forms convex combinations of inputs and labels.",
+        "scope": "Original ICLR2018 method; one-hot toy example explicitly derived",
+        "sources": [
+          "expansion_mixup"
+        ],
+        "status": "reported-primary"
       }
     ],
-    "document_sha256": "c4700f39cac03a1235705eed2d74244a6fd7af632c1def0d954e914e823adcb6",
-    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
-    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
+    "document_sha256": "6876e18cc4c393cf464d0d90b6d73ff581bf2bbd0ef9ce52819fbb6e3c15a429",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
+    "assets": {},
+    "prior_evidence": [
+      {
+        "path": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+        "sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef"
+      }
+    ]
+  },
+  "computational-science/machine-learning/training-and-optimization.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 문서 전체 주장·식·예제·도식·관련 문서 및 원문 링크"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewer ml_representation_writer",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "bookReg": {
+        "url": "https://www.deeplearningbook.org/contents/regularization.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§7.1,7.1.1,7.4,7.8",
+        "kind": "textbook"
+      },
+      "bookGrad": {
+        "url": "https://www.deeplearningbook.org/contents/numerical.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§4.3 Eq4.5, §4.3.1 Eqs4.8–4.9",
+        "kind": "textbook"
+      },
+      "bookOpt": {
+        "url": "https://www.deeplearningbook.org/contents/optimization.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§8.1.1, 8.1.3, 8.3.1, Eqs.8.3 and 8.9, Algorithm8.1",
+        "kind": "textbook"
+      },
+      "stanford": {
+        "url": "https://cs231n.github.io/neural-networks-3/",
+        "provenance": "stanford-cs231n",
+        "location": "Babysitting the learning process, epoch definition",
+        "kind": "primary-teaching"
+      },
+      "torchData": {
+        "url": "https://docs.pytorch.org/docs/2.15/data.html",
+        "provenance": "pytorch-data-official",
+        "location": "BatchSampler, drop_last, DistributedSampler",
+        "kind": "primary-documentation"
+      },
+      "batchFixture": {
+        "url": "https://github.com/YHKlab-MSJeong/Theory-Wiki/blob/main/refs/quality/evidence/ml-expansion-2026-11-15.md",
+        "provenance": "independent-batchsampler-cpu-2.0.1",
+        "location": "Independent narrow fixture, 103 samples, batch32, drop_lastFalse/True; runtime version separate from 2.15 docs",
+        "kind": "independent-execution"
+      },
+      "d2lBatch": {
+        "url": "https://d2l.ai/chapter_optimization/minibatch-sgd.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§12.5.2 Eqs12.5.1–12.5.2",
+        "kind": "textbook"
+      },
+      "adamw": {
+        "url": "https://arxiv.org/html/1711.05101v3",
+        "provenance": "loshchilov-hutter-2019-adamw",
+        "location": "§2 Algorithms1–2 Propositions1–2; Appendix A",
+        "kind": "primary-research"
+      },
+      "d2lDecay": {
+        "url": "https://d2l.ai/chapter_linear-regression/weight-decay.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§3.7.1 Eqs3.7.2–3.7.3",
+        "kind": "textbook"
+      },
+      "bjorck": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/download/16837/16644",
+        "provenance": "bjorck-weinberger-gomes-2021",
+        "location": "On Weight Decay for Adaptive Optimizers, Eq6, pp6781–6783",
+        "kind": "primary-research"
+      },
+      "d2lGD": {
+        "url": "https://d2l.ai/chapter_optimization/gd.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§§12.3.1–12.3.2",
+        "kind": "textbook"
+      },
+      "adam": {
+        "url": "https://arxiv.org/pdf/1412.6980",
+        "provenance": "kingma-ba-2015-adam",
+        "location": "§§2–3 Algorithm1",
+        "kind": "primary-research"
+      },
+      "d2lLinear": {
+        "url": "https://d2l.ai/chapter_linear-regression/linear-regression.html",
+        "provenance": "zhang-lipton-li-smola-d2l",
+        "location": "§3.1.1.2 Eqs3.1.5–3.1.7; §3.1.1.4 Eqs3.1.10–3.1.11",
+        "kind": "textbook"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Loss, empirical objective and penalty use the stated sum/mean conventions.",
+        "scope": "Finite differentiable supervised-learning objective and explicit normalization",
+        "sources": [
+          "bookOpt",
+          "d2lLinear",
+          "bookReg",
+          "d2lDecay"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Gradient descent and the mini-batch gradient follow the stated updates and sampling assumptions.",
+        "scope": "Euclidean differentiable objective; unbiasedness at fixed parameters with uniform index sampling",
+        "sources": [
+          "bookGrad",
+          "d2lGD",
+          "bookOpt",
+          "d2lBatch"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Epoch and mini-batch step counts require a finite-pass and sampler convention.",
+        "scope": "One update per batch, single-process illustrative case",
+        "sources": [
+          "bookOpt",
+          "stanford"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Adam Algorithm1 uses the stated moments and bias-corrected update.",
+        "scope": "Named paper report, zero initial moments and epsilon outside square root",
+        "sources": [
+          "adam"
+        ],
+        "status": "reported-primary"
+      },
+      {
+        "claim": "Basic SGD L2 equivalence and adaptive L2/decoupled decay distinction follow the stated conventions.",
+        "scope": "Same parameter set; AdamW decay lambda is reparameterized relative to original Algorithm2",
+        "sources": [
+          "bookReg",
+          "d2lDecay",
+          "adamw",
+          "bjorck"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "The 103/32 BatchSampler example retains or removes the last incomplete batch according to drop_last.",
+        "scope": "Narrow documented behavior checked on local PyTorch2.0.1 and compared with official2.15 specification",
+        "sources": [
+          "torchData",
+          "batchFixture"
+        ],
+        "status": "supported"
+      }
+    ],
+    "document_sha256": "fd8c22e7b575f17bcf5318413982a0b7e6d896ef655e52c2d2fd44e4586b2b33",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
     "assets": {}
+  },
+  "computational-science/machine-learning/evaluation-and-transferability.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 문서 전체 주장·식·예제·도식·관련 문서 및 원문 링크"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewer ml_rules_audit",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "kapoor": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10499856/",
+        "provenance": "kapoor-narayanan-2023",
+        "location": "Leakage taxonomy L1.2/L1.4/L3.2/L3.3",
+        "kind": "primary-research"
+      },
+      "pan": {
+        "url": "https://www.cse.cuhk.edu.hk/~sinnopan/publications/TLsurvey_0822.pdf",
+        "provenance": "pan-yang-2010-transfer-learning",
+        "location": "§2 domains/tasks and definitions",
+        "kind": "review"
+      },
+      "schnet": {
+        "url": "https://arxiv.org/pdf/1706.08566",
+        "provenance": "schutt-2017-schnet",
+        "location": "§§3–4.2 Eqs2–5, embeddings, invariant energy, equivariant force; §5 benchmarks",
+        "kind": "primary-research"
+      },
+      "metrics": {
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "Regression metrics; Multioutput",
+        "kind": "primary-documentation"
+      },
+      "yosinski": {
+        "url": "https://arxiv.org/pdf/1411.1792",
+        "provenance": "yosinski-clune-bengio-lipson-2014",
+        "location": "Introduction and Experimental setup, feature freezing and fine tuning",
+        "kind": "primary-research"
+      },
+      "skPitfall": {
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "§12.2 leakage, preprocessing fit only on training",
+        "kind": "primary-documentation"
+      },
+      "skCV": {
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "Grouped data, time series, data transformation",
+        "kind": "primary-documentation"
+      },
+      "chai": {
+        "url": "https://gmd.copernicus.org/articles/7/1247/2014/",
+        "provenance": "chai-draxler-2014",
+        "location": "§§1–3, definitions and RMSE>=MAE",
+        "kind": "primary-research"
+      },
+      "augChen": {
+        "url": "https://www.jmlr.org/papers/volume21/20-163/20-163.pdf",
+        "provenance": "chen-dobriban-lee-2020",
+        "location": "§3.1 pp7–8 Eqs1–5 and Algorithm1; §4.2 population risk",
+        "kind": "primary-research"
+      },
+      "liOOD": {
+        "url": "https://arxiv.org/pdf/2406.06489",
+        "provenance": "li-et-al-2024-materials-ood",
+        "location": "§II.D Inspecting materials representations, pp6–7",
+        "kind": "primary-research"
+      },
+      "bookML": {
+        "url": "https://www.deeplearningbook.org/contents/ml.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "§§5.2–5.3 and 5.11.2",
+        "kind": "textbook"
+      },
+      "skCurve": {
+        "url": "https://scikit-learn.org/stable/modules/learning_curve.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "§3.5.1 validation curve and overfitting",
+        "kind": "primary-documentation"
+      }
+    },
+    "findings": [
+      {
+        "claim": "MAE/MSE/RMSE and aggregation follow the stated formulas and units.",
+        "scope": "Scalar equal-weight case; explicit vector/per-structure aggregation choices",
+        "sources": [
+          "metrics",
+          "chai",
+          "schnet"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Generalization, population risk, training/validation/test roles and overfitting depend on the stated target distribution and selection process.",
+        "scope": "Expected loss and finite evaluation data",
+        "sources": [
+          "bookML",
+          "augChen",
+          "skCV",
+          "skCurve"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Leakage can arise from preprocessing, duplicate originals and non-independent groups.",
+        "scope": "Grouped and time-ordered evaluation questions",
+        "sources": [
+          "kapoor",
+          "skPitfall",
+          "skCV"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Interpolation, extrapolation and OOD depend on the chosen representation and training domain.",
+        "scope": "1D illustrative interval and material descriptors",
+        "sources": [
+          "bookML",
+          "liOOD"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Transferability, feature reuse and fine-tuning require explicit source/target and adaptation conditions.",
+        "scope": "Yosinski protocol and Pan domain/task definitions; synthetic target errors are own arithmetic",
+        "sources": [
+          "pan",
+          "yosinski",
+          "schnet"
+        ],
+        "status": "supported"
+      }
+    ],
+    "document_sha256": "96e432ddad071b0bfcbe81165f652031b469f6fb8ee906703f03f1000a00080b",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
+    "assets": {
+      "computational-science/machine-learning/images/interpolation-extrapolation.svg": "b31f457844a8667e7381e7018d1f680bfe7134099f2d5e9863a5e5f457720b43"
+    }
+  },
+  "computational-science/machine-learning/representation-and-symmetry.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 문서 전체 주장·식·예제·도식·관련 문서 및 원문 링크"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewer ml_training_writer",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "schnet": {
+        "url": "https://arxiv.org/pdf/1706.08566",
+        "provenance": "schutt-2017-schnet",
+        "location": "§§3–4.2 Eqs2–5, embeddings, invariant energy, equivariant force; §5 benchmarks",
+        "kind": "primary-research"
+      },
+      "nequip": {
+        "url": "https://arxiv.org/pdf/2101.03164",
+        "provenance": "geometric-tfn-nequip-family",
+        "location": "Results Equivariance Eqs1–3,6–7, Fig1, Neural equivariant interatomic potentials, cutoff and periodic neighbor images",
+        "kind": "primary-research"
+      },
+      "bahdanau": {
+        "url": "https://arxiv.org/html/1409.0473v7",
+        "provenance": "bahdanau-cho-bengio-2015",
+        "location": "§3.1 Eqs5–6 weighted sum",
+        "kind": "primary-research"
+      },
+      "gilmer": {
+        "url": "https://proceedings.mlr.press/v70/gilmer17a/gilmer17a.pdf",
+        "provenance": "gilmer-2017-mpnn",
+        "location": "§2 Eqs1–3 message/update/readout; §5.2 global graph elements",
+        "kind": "primary-research"
+      },
+      "behler": {
+        "url": "https://aiichironakano.github.io/cs653/Behler-NNPES-PRL07.pdf",
+        "provenance": "behler-parrinello-2007",
+        "location": "pp146401-2–4 Eqs2–5 radial/angular symmetry functions, cutoff and long range",
+        "kind": "primary-research"
+      },
+      "vaswani": {
+        "url": "https://arxiv.org/html/1706.03762v7",
+        "provenance": "vaswani-2017-transformer",
+        "location": "§§3.2.1–3.2.3 Eq1 and §3.4",
+        "kind": "primary-research"
+      },
+      "grisafi": {
+        "url": "https://arxiv.org/pdf/1709.06757",
+        "provenance": "grisafi-wilkins-csanyi-ceriotti-2018",
+        "location": "pp1–3, Eqs3 and 8, Cartesian tensor laws and inversion",
+        "kind": "primary-research"
+      },
+      "tfn": {
+        "url": "https://arxiv.org/html/1802.08219v3",
+        "provenance": "geometric-tfn-nequip-family",
+        "location": "§§3.1–3.3 and 5.2 scalar/vector/rank2 transformations",
+        "kind": "primary-research"
+      },
+      "hamgnn": {
+        "url": "https://arxiv.org/pdf/2609.37058v1",
+        "provenance": "liu-2026-hamgnn-negf",
+        "location": "Abstract and Results pp3–4, learned Hamiltonian model",
+        "kind": "primary-research"
+      },
+      "gu": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11310461/",
+        "provenance": "gu-2024-deeptb",
+        "location": "Fig1 Eqs5–7, local embedding and SK corrections",
+        "kind": "primary-research"
+      },
+      "sevennet": {
+        "url": "https://arxiv.org/html/2607.14827v3",
+        "provenance": "lu-2026-sevennet-polar",
+        "location": "§4.4 BEC rank2 decomposition",
+        "kind": "primary-research"
+      },
+      "bartok": {
+        "url": "https://arxiv.org/html/1209.3140v3",
+        "provenance": "bartok-kondor-csanyi-2013",
+        "location": "§§I–III and V.1, descriptors and completeness",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Atomic descriptors and learned embeddings encode specified local geometry and species.",
+        "scope": "Relative environment, radial/angular features and learned categorical vectors",
+        "sources": [
+          "bartok",
+          "behler",
+          "schnet",
+          "vaswani"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Bartok defines completeness by reconstruction up to the stated symmetry.",
+        "scope": "Specific definition attributed to Bartok et al.",
+        "sources": [
+          "bartok"
+        ],
+        "status": "reported-primary"
+      },
+      {
+        "claim": "Attention combines values with input-dependent normalized scores.",
+        "scope": "General attention principle from independent original models",
+        "sources": [
+          "vaswani",
+          "bahdanau"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Vaswani scaled dot-product, self-attention and multi-head definitions are as stated.",
+        "scope": "Named Transformer operations; toy attention numbers independently reproduced",
+        "sources": [
+          "vaswani"
+        ],
+        "status": "reported-primary"
+      },
+      {
+        "claim": "Scalar, vector and rank2 properties follow their specified equivariance and parity rules.",
+        "scope": "Active proper rotations and separately stated inversion assumptions",
+        "sources": [
+          "tfn",
+          "grisafi"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Cutoff defines local graph neighborhoods; repeated local updates propagate information along paths.",
+        "scope": "Fixed local graph with atom-only initial states for L-hop bound; global paths and readout distinguished",
+        "sources": [
+          "behler",
+          "nequip",
+          "gilmer",
+          "schnet"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "DeePTB uses the described local environment representation.",
+        "scope": "Specific paper construction",
+        "sources": [
+          "gu"
+        ],
+        "status": "reported-primary"
+      },
+      {
+        "claim": "HamGNN-NEGF predicts device Hamiltonians from the reported equivariant model.",
+        "scope": "Related-paper method link only",
+        "sources": [
+          "hamgnn"
+        ],
+        "status": "reported-primary"
+      },
+      {
+        "claim": "SevenNet-Polar uses the stated rank2 BEC representation.",
+        "scope": "Related-paper method link only",
+        "sources": [
+          "sevennet"
+        ],
+        "status": "reported-primary"
+      }
+    ],
+    "document_sha256": "bfadc491651d2f658e2eac55b3dc2534dcf16aec59f148b559f7d4759fe8e896",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
+    "assets": {
+      "computational-science/machine-learning/images/ml-symmetry-message-passing.svg": "f968d256b6bffcbb62bd354ee2815171b37610ec552bfaf1309c60885c50a211"
+    }
+  },
+  "computational-science/machine-learning/data-augmentation.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 문서 전체 주장·식·예제·도식·관련 문서 및 원문 링크"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewer ml_rules_audit",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "kapoor": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10499856/",
+        "provenance": "kapoor-narayanan-2023",
+        "location": "Leakage taxonomy L1.2/L1.4/L3.2/L3.3",
+        "kind": "primary-research"
+      },
+      "mixup": {
+        "url": "https://arxiv.org/pdf/1710.09412",
+        "provenance": "zhang-cisse-dauphin-lopezpaz-2018",
+        "location": "§2 p3 mixture input and label equations",
+        "kind": "primary-research"
+      },
+      "nequip": {
+        "url": "https://arxiv.org/pdf/2101.03164",
+        "provenance": "geometric-tfn-nequip-family",
+        "location": "Results Equivariance Eqs1–3,6–7, Fig1, Neural equivariant interatomic potentials, cutoff and periodic neighbor images",
+        "kind": "primary-research"
+      },
+      "schnet": {
+        "url": "https://arxiv.org/pdf/1706.08566",
+        "provenance": "schutt-2017-schnet",
+        "location": "§§3–4.2 Eqs2–5, embeddings, invariant energy, equivariant force; §5 benchmarks",
+        "kind": "primary-research"
+      },
+      "shorten": {
+        "url": "https://doi.org/10.1186/s40537-019-0197-0",
+        "provenance": "shorten-khoshgoftaar-2019",
+        "location": "Introduction; online/offline augmentation; rotation label preservation; noise injection; mixing images",
+        "kind": "review"
+      },
+      "cohen": {
+        "url": "https://proceedings.mlr.press/v48/cohenc16.pdf",
+        "provenance": "cohen-welling-2016",
+        "location": "§4.4 Eq4, inverse action on scalar functions",
+        "kind": "primary-research"
+      },
+      "skPitfall": {
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "§12.2 leakage, preprocessing fit only on training",
+        "kind": "primary-documentation"
+      },
+      "skCV": {
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+        "provenance": "scikit-learn-documentation",
+        "location": "Grouped data, time series, data transformation",
+        "kind": "primary-documentation"
+      },
+      "augChen": {
+        "url": "https://www.jmlr.org/papers/volume21/20-163/20-163.pdf",
+        "provenance": "chen-dobriban-lee-2020",
+        "location": "§3.1 pp7–8 Eqs1–5 and Algorithm1; §4.2 population risk",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Augmentation averages losses over chosen transformations with matching target rules.",
+        "scope": "Specified transformation distribution and validity assumptions; online/offline variants",
+        "sources": [
+          "augChen",
+          "shorten"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Energy/force rotation and scalar-field inverse coordinate actions give the stated synthetic examples.",
+        "scope": "Proper active rotation; no fixed external direction; grid/periodic conventions explicitly stated",
+        "sources": [
+          "schnet",
+          "nequip",
+          "cohen"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Noise injection and original-group splitting require label validity and evaluation separation.",
+        "scope": "Observation noise versus changed physical structures; shared originals and time correlations",
+        "sources": [
+          "shorten",
+          "kapoor",
+          "skPitfall",
+          "skCV"
+        ],
+        "status": "supported"
+      },
+      {
+        "claim": "Mixup forms convex combinations of inputs and labels.",
+        "scope": "Original ICLR2018 method; one-hot toy example explicitly derived",
+        "sources": [
+          "mixup"
+        ],
+        "status": "reported-primary"
+      }
+    ],
+    "document_sha256": "a530c470475770ec6a55351deae06119aedbe7991eb16897ca3de394d8bf8c45",
+    "evidence": "refs/quality/evidence/ml-expansion-2026-11-15.md",
+    "evidence_sha256": "0f3ac1b6c943a1f114d6704dee1ad57f45e457abed337091edb016c3356b3139",
+    "assets": {
+      "computational-science/machine-learning/images/augmentation-split.svg": "2fa9359e0a3039b386c2def0e4b87aa27e7a1fbd0ff030554077dd2c2da21605"
+    }
   }
 }
