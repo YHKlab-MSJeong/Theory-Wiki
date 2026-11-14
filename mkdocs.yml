@@ -78,3 +78,8 @@ nav:
           - SIESTA 5.4 OMM: computational-science/atomistic-simulation/siesta-54-omm.md
           - Order-N DFT: computational-science/atomistic-simulation/order-n-dft.md
           - DFTB for large-scale simulation: computational-science/atomistic-simulation/dftb-large-scale.md
+      - Machine learning:
+          - Index: computational-science/machine-learning/index.md
+          - ML glossary: computational-science/machine-learning/glossary.md
+          - Fidelity: computational-science/machine-learning/fidelity.md
+          - CNN kernel and receptive field: computational-science/machine-learning/cnn-kernel-receptive-field.md

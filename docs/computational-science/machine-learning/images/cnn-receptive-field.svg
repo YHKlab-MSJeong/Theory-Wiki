@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="450" viewBox="0 0 1050 450" role="img" aria-labelledby="title description">
+  <title id="title">CNN kernel windows and receptive field</title>
+  <desc id="description">Two 3×3 convolutions with stride 1, dilation 1, and padding 0 map a 5×5 input to a 3×3 feature map and then to one output. The second convolution uses a 3×3 window on the preceding feature map. The output's theoretical receptive field covers the entire 5×5 original input. Original schematic, using the definitions in https://distill.pub/2019/computing-receptive-fields/.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#263541"/>
+    </marker>
+    <marker id="rf-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#23658e"/>
+    </marker>
+    <style>
+      text { font-family: 'DejaVu Sans', sans-serif; fill: #18232d; text-anchor: middle; }
+      .stage { font-size: 22px; font-weight: 600; }
+      .operation { font-size: 18px; }
+      .condition { font-size: 17px; fill: #4e5d68; }
+      .grid-line { fill: none; stroke: #8a9ba5; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="1050" height="450" fill="#fff"/>
+
+  <text x="525" y="34" class="condition">stride = 1 · dilation = 1 · padding = 0</text>
+  <text x="180" y="91" class="stage">Input 5×5</text>
+  <text x="561" y="91" class="stage">Feature map 3×3</text>
+  <text x="907" y="91" class="stage">Output 1×1</text>
+
+  <path d="M627 176 L885 220 L885 264 L627 308 Z" fill="#f8eee1"/>
+  <path d="M627 176 L885 220 M627 308 L885 264" fill="none" stroke="#bc7827" stroke-width="1.6" stroke-dasharray="5 5"/>
+
+  <rect x="70" y="132" width="220" height="220" fill="#e7f0f7" stroke="#263541" stroke-width="1.5"/>
+<path d="M114 132 V352" class="grid-line"/>
+<path d="M70 176 H290" class="grid-line"/>
+<path d="M158 132 V352" class="grid-line"/>
+<path d="M70 220 H290" class="grid-line"/>
+<path d="M202 132 V352" class="grid-line"/>
+<path d="M70 264 H290" class="grid-line"/>
+<path d="M246 132 V352" class="grid-line"/>
+<path d="M70 308 H290" class="grid-line"/>
+  <rect x="70" y="132" width="220" height="220" fill="none" stroke="#23658e" stroke-width="3"/>
+  <rect x="495" y="176" width="132" height="132" fill="#faedda" stroke="#263541" stroke-width="1.5"/>
+<path d="M539 176 V308" class="grid-line"/>
+<path d="M495 220 H627" class="grid-line"/>
+<path d="M583 176 V308" class="grid-line"/>
+<path d="M495 264 H627" class="grid-line"/>
+  <rect x="490" y="171" width="142" height="142" fill="none" stroke="#a96617" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <rect x="885" y="220" width="44" height="44" fill="#d8933b" stroke="#263541" stroke-width="1.5"/>
+
+  <text x="393" y="228" class="operation">3×3 convolution</text>
+  <path d="M318 242 H465" fill="none" stroke="#263541" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="756" y="228" class="operation">3×3 convolution</text>
+  <path d="M659 242 H852" fill="none" stroke="#263541" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="561" y="342" font-size="18" style="fill:#96590f">3×3 window</text>
+
+  <circle cx="907" cy="274" r="3" fill="#23658e"/>
+  <path d="M907 274 V391 H180 V359" fill="none" stroke="#23658e" stroke-width="2.5" marker-end="url(#rf-arrow)"/>
+  <text x="543" y="425" font-size="21" font-weight="600" style="fill:#23658e">Receptive field 5×5</text>
+</svg>

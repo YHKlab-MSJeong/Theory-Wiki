@@ -3811,5 +3811,371 @@
     "document_sha256": "0bd30ac9263aee1bedb186097c8174997ea2c262cc1fda4b5d89a2936cd4617d",
     "evidence": "refs/quality/evidence/hod-deeptb-2026-11-09.md",
     "evidence_sha256": "147d43b583bdb708b25064df7dd0c2da276c6970f3b85c5fdae10af78d2c74e5"
+  },
+  "computational-science/machine-learning/fidelity.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewers ml_fidelity_research",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "perdikaris": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5332612/",
+        "provenance": "perdikaris-raissi-2017-multifidelity",
+        "location": "Introduction and §2(a)",
+        "kind": "primary-research"
+      },
+      "peherstorfer": {
+        "url": "https://arxiv.org/abs/1806.10761",
+        "provenance": "peherstorfer-willcox-2018-multifidelity",
+        "location": "§§1–3, particularly §1.3",
+        "kind": "review"
+      },
+      "chen": {
+        "url": "https://doi.org/10.1038/s43588-020-00002-x",
+        "provenance": "chen-ong-2021-multifidelity",
+        "location": "Introduction, Results Multi-fidelity Graph Networks, Fig.1; arXiv 2005.04338v3 pp.2,4–5",
+        "kind": "primary-research"
+      },
+      "lime": {
+        "url": "https://ucinlp.github.io/files/papers/lime-kdd16.pdf",
+        "provenance": "ribeiro-singh-guestrin-2016-lime",
+        "location": "§§2, 3.1–3.4, Eq.(2)",
+        "kind": "primary-research"
+      },
+      "craven": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1995/file/45f31d16b1058d586fc3be7207b58053-Paper.pdf",
+        "provenance": "craven-shavlik-1995-trepan",
+        "location": "§3 Empirical Evaluation, pp.27–28",
+        "kind": "primary-research"
+      },
+      "pytorch": {
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html",
+        "provenance": "pytorch-conv2d-official",
+        "location": "Operation, Parameters, Variables and Shape; stable redirected to 2.15 when checked",
+        "kind": "primary-documentation"
+      },
+      "tf": {
+        "url": "https://www.tensorflow.org/api_docs/python/tf/nn/conv2d",
+        "provenance": "tensorflow-conv2d-official",
+        "location": "Patch extraction steps 1–3 and filter shape",
+        "kind": "primary-documentation"
+      },
+      "goodfellow": {
+        "url": "https://www.deeplearningbook.org/contents/convnets.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "Chapter 9 §§9.1–9.2 and 9.5",
+        "kind": "textbook"
+      },
+      "araujo": {
+        "url": "https://distill.pub/2019/computing-receptive-fields/",
+        "provenance": "araujo-norris-sim-2019-rf",
+        "location": "Problem setup, Single-path networks, RF region, Arbitrary computation graphs, Other network operations, Discussion",
+        "kind": "primary-research"
+      },
+      "luo": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/c8067ad1937f728f51288b3eb986afaa-Paper.pdf",
+        "provenance": "luo-li-urtasun-zemel-2016-erf",
+        "location": "§§2–3, particularly §2 and §3.1",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Multi-fidelity combines models/data at different approximation levels for quantities of interest.",
+        "scope": "Science ML and surrogate modeling, with specified reference and valid input domain",
+        "status": "supported",
+        "sources": [
+          "perdikaris",
+          "peherstorfer"
+        ]
+      },
+      {
+        "claim": "Explanation fidelity measures reproduction of a reference model, with locality specified in local explanations.",
+        "scope": "Model extraction and local explanation",
+        "status": "supported",
+        "sources": [
+          "lime",
+          "craven"
+        ]
+      },
+      {
+        "claim": "Agreement-based fidelity and classification accuracy have different comparison targets.",
+        "scope": "Definitions used by TREPAN; four-input illustrative calculation is explicitly derived",
+        "status": "reported-primary",
+        "sources": [
+          "craven"
+        ]
+      },
+      {
+        "claim": "LIME uses the stated locality-weighted squared loss.",
+        "scope": "LIME Eq.(2), paired perturbation samples and interpretable representations",
+        "status": "reported-primary",
+        "sources": [
+          "lime"
+        ]
+      },
+      {
+        "claim": "Chen used PBE and higher-level calculation/experimental bandgap data together.",
+        "scope": "Specific paper report, not universal fidelity hierarchy",
+        "status": "reported-primary",
+        "sources": [
+          "chen"
+        ]
+      }
+    ],
+    "document_sha256": "3bb7bc5c687faeba5090e7b6f4269a6f4035babd2e1960a325ab84c7e0d5fa55",
+    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
+    "assets": {}
+  },
+  "computational-science/machine-learning/cnn-kernel-receptive-field.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewers ml_cnn_research",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "perdikaris": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5332612/",
+        "provenance": "perdikaris-raissi-2017-multifidelity",
+        "location": "Introduction and §2(a)",
+        "kind": "primary-research"
+      },
+      "peherstorfer": {
+        "url": "https://arxiv.org/abs/1806.10761",
+        "provenance": "peherstorfer-willcox-2018-multifidelity",
+        "location": "§§1–3, particularly §1.3",
+        "kind": "review"
+      },
+      "chen": {
+        "url": "https://doi.org/10.1038/s43588-020-00002-x",
+        "provenance": "chen-ong-2021-multifidelity",
+        "location": "Introduction, Results Multi-fidelity Graph Networks, Fig.1; arXiv 2005.04338v3 pp.2,4–5",
+        "kind": "primary-research"
+      },
+      "lime": {
+        "url": "https://ucinlp.github.io/files/papers/lime-kdd16.pdf",
+        "provenance": "ribeiro-singh-guestrin-2016-lime",
+        "location": "§§2, 3.1–3.4, Eq.(2)",
+        "kind": "primary-research"
+      },
+      "craven": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1995/file/45f31d16b1058d586fc3be7207b58053-Paper.pdf",
+        "provenance": "craven-shavlik-1995-trepan",
+        "location": "§3 Empirical Evaluation, pp.27–28",
+        "kind": "primary-research"
+      },
+      "pytorch": {
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html",
+        "provenance": "pytorch-conv2d-official",
+        "location": "Operation, Parameters, Variables and Shape; stable redirected to 2.15 when checked",
+        "kind": "primary-documentation"
+      },
+      "tf": {
+        "url": "https://www.tensorflow.org/api_docs/python/tf/nn/conv2d",
+        "provenance": "tensorflow-conv2d-official",
+        "location": "Patch extraction steps 1–3 and filter shape",
+        "kind": "primary-documentation"
+      },
+      "goodfellow": {
+        "url": "https://www.deeplearningbook.org/contents/convnets.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "Chapter 9 §§9.1–9.2 and 9.5",
+        "kind": "textbook"
+      },
+      "araujo": {
+        "url": "https://distill.pub/2019/computing-receptive-fields/",
+        "provenance": "araujo-norris-sim-2019-rf",
+        "location": "Problem setup, Single-path networks, RF region, Arbitrary computation graphs, Other network operations, Discussion",
+        "kind": "primary-research"
+      },
+      "luo": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/c8067ad1937f728f51288b3eb986afaa-Paper.pdf",
+        "provenance": "luo-li-urtasun-zemel-2016-erf",
+        "location": "§§2–3, particularly §2 and §3.1",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "CNN kernels, input/output channels, window movement and boundary treatment follow the stated operations and shapes.",
+        "scope": "2D groups1 conventional convolution, with groups caveat",
+        "status": "supported",
+        "sources": [
+          "pytorch",
+          "tf",
+          "goodfellow"
+        ]
+      },
+      {
+        "claim": "Theoretical RF span follows the single-path recurrence in input coordinates.",
+        "scope": "Local single-path operations; boundary overlap and unreferenced holes distinguished",
+        "status": "supported",
+        "sources": [
+          "araujo",
+          "luo"
+        ]
+      },
+      {
+        "claim": "Effective receptive field assesses differential influence within the connected input region.",
+        "scope": "Gradient-based definition with input/weight and measurement dependence",
+        "status": "supported",
+        "sources": [
+          "luo",
+          "araujo"
+        ]
+      }
+    ],
+    "document_sha256": "39688c61695dd033a8f7deb105c4536ed418d8c6e831f583cd2dc7fd15d220d2",
+    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
+    "assets": {
+      "computational-science/machine-learning/images/cnn-receptive-field.svg": "a6577d1c30e6b2a5f00b85788c200bdf2b2a4d549d353a2b50622e255fa0db80"
+    }
+  },
+  "computational-science/machine-learning/glossary.md": {
+    "status": "pass",
+    "coverage": {
+      "mode": "full",
+      "description": "신규 용어 문서 전체, 예제와 내부 링크 및 해당 도식"
+    },
+    "reviewer": {
+      "role": "independent scientific reviewers ml_fidelity_research and ml_cnn_research, respective sections",
+      "independent": true,
+      "date": "2026-11-15"
+    },
+    "sources": {
+      "perdikaris": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5332612/",
+        "provenance": "perdikaris-raissi-2017-multifidelity",
+        "location": "Introduction and §2(a)",
+        "kind": "primary-research"
+      },
+      "peherstorfer": {
+        "url": "https://arxiv.org/abs/1806.10761",
+        "provenance": "peherstorfer-willcox-2018-multifidelity",
+        "location": "§§1–3, particularly §1.3",
+        "kind": "review"
+      },
+      "chen": {
+        "url": "https://doi.org/10.1038/s43588-020-00002-x",
+        "provenance": "chen-ong-2021-multifidelity",
+        "location": "Introduction, Results Multi-fidelity Graph Networks, Fig.1; arXiv 2005.04338v3 pp.2,4–5",
+        "kind": "primary-research"
+      },
+      "lime": {
+        "url": "https://ucinlp.github.io/files/papers/lime-kdd16.pdf",
+        "provenance": "ribeiro-singh-guestrin-2016-lime",
+        "location": "§§2, 3.1–3.4, Eq.(2)",
+        "kind": "primary-research"
+      },
+      "craven": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/1995/file/45f31d16b1058d586fc3be7207b58053-Paper.pdf",
+        "provenance": "craven-shavlik-1995-trepan",
+        "location": "§3 Empirical Evaluation, pp.27–28",
+        "kind": "primary-research"
+      },
+      "pytorch": {
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html",
+        "provenance": "pytorch-conv2d-official",
+        "location": "Operation, Parameters, Variables and Shape; stable redirected to 2.15 when checked",
+        "kind": "primary-documentation"
+      },
+      "tf": {
+        "url": "https://www.tensorflow.org/api_docs/python/tf/nn/conv2d",
+        "provenance": "tensorflow-conv2d-official",
+        "location": "Patch extraction steps 1–3 and filter shape",
+        "kind": "primary-documentation"
+      },
+      "goodfellow": {
+        "url": "https://www.deeplearningbook.org/contents/convnets.html",
+        "provenance": "goodfellow-bengio-courville-2016",
+        "location": "Chapter 9 §§9.1–9.2 and 9.5",
+        "kind": "textbook"
+      },
+      "araujo": {
+        "url": "https://distill.pub/2019/computing-receptive-fields/",
+        "provenance": "araujo-norris-sim-2019-rf",
+        "location": "Problem setup, Single-path networks, RF region, Arbitrary computation graphs, Other network operations, Discussion",
+        "kind": "primary-research"
+      },
+      "luo": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/c8067ad1937f728f51288b3eb986afaa-Paper.pdf",
+        "provenance": "luo-li-urtasun-zemel-2016-erf",
+        "location": "§§2–3, particularly §2 and §3.1",
+        "kind": "primary-research"
+      }
+    },
+    "findings": [
+      {
+        "claim": "Multi-fidelity combines models/data at different approximation levels for quantities of interest.",
+        "scope": "Science ML and surrogate modeling, with specified reference and valid input domain",
+        "status": "supported",
+        "sources": [
+          "perdikaris",
+          "peherstorfer"
+        ]
+      },
+      {
+        "claim": "Explanation fidelity measures reproduction of a reference model, with locality specified in local explanations.",
+        "scope": "Model extraction and local explanation",
+        "status": "supported",
+        "sources": [
+          "lime",
+          "craven"
+        ]
+      },
+      {
+        "claim": "Agreement-based fidelity and classification accuracy have different comparison targets.",
+        "scope": "Definitions used by TREPAN; four-input illustrative calculation is explicitly derived",
+        "status": "reported-primary",
+        "sources": [
+          "craven"
+        ]
+      },
+      {
+        "claim": "CNN kernels, input/output channels, window movement and boundary treatment follow the stated operations and shapes.",
+        "scope": "2D groups1 conventional convolution, with groups caveat",
+        "status": "supported",
+        "sources": [
+          "pytorch",
+          "tf",
+          "goodfellow"
+        ]
+      },
+      {
+        "claim": "Theoretical RF span follows the single-path recurrence in input coordinates.",
+        "scope": "Local single-path operations; boundary overlap and unreferenced holes distinguished",
+        "status": "supported",
+        "sources": [
+          "araujo",
+          "luo"
+        ]
+      },
+      {
+        "claim": "Effective receptive field assesses differential influence within the connected input region.",
+        "scope": "Gradient-based definition with input/weight and measurement dependence",
+        "status": "supported",
+        "sources": [
+          "luo",
+          "araujo"
+        ]
+      }
+    ],
+    "document_sha256": "c4700f39cac03a1235705eed2d74244a6fd7af632c1def0d954e914e823adcb6",
+    "evidence": "refs/quality/evidence/ml-glossary-2026-11-15.md",
+    "evidence_sha256": "a54c48965691a3d48fe5228e4c8257491889d14a6a89738f7b89e6d3c46bc2ef",
+    "assets": {}
   }
 }
